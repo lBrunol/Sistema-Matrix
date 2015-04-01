@@ -100,6 +100,30 @@
     <Compile Include="ConsultaUsuarios.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="DadosEmitente.Designer.vb">
+      <DependentUpon>DadosEmitente.vb</DependentUpon>
+    </Compile>
+    <Compile Include="DadosEmitente.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Nota Fiscal.Designer.vb">
+      <DependentUpon>Nota Fiscal.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Nota Fiscal.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Contas a Receber.Designer.vb">
+      <DependentUpon>Contas a Receber.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Contas a Receber.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Confirma Nota Fiscal.Designer.vb">
+      <DependentUpon>Confirma Nota Fiscal.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Confirma Nota Fiscal.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Servico.Designer.vb">
       <DependentUpon>Servico.vb</DependentUpon>
     </Compile>
@@ -164,6 +188,18 @@
   <ItemGroup>
     <EmbeddedResource Include="ConsultaUsuarios.resx">
       <DependentUpon>ConsultaUsuarios.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DadosEmitente.resx">
+      <DependentUpon>DadosEmitente.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Nota Fiscal.resx">
+      <DependentUpon>Nota Fiscal.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Contas a Receber.resx">
+      <DependentUpon>Contas a Receber.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Confirma Nota Fiscal.resx">
+      <DependentUpon>Confirma Nota Fiscal.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Servico.resx">
       <DependentUpon>Servico.vb</DependentUpon>
@@ -261,6 +297,9 @@
       <Isolated>False</Isolated>
       <EmbedInteropTypes>True</EmbedInteropTypes>
     </COMReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\icones\nota-fiscal-eletronica.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

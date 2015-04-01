@@ -45,6 +45,10 @@ Partial Class telaPrincipal
         Me.txtBoasVindas = New System.Windows.Forms.TextBox()
         Me.lblLogoff = New System.Windows.Forms.Label()
         Me.botLogoff = New System.Windows.Forms.Button()
+        Me.botConsultaContasReceber = New System.Windows.Forms.Button()
+        Me.botConsultaNotasFiscais = New System.Windows.Forms.Button()
+        Me.botDadosEmitente = New System.Windows.Forms.Button()
+        Me.botConfirmaNotasFiscais = New System.Windows.Forms.Button()
         Me.MenuStrip1.SuspendLayout()
         Me.FlowLayoutPanel1.SuspendLayout()
         Me.SuspendLayout()
@@ -54,7 +58,7 @@ Partial Class telaPrincipal
         Me.MenuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.menuCadastroCliente, Me.FaturamentoToolStripMenuItem, Me.menuAdministrador, Me.AjudaToolStripMenuItem})
         Me.MenuStrip1.Location = New System.Drawing.Point(0, 0)
         Me.MenuStrip1.Name = "MenuStrip1"
-        Me.MenuStrip1.Size = New System.Drawing.Size(497, 24)
+        Me.MenuStrip1.Size = New System.Drawing.Size(697, 24)
         Me.MenuStrip1.TabIndex = 0
         Me.MenuStrip1.Text = "MenuStrip1"
         '
@@ -148,14 +152,18 @@ Partial Class telaPrincipal
         Me.FlowLayoutPanel1.Controls.Add(Me.botServicos)
         Me.FlowLayoutPanel1.Controls.Add(Me.botFuncionario)
         Me.FlowLayoutPanel1.Controls.Add(Me.botOS)
-        Me.FlowLayoutPanel1.Location = New System.Drawing.Point(25, 35)
+        Me.FlowLayoutPanel1.Controls.Add(Me.botConsultaContasReceber)
+        Me.FlowLayoutPanel1.Controls.Add(Me.botConsultaNotasFiscais)
+        Me.FlowLayoutPanel1.Controls.Add(Me.botDadosEmitente)
+        Me.FlowLayoutPanel1.Controls.Add(Me.botConfirmaNotasFiscais)
+        Me.FlowLayoutPanel1.Location = New System.Drawing.Point(12, 35)
         Me.FlowLayoutPanel1.Name = "FlowLayoutPanel1"
-        Me.FlowLayoutPanel1.Size = New System.Drawing.Size(446, 327)
+        Me.FlowLayoutPanel1.Size = New System.Drawing.Size(673, 493)
         Me.FlowLayoutPanel1.TabIndex = 1
         '
         'botCadastro
         '
-        Me.botCadastro.BackColor = System.Drawing.Color.DeepSkyBlue
+        Me.botCadastro.BackColor = System.Drawing.Color.Maroon
         Me.botCadastro.BackgroundImage = CType(resources.GetObject("botCadastro.BackgroundImage"), System.Drawing.Image)
         Me.botCadastro.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center
         Me.botCadastro.FlatAppearance.BorderSize = 0
@@ -189,14 +197,14 @@ Partial Class telaPrincipal
         '
         'botFuncionario
         '
-        Me.botFuncionario.BackColor = System.Drawing.Color.Blue
+        Me.botFuncionario.BackColor = System.Drawing.Color.MediumSpringGreen
         Me.botFuncionario.BackgroundImage = CType(resources.GetObject("botFuncionario.BackgroundImage"), System.Drawing.Image)
         Me.botFuncionario.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center
         Me.botFuncionario.FlatAppearance.BorderSize = 0
         Me.botFuncionario.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.botFuncionario.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.botFuncionario.ForeColor = System.Drawing.Color.WhiteSmoke
-        Me.botFuncionario.Location = New System.Drawing.Point(3, 165)
+        Me.botFuncionario.Location = New System.Drawing.Point(445, 3)
         Me.botFuncionario.Name = "botFuncionario"
         Me.botFuncionario.Size = New System.Drawing.Size(215, 156)
         Me.botFuncionario.TabIndex = 2
@@ -213,7 +221,7 @@ Partial Class telaPrincipal
         Me.botOS.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.botOS.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.botOS.ForeColor = System.Drawing.Color.White
-        Me.botOS.Location = New System.Drawing.Point(224, 165)
+        Me.botOS.Location = New System.Drawing.Point(3, 165)
         Me.botOS.Name = "botOS"
         Me.botOS.Size = New System.Drawing.Size(215, 156)
         Me.botOS.TabIndex = 3
@@ -226,7 +234,7 @@ Partial Class telaPrincipal
         Me.txtBoasVindas.BackColor = System.Drawing.SystemColors.ButtonFace
         Me.txtBoasVindas.BorderStyle = System.Windows.Forms.BorderStyle.None
         Me.txtBoasVindas.Enabled = False
-        Me.txtBoasVindas.Location = New System.Drawing.Point(353, 370)
+        Me.txtBoasVindas.Location = New System.Drawing.Point(355, 617)
         Me.txtBoasVindas.Multiline = True
         Me.txtBoasVindas.Name = "txtBoasVindas"
         Me.txtBoasVindas.Size = New System.Drawing.Size(142, 20)
@@ -238,7 +246,7 @@ Partial Class telaPrincipal
         '
         Me.lblLogoff.AutoSize = True
         Me.lblLogoff.BackColor = System.Drawing.Color.White
-        Me.lblLogoff.Location = New System.Drawing.Point(376, 8)
+        Me.lblLogoff.Location = New System.Drawing.Point(613, 8)
         Me.lblLogoff.Name = "lblLogoff"
         Me.lblLogoff.Size = New System.Drawing.Size(37, 13)
         Me.lblLogoff.TabIndex = 4
@@ -252,8 +260,9 @@ Partial Class telaPrincipal
         Me.botLogoff.AutoSize = True
         Me.botLogoff.Cursor = System.Windows.Forms.Cursors.Hand
         Me.botLogoff.Image = Global.Sistema_Matrix.My.Resources.Resources.logoff
-        Me.botLogoff.Location = New System.Drawing.Point(416, 0)
+        Me.botLogoff.Location = New System.Drawing.Point(653, 2)
         Me.botLogoff.Margin = New System.Windows.Forms.Padding(0)
+        Me.botLogoff.MaximumSize = New System.Drawing.Size(32, 25)
         Me.botLogoff.Name = "botLogoff"
         Me.botLogoff.RightToLeft = System.Windows.Forms.RightToLeft.No
         Me.botLogoff.Size = New System.Drawing.Size(32, 25)
@@ -261,11 +270,79 @@ Partial Class telaPrincipal
         Me.botLogoff.TabStop = False
         Me.botLogoff.UseVisualStyleBackColor = True
         '
+        'botConsultaContasReceber
+        '
+        Me.botConsultaContasReceber.BackColor = System.Drawing.Color.DarkGreen
+        Me.botConsultaContasReceber.BackgroundImage = CType(resources.GetObject("botConsultaContasReceber.BackgroundImage"), System.Drawing.Image)
+        Me.botConsultaContasReceber.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center
+        Me.botConsultaContasReceber.FlatAppearance.BorderSize = 0
+        Me.botConsultaContasReceber.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.botConsultaContasReceber.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.botConsultaContasReceber.ForeColor = System.Drawing.Color.WhiteSmoke
+        Me.botConsultaContasReceber.Location = New System.Drawing.Point(224, 165)
+        Me.botConsultaContasReceber.Name = "botConsultaContasReceber"
+        Me.botConsultaContasReceber.Size = New System.Drawing.Size(215, 156)
+        Me.botConsultaContasReceber.TabIndex = 4
+        Me.botConsultaContasReceber.Text = "Consulta de Contas a Receber"
+        Me.botConsultaContasReceber.TextAlign = System.Drawing.ContentAlignment.BottomCenter
+        Me.botConsultaContasReceber.UseVisualStyleBackColor = False
+        '
+        'botConsultaNotasFiscais
+        '
+        Me.botConsultaNotasFiscais.BackColor = System.Drawing.Color.Gainsboro
+        Me.botConsultaNotasFiscais.BackgroundImage = CType(resources.GetObject("botConsultaNotasFiscais.BackgroundImage"), System.Drawing.Image)
+        Me.botConsultaNotasFiscais.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center
+        Me.botConsultaNotasFiscais.FlatAppearance.BorderSize = 0
+        Me.botConsultaNotasFiscais.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.botConsultaNotasFiscais.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.botConsultaNotasFiscais.ForeColor = System.Drawing.Color.White
+        Me.botConsultaNotasFiscais.Location = New System.Drawing.Point(445, 165)
+        Me.botConsultaNotasFiscais.Name = "botConsultaNotasFiscais"
+        Me.botConsultaNotasFiscais.Size = New System.Drawing.Size(215, 156)
+        Me.botConsultaNotasFiscais.TabIndex = 5
+        Me.botConsultaNotasFiscais.Text = "Consulta de Notas Fiscais"
+        Me.botConsultaNotasFiscais.TextAlign = System.Drawing.ContentAlignment.BottomCenter
+        Me.botConsultaNotasFiscais.UseVisualStyleBackColor = False
+        '
+        'botDadosEmitente
+        '
+        Me.botDadosEmitente.BackColor = System.Drawing.Color.DarkSlateGray
+        Me.botDadosEmitente.BackgroundImage = CType(resources.GetObject("botDadosEmitente.BackgroundImage"), System.Drawing.Image)
+        Me.botDadosEmitente.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center
+        Me.botDadosEmitente.FlatAppearance.BorderSize = 0
+        Me.botDadosEmitente.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.botDadosEmitente.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.botDadosEmitente.ForeColor = System.Drawing.Color.White
+        Me.botDadosEmitente.Location = New System.Drawing.Point(3, 327)
+        Me.botDadosEmitente.Name = "botDadosEmitente"
+        Me.botDadosEmitente.Size = New System.Drawing.Size(215, 156)
+        Me.botDadosEmitente.TabIndex = 6
+        Me.botDadosEmitente.Text = "Cadastro do Emitente"
+        Me.botDadosEmitente.TextAlign = System.Drawing.ContentAlignment.BottomCenter
+        Me.botDadosEmitente.UseVisualStyleBackColor = False
+        '
+        'botConfirmaNotasFiscais
+        '
+        Me.botConfirmaNotasFiscais.BackColor = System.Drawing.Color.LightGreen
+        Me.botConfirmaNotasFiscais.BackgroundImage = CType(resources.GetObject("botConfirmaNotasFiscais.BackgroundImage"), System.Drawing.Image)
+        Me.botConfirmaNotasFiscais.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center
+        Me.botConfirmaNotasFiscais.FlatAppearance.BorderSize = 0
+        Me.botConfirmaNotasFiscais.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.botConfirmaNotasFiscais.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.botConfirmaNotasFiscais.ForeColor = System.Drawing.Color.WhiteSmoke
+        Me.botConfirmaNotasFiscais.Location = New System.Drawing.Point(224, 327)
+        Me.botConfirmaNotasFiscais.Name = "botConfirmaNotasFiscais"
+        Me.botConfirmaNotasFiscais.Size = New System.Drawing.Size(215, 156)
+        Me.botConfirmaNotasFiscais.TabIndex = 7
+        Me.botConfirmaNotasFiscais.Text = "Confirma Dados Notas Fiscais"
+        Me.botConfirmaNotasFiscais.TextAlign = System.Drawing.ContentAlignment.BottomCenter
+        Me.botConfirmaNotasFiscais.UseVisualStyleBackColor = False
+        '
         'telaPrincipal
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(497, 392)
+        Me.ClientSize = New System.Drawing.Size(697, 540)
         Me.Controls.Add(Me.lblLogoff)
         Me.Controls.Add(Me.botLogoff)
         Me.Controls.Add(Me.txtBoasVindas)
@@ -304,4 +381,8 @@ Partial Class telaPrincipal
     Friend WithEvents menuCadastroUsuario As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents menuAlteracaoUsuario As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents ServiçosToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
+    Friend WithEvents botConsultaContasReceber As System.Windows.Forms.Button
+    Friend WithEvents botConsultaNotasFiscais As System.Windows.Forms.Button
+    Friend WithEvents botDadosEmitente As System.Windows.Forms.Button
+    Friend WithEvents botConfirmaNotasFiscais As System.Windows.Forms.Button
 End Class

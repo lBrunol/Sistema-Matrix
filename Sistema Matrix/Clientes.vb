@@ -19,6 +19,7 @@ Public Class Clientes
         mtxRG.Mask = "00.000.000-0"
         mtxTelefone.Mask = "(00)0000-0000"
 
+        'Atribui o valor retornado pela função atribuiCodigo a textbox do Código
         valorCodCliente = atribuiCodigo("cliCodigo", "cliente")
         txtCodigoCliente.Text = valorCodCliente
 
@@ -34,13 +35,11 @@ Public Class Clientes
         Dim varCelular As String
         Dim varCEP As String
         Dim varTipo As String
-
-        'Declaração de variáveis
         Dim valRetornado As Integer
 
         'Função que verifica se os campos obrigatórios estão vazios
         valRetornado = Funcoes.verificaVazio(Me)
-        'valRetornadoMas = Funcoes.checaCaixasMascara(Me)
+
         'Testa se o valor retornado pela função para dar continuidade aos comandos
         If valRetornado = 0 Then
             'Retira a máscara das caixas de texto

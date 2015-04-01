@@ -2,16 +2,6 @@
 Module Funcoes
     Public i As Integer
     Public j As Integer
-    'Function abreConexao()
-    '    'Abertura do Banco de Dados
-    '    Dim conexao As New OleDb.OleDbConnection("provider = microsoft.ace.oledb.12.0; data source = banco.accdb")
-    '    Try
-    '        conexao.Open()
-    '    Catch exc As Exception
-    '        MsgBox("Ocorreu um erro " & vbCrLf & "Número: " & Err.Number & vbCrLf & Err.Description, MsgBoxStyle.Exclamation, '"Erro")
-    '    End Try
-    '    Return conexao
-    'End Function
     Public Function verificaVazio(ByVal nomeFormulario As Control)
         Dim ctl As Control
         For Each ctl In nomeFormulario.Controls
@@ -204,6 +194,9 @@ Module Funcoes
     End Function
 
     Function atribuiCodigo(ByVal nomeCampo As String, ByVal nomeTabela As String)
+        'Atribui os códigos manualmente no banco, a função faz um select verificando o maior número e adiciona mais 1
+        'a este gerando o código do novo registro.
+        'Funciona através da passagem do nome do campo e da tabela
         Dim strsql As String
         Dim tabela As DataTable
         Dim objBanco As New ConexaoAccess
@@ -212,10 +205,11 @@ Module Funcoes
         strsql = "SELECT MAX (" & nomeCampo & ") FROM " & nomeTabela & ""
 
         tabela = New DataTable
-
+        'Executa o método para buscar no banco
         tabela = objBanco.ExecutaDataTable(strsql)
-
+        'Verifica se a linha retornada é diferente de vazio
         If tabela.Rows(0)(0).ToString <> "" Then
+            'Converte o código retornado em inteiro e adiciona mais 1
             valorCod = CInt(tabela.Rows(0)(0))
             valorCod = valorCod + 1
         Else

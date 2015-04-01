@@ -73,4 +73,20 @@
     Private Sub menuAlteracaoUsuario_Click(sender As Object, e As EventArgs) Handles menuAlteracaoUsuario.Click
         ConsultaUsuarios.Show()
     End Sub
+
+    Private Sub botConsultaContasReceber_Click(sender As Object, e As EventArgs) Handles botConsultaContasReceber.Click
+        ContasReceber.Show()
+    End Sub
+
+    Private Sub botConsultaNotasFiscais_Click(sender As Object, e As EventArgs) Handles botConsultaNotasFiscais.Click
+        NotasFiscais.Show()
+    End Sub
+
+    Private Sub botDadosEmitente_Click(sender As Object, e As EventArgs) Handles botDadosEmitente.Click
+        DadosEmitente.Show()
+    End Sub
+
+    Private Sub botConfirmaNotasFiscais_Click(sender As Object, e As EventArgs) Handles botConfirmaNotasFiscais.Click
+        confirmaNotaFiscal.Show()
+    End Sub
 End Class

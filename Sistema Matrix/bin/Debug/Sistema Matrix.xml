@@ -47,6 +47,10 @@ SistemaMatrix
 	<summary>
   Looks up a localized resource of type System.Drawing.Bitmap.
 </summary>
+</member><member name="P:Sistema_Matrix.My.Resources.Resources.nota_fiscal_eletronica">
+	<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
 </member><member name="P:Sistema_Matrix.My.Resources.Resources.os">
 	<summary>
   Looks up a localized resource of type System.Drawing.Bitmap.
