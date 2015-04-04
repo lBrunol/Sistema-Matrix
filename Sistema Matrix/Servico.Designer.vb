@@ -22,8 +22,8 @@ Partial Class formConsultaUsuarios
     'Não o modifique usando o editor de códigos.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
-        Dim DataGridViewCellStyle1 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle2 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle3 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle4 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Me.tabServico = New System.Windows.Forms.TabControl()
         Me.tabCadastroServicos = New System.Windows.Forms.TabPage()
         Me.lblCodServico = New System.Windows.Forms.Label()
@@ -302,20 +302,20 @@ Partial Class formConsultaUsuarios
         '
         Me.dtgConsultaServicos.AllowUserToAddRows = False
         Me.dtgConsultaServicos.AllowUserToDeleteRows = False
-        DataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        Me.dtgConsultaServicos.AlternatingRowsDefaultCellStyle = DataGridViewCellStyle1
+        DataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        Me.dtgConsultaServicos.AlternatingRowsDefaultCellStyle = DataGridViewCellStyle3
         Me.dtgConsultaServicos.BackgroundColor = System.Drawing.SystemColors.Control
         Me.dtgConsultaServicos.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
         Me.dtgConsultaServicos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.dtgConsultaServicos.Cursor = System.Windows.Forms.Cursors.Hand
-        DataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window
-        DataGridViewCellStyle2.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText
-        DataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.ActiveCaption
-        DataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText
-        DataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
-        Me.dtgConsultaServicos.DefaultCellStyle = DataGridViewCellStyle2
+        DataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.Window
+        DataGridViewCellStyle4.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.ControlText
+        DataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.ActiveCaption
+        DataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
+        Me.dtgConsultaServicos.DefaultCellStyle = DataGridViewCellStyle4
         Me.dtgConsultaServicos.EditMode = System.Windows.Forms.DataGridViewEditMode.EditProgrammatically
         Me.dtgConsultaServicos.Location = New System.Drawing.Point(6, 39)
         Me.dtgConsultaServicos.MultiSelect = False
@@ -333,7 +333,6 @@ Partial Class formConsultaUsuarios
         Me.Name = "formConsultaUsuarios"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "Serviços"
-        Me.TopMost = True
         Me.tabServico.ResumeLayout(False)
         Me.tabCadastroServicos.ResumeLayout(False)
         Me.tabCadastroServicos.PerformLayout()

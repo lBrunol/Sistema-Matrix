@@ -10,13 +10,14 @@ Public Class Form6
     Public valorCodOS As Integer
     Public objBanco As New ConexaoAccess
     Public i As Integer
-    Public valanterior As Integer = 30
+    Public valanterior As Integer = 109
     Public codServ As Integer
     Public codCli As Integer
     Public codFun As Integer
     Public tipCliente As String
     Public varOK As Boolean = True
     Private Sub Form6_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        
         Dim i As Integer = 0
         Try
             'Carrega as combo box com os dados das tabelas cliente, funcionarios e serviços
@@ -29,9 +30,8 @@ Public Class Form6
                     cboCliente.Items.Add(tabela.Rows(i)("cliNome"))
                 Next
             End If
-
+            'Zera o contador para que ele seja reutilizado
             i = 0
-
             strsql = "SELECT * FROM funcionarios"
             tabela = objBanco.ExecutaDataTable(strsql)
             If tabela.Rows.Count > 0 Then
@@ -52,11 +52,15 @@ Public Class Form6
             End If
             i = 0
 
+            'Atribui a data de abertura a textBox
             mtxDataAbertura.Text = Today
 
+            'Gera o código para a ordem de serviço e atribui a textbox
             valorCodOS = atribuiCodigo("ordCodigo", "ordemServico")
             txtCodigo.Text = valorCodOS
 
+            'Desabilita os campos de preenchimento automático
+            habilitaDesabilitaControles(Me, True)
         Catch exc As SqlClient.SqlException
             MsgBox("Erro com banco de dados" & vbCrLf & Err.Description, vbCritical, "Erro com Banco de dados")
         Catch exc As Exception
@@ -70,8 +74,9 @@ Public Class Form6
     End Sub
 
     Private Sub cboCliente_SelectedIndexChanged(sender As Object, e As EventArgs) Handles cboCliente.SelectedIndexChanged
-        If varOK = True Then
+        If varOK = True And cboCliente.SelectedIndex <> -1 Then
             cboCodCliente.SelectedIndex = cboCliente.SelectedIndex
+
         End If
     End Sub
 
@@ -84,167 +89,211 @@ Public Class Form6
         Dim cboServico1(36) As ComboBox
 
 
-        txtValor1(i) = New TextBox()
-        txtQtde1(i) = New TextBox()
-        txtDescricao1(i) = New RichTextBox()
-        cboServico1(i) = New ComboBox()
+        txtValor1(i) = New System.Windows.Forms.TextBox()
+        txtQtde1(i) = New System.Windows.Forms.TextBox()
+        txtDescricao1(i) = New System.Windows.Forms.RichTextBox()
+        cboServico1(i) = New System.Windows.Forms.ComboBox()
 
+        Me.Size = New Size(770, Me.Height + 107)
+        tabOrdemServico.Size = New Size(730, tabOrdemServico.Height + 85)
+        grpServico.Size = New Size(695, grpServico.Height + 70)
+
+        'Cria a txtValor
         txtValor1(i).Name = "txtValor" & i
         txtValor1(i).Height = 20
         txtValor1(i).Width = 95
-        txtValor1(i).Location = New Point(307, (valanterior * 2))
+        txtValor1(i).Location = New Point(307, valanterior)
         txtValor1(i).BringToFront()
-        Me.Controls.Add(txtValor1(i))
         grpServico.Controls.Add(txtValor1(i))
-        grpServico.Size = New Size(695, grpServico.Height + 105)
-        Me.Size = New Size(770, 666 + 125)
-        tabOrdemServico.Size = New Size(730, 604 + 115)
-        valanterior = valanterior + 30
+        'Me.Controls.Add(txtValor1(i))
+
+        'Cria a text box quantidade
+        txtQtde1(i).Name = "txtQtde" & i
+        txtQtde1(i).Height = 20
+        txtQtde1(i).Width = 39
+        txtQtde1(i).Location = New Point(407, valanterior)
+        grpServico.Controls.Add(txtQtde1(i))
+
+        'Cria a text box descrição
+        txtDescricao1(i).Name = "txtDescricao" & i
+        txtDescricao1(i).Height = 56
+        txtDescricao1(i).Width = 216
+        txtDescricao1(i).Location = New Point(468, valanterior)
+        grpServico.Controls.Add(txtDescricao1(i))
+
+        'Cria a combo box descrição
+        cboServico1(i).Name = "txtDescricao" & i
+        cboServico1(i).Height = 21
+        cboServico1(i).Width = 289
+        cboServico1(i).Location = New Point(6, valanterior)
+        grpServico.Controls.Add(cboServico1(i))
+
+        'Carrega as combo box
+        j = 0
+        strsql = "SELECT * FROM servicos"
+        tabela = objBanco.ExecutaDataTable(strsql)
+        If tabela.Rows.Count > 0 Then
+            For j = 0 To tabela.Rows.Count - 1
+                cboServico1(i).Items.Add(tabela.Rows(j)("svcNome"))
+            Next
+        End If
+
+        'Reposiciona o botão para criar as novas textbox
+        botNovoServico.Location = New Point(4, valanterior + 35)
+
+        valanterior = valanterior + 70
+        
         i = i + 1
     End Sub
     Private Sub cboCodCliente_SelectedIndexChanged(sender As Object, e As EventArgs) Handles cboCodCliente.SelectedIndexChanged
-
-        Try
-            codCli = cboCodCliente.SelectedItem
-            strsql = "SELECT * FROM cliente WHERE cliCodigo = " & codCli
-            leitor = objBanco.ExecutaDataRead(strsql)
-            leitor.Read()
-
-            txtEndereco.Text = leitor.Item(2).ToString
-            txtBairro.Text = leitor.Item(3).ToString
-            mtxCEP.Text = leitor.Item(4).ToString
-            txtCidade.Text = leitor.Item(5).ToString
-            txtUF.Text = leitor.Item(6).ToString
-            mtxTelefone.Text = leitor.Item(7).ToString
-            txtNumEndereco.Text = leitor.Item(11).ToString
-            txtComplemento.Text = leitor.Item(13).ToString
-
-            If leitor.Item("cliTipo").ToString = "F" Then
-                strsql = "SELECT * FROM cliPessoaFisica WHERE cliCodigo = " & codCli
+        If cboCodCliente.SelectedIndex <> -1 Then
+            Try
+                codCli = cboCodCliente.SelectedItem
+                strsql = "SELECT * FROM cliente WHERE cliCodigo = " & codCli
                 leitor = objBanco.ExecutaDataRead(strsql)
                 leitor.Read()
 
-                mtxCPF.Visible = True
-                lblCPF.Visible = True
-                mtxRG.Visible = True
-                lblRG.Visible = True
+                txtEndereco.Text = leitor.Item(2).ToString
+                txtBairro.Text = leitor.Item(3).ToString
+                mtxCEP.Text = leitor.Item(4).ToString
+                txtCidade.Text = leitor.Item(5).ToString
+                txtUF.Text = leitor.Item(6).ToString
+                mtxTelefone.Text = leitor.Item(7).ToString
+                txtNumEndereco.Text = leitor.Item(11).ToString
+                txtComplemento.Text = leitor.Item(13).ToString
+
+                If leitor.Item("cliTipo").ToString = "F" Then
+                    strsql = "SELECT * FROM cliPessoaFisica WHERE cliCodigo = " & codCli
+                    leitor = objBanco.ExecutaDataRead(strsql)
+                    leitor.Read()
+
+                    mtxCPF.Visible = True
+                    lblCPF.Visible = True
+                    mtxRG.Visible = True
+                    lblRG.Visible = True
 
 
-                mtxRG.Text = leitor.Item(0).ToString
-                mtxCPF.Text = leitor.Item(1).ToString
+                    mtxRG.Text = leitor.Item(0).ToString
+                    mtxCPF.Text = leitor.Item(1).ToString
 
-                mtxCNPJ.Visible = False
-                lblCNPJ.Visible = False
-                mtxIE.Visible = False
-                lblIE.Visible = False
-                txtIM.Visible = False
-                lblIM.Visible = False
-                lblRazaoSocial.Visible = False
-                txtRazaoSocial.Visible = False
-
-
-            ElseIf leitor.Item(15).ToString = "J" Then
-
-                strsql = "SELECT * FROM cliPessoaJuridica WHERE cliCodigo = " & codCli
-                leitor = objBanco.ExecutaDataRead(strsql)
-                leitor.Read()
-
-                mtxCPF.Visible = False
-                lblCPF.Visible = False
-                mtxRG.Visible = False
-                lblRG.Visible = False
+                    mtxCNPJ.Visible = False
+                    lblCNPJ.Visible = False
+                    mtxIE.Visible = False
+                    lblIE.Visible = False
+                    txtIM.Visible = False
+                    lblIM.Visible = False
+                    lblRazaoSocial.Visible = False
+                    txtRazaoSocial.Visible = False
 
 
+                ElseIf leitor.Item(15).ToString = "J" Then
 
-                mtxCNPJ.Visible = True
-                lblCNPJ.Visible = True
-                mtxIE.Visible = True
-                lblIE.Visible = True
-                txtIM.Visible = True
-                lblIM.Visible = True
-                lblRazaoSocial.Visible = True
-                txtRazaoSocial.Visible = True
+                    strsql = "SELECT * FROM cliPessoaJuridica WHERE cliCodigo = " & codCli
+                    leitor = objBanco.ExecutaDataRead(strsql)
+                    leitor.Read()
 
-                mtxCNPJ.Text = leitor.Item(0).ToString
-                txtIM.Text = leitor.Item(1).ToString
-                mtxIE.Text = leitor.Item(2).ToString
-                txtRazaoSocial.Text = leitor.Item(3).ToString
-            End If
-            habilitaDesabilitaControles(grpCliente, True)
-        Catch exc As SqlClient.SqlException
-            MsgBox("Erro com banco de dados" & vbCrLf & Err.Description, vbCritical, "Erro com Banco de dados")
-        Catch exc As Exception
-            MsgBox("Erro" & vbCrLf & Err.Number & vbCrLf & Err.Description, vbCritical, "Erro")
-        Finally
-            'Fecha a conexão
-            objBanco.DesconectarBanco()
-            strsql = String.Empty
-            'Testa se a variável leitor foi alterada, se sim a conexão com banco de dados será fechada
-            If leitor IsNot Nothing Then
-                leitor = Nothing
-            End If
-        End Try
+                    mtxCPF.Visible = False
+                    lblCPF.Visible = False
+                    mtxRG.Visible = False
+                    lblRG.Visible = False
+
+
+
+                    mtxCNPJ.Visible = True
+                    lblCNPJ.Visible = True
+                    mtxIE.Visible = True
+                    lblIE.Visible = True
+                    txtIM.Visible = True
+                    lblIM.Visible = True
+                    lblRazaoSocial.Visible = True
+                    txtRazaoSocial.Visible = True
+
+                    mtxCNPJ.Text = leitor.Item(0).ToString
+                    txtIM.Text = leitor.Item(1).ToString
+                    mtxIE.Text = leitor.Item(2).ToString
+                    txtRazaoSocial.Text = leitor.Item(3).ToString
+                End If
+                habilitaDesabilitaControles(grpCliente, True)
+            Catch exc As SqlClient.SqlException
+                MsgBox("Erro com banco de dados" & vbCrLf & Err.Description, vbCritical, "Erro com Banco de dados")
+            Catch exc As Exception
+                MsgBox("Erro" & vbCrLf & Err.Number & vbCrLf & Err.Description, vbCritical, "Erro")
+            Finally
+                'Fecha a conexão
+                objBanco.DesconectarBanco()
+                strsql = String.Empty
+                'Testa se a variável leitor foi alterada, se sim a conexão com banco de dados será fechada
+                If leitor IsNot Nothing Then
+                    leitor = Nothing
+                End If
+            End Try
+        End If
     End Sub
 
     Private Sub cboFuncionario_SelectedIndexChanged(sender As Object, e As EventArgs) Handles cboFuncionario.SelectedIndexChanged
-        If varOK = True Then
+        If varOK = True And cboFuncionario.SelectedIndex <> -1 Then
             cboCodFuncionario.SelectedIndex = cboFuncionario.SelectedIndex
         End If
     End Sub
 
     Private Sub cboServico_SelectedIndexChanged(sender As Object, e As EventArgs) Handles cboServico.SelectedIndexChanged
-        If varOK = True Then
+        If varOK = True And cboServico.SelectedIndex <> -1 Then
             cboCodServico.SelectedIndex = cboServico.SelectedIndex
         End If
     End Sub
 
     Private Sub cboCodServico_SelectedIndexChanged(sender As Object, e As EventArgs) Handles cboCodServico.SelectedIndexChanged
-        Try
-            codServ = cboCodServico.SelectedItem
-            strsql = "SELECT * FROM servicos WHERE svcCodigo = " & codServ
-            leitor = objBanco.ExecutaDataRead(strsql)
-            leitor.Read()
-            txtValor.Text = leitor.Item(2).ToString
-            txtDescrição.Text = leitor.Item(3).ToString
-            habilitaDesabilitaControles(grpServico, True)
-            txtQtde.Text = "1"
+        If cboCodServico.SelectedIndex <> -1 Then
+            Try
+                codServ = cboCodServico.SelectedItem
+                strsql = "SELECT * FROM servicos WHERE svcCodigo = " & codServ
+                leitor = objBanco.ExecutaDataRead(strsql)
+                leitor.Read()
+                txtValor.Text = leitor.Item(2).ToString
+                txtDescrição.Text = leitor.Item(3).ToString
+                habilitaDesabilitaControles(grpServico, True)
+                txtQtde.Text = "1"
 
-        Catch exc As SqlClient.SqlException
-            MsgBox("Erro com banco de dados" & vbCrLf & Err.Description, vbCritical, "Erro com Banco de dados")
-        Catch exc As Exception
-            MsgBox("Erro" & vbCrLf & Err.Number & vbCrLf & Err.Description, vbCritical, "Erro")
-        Finally
-            'Fecha a conexão
-            objBanco.DesconectarBanco()
-            strsql = String.Empty
-            'Testa se a variável leitor foi alterada, se sim a conexão com banco de dados será fechada
-            If leitor IsNot Nothing Then
-                leitor = Nothing
-            End If
-        End Try
+            Catch exc As SqlClient.SqlException
+                MsgBox("Erro com banco de dados" & vbCrLf & Err.Description, vbCritical, "Erro com Banco de dados")
+            Catch exc As Exception
+                MsgBox("Erro" & vbCrLf & Err.Number & vbCrLf & Err.Description, vbCritical, "Erro")
+            Finally
+                'Fecha a conexão
+                objBanco.DesconectarBanco()
+                strsql = String.Empty
+                'Testa se a variável leitor foi alterada, se sim a conexão com banco de dados será fechada
+                If leitor IsNot Nothing Then
+                    leitor = Nothing
+                End If
+            End Try
+        End If
     End Sub
 
     Private Sub cboCodFuncionario_SelectedIndexChanged(sender As Object, e As EventArgs) Handles cboCodFuncionario.SelectedIndexChanged
-        Try
-            codFun = cboCodFuncionario.SelectedItem
-            strsql = "SELECT * FROM funcionarios WHERE funMatricula = " & codFun
-            leitor = objBanco.ExecutaDataRead(strsql)
-            leitor.Read()
-            txtCargo.Text = leitor.Item(2).ToString
-            habilitaDesabilitaControles(grpFuncionario, True)
-        Catch exc As SqlClient.SqlException
-            MsgBox("Erro com banco de dados" & vbCrLf & Err.Description, vbCritical, "Erro com Banco de dados")
-        Catch exc As Exception
-            MsgBox("Erro" & vbCrLf & Err.Number & vbCrLf & Err.Description, vbCritical, "Erro")
-        Finally
-            'Fecha a conexão
-            objBanco.DesconectarBanco()
-            strsql = String.Empty
-            'Testa se a variável leitor foi alterada, se sim a conexão com banco de dados será fechada
-            If leitor IsNot Nothing Then
-                leitor = Nothing
-            End If
-        End Try
+        If cboCodFuncionario.SelectedIndex <> -1 Then
+            Try
+                codFun = cboCodFuncionario.SelectedItem
+                strsql = "SELECT * FROM funcionarios WHERE funMatricula = " & codFun
+                leitor = objBanco.ExecutaDataRead(strsql)
+                leitor.Read()
+                txtCargo.Text = leitor.Item(2).ToString
+                habilitaDesabilitaControles(grpFuncionario, True)
+            Catch exc As SqlClient.SqlException
+                MsgBox("Erro com banco de dados" & vbCrLf & Err.Description, vbCritical, "Erro com Banco de dados")
+            Catch exc As Exception
+                MsgBox("Erro" & vbCrLf & Err.Number & vbCrLf & Err.Description, vbCritical, "Erro")
+            Finally
+                'Fecha a conexão
+                objBanco.DesconectarBanco()
+                strsql = String.Empty
+                'Testa se a variável leitor foi alterada, se sim a conexão com banco de dados será fechada
+                If leitor IsNot Nothing Then
+                    leitor = Nothing
+                End If
+            End Try
+        End If
+        
     End Sub
 
     Private Sub botCadastrar_Click(sender As Object, e As EventArgs) Handles botCadastrar.Click
@@ -256,30 +305,29 @@ Public Class Form6
             dataFechamento = Replace(dataFechamento, " ", "")
         End If
         Try
-            If MsgBox("Atenção, depois de confirmar está mensagem, não será mais possível alterar ou excluir a Ordem de Serviço" & vbCrLf & "Deseja prosseguir?", vbQuestion + vbYesNo, "Aviso") = vbYes Then
-                If cboCliente.Text = "" Or cboFuncionario.Text = "" Or cboServico.Text = "" Then
-                    MsgBox("Por favor, preencha as ComboBox para prosseguir", vbExclamation, "Aviso")
-                Else
-                    'Inseri os dados da ordem de serviço    
-                    strsql = "INSERT INTO ordemServico (ordCodigo , ordOcorrencia, ordDataAbertura, ordDataFechamento, cliCodigo, funMatricula) VALUES (" & valorCodOS & " ,'" & txtDescricaoOS.Text & "', '" & mtxDataAbertura.Text & "' , '" & dataFechamento & "' , " & codCli & ", " & codFun & ")"
-                    objBanco.ExecutaQuery(strsql)
+            If cboCliente.Text = "" Or cboFuncionario.Text = "" Or cboServico.Text = "" Then
+                MsgBox("Por favor, preencha as ComboBox para prosseguir", vbExclamation, "Aviso")
+            ElseIf MsgBox("Atenção, depois de confirmar está mensagem, não será mais possível alterar ou excluir a Ordem de Serviço" & vbCrLf & "Deseja prosseguir?", vbQuestion + vbYesNo, "Aviso") = vbYes Then
+                'Inseri os dados da ordem de serviço    
+                strsql = "INSERT INTO ordemServico (ordCodigo , ordOcorrencia, ordDataAbertura, ordDataFechamento, cliCodigo, funMatricula) VALUES (" & valorCodOS & " ,'" & txtDescricaoOS.Text & "', '" & mtxDataAbertura.Text & "' , '" & dataFechamento & "' , " & codCli & ", " & codFun & ")"
+                objBanco.ExecutaQuery(strsql)
 
-                    'Adiciona os dados de serviço na tabela servicos_os
-                    strsql = "INSERT INTO servicos_os(seoData, seoQuantidade, ordCodigo, svcCodigo) VALUES ('" & Today & "', '" & txtQtde.Text & "' , " & valorCodOS & ", " & codServ & ")"
-                    objBanco.ExecutaQuery(strsql)
-                    MsgBox("Dados inseridos com sucesso", vbInformation, "Aviso")
-                    Limpar(Me)
-                    valorCodOS = atribuiCodigo("ordCodigo", "ordemServico")
-                    txtCodigo.Text = valorCodOS
-                    habilitaDesabilitaControles(Me, False)
-                    mtxDataAbertura.Enabled = False
-                    cboCliente.ResetText()
-                    cboFuncionario.ResetText()
-                    cboServico.ResetText()
-                    mtxDataAbertura.Text = Date.Today
-                End If
+                'Adiciona os dados de serviço na tabela servicos_os
+                strsql = "INSERT INTO servicos_os(seoData, seoQuantidade, ordCodigo, svcCodigo) VALUES ('" & Today & "', '" & txtQtde.Text & "' , " & valorCodOS & ", " & codServ & ")"
+                objBanco.ExecutaQuery(strsql)
+                MsgBox("Dados inseridos com sucesso", vbInformation, "Aviso")
+                'Limpar(Me)
+                'valorCodOS = atribuiCodigo("ordCodigo", "ordemServico")
+                'txtCodigo.Text = valorCodOS
+                habilitaDesabilitaControles(Me, True)
+                mtxDataAbertura.Enabled = False
+                cboCliente.ResetText()
+                cboFuncionario.ResetText()
+                cboServico.ResetText()
+                mtxDataAbertura.Text = Date.Today
+                modoNovo()
             Else
-
+                Exit Sub
             End If
         Catch exc As SqlClient.SqlException
             MsgBox("Erro com banco de dados" & vbCrLf & Err.Description, vbCritical, "Erro com Banco de dados")
@@ -295,11 +343,6 @@ Public Class Form6
             End If
         End Try
     End Sub
-
-    Private Sub dtgOrdemServico_Enter(sender As Object, e As EventArgs) Handles dtgOrdemServico.Enter
-
-    End Sub
-
     Private Sub tabConsultaOrdem_Enter(sender As Object, e As EventArgs) Handles tabConsultaOrdem.Enter
         dtgOrdemServico.Rows.Clear()
         Try
@@ -358,7 +401,6 @@ Public Class Form6
 
             If tipCliente = "F" Then
                 'Verifica qual dos radio buttons estão marcados e carrega os valores do select nas textbox
-
                 strsql = "SELECT ordCodigo, ordOcorrencia, ordDataAbertura, ordDataFechamento, cliente.cliNome, cliente.cliCodigo, ordemServico.cliCodigo, cliEndereco, cliBairro, cliCEP, cliCidade, cliUF, cliTelefone, cliNumEndereco, cliComplemento, cliRG, cliCPF, funNome, funCargo FROM (funcionarios INNER JOIN (cliente INNER JOIN ordemServico ON cliente.cliCodigo = ordemServico.cliCodigo) ON funcionarios.funMatricula = ordemServico.funMatricula) INNER JOIN cliPessoaFisica ON cliente.cliCodigo = cliPessoaFisica.cliCodigo WHERE ordemServico.ordCodigo = " & valorCodOS
 
                 leitor = objBanco.ExecutaDataRead(strsql)
@@ -397,10 +439,11 @@ Public Class Form6
 
                 habilitaDesabilitaControles(Me, True)
                 mtxDataFechamento.Enabled = True
-                cboCliente.Enabled = False
-                cboFuncionario.Enabled = False
-                cboServico.Enabled = False
+                cboCliente.Enabled = True
+                cboFuncionario.Enabled = True
+                cboServico.Enabled = True
                 txtQtde.Enabled = False
+                varOK = True
             Else
                 strsql = "SELECT ordemServico.ordCodigo, ordemServico.ordOcorrencia, ordemServico.ordDataAbertura, ordemServico.ordDataFechamento, cliente.cliNome, cliente.cliEndereco, cliente.cliBairro, cliente.cliCEP, cliente.cliCidade, cliente.cliUF, cliente.cliTelefone, cliente.cliNumEndereco, cliente.cliComplemento, cliPessoaJuridica.cliCNPJ, cliPessoaJuridica.cliIM, cliPessoaJuridica.cliIE, cliPessoaJuridica.cliRazaoSocial, funcionarios.funNome, funcionarios.funCargo FROM (funcionarios INNER JOIN (cliente INNER JOIN ordemServico ON cliente.cliCodigo = ordemServico.cliCodigo) ON funcionarios.funMatricula = ordemServico.funMatricula) INNER JOIN cliPessoaJuridica ON cliente.cliCodigo = cliPessoaJuridica.cliCodigo WHERE ordemServico.ordCodigo = " & valorCodOS
 
@@ -442,10 +485,11 @@ Public Class Form6
                 txtDescrição.Text = leitor.Item("svcDescricao").ToString
 
                 habilitaDesabilitaControles(Me, True)
-                cboCliente.Enabled = False
-                cboFuncionario.Enabled = False
-                cboServico.Enabled = False
+                cboCliente.Enabled = True
+                cboFuncionario.Enabled = True
+                cboServico.Enabled = True
                 txtQtde.Enabled = False
+                varOK = True
             End If
         Catch exc As SqlClient.SqlException
             MsgBox("Erro com banco de dados" & vbCrLf & Err.Description, vbCritical, "Erro com Banco de dados")
@@ -464,20 +508,15 @@ Public Class Form6
     End Sub
 
     Private Sub botModoNovo_Click(sender As Object, e As EventArgs) Handles botModoNovo.Click
-        botCadastrar.Visible = True
-        lblCadastrar.Visible = True
-        botLimpar.Visible = True
-        lblLimpar.Visible = True
-        botAlterar.Visible = False
-        lblAlterar.Visible = False
-        botExcluir.Visible = False
-        lblExcluir.Visible = False
-        botModoNovo.Visible = False
-        lblInserir.Visible = False
-        cboCliente.Enabled = True
-        cboFuncionario.Enabled = True
-        cboServico.Enabled = True
-        Limpar(Me)
+        modoNovo()
+        'If cboCliente.SelectedIndex <> -1 Or cboFuncionario.SelectedIndex <> -1 Or cboServico.SelectedIndex <> -1 Then
+        cboCliente.SelectedIndex = -1
+        cboServico.SelectedIndex = -1
+        cboFuncionario.SelectedIndex = -1
+        cboCodCliente.SelectedIndex = -1
+        cboCodServico.SelectedIndex = -1
+        cboCodFuncionario.SelectedIndex = -1
+        'End If
     End Sub
 
     Private Sub botAlterar_Click(sender As Object, e As EventArgs) Handles botAlterar.Click
@@ -493,7 +532,8 @@ Public Class Form6
             strsql = "UPDATE ordemServico SET ordDataFechamento = '" & dataFechamento & "' WHERE ordCodigo = " & valorCodOS
             objBanco.ExecutaQuery(strsql)
             MsgBox("Dados Alterados com Sucesso", vbInformation, "Aviso")
-            Funcoes.Limpar(Me)
+            modoNovo()
+
         Catch exc As SqlClient.SqlException
             MsgBox("Erro com banco de dados" & vbCrLf & Err.Number & Err.Description, vbCritical, "Erro com Banco de dados")
         Catch exc As Exception
@@ -501,5 +541,28 @@ Public Class Form6
         Finally
             objBanco.DesconectarBanco()
         End Try
+    End Sub
+
+    Private Sub modoNovo()
+        botCadastrar.Visible = True
+        lblCadastrar.Visible = True
+        botLimpar.Visible = True
+        lblLimpar.Visible = True
+        botAlterar.Visible = False
+        lblAlterar.Visible = False
+        botExcluir.Visible = False
+        lblExcluir.Visible = False
+        botModoNovo.Visible = False
+        lblInserir.Visible = False
+        cboCliente.Enabled = True
+        cboFuncionario.Enabled = True
+        cboServico.Enabled = True
+        Limpar(Me)
+        valorCodOS = atribuiCodigo("ordCodigo", "ordemServico")
+        txtCodigo.Text = valorCodOS
+    End Sub
+
+    Private Sub Form6_FormClosed(sender As Object, e As FormClosedEventArgs) Handles MyBase.FormClosed
+        Funcoes.HabilitaBotaoLogOff()
     End Sub
 End Class

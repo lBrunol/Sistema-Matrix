@@ -42,13 +42,13 @@ Partial Class telaPrincipal
         Me.botServicos = New System.Windows.Forms.Button()
         Me.botFuncionario = New System.Windows.Forms.Button()
         Me.botOS = New System.Windows.Forms.Button()
-        Me.txtBoasVindas = New System.Windows.Forms.TextBox()
-        Me.lblLogoff = New System.Windows.Forms.Label()
-        Me.botLogoff = New System.Windows.Forms.Button()
         Me.botConsultaContasReceber = New System.Windows.Forms.Button()
         Me.botConsultaNotasFiscais = New System.Windows.Forms.Button()
         Me.botDadosEmitente = New System.Windows.Forms.Button()
         Me.botConfirmaNotasFiscais = New System.Windows.Forms.Button()
+        Me.txtBoasVindas = New System.Windows.Forms.TextBox()
+        Me.lblLogoff = New System.Windows.Forms.Label()
+        Me.botLogoff = New System.Windows.Forms.Button()
         Me.MenuStrip1.SuspendLayout()
         Me.FlowLayoutPanel1.SuspendLayout()
         Me.SuspendLayout()
@@ -229,47 +229,6 @@ Partial Class telaPrincipal
         Me.botOS.TextAlign = System.Drawing.ContentAlignment.BottomCenter
         Me.botOS.UseVisualStyleBackColor = False
         '
-        'txtBoasVindas
-        '
-        Me.txtBoasVindas.BackColor = System.Drawing.SystemColors.ButtonFace
-        Me.txtBoasVindas.BorderStyle = System.Windows.Forms.BorderStyle.None
-        Me.txtBoasVindas.Enabled = False
-        Me.txtBoasVindas.Location = New System.Drawing.Point(355, 617)
-        Me.txtBoasVindas.Multiline = True
-        Me.txtBoasVindas.Name = "txtBoasVindas"
-        Me.txtBoasVindas.Size = New System.Drawing.Size(142, 20)
-        Me.txtBoasVindas.TabIndex = 2
-        Me.txtBoasVindas.TabStop = False
-        Me.txtBoasVindas.TextAlign = System.Windows.Forms.HorizontalAlignment.Right
-        '
-        'lblLogoff
-        '
-        Me.lblLogoff.AutoSize = True
-        Me.lblLogoff.BackColor = System.Drawing.Color.White
-        Me.lblLogoff.Location = New System.Drawing.Point(613, 8)
-        Me.lblLogoff.Name = "lblLogoff"
-        Me.lblLogoff.Size = New System.Drawing.Size(37, 13)
-        Me.lblLogoff.TabIndex = 4
-        Me.lblLogoff.Text = "Logoff"
-        '
-        'botLogoff
-        '
-        Me.botLogoff.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
-            Or System.Windows.Forms.AnchorStyles.Left) _
-            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.botLogoff.AutoSize = True
-        Me.botLogoff.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.botLogoff.Image = Global.Sistema_Matrix.My.Resources.Resources.logoff
-        Me.botLogoff.Location = New System.Drawing.Point(653, 2)
-        Me.botLogoff.Margin = New System.Windows.Forms.Padding(0)
-        Me.botLogoff.MaximumSize = New System.Drawing.Size(32, 25)
-        Me.botLogoff.Name = "botLogoff"
-        Me.botLogoff.RightToLeft = System.Windows.Forms.RightToLeft.No
-        Me.botLogoff.Size = New System.Drawing.Size(32, 25)
-        Me.botLogoff.TabIndex = 3
-        Me.botLogoff.TabStop = False
-        Me.botLogoff.UseVisualStyleBackColor = True
-        '
         'botConsultaContasReceber
         '
         Me.botConsultaContasReceber.BackColor = System.Drawing.Color.DarkGreen
@@ -338,10 +297,52 @@ Partial Class telaPrincipal
         Me.botConfirmaNotasFiscais.TextAlign = System.Drawing.ContentAlignment.BottomCenter
         Me.botConfirmaNotasFiscais.UseVisualStyleBackColor = False
         '
+        'txtBoasVindas
+        '
+        Me.txtBoasVindas.BackColor = System.Drawing.SystemColors.ButtonFace
+        Me.txtBoasVindas.BorderStyle = System.Windows.Forms.BorderStyle.None
+        Me.txtBoasVindas.Enabled = False
+        Me.txtBoasVindas.Location = New System.Drawing.Point(355, 617)
+        Me.txtBoasVindas.Multiline = True
+        Me.txtBoasVindas.Name = "txtBoasVindas"
+        Me.txtBoasVindas.Size = New System.Drawing.Size(142, 20)
+        Me.txtBoasVindas.TabIndex = 2
+        Me.txtBoasVindas.TabStop = False
+        Me.txtBoasVindas.TextAlign = System.Windows.Forms.HorizontalAlignment.Right
+        '
+        'lblLogoff
+        '
+        Me.lblLogoff.AutoSize = True
+        Me.lblLogoff.BackColor = System.Drawing.Color.White
+        Me.lblLogoff.Location = New System.Drawing.Point(613, 8)
+        Me.lblLogoff.Name = "lblLogoff"
+        Me.lblLogoff.Size = New System.Drawing.Size(37, 13)
+        Me.lblLogoff.TabIndex = 4
+        Me.lblLogoff.Text = "Logoff"
+        '
+        'botLogoff
+        '
+        Me.botLogoff.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
+            Or System.Windows.Forms.AnchorStyles.Left) _
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.botLogoff.AutoSize = True
+        Me.botLogoff.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.botLogoff.Image = Global.Sistema_Matrix.My.Resources.Resources.logoff
+        Me.botLogoff.Location = New System.Drawing.Point(653, 2)
+        Me.botLogoff.Margin = New System.Windows.Forms.Padding(0)
+        Me.botLogoff.MaximumSize = New System.Drawing.Size(32, 25)
+        Me.botLogoff.Name = "botLogoff"
+        Me.botLogoff.RightToLeft = System.Windows.Forms.RightToLeft.No
+        Me.botLogoff.Size = New System.Drawing.Size(32, 25)
+        Me.botLogoff.TabIndex = 3
+        Me.botLogoff.TabStop = False
+        Me.botLogoff.UseVisualStyleBackColor = True
+        '
         'telaPrincipal
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
+        Me.BackColor = System.Drawing.SystemColors.Window
         Me.ClientSize = New System.Drawing.Size(697, 540)
         Me.Controls.Add(Me.lblLogoff)
         Me.Controls.Add(Me.botLogoff)

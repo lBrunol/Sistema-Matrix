@@ -242,4 +242,8 @@ Public Class formConsultaUsuarios
             e.Handled = True
         End If
     End Sub
+
+    Private Sub formConsultaUsuarios_FormClosed(sender As Object, e As FormClosedEventArgs) Handles MyBase.FormClosed
+        Funcoes.HabilitaBotaoLogOff()
+    End Sub
 End Class

@@ -78,4 +78,8 @@ Public Class Usuario
         valorCodUsuario = atribuiCodigo("usrCodigo", "usuarios")
         txtCodigoUsuario.Text = valorCodUsuario
     End Sub
+
+    Private Sub Usuario_FormClosed(sender As Object, e As FormClosedEventArgs) Handles MyBase.FormClosed
+        Funcoes.HabilitaBotaoLogOff()
+    End Sub
 End Class

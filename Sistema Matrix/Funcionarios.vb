@@ -217,4 +217,8 @@ Public Class Funcionarios
         botModoNovo.Visible = False
         lblInserir.Visible = False
     End Sub
+
+    Private Sub Funcionarios_FormClosed(sender As Object, e As FormClosedEventArgs) Handles MyBase.FormClosed
+        Funcoes.HabilitaBotaoLogOff()
+    End Sub
 End Class

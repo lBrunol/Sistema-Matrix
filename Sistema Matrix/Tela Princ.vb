@@ -1,14 +1,28 @@
-﻿Public Class telaPrincipal
+﻿Imports System.Windows.Forms.VisualStyles.VisualStyleElement
+
+Public Class telaPrincipal
+    Private Sub abreFormularios(nomeForm As Form)
+        'Esse procedimento recebe o resultado da função que verifica quantos forms estão abertos e realiza o tratamento
+        Dim numFormsAbertos As Integer
+        numFormsAbertos = quantFormsAbertos()
+        If numFormsAbertos > 3 Then
+            MsgBox("Você excedeu o limite de telas abertas", vbExclamation, "Atenção")
+        Else
+            Me.botLogoff.Enabled = False
+            nomeForm.Show()
+        End If
+    End Sub
+
     Private Sub CadastroDeClientesToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles CadastroDeClientesToolStripMenuItem.Click
-        Clientes.Show()
+        abreFormularios(Clientes)
     End Sub
 
     Private Sub menuCadastroFornecedor_Click(sender As Object, e As EventArgs) Handles menuCadastroFornecedor.Click
-        Funcionarios.Show()
+        abreFormularios(Funcionarios)
     End Sub
 
     Private Sub menuCadastroFuncionario_Click(sender As Object, e As EventArgs)
-        Funcionarios.Show()
+        abreFormularios(Funcionarios)
     End Sub
 
     Private Sub menuSair_Click(sender As Object, e As EventArgs) Handles menuSair.Click
@@ -19,23 +33,23 @@
     End Sub
 
     Private Sub botCadastro_Click(sender As Object, e As EventArgs) Handles botCadastro.Click
-        Clientes.Show()
+        abreFormularios(Clientes)
     End Sub
 
     Private Sub botServicos_Click(sender As Object, e As EventArgs) Handles botServicos.Click
-        formConsultaUsuarios.Show()
+        abreFormularios(formConsultaUsuarios)
     End Sub
 
     Private Sub botFuncionario_Click(sender As Object, e As EventArgs) Handles botFuncionario.Click
-        Funcionarios.Show()
+        abreFormularios(Funcionarios)
     End Sub
 
     Private Sub botOS_Click(sender As Object, e As EventArgs) Handles botOS.Click
-        Form6.Show()
+        abreFormularios(Form6)
     End Sub
 
     Private Sub OrdemDeServiçoToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles OrdemDeServiçoToolStripMenuItem.Click
-        Form6.Show()
+        abreFormularios(Form6)
     End Sub
 
     Private Sub menuSobre_Click(sender As Object, e As EventArgs) Handles menuSobre.Click
@@ -47,6 +61,7 @@
     End Sub
 
     Private Sub telaPrincipal_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        'Atribui o nome do usuário logado na label e verifica se o usuário que logou é administrador
         txtBoasVindas.Text = "Olá " & Login.strUsuario
         If Login.varUsuarioAdm = False Then
             menuAdministrador.Visible = False
@@ -58,35 +73,33 @@
     Private Sub botLogoff_Click(sender As Object, e As EventArgs) Handles botLogoff.Click
         ActiveForm.Close()
         Login.Show()
-        Limpar(Me)
-
     End Sub
 
     Private Sub CadastroToolStripMenuItem3_Click(sender As Object, e As EventArgs) Handles menuCadastroUsuario.Click
-        Usuario.Show()
+        abreFormularios(Usuario)
     End Sub
 
     Private Sub ServiçosToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles ServiçosToolStripMenuItem.Click
-        formConsultaUsuarios.Show()
+        abreFormularios(formConsultaUsuarios)
     End Sub
 
     Private Sub menuAlteracaoUsuario_Click(sender As Object, e As EventArgs) Handles menuAlteracaoUsuario.Click
-        ConsultaUsuarios.Show()
+        abreFormularios(ConsultaUsuarios)
     End Sub
 
     Private Sub botConsultaContasReceber_Click(sender As Object, e As EventArgs) Handles botConsultaContasReceber.Click
-        ContasReceber.Show()
+        abreFormularios(ContasReceber)
     End Sub
 
     Private Sub botConsultaNotasFiscais_Click(sender As Object, e As EventArgs) Handles botConsultaNotasFiscais.Click
-        NotasFiscais.Show()
+        abreFormularios(NotasFiscais)
     End Sub
 
     Private Sub botDadosEmitente_Click(sender As Object, e As EventArgs) Handles botDadosEmitente.Click
-        DadosEmitente.Show()
+        abreFormularios(DadosEmitente)
     End Sub
 
     Private Sub botConfirmaNotasFiscais_Click(sender As Object, e As EventArgs) Handles botConfirmaNotasFiscais.Click
-        confirmaNotaFiscal.Show()
+        abreFormularios(confirmaNotaFiscal)
     End Sub
 End Class

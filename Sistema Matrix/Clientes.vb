@@ -626,4 +626,8 @@ Public Class Clientes
             e.Handled = True
         End If
     End Sub
+
+    Private Sub Clientes_FormClosed(sender As Object, e As FormClosedEventArgs) Handles MyBase.FormClosed
+        Funcoes.HabilitaBotaoLogOff()
+    End Sub
 End Class

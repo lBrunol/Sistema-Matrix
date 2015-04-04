@@ -428,7 +428,6 @@ Partial Class Funcionarios
         Me.Name = "Funcionarios"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "Funcionarios"
-        Me.TopMost = True
         Me.tabFuncionarios.ResumeLayout(False)
         Me.tabCadastroFuncionarios.ResumeLayout(False)
         Me.tabCadastroFuncionarios.PerformLayout()

@@ -26,19 +26,19 @@ Partial Class DadosEmitente
         Me.lblTitulo = New System.Windows.Forms.Label()
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.lblCnpjCpfTomador = New System.Windows.Forms.Label()
-        Me.txtCnpjCpfTomador = New System.Windows.Forms.TextBox()
+        Me.txtNomeFantasia = New System.Windows.Forms.TextBox()
         Me.Label1 = New System.Windows.Forms.Label()
-        Me.TextBox1 = New System.Windows.Forms.TextBox()
+        Me.txtRazaoSocial = New System.Windows.Forms.TextBox()
         Me.Label2 = New System.Windows.Forms.Label()
-        Me.TextBox2 = New System.Windows.Forms.TextBox()
+        Me.txtIM = New System.Windows.Forms.TextBox()
         Me.Label3 = New System.Windows.Forms.Label()
-        Me.TextBox3 = New System.Windows.Forms.TextBox()
+        Me.txtIE = New System.Windows.Forms.TextBox()
         Me.Label4 = New System.Windows.Forms.Label()
-        Me.TextBox4 = New System.Windows.Forms.TextBox()
+        Me.txtEndereco = New System.Windows.Forms.TextBox()
         Me.Label5 = New System.Windows.Forms.Label()
-        Me.TextBox5 = New System.Windows.Forms.TextBox()
+        Me.txtTelefone = New System.Windows.Forms.TextBox()
         Me.Label6 = New System.Windows.Forms.Label()
-        Me.TextBox6 = New System.Windows.Forms.TextBox()
+        Me.txtCEP = New System.Windows.Forms.TextBox()
         Me.lblCadastrar = New System.Windows.Forms.Label()
         Me.lblAlterar = New System.Windows.Forms.Label()
         Me.botAlterar = New System.Windows.Forms.Button()
@@ -81,14 +81,14 @@ Partial Class DadosEmitente
         Me.lblCnpjCpfTomador.TabIndex = 16
         Me.lblCnpjCpfTomador.Text = "Nome Fantasia"
         '
-        'txtCnpjCpfTomador
+        'txtNomeFantasia
         '
-        Me.txtCnpjCpfTomador.Font = New System.Drawing.Font("Century Gothic", 9.75!)
-        Me.txtCnpjCpfTomador.Location = New System.Drawing.Point(12, 164)
-        Me.txtCnpjCpfTomador.Multiline = True
-        Me.txtCnpjCpfTomador.Name = "txtCnpjCpfTomador"
-        Me.txtCnpjCpfTomador.Size = New System.Drawing.Size(317, 23)
-        Me.txtCnpjCpfTomador.TabIndex = 15
+        Me.txtNomeFantasia.Font = New System.Drawing.Font("Century Gothic", 9.75!)
+        Me.txtNomeFantasia.Location = New System.Drawing.Point(12, 164)
+        Me.txtNomeFantasia.Multiline = True
+        Me.txtNomeFantasia.Name = "txtNomeFantasia"
+        Me.txtNomeFantasia.Size = New System.Drawing.Size(317, 23)
+        Me.txtNomeFantasia.TabIndex = 1
         '
         'Label1
         '
@@ -100,14 +100,14 @@ Partial Class DadosEmitente
         Me.Label1.TabIndex = 18
         Me.Label1.Text = "Razão Social"
         '
-        'TextBox1
+        'txtRazaoSocial
         '
-        Me.TextBox1.Font = New System.Drawing.Font("Century Gothic", 9.75!)
-        Me.TextBox1.Location = New System.Drawing.Point(12, 215)
-        Me.TextBox1.Multiline = True
-        Me.TextBox1.Name = "TextBox1"
-        Me.TextBox1.Size = New System.Drawing.Size(317, 23)
-        Me.TextBox1.TabIndex = 17
+        Me.txtRazaoSocial.Font = New System.Drawing.Font("Century Gothic", 9.75!)
+        Me.txtRazaoSocial.Location = New System.Drawing.Point(12, 215)
+        Me.txtRazaoSocial.Multiline = True
+        Me.txtRazaoSocial.Name = "txtRazaoSocial"
+        Me.txtRazaoSocial.Size = New System.Drawing.Size(317, 23)
+        Me.txtRazaoSocial.TabIndex = 2
         '
         'Label2
         '
@@ -119,14 +119,14 @@ Partial Class DadosEmitente
         Me.Label2.TabIndex = 20
         Me.Label2.Text = "Inscrição Municipal"
         '
-        'TextBox2
+        'txtIM
         '
-        Me.TextBox2.Font = New System.Drawing.Font("Century Gothic", 9.75!)
-        Me.TextBox2.Location = New System.Drawing.Point(12, 269)
-        Me.TextBox2.Multiline = True
-        Me.TextBox2.Name = "TextBox2"
-        Me.TextBox2.Size = New System.Drawing.Size(156, 23)
-        Me.TextBox2.TabIndex = 19
+        Me.txtIM.Font = New System.Drawing.Font("Century Gothic", 9.75!)
+        Me.txtIM.Location = New System.Drawing.Point(12, 269)
+        Me.txtIM.Multiline = True
+        Me.txtIM.Name = "txtIM"
+        Me.txtIM.Size = New System.Drawing.Size(156, 23)
+        Me.txtIM.TabIndex = 3
         '
         'Label3
         '
@@ -138,14 +138,14 @@ Partial Class DadosEmitente
         Me.Label3.TabIndex = 22
         Me.Label3.Text = "Inscrição Estadual"
         '
-        'TextBox3
+        'txtIE
         '
-        Me.TextBox3.Font = New System.Drawing.Font("Century Gothic", 9.75!)
-        Me.TextBox3.Location = New System.Drawing.Point(186, 269)
-        Me.TextBox3.Multiline = True
-        Me.TextBox3.Name = "TextBox3"
-        Me.TextBox3.Size = New System.Drawing.Size(143, 23)
-        Me.TextBox3.TabIndex = 21
+        Me.txtIE.Font = New System.Drawing.Font("Century Gothic", 9.75!)
+        Me.txtIE.Location = New System.Drawing.Point(186, 269)
+        Me.txtIE.Multiline = True
+        Me.txtIE.Name = "txtIE"
+        Me.txtIE.Size = New System.Drawing.Size(143, 23)
+        Me.txtIE.TabIndex = 4
         '
         'Label4
         '
@@ -157,14 +157,14 @@ Partial Class DadosEmitente
         Me.Label4.TabIndex = 24
         Me.Label4.Text = "Endereço"
         '
-        'TextBox4
+        'txtEndereco
         '
-        Me.TextBox4.Font = New System.Drawing.Font("Century Gothic", 9.75!)
-        Me.TextBox4.Location = New System.Drawing.Point(12, 324)
-        Me.TextBox4.Multiline = True
-        Me.TextBox4.Name = "TextBox4"
-        Me.TextBox4.Size = New System.Drawing.Size(317, 23)
-        Me.TextBox4.TabIndex = 23
+        Me.txtEndereco.Font = New System.Drawing.Font("Century Gothic", 9.75!)
+        Me.txtEndereco.Location = New System.Drawing.Point(12, 324)
+        Me.txtEndereco.Multiline = True
+        Me.txtEndereco.Name = "txtEndereco"
+        Me.txtEndereco.Size = New System.Drawing.Size(317, 23)
+        Me.txtEndereco.TabIndex = 5
         '
         'Label5
         '
@@ -176,14 +176,14 @@ Partial Class DadosEmitente
         Me.Label5.TabIndex = 28
         Me.Label5.Text = "Telefone"
         '
-        'TextBox5
+        'txtTelefone
         '
-        Me.TextBox5.Font = New System.Drawing.Font("Century Gothic", 9.75!)
-        Me.TextBox5.Location = New System.Drawing.Point(186, 380)
-        Me.TextBox5.Multiline = True
-        Me.TextBox5.Name = "TextBox5"
-        Me.TextBox5.Size = New System.Drawing.Size(143, 23)
-        Me.TextBox5.TabIndex = 27
+        Me.txtTelefone.Font = New System.Drawing.Font("Century Gothic", 9.75!)
+        Me.txtTelefone.Location = New System.Drawing.Point(186, 380)
+        Me.txtTelefone.Multiline = True
+        Me.txtTelefone.Name = "txtTelefone"
+        Me.txtTelefone.Size = New System.Drawing.Size(143, 23)
+        Me.txtTelefone.TabIndex = 7
         '
         'Label6
         '
@@ -195,14 +195,14 @@ Partial Class DadosEmitente
         Me.Label6.TabIndex = 26
         Me.Label6.Text = "CEP"
         '
-        'TextBox6
+        'txtCEP
         '
-        Me.TextBox6.Font = New System.Drawing.Font("Century Gothic", 9.75!)
-        Me.TextBox6.Location = New System.Drawing.Point(12, 380)
-        Me.TextBox6.Multiline = True
-        Me.TextBox6.Name = "TextBox6"
-        Me.TextBox6.Size = New System.Drawing.Size(156, 23)
-        Me.TextBox6.TabIndex = 25
+        Me.txtCEP.Font = New System.Drawing.Font("Century Gothic", 9.75!)
+        Me.txtCEP.Location = New System.Drawing.Point(12, 380)
+        Me.txtCEP.Multiline = True
+        Me.txtCEP.Name = "txtCEP"
+        Me.txtCEP.Size = New System.Drawing.Size(156, 23)
+        Me.txtCEP.TabIndex = 6
         '
         'lblCadastrar
         '
@@ -292,19 +292,19 @@ Partial Class DadosEmitente
         Me.Controls.Add(Me.botAlterar)
         Me.Controls.Add(Me.botCadastrar)
         Me.Controls.Add(Me.Label5)
-        Me.Controls.Add(Me.TextBox5)
+        Me.Controls.Add(Me.txtTelefone)
         Me.Controls.Add(Me.Label6)
-        Me.Controls.Add(Me.TextBox6)
+        Me.Controls.Add(Me.txtCEP)
         Me.Controls.Add(Me.Label4)
-        Me.Controls.Add(Me.TextBox4)
+        Me.Controls.Add(Me.txtEndereco)
         Me.Controls.Add(Me.Label3)
-        Me.Controls.Add(Me.TextBox3)
+        Me.Controls.Add(Me.txtIE)
         Me.Controls.Add(Me.Label2)
-        Me.Controls.Add(Me.TextBox2)
+        Me.Controls.Add(Me.txtIM)
         Me.Controls.Add(Me.Label1)
-        Me.Controls.Add(Me.TextBox1)
+        Me.Controls.Add(Me.txtRazaoSocial)
         Me.Controls.Add(Me.lblCnpjCpfTomador)
-        Me.Controls.Add(Me.txtCnpjCpfTomador)
+        Me.Controls.Add(Me.txtNomeFantasia)
         Me.Controls.Add(Me.PictureBox1)
         Me.Controls.Add(Me.lblTitulo)
         Me.Name = "DadosEmitente"
@@ -318,19 +318,19 @@ Partial Class DadosEmitente
     Friend WithEvents PictureBox1 As System.Windows.Forms.PictureBox
     Friend WithEvents lblTitulo As System.Windows.Forms.Label
     Friend WithEvents lblCnpjCpfTomador As System.Windows.Forms.Label
-    Friend WithEvents txtCnpjCpfTomador As System.Windows.Forms.TextBox
+    Friend WithEvents txtNomeFantasia As System.Windows.Forms.TextBox
     Friend WithEvents Label1 As System.Windows.Forms.Label
-    Friend WithEvents TextBox1 As System.Windows.Forms.TextBox
+    Friend WithEvents txtRazaoSocial As System.Windows.Forms.TextBox
     Friend WithEvents Label2 As System.Windows.Forms.Label
-    Friend WithEvents TextBox2 As System.Windows.Forms.TextBox
+    Friend WithEvents txtIM As System.Windows.Forms.TextBox
     Friend WithEvents Label3 As System.Windows.Forms.Label
-    Friend WithEvents TextBox3 As System.Windows.Forms.TextBox
+    Friend WithEvents txtIE As System.Windows.Forms.TextBox
     Friend WithEvents Label4 As System.Windows.Forms.Label
-    Friend WithEvents TextBox4 As System.Windows.Forms.TextBox
+    Friend WithEvents txtEndereco As System.Windows.Forms.TextBox
     Friend WithEvents Label5 As System.Windows.Forms.Label
-    Friend WithEvents TextBox5 As System.Windows.Forms.TextBox
+    Friend WithEvents txtTelefone As System.Windows.Forms.TextBox
     Friend WithEvents Label6 As System.Windows.Forms.Label
-    Friend WithEvents TextBox6 As System.Windows.Forms.TextBox
+    Friend WithEvents txtCEP As System.Windows.Forms.TextBox
     Friend WithEvents lblCadastrar As System.Windows.Forms.Label
     Friend WithEvents lblAlterar As System.Windows.Forms.Label
     Friend WithEvents botAlterar As System.Windows.Forms.Button

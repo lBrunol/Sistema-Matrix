@@ -172,7 +172,7 @@ Module Funcoes
         If opcao = True Then
             For Each ctl In nomeFormulario.Controls
                 If TypeOf ctl Is TextBox Or TypeOf ctl Is RichTextBox Or TypeOf ctl Is MaskedTextBox Then
-                    If ctl.Tag = "" Then
+                    If ctl.Tag = "Auto" Then
                         ctl.Enabled = False
                     End If
                 ElseIf ctl.Controls.Count > 0 Then
@@ -182,7 +182,7 @@ Module Funcoes
         Else
             For Each ctl In nomeFormulario.Controls
                 If TypeOf ctl Is TextBox Or TypeOf ctl Is RichTextBox Or TypeOf ctl Is MaskedTextBox Then
-                    If ctl.Tag = "" Then
+                    If ctl.Tag = "Auto" Then
                         ctl.Enabled = True
                     End If
                 ElseIf ctl.Controls.Count > 0 Then
@@ -190,7 +190,7 @@ Module Funcoes
                 End If
             Next
         End If
-        Return True
+        Return opcao
     End Function
 
     Function atribuiCodigo(ByVal nomeCampo As String, ByVal nomeTabela As String)
@@ -219,4 +219,23 @@ Module Funcoes
         Return valorCod
 
     End Function
+
+    Public Function quantFormsAbertos()
+        'Esta função verifica quantos formulários estão abertos
+        Dim guardaNumFormularios As Integer
+        For Each numForms As Form In My.Application.OpenForms
+            guardaNumFormularios = guardaNumFormularios + 1
+        Next
+        Return guardaNumFormularios
+    End Function
+
+    Public Sub HabilitaBotaoLogOff()
+        'Verifica se há apenas o formulário principal aberto, se sim ele habilitará o botão de logoff novamente
+        Dim numFormsAbertos As Integer
+        numFormsAbertos = quantFormsAbertos()
+
+        If (numFormsAbertos = 2) Then
+            telaPrincipal.botLogoff.Enabled = True
+        End If
+    End Sub
 End Module

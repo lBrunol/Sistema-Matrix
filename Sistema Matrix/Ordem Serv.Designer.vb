@@ -193,7 +193,6 @@ Partial Class Form6
         Me.cboCodServico.Name = "cboCodServico"
         Me.cboCodServico.Size = New System.Drawing.Size(121, 21)
         Me.cboCodServico.TabIndex = 74
-        Me.cboCodServico.Visible = False
         '
         'Label5
         '
@@ -212,7 +211,7 @@ Partial Class Form6
         Me.txtQtde.Name = "txtQtde"
         Me.txtQtde.Size = New System.Drawing.Size(39, 20)
         Me.txtQtde.TabIndex = 3
-        Me.txtQtde.Tag = "Não"
+        Me.txtQtde.Tag = ""
         '
         'botNovoServico
         '
@@ -223,7 +222,6 @@ Partial Class Form6
         Me.botNovoServico.TabIndex = 73
         Me.botNovoServico.Text = "Novo"
         Me.botNovoServico.UseVisualStyleBackColor = True
-        Me.botNovoServico.Visible = False
         '
         'Label4
         '
@@ -244,6 +242,7 @@ Partial Class Form6
         Me.txtDescrição.Size = New System.Drawing.Size(216, 56)
         Me.txtDescrição.TabIndex = 77
         Me.txtDescrição.TabStop = False
+        Me.txtDescrição.Tag = "Auto"
         Me.txtDescrição.Text = ""
         '
         'lblValor
@@ -269,11 +268,12 @@ Partial Class Form6
         'txtValor
         '
         Me.txtValor.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtValor.Location = New System.Drawing.Point(307, 38)
+        Me.txtValor.Location = New System.Drawing.Point(308, 39)
         Me.txtValor.Name = "txtValor"
         Me.txtValor.Size = New System.Drawing.Size(95, 20)
         Me.txtValor.TabIndex = 74
         Me.txtValor.TabStop = False
+        Me.txtValor.Tag = "Auto"
         '
         'mtxDataFechamento
         '
@@ -322,6 +322,7 @@ Partial Class Form6
         Me.mtxDataAbertura.Name = "mtxDataAbertura"
         Me.mtxDataAbertura.Size = New System.Drawing.Size(76, 20)
         Me.mtxDataAbertura.TabIndex = 60
+        Me.mtxDataAbertura.Tag = "Auto"
         '
         'lblAlterar
         '
@@ -375,7 +376,6 @@ Partial Class Form6
         Me.cboCodFuncionario.Name = "cboCodFuncionario"
         Me.cboCodFuncionario.Size = New System.Drawing.Size(121, 21)
         Me.cboCodFuncionario.TabIndex = 73
-        Me.cboCodFuncionario.Visible = False
         '
         'Label2
         '
@@ -395,6 +395,7 @@ Partial Class Form6
         Me.txtCargo.Size = New System.Drawing.Size(246, 20)
         Me.txtCargo.TabIndex = 72
         Me.txtCargo.TabStop = False
+        Me.txtCargo.Tag = "Auto"
         '
         'cboFuncionario
         '
@@ -477,6 +478,7 @@ Partial Class Form6
         Me.txtRazaoSocial.Size = New System.Drawing.Size(216, 20)
         Me.txtRazaoSocial.TabIndex = 71
         Me.txtRazaoSocial.TabStop = False
+        Me.txtRazaoSocial.Tag = "Auto"
         Me.txtRazaoSocial.Visible = False
         '
         'cboCodCliente
@@ -487,7 +489,6 @@ Partial Class Form6
         Me.cboCodCliente.Name = "cboCodCliente"
         Me.cboCodCliente.Size = New System.Drawing.Size(121, 21)
         Me.cboCodCliente.TabIndex = 70
-        Me.cboCodCliente.Visible = False
         '
         'lblIM
         '
@@ -508,6 +509,7 @@ Partial Class Form6
         Me.txtIM.Size = New System.Drawing.Size(140, 20)
         Me.txtIM.TabIndex = 67
         Me.txtIM.TabStop = False
+        Me.txtIM.Tag = "Auto"
         Me.txtIM.Visible = False
         '
         'mtxTelefone
@@ -519,6 +521,7 @@ Partial Class Form6
         Me.mtxTelefone.Size = New System.Drawing.Size(100, 20)
         Me.mtxTelefone.TabIndex = 60
         Me.mtxTelefone.TabStop = False
+        Me.mtxTelefone.Tag = "Auto"
         '
         'mtxCEP
         '
@@ -529,6 +532,7 @@ Partial Class Form6
         Me.mtxCEP.Size = New System.Drawing.Size(100, 20)
         Me.mtxCEP.TabIndex = 59
         Me.mtxCEP.TabStop = False
+        Me.mtxCEP.Tag = "Auto"
         '
         'lblTelefone
         '
@@ -548,6 +552,7 @@ Partial Class Form6
         Me.txtBairro.Size = New System.Drawing.Size(172, 20)
         Me.txtBairro.TabIndex = 57
         Me.txtBairro.TabStop = False
+        Me.txtBairro.Tag = "Auto"
         '
         'lblComplemento
         '
@@ -567,6 +572,7 @@ Partial Class Form6
         Me.txtCidade.Size = New System.Drawing.Size(233, 20)
         Me.txtCidade.TabIndex = 55
         Me.txtCidade.TabStop = False
+        Me.txtCidade.Tag = "Auto"
         '
         'txtUF
         '
@@ -576,6 +582,7 @@ Partial Class Form6
         Me.txtUF.Size = New System.Drawing.Size(42, 20)
         Me.txtUF.TabIndex = 54
         Me.txtUF.TabStop = False
+        Me.txtUF.Tag = "Auto"
         '
         'txtNumEndereco
         '
@@ -585,6 +592,7 @@ Partial Class Form6
         Me.txtNumEndereco.Size = New System.Drawing.Size(49, 20)
         Me.txtNumEndereco.TabIndex = 53
         Me.txtNumEndereco.TabStop = False
+        Me.txtNumEndereco.Tag = "Auto"
         '
         'txtComplemento
         '
@@ -594,6 +602,7 @@ Partial Class Form6
         Me.txtComplemento.Size = New System.Drawing.Size(104, 20)
         Me.txtComplemento.TabIndex = 51
         Me.txtComplemento.TabStop = False
+        Me.txtComplemento.Tag = "Auto"
         '
         'txtEndereco
         '
@@ -603,6 +612,7 @@ Partial Class Form6
         Me.txtEndereco.Size = New System.Drawing.Size(296, 20)
         Me.txtEndereco.TabIndex = 50
         Me.txtEndereco.TabStop = False
+        Me.txtEndereco.Tag = "Auto"
         '
         'lblUF
         '
@@ -703,6 +713,7 @@ Partial Class Form6
         Me.mtxRG.Size = New System.Drawing.Size(130, 20)
         Me.mtxRG.TabIndex = 62
         Me.mtxRG.TabStop = False
+        Me.mtxRG.Tag = "Auto"
         '
         'mtxCPF
         '
@@ -713,6 +724,7 @@ Partial Class Form6
         Me.mtxCPF.Size = New System.Drawing.Size(130, 20)
         Me.mtxCPF.TabIndex = 61
         Me.mtxCPF.TabStop = False
+        Me.mtxCPF.Tag = "Auto"
         '
         'lblCNPJ
         '
@@ -784,6 +796,7 @@ Partial Class Form6
         Me.txtCodigo.Name = "txtCodigo"
         Me.txtCodigo.Size = New System.Drawing.Size(63, 20)
         Me.txtCodigo.TabIndex = 21
+        Me.txtCodigo.Tag = "Auto"
         '
         'Label1
         '
@@ -892,17 +905,21 @@ Partial Class Form6
         '
         'Form6
         '
+        Me.AcceptButton = Me.botCadastrar
         Me.AccessibleRole = System.Windows.Forms.AccessibleRole.ScrollBar
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.AutoScroll = True
+        Me.AutoSize = True
+        Me.CancelButton = Me.botLimpar
         Me.ClientSize = New System.Drawing.Size(754, 683)
         Me.Controls.Add(Me.tabOrdemServico)
-        Me.MaximumSize = New System.Drawing.Size(770, 770)
-        Me.MinimumSize = New System.Drawing.Size(770, 666)
+        Me.MaximumSize = New System.Drawing.Size(770, 721)
         Me.Name = "Form6"
+        Me.SizeGripStyle = System.Windows.Forms.SizeGripStyle.Show
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "Ordem Serviços"
+        Me.TransparencyKey = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(128, Byte), Integer), CType(CType(128, Byte), Integer))
         Me.tabCadastraOrdem.ResumeLayout(False)
         Me.tabCadastraOrdem.PerformLayout()
         Me.grpServico.ResumeLayout(False)

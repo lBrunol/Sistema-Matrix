@@ -38,35 +38,36 @@ Partial Class Login
         'Label1
         '
         Me.Label1.AutoSize = True
-        Me.Label1.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label1.Location = New System.Drawing.Point(105, 25)
+        Me.Label1.Font = New System.Drawing.Font("Century Gothic", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label1.Location = New System.Drawing.Point(130, 5)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(51, 20)
+        Me.Label1.Size = New System.Drawing.Size(44, 17)
         Me.Label1.TabIndex = 0
         Me.Label1.Text = "Nome"
         '
         'Label2
         '
         Me.Label2.AutoSize = True
-        Me.Label2.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label2.Location = New System.Drawing.Point(105, 54)
+        Me.Label2.Font = New System.Drawing.Font("Century Gothic", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label2.Location = New System.Drawing.Point(130, 50)
         Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(56, 20)
+        Me.Label2.Size = New System.Drawing.Size(45, 17)
         Me.Label2.TabIndex = 1
         Me.Label2.Text = "Senha"
         '
         'txtUsuario
         '
         Me.txtUsuario.CharacterCasing = System.Windows.Forms.CharacterCasing.Lower
-        Me.txtUsuario.Location = New System.Drawing.Point(181, 25)
+        Me.txtUsuario.Font = New System.Drawing.Font("Century Gothic", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtUsuario.Location = New System.Drawing.Point(133, 25)
         Me.txtUsuario.Name = "txtUsuario"
-        Me.txtUsuario.Size = New System.Drawing.Size(160, 20)
+        Me.txtUsuario.Size = New System.Drawing.Size(160, 22)
         Me.txtUsuario.TabIndex = 1
         '
         'botOk
         '
         Me.botOk.Image = Global.Sistema_Matrix.My.Resources.Resources.entrar
-        Me.botOk.Location = New System.Drawing.Point(245, 78)
+        Me.botOk.Location = New System.Drawing.Point(133, 107)
         Me.botOk.Name = "botOk"
         Me.botOk.Size = New System.Drawing.Size(40, 40)
         Me.botOk.TabIndex = 3
@@ -74,16 +75,18 @@ Partial Class Login
         '
         'txtSenha
         '
-        Me.txtSenha.Location = New System.Drawing.Point(181, 53)
+        Me.txtSenha.Font = New System.Drawing.Font("Century Gothic", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtSenha.Location = New System.Drawing.Point(133, 70)
         Me.txtSenha.Name = "txtSenha"
         Me.txtSenha.PasswordChar = Global.Microsoft.VisualBasic.ChrW(42)
-        Me.txtSenha.Size = New System.Drawing.Size(160, 20)
+        Me.txtSenha.Size = New System.Drawing.Size(160, 22)
         Me.txtSenha.TabIndex = 2
         '
         'botLimpar
         '
+        Me.botLimpar.DialogResult = System.Windows.Forms.DialogResult.Cancel
         Me.botLimpar.Image = Global.Sistema_Matrix.My.Resources.Resources.limpar
-        Me.botLimpar.Location = New System.Drawing.Point(301, 78)
+        Me.botLimpar.Location = New System.Drawing.Point(203, 107)
         Me.botLimpar.Name = "botLimpar"
         Me.botLimpar.Size = New System.Drawing.Size(40, 40)
         Me.botLimpar.TabIndex = 4
@@ -93,7 +96,7 @@ Partial Class Login
         'PictureBox1
         '
         Me.PictureBox1.Image = CType(resources.GetObject("PictureBox1.Image"), System.Drawing.Image)
-        Me.PictureBox1.Location = New System.Drawing.Point(12, 25)
+        Me.PictureBox1.Location = New System.Drawing.Point(12, 36)
         Me.PictureBox1.Name = "PictureBox1"
         Me.PictureBox1.Size = New System.Drawing.Size(87, 93)
         Me.PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage
@@ -103,7 +106,7 @@ Partial Class Login
         'lblEntrar
         '
         Me.lblEntrar.AutoSize = True
-        Me.lblEntrar.Location = New System.Drawing.Point(246, 122)
+        Me.lblEntrar.Location = New System.Drawing.Point(138, 150)
         Me.lblEntrar.Name = "lblEntrar"
         Me.lblEntrar.Size = New System.Drawing.Size(35, 13)
         Me.lblEntrar.TabIndex = 5
@@ -112,7 +115,7 @@ Partial Class Login
         'lblLimpar
         '
         Me.lblLimpar.AutoSize = True
-        Me.lblLimpar.Location = New System.Drawing.Point(306, 121)
+        Me.lblLimpar.Location = New System.Drawing.Point(205, 150)
         Me.lblLimpar.Name = "lblLimpar"
         Me.lblLimpar.Size = New System.Drawing.Size(38, 13)
         Me.lblLimpar.TabIndex = 6
@@ -123,7 +126,9 @@ Partial Class Login
         Me.AcceptButton = Me.botOk
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(354, 142)
+        Me.BackColor = System.Drawing.SystemColors.Window
+        Me.CancelButton = Me.botLimpar
+        Me.ClientSize = New System.Drawing.Size(314, 172)
         Me.Controls.Add(Me.lblLimpar)
         Me.Controls.Add(Me.lblEntrar)
         Me.Controls.Add(Me.txtSenha)
@@ -133,8 +138,8 @@ Partial Class Login
         Me.Controls.Add(Me.txtUsuario)
         Me.Controls.Add(Me.Label2)
         Me.Controls.Add(Me.Label1)
-        Me.MaximumSize = New System.Drawing.Size(370, 180)
-        Me.MinimumSize = New System.Drawing.Size(370, 180)
+        Me.MaximumSize = New System.Drawing.Size(330, 210)
+        Me.MinimumSize = New System.Drawing.Size(330, 210)
         Me.Name = "Login"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "Login"

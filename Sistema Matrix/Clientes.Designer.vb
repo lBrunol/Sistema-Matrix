@@ -870,7 +870,6 @@ Partial Class Clientes
         Me.Name = "Clientes"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "Cliente"
-        Me.TopMost = True
         Me.tabClientes.ResumeLayout(False)
         Me.tabCadastroClientes.ResumeLayout(False)
         Me.tabCadastroClientes.PerformLayout()
