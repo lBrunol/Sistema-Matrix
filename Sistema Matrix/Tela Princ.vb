@@ -63,7 +63,7 @@ Public Class telaPrincipal
     Private Sub telaPrincipal_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         'Atribui o nome do usuário logado na label e verifica se o usuário que logou é administrador
         txtBoasVindas.Text = "Olá " & Login.strUsuario
-        If Login.varUsuarioAdm = False Then
+        If Login.varUsuarioAdm = "true" Then
             menuAdministrador.Visible = False
         Else
             menuAdministrador.Visible = True
@@ -101,5 +101,13 @@ Public Class telaPrincipal
 
     Private Sub botConfirmaNotasFiscais_Click(sender As Object, e As EventArgs) Handles botConfirmaNotasFiscais.Click
         abreFormularios(confirmaNotaFiscal)
+    End Sub
+
+    Private Sub botRelatorio_Click(sender As Object, e As EventArgs) Handles botRelatorio.Click
+        abreFormularios(RelatorioOrdemServico)
+    End Sub
+
+    Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
+        abreFormularios(relatorioContasReceber)
     End Sub
 End Class

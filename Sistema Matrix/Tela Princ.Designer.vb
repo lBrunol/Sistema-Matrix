@@ -46,9 +46,11 @@ Partial Class telaPrincipal
         Me.botConsultaNotasFiscais = New System.Windows.Forms.Button()
         Me.botDadosEmitente = New System.Windows.Forms.Button()
         Me.botConfirmaNotasFiscais = New System.Windows.Forms.Button()
+        Me.botRelatorio = New System.Windows.Forms.Button()
         Me.txtBoasVindas = New System.Windows.Forms.TextBox()
         Me.lblLogoff = New System.Windows.Forms.Label()
         Me.botLogoff = New System.Windows.Forms.Button()
+        Me.Button1 = New System.Windows.Forms.Button()
         Me.MenuStrip1.SuspendLayout()
         Me.FlowLayoutPanel1.SuspendLayout()
         Me.SuspendLayout()
@@ -156,9 +158,11 @@ Partial Class telaPrincipal
         Me.FlowLayoutPanel1.Controls.Add(Me.botConsultaNotasFiscais)
         Me.FlowLayoutPanel1.Controls.Add(Me.botDadosEmitente)
         Me.FlowLayoutPanel1.Controls.Add(Me.botConfirmaNotasFiscais)
+        Me.FlowLayoutPanel1.Controls.Add(Me.botRelatorio)
+        Me.FlowLayoutPanel1.Controls.Add(Me.Button1)
         Me.FlowLayoutPanel1.Location = New System.Drawing.Point(12, 35)
         Me.FlowLayoutPanel1.Name = "FlowLayoutPanel1"
-        Me.FlowLayoutPanel1.Size = New System.Drawing.Size(673, 493)
+        Me.FlowLayoutPanel1.Size = New System.Drawing.Size(673, 667)
         Me.FlowLayoutPanel1.TabIndex = 1
         '
         'botCadastro
@@ -297,12 +301,29 @@ Partial Class telaPrincipal
         Me.botConfirmaNotasFiscais.TextAlign = System.Drawing.ContentAlignment.BottomCenter
         Me.botConfirmaNotasFiscais.UseVisualStyleBackColor = False
         '
+        'botRelatorio
+        '
+        Me.botRelatorio.BackColor = System.Drawing.Color.Orange
+        Me.botRelatorio.BackgroundImage = CType(resources.GetObject("botRelatorio.BackgroundImage"), System.Drawing.Image)
+        Me.botRelatorio.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center
+        Me.botRelatorio.FlatAppearance.BorderSize = 0
+        Me.botRelatorio.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.botRelatorio.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.botRelatorio.ForeColor = System.Drawing.Color.WhiteSmoke
+        Me.botRelatorio.Location = New System.Drawing.Point(445, 327)
+        Me.botRelatorio.Name = "botRelatorio"
+        Me.botRelatorio.Size = New System.Drawing.Size(215, 156)
+        Me.botRelatorio.TabIndex = 8
+        Me.botRelatorio.Text = "Relatório de Ordem de Serviço"
+        Me.botRelatorio.TextAlign = System.Drawing.ContentAlignment.BottomCenter
+        Me.botRelatorio.UseVisualStyleBackColor = False
+        '
         'txtBoasVindas
         '
         Me.txtBoasVindas.BackColor = System.Drawing.SystemColors.ButtonFace
         Me.txtBoasVindas.BorderStyle = System.Windows.Forms.BorderStyle.None
         Me.txtBoasVindas.Enabled = False
-        Me.txtBoasVindas.Location = New System.Drawing.Point(355, 617)
+        Me.txtBoasVindas.Location = New System.Drawing.Point(530, 704)
         Me.txtBoasVindas.Multiline = True
         Me.txtBoasVindas.Name = "txtBoasVindas"
         Me.txtBoasVindas.Size = New System.Drawing.Size(142, 20)
@@ -338,12 +359,29 @@ Partial Class telaPrincipal
         Me.botLogoff.TabStop = False
         Me.botLogoff.UseVisualStyleBackColor = True
         '
+        'Button1
+        '
+        Me.Button1.BackColor = System.Drawing.Color.Blue
+        Me.Button1.BackgroundImage = CType(resources.GetObject("Button1.BackgroundImage"), System.Drawing.Image)
+        Me.Button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center
+        Me.Button1.FlatAppearance.BorderSize = 0
+        Me.Button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.Button1.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Button1.ForeColor = System.Drawing.Color.WhiteSmoke
+        Me.Button1.Location = New System.Drawing.Point(3, 489)
+        Me.Button1.Name = "Button1"
+        Me.Button1.Size = New System.Drawing.Size(215, 156)
+        Me.Button1.TabIndex = 9
+        Me.Button1.Text = "Relatório de Contas a Receber"
+        Me.Button1.TextAlign = System.Drawing.ContentAlignment.BottomCenter
+        Me.Button1.UseVisualStyleBackColor = False
+        '
         'telaPrincipal
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.SystemColors.Window
-        Me.ClientSize = New System.Drawing.Size(697, 540)
+        Me.ClientSize = New System.Drawing.Size(697, 736)
         Me.Controls.Add(Me.lblLogoff)
         Me.Controls.Add(Me.botLogoff)
         Me.Controls.Add(Me.txtBoasVindas)
@@ -386,4 +424,6 @@ Partial Class telaPrincipal
     Friend WithEvents botConsultaNotasFiscais As System.Windows.Forms.Button
     Friend WithEvents botDadosEmitente As System.Windows.Forms.Button
     Friend WithEvents botConfirmaNotasFiscais As System.Windows.Forms.Button
+    Friend WithEvents botRelatorio As System.Windows.Forms.Button
+    Friend WithEvents Button1 As System.Windows.Forms.Button
 End Class

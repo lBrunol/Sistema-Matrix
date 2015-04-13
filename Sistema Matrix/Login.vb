@@ -2,7 +2,7 @@
 Imports System.Data.OleDb
 Public Class Login
     Public strUsuario As String
-    Public varUsuarioAdm As Boolean
+    Public varUsuarioAdm As String
     Public tabela As DataTable
     Public leitor As OleDbDataReader
     Public strsql As String
@@ -43,7 +43,7 @@ Public Class Login
                         'Oculta o formulário de login
                         Me.Hide()
                         'Verifica se o usuário que logou é administrador
-                        varUsuarioAdm = leitor.GetBoolean(2)
+                        varUsuarioAdm = leitor.GetString(2).ToString
                         'Mostra a tela principal
                         telaPrincipal.Show()
                         'Limpa os campos do formulário

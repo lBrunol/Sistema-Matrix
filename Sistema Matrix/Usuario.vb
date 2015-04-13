@@ -4,7 +4,7 @@ Public Class Usuario
     Public varUsuario As String
     Public varSenha As String
     Public varConfirmaSenha As String
-    Public varAdm As Boolean
+    Public varAdm As String
     Public varValorRetornado As Integer
     Public strSql As String
     Public valorCodUsuario As Integer
@@ -19,7 +19,11 @@ Public Class Usuario
         varUsuario = txtUsuario.Text
         varSenha = txtSenha.Text
         varConfirmaSenha = txtConfirmaSenha.Text
-        varAdm = chkAdministrador.Checked
+        If chkAdministrador.Checked = True Then
+            varAdm = "true"
+        Else
+            varAdm = "false"
+        End If
         varValorRetornado = Funcoes.verificaVazio(Me)
         'Testes condicionais
         If varValorRetornado = 0 Then

@@ -49,10 +49,10 @@
     <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
   </PropertyGroup>
   <PropertyGroup>
-    <OptionExplicit>On</OptionExplicit>
+    <OptionExplicit>Off</OptionExplicit>
   </PropertyGroup>
   <PropertyGroup>
-    <OptionCompare>Binary</OptionCompare>
+    <OptionCompare>Text</OptionCompare>
   </PropertyGroup>
   <PropertyGroup>
     <OptionStrict>Off</OptionStrict>
@@ -68,13 +68,18 @@
     </ApplicationIcon>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Microsoft.ReportViewer.Common, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91" />
+    <Reference Include="Microsoft.ReportViewer.WinForms, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91" />
     <Reference Include="mulcolcombo">
       <HintPath>..\..\..\..\..\..\..\..\Downloads\ControlsTest\ControlsTest\bin\mulcolcombo.dll</HintPath>
     </Reference>
+    <Reference Include="Oracle.DataAccess, Version=2.112.2.0, Culture=neutral, PublicKeyToken=89b483f429c47342, processorArchitecture=AMD64" />
     <Reference Include="System" />
     <Reference Include="System.Data" />
+    <Reference Include="System.Data.OracleClient" />
     <Reference Include="System.Deployment" />
     <Reference Include="System.Drawing" />
+    <Reference Include="System.Web.Services" />
     <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml" />
     <Reference Include="System.Core" />
@@ -122,6 +127,26 @@
       <DependentUpon>Confirma Nota Fiscal.vb</DependentUpon>
     </Compile>
     <Compile Include="Confirma Nota Fiscal.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="oracle.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>oracle.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="oracle.vb">
+      <DependentUpon>oracle.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="relatorioContasReceber.Designer.vb">
+      <DependentUpon>relatorioContasReceber.vb</DependentUpon>
+    </Compile>
+    <Compile Include="relatorioContasReceber.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RelatorioOrdemServico.Designer.vb">
+      <DependentUpon>RelatorioOrdemServico.vb</DependentUpon>
+    </Compile>
+    <Compile Include="RelatorioOrdemServico.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Servico.Designer.vb">
@@ -201,6 +226,14 @@
     <EmbeddedResource Include="Confirma Nota Fiscal.resx">
       <DependentUpon>Confirma Nota Fiscal.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="relatorioContasReceber.resx">
+      <DependentUpon>relatorioContasReceber.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RelatorioOrdemServico.resx">
+      <DependentUpon>RelatorioOrdemServico.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report1.rdlc" />
+    <EmbeddedResource Include="Report2.rdlc" />
     <EmbeddedResource Include="Servico.resx">
       <DependentUpon>Servico.vb</DependentUpon>
     </EmbeddedResource>
@@ -230,15 +263,28 @@
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
+    <None Include="app.config" />
     <None Include="My Project\app.manifest" />
     <None Include="My Project\Application.myapp">
       <Generator>MyApplicationCodeGenerator</Generator>
       <LastGenOutput>Application.Designer.vb</LastGenOutput>
     </None>
+    <None Include="My Project\DataSources\ConexaoAccess.datasource" />
     <None Include="My Project\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <CustomToolNamespace>My</CustomToolNamespace>
       <LastGenOutput>Settings.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="oracle.xsc">
+      <DependentUpon>oracle.xsd</DependentUpon>
+    </None>
+    <None Include="oracle.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <SubType>Designer</SubType>
+      <LastGenOutput>oracle1.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="oracle.xss">
+      <DependentUpon>oracle.xsd</DependentUpon>
     </None>
   </ItemGroup>
   <ItemGroup>
@@ -288,6 +334,15 @@
       <Isolated>False</Isolated>
       <EmbedInteropTypes>True</EmbedInteropTypes>
     </COMReference>
+    <COMReference Include="ORAOLEDBLib">
+      <Guid>{0BB9AFD1-51A1-11D2-BB7D-00C04FA30080}</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>tlbimp</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
     <COMReference Include="stdole">
       <Guid>{00020430-0000-0000-C000-000000000046}</Guid>
       <VersionMajor>2</VersionMajor>
@@ -300,6 +355,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="bin\Debug\icones\nota-fiscal-eletronica.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

@@ -6,7 +6,283 @@ SistemaMatrix
 </name>
 </assembly>
 <members>
-<member name="P:Sistema_Matrix.My.Resources.Resources.ResourceManager">
+<member name="T:Sistema_Matrix.oracle.CLIENTEDataTable">
+	<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member><member name="T:Sistema_Matrix.oracle.CLIPESSOAJURIDICADataTable">
+	<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member><member name="T:Sistema_Matrix.oracle.CLIPESSOFISICADataTable">
+	<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member><member name="T:Sistema_Matrix.oracle.CONTASRECEBERDataTable">
+	<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member><member name="T:Sistema_Matrix.oracle.DADOSEMITENTEDataTable">
+	<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member><member name="T:Sistema_Matrix.oracle.FUNCIONARIODataTable">
+	<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member><member name="T:Sistema_Matrix.oracle.NOTAFISCALDataTable">
+	<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member><member name="T:Sistema_Matrix.oracle.ORDEMSERVICODataTable">
+	<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member><member name="T:Sistema_Matrix.oracle.SERVICOSDataTable">
+	<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member><member name="T:Sistema_Matrix.oracle.SERVICOSOSDataTable">
+	<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member><member name="T:Sistema_Matrix.oracle.TIPOSPAGAMENTODataTable">
+	<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member><member name="T:Sistema_Matrix.oracle.USUARIOSDataTable">
+	<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member><member name="T:Sistema_Matrix.oracle.DataTable1DataTable">
+	<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member><member name="T:Sistema_Matrix.oracle.Q_ORDEMDataTable">
+	<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member><member name="T:Sistema_Matrix.oracle.Q_CONTAS_RECEBERDataTable">
+	<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member><member name="T:Sistema_Matrix.oracle.CLIENTERow">
+	<summary>
+Represents strongly named DataRow class.
+</summary>
+</member><member name="T:Sistema_Matrix.oracle.CLIPESSOAJURIDICARow">
+	<summary>
+Represents strongly named DataRow class.
+</summary>
+</member><member name="T:Sistema_Matrix.oracle.CLIPESSOFISICARow">
+	<summary>
+Represents strongly named DataRow class.
+</summary>
+</member><member name="T:Sistema_Matrix.oracle.CONTASRECEBERRow">
+	<summary>
+Represents strongly named DataRow class.
+</summary>
+</member><member name="T:Sistema_Matrix.oracle.DADOSEMITENTERow">
+	<summary>
+Represents strongly named DataRow class.
+</summary>
+</member><member name="T:Sistema_Matrix.oracle.FUNCIONARIORow">
+	<summary>
+Represents strongly named DataRow class.
+</summary>
+</member><member name="T:Sistema_Matrix.oracle.NOTAFISCALRow">
+	<summary>
+Represents strongly named DataRow class.
+</summary>
+</member><member name="T:Sistema_Matrix.oracle.ORDEMSERVICORow">
+	<summary>
+Represents strongly named DataRow class.
+</summary>
+</member><member name="T:Sistema_Matrix.oracle.SERVICOSRow">
+	<summary>
+Represents strongly named DataRow class.
+</summary>
+</member><member name="T:Sistema_Matrix.oracle.SERVICOSOSRow">
+	<summary>
+Represents strongly named DataRow class.
+</summary>
+</member><member name="T:Sistema_Matrix.oracle.TIPOSPAGAMENTORow">
+	<summary>
+Represents strongly named DataRow class.
+</summary>
+</member><member name="T:Sistema_Matrix.oracle.USUARIOSRow">
+	<summary>
+Represents strongly named DataRow class.
+</summary>
+</member><member name="T:Sistema_Matrix.oracle.DataTable1Row">
+	<summary>
+Represents strongly named DataRow class.
+</summary>
+</member><member name="T:Sistema_Matrix.oracle.Q_ORDEMRow">
+	<summary>
+Represents strongly named DataRow class.
+</summary>
+</member><member name="T:Sistema_Matrix.oracle.Q_CONTAS_RECEBERRow">
+	<summary>
+Represents strongly named DataRow class.
+</summary>
+</member><member name="T:Sistema_Matrix.oracle.CLIENTERowChangeEvent">
+	<summary>
+Row event argument class
+</summary>
+</member><member name="T:Sistema_Matrix.oracle.CLIPESSOAJURIDICARowChangeEvent">
+	<summary>
+Row event argument class
+</summary>
+</member><member name="T:Sistema_Matrix.oracle.CLIPESSOFISICARowChangeEvent">
+	<summary>
+Row event argument class
+</summary>
+</member><member name="T:Sistema_Matrix.oracle.CONTASRECEBERRowChangeEvent">
+	<summary>
+Row event argument class
+</summary>
+</member><member name="T:Sistema_Matrix.oracle.DADOSEMITENTERowChangeEvent">
+	<summary>
+Row event argument class
+</summary>
+</member><member name="T:Sistema_Matrix.oracle.FUNCIONARIORowChangeEvent">
+	<summary>
+Row event argument class
+</summary>
+</member><member name="T:Sistema_Matrix.oracle.NOTAFISCALRowChangeEvent">
+	<summary>
+Row event argument class
+</summary>
+</member><member name="T:Sistema_Matrix.oracle.ORDEMSERVICORowChangeEvent">
+	<summary>
+Row event argument class
+</summary>
+</member><member name="T:Sistema_Matrix.oracle.SERVICOSRowChangeEvent">
+	<summary>
+Row event argument class
+</summary>
+</member><member name="T:Sistema_Matrix.oracle.SERVICOSOSRowChangeEvent">
+	<summary>
+Row event argument class
+</summary>
+</member><member name="T:Sistema_Matrix.oracle.TIPOSPAGAMENTORowChangeEvent">
+	<summary>
+Row event argument class
+</summary>
+</member><member name="T:Sistema_Matrix.oracle.USUARIOSRowChangeEvent">
+	<summary>
+Row event argument class
+</summary>
+</member><member name="T:Sistema_Matrix.oracle.DataTable1RowChangeEvent">
+	<summary>
+Row event argument class
+</summary>
+</member><member name="T:Sistema_Matrix.oracle.Q_ORDEMRowChangeEvent">
+	<summary>
+Row event argument class
+</summary>
+</member><member name="T:Sistema_Matrix.oracle.Q_CONTAS_RECEBERRowChangeEvent">
+	<summary>
+Row event argument class
+</summary>
+</member><member name="T:Sistema_Matrix.oracle">
+	<summary>
+Represents a strongly typed in-memory cache of data.
+</summary>
+</member><member name="T:Sistema_Matrix.oracleTableAdapters.CLIENTETableAdapter">
+	<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member><member name="T:Sistema_Matrix.oracleTableAdapters.CLIPESSOAJURIDICATableAdapter">
+	<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member><member name="T:Sistema_Matrix.oracleTableAdapters.CLIPESSOFISICATableAdapter">
+	<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member><member name="T:Sistema_Matrix.oracleTableAdapters.CONTASRECEBERTableAdapter">
+	<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member><member name="T:Sistema_Matrix.oracleTableAdapters.DADOSEMITENTETableAdapter">
+	<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member><member name="T:Sistema_Matrix.oracleTableAdapters.FUNCIONARIOTableAdapter">
+	<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member><member name="T:Sistema_Matrix.oracleTableAdapters.NOTAFISCALTableAdapter">
+	<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member><member name="T:Sistema_Matrix.oracleTableAdapters.ORDEMSERVICOTableAdapter">
+	<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member><member name="T:Sistema_Matrix.oracleTableAdapters.SERVICOSTableAdapter">
+	<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member><member name="T:Sistema_Matrix.oracleTableAdapters.SERVICOSOSTableAdapter">
+	<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member><member name="T:Sistema_Matrix.oracleTableAdapters.TIPOSPAGAMENTOTableAdapter">
+	<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member><member name="T:Sistema_Matrix.oracleTableAdapters.USUARIOSTableAdapter">
+	<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member><member name="T:Sistema_Matrix.oracleTableAdapters.DataTable1TableAdapter">
+	<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member><member name="T:Sistema_Matrix.oracleTableAdapters.Q_ORDEMTableAdapter">
+	<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member><member name="T:Sistema_Matrix.oracleTableAdapters.Q_CONTAS_RECEBERTableAdapter">
+	<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member><member name="M:Sistema_Matrix.oracleTableAdapters.TableAdapterManager.UpdateUpdatedRows(Sistema_Matrix.oracle,System.Collections.Generic.List{System.Data.DataRow},System.Collections.Generic.List{System.Data.DataRow})">
+	<summary>
+Update rows in top-down order.
+</summary>
+</member><member name="M:Sistema_Matrix.oracleTableAdapters.TableAdapterManager.UpdateInsertedRows(Sistema_Matrix.oracle,System.Collections.Generic.List{System.Data.DataRow})">
+	<summary>
+Insert rows in top-down order.
+</summary>
+</member><member name="M:Sistema_Matrix.oracleTableAdapters.TableAdapterManager.UpdateDeletedRows(Sistema_Matrix.oracle,System.Collections.Generic.List{System.Data.DataRow})">
+	<summary>
+Delete rows in bottom-up order.
+</summary>
+</member><member name="M:Sistema_Matrix.oracleTableAdapters.TableAdapterManager.GetRealUpdatedRows(System.Data.DataRow[],System.Collections.Generic.List{System.Data.DataRow})">
+	<summary>
+Remove inserted rows that become updated rows after calling TableAdapter.Update(inserted rows) first
+</summary>
+</member><member name="M:Sistema_Matrix.oracleTableAdapters.TableAdapterManager.UpdateAll(Sistema_Matrix.oracle)">
+	<summary>
+Update all changes to the dataset.
+</summary>
+</member><member name="T:Sistema_Matrix.oracleTableAdapters.TableAdapterManager.UpdateOrderOption">
+	<summary>
+Update Order Option
+</summary>
+</member><member name="T:Sistema_Matrix.oracleTableAdapters.TableAdapterManager.SelfReferenceComparer">
+	<summary>
+Used to sort self-referenced table's rows
+</summary>
+</member><member name="T:Sistema_Matrix.oracleTableAdapters.TableAdapterManager">
+	<summary>
+TableAdapterManager is used to coordinate TableAdapters in the dataset to enable Hierarchical Update scenarios
+</summary>
+</member><member name="P:Sistema_Matrix.My.Resources.Resources.ResourceManager">
 	<summary>
   Returns the cached ResourceManager instance used by this class.
 </summary>

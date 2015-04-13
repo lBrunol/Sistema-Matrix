@@ -9,7 +9,7 @@ Public Class Form6
     Public strsql As String
     Public valorCodOS As Integer
     Public objBanco As New ConexaoAccess
-    Public i As Integer
+    Public k As Integer
     Public valanterior As Integer = 109
     Public codServ As Integer
     Public codCli As Integer
@@ -129,12 +129,12 @@ Public Class Form6
         grpServico.Controls.Add(cboServico1(i))
 
         'Carrega as combo box
-        j = 0
+
         strsql = "SELECT * FROM servicos"
         tabela = objBanco.ExecutaDataTable(strsql)
         If tabela.Rows.Count > 0 Then
-            For j = 0 To tabela.Rows.Count - 1
-                cboServico1(i).Items.Add(tabela.Rows(j)("svcNome"))
+            For k = 0 To tabela.Rows.Count - 1
+                cboServico1(i).Items.Add(tabela.Rows(k)("svcNome"))
             Next
         End If
 

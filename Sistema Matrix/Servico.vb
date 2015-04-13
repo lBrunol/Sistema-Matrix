@@ -24,7 +24,7 @@ Public Class formConsultaUsuarios
         varNome = txtNome.Text
         varValor = txtValor.Text
         varDescricao = txtDescricao.Text
-
+        varValor = CInt(varValor)
         'Função que verifica se os campos obrigatórios estão vazios
         valRetornado = Funcoes.verificaVazio(Me)
 
@@ -33,11 +33,11 @@ Public Class formConsultaUsuarios
             'Abre conexão com banco de dados
             Try
                 'Comando para inclusão dos dados
-                strsql = "INSERT INTO servicos(svcCodigo, svcNome, svcValor, svcDescricao) VALUES (" & _
+                strsql = "INSERT INTO servicos(svcCodigo, svcNome, svcValorHora, svcDescricao, svcCodigoServico, svcAliquota) VALUES (" & _
                     valorCodServico & " , '" & _
                     varNome & "','" & _
                     varValor & "','" & _
-                    varDescricao & "')"
+                    varDescricao & "', " & 1 & ", " & 5 & ")"
                 objBanco.ExecutaQuery(strsql)
                 MsgBox("Dados cadastrados com sucesso", vbInformation, "Aviso")
                 Funcoes.Limpar(Me)

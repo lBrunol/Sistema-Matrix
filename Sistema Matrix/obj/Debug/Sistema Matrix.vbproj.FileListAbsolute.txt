@@ -207,3 +207,10 @@ C:\Users\CASA\Documents\GitHub\Sistema-Matrix\Sistema Matrix\obj\Debug\Sistema_M
 C:\Users\CASA\Documents\GitHub\Sistema-Matrix\Sistema Matrix\obj\Debug\Sistema_Matrix.telaPrincipal.resources
 C:\Users\CASA\Documents\GitHub\Sistema-Matrix\Sistema Matrix\obj\Debug\Sistema_Matrix.Usuario.resources
 C:\Users\CASA\Documents\GitHub\Sistema-Matrix\Sistema Matrix\obj\Debug\Sistema Matrix.vbproj.GenerateResource.Cache
+C:\Users\CASA\Documents\GitHub\Sistema-Matrix\Sistema Matrix\bin\Debug\Interop.ORAOLEDBLib.dll
+C:\Users\CASA\Documents\GitHub\Sistema-Matrix\Sistema Matrix\obj\Debug\Interop.ORAOLEDBLib.dll
+C:\Users\CASA\Documents\GitHub\Sistema-Matrix\Sistema Matrix\obj\Debug\RdlCompile.cache
+C:\Users\CASA\Documents\GitHub\Sistema-Matrix\Sistema Matrix\obj\Debug\RdlCompile.compiled
+C:\Users\CASA\Documents\GitHub\Sistema-Matrix\Sistema Matrix\bin\Debug\Sistema Matrix.exe.config
+C:\Users\CASA\Documents\GitHub\Sistema-Matrix\Sistema Matrix\obj\Debug\Sistema_Matrix.relatorioContasReceber.resources
+C:\Users\CASA\Documents\GitHub\Sistema-Matrix\Sistema Matrix\obj\Debug\Sistema_Matrix.RelatorioOrdemServico.resources
