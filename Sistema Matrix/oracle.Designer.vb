@@ -5643,6 +5643,8 @@ Partial Public Class oracle
         
         Private columnNOTCODIGO As Global.System.Data.DataColumn
         
+        Private columnTPADESCRICAO As Global.System.Data.DataColumn
+        
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
         Public Sub New()
@@ -5767,6 +5769,14 @@ Partial Public Class oracle
         End Property
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public ReadOnly Property TPADESCRICAOColumn() As Global.System.Data.DataColumn
+            Get
+                Return Me.columnTPADESCRICAO
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0"),  _
          Global.System.ComponentModel.Browsable(false)>  _
         Public ReadOnly Property Count() As Integer
@@ -5803,9 +5813,9 @@ Partial Public Class oracle
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
-        Public Overloads Function AddQ_CONTAS_RECEBERRow(ByVal CTRCODIGO As Decimal, ByVal CLINOME As String, ByVal CLIENDERECO As String, ByVal CTRDATAEMISSAO As Date, ByVal CTRDATAVENCIMENTO As Date, ByVal CTRVALOREMITIDO As Decimal, ByVal CTRDATAPAGAMENTO As Date, ByVal CTRDESC As Decimal, ByVal CTRJUROS As Decimal, ByVal CTRVALORPAGO As Decimal, ByVal NOTCODIGO As Decimal) As Q_CONTAS_RECEBERRow
+        Public Overloads Function AddQ_CONTAS_RECEBERRow(ByVal CTRCODIGO As Decimal, ByVal CLINOME As String, ByVal CLIENDERECO As String, ByVal CTRDATAEMISSAO As Date, ByVal CTRDATAVENCIMENTO As Date, ByVal CTRVALOREMITIDO As Decimal, ByVal CTRDATAPAGAMENTO As Date, ByVal CTRDESC As Decimal, ByVal CTRJUROS As Decimal, ByVal CTRVALORPAGO As Decimal, ByVal NOTCODIGO As Decimal, ByVal TPADESCRICAO As String) As Q_CONTAS_RECEBERRow
             Dim rowQ_CONTAS_RECEBERRow As Q_CONTAS_RECEBERRow = CType(Me.NewRow,Q_CONTAS_RECEBERRow)
-            Dim columnValuesArray() As Object = New Object() {CTRCODIGO, CLINOME, CLIENDERECO, CTRDATAEMISSAO, CTRDATAVENCIMENTO, CTRVALOREMITIDO, CTRDATAPAGAMENTO, CTRDESC, CTRJUROS, CTRVALORPAGO, NOTCODIGO}
+            Dim columnValuesArray() As Object = New Object() {CTRCODIGO, CLINOME, CLIENDERECO, CTRDATAEMISSAO, CTRDATAVENCIMENTO, CTRVALOREMITIDO, CTRDATAPAGAMENTO, CTRDESC, CTRJUROS, CTRVALORPAGO, NOTCODIGO, TPADESCRICAO}
             rowQ_CONTAS_RECEBERRow.ItemArray = columnValuesArray
             Me.Rows.Add(rowQ_CONTAS_RECEBERRow)
             Return rowQ_CONTAS_RECEBERRow
@@ -5845,6 +5855,7 @@ Partial Public Class oracle
             Me.columnCTRJUROS = MyBase.Columns("CTRJUROS")
             Me.columnCTRVALORPAGO = MyBase.Columns("CTRVALORPAGO")
             Me.columnNOTCODIGO = MyBase.Columns("NOTCODIGO")
+            Me.columnTPADESCRICAO = MyBase.Columns("TPADESCRICAO")
         End Sub
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
@@ -5872,6 +5883,8 @@ Partial Public Class oracle
             MyBase.Columns.Add(Me.columnCTRVALORPAGO)
             Me.columnNOTCODIGO = New Global.System.Data.DataColumn("NOTCODIGO", GetType(Decimal), Nothing, Global.System.Data.MappingType.Element)
             MyBase.Columns.Add(Me.columnNOTCODIGO)
+            Me.columnTPADESCRICAO = New Global.System.Data.DataColumn("TPADESCRICAO", GetType(String), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnTPADESCRICAO)
             Me.Constraints.Add(New Global.System.Data.UniqueConstraint("Constraint1", New Global.System.Data.DataColumn() {Me.columnCTRCODIGO, Me.columnNOTCODIGO}, true))
             Me.columnCTRCODIGO.AllowDBNull = false
             Me.columnCLINOME.AllowDBNull = false
@@ -5882,6 +5895,7 @@ Partial Public Class oracle
             Me.columnCTRDATAVENCIMENTO.AllowDBNull = false
             Me.columnCTRVALOREMITIDO.AllowDBNull = false
             Me.columnNOTCODIGO.AllowDBNull = false
+            Me.columnTPADESCRICAO.MaxLength = 250
         End Sub
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
@@ -7899,6 +7913,21 @@ Partial Public Class oracle
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Property TPADESCRICAO() As String
+            Get
+                Try 
+                    Return CType(Me(Me.tableQ_CONTAS_RECEBER.TPADESCRICAOColumn),String)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("The value for column 'TPADESCRICAO' in table 'Q_CONTAS_RECEBER' is DBNull.", e)
+                End Try
+            End Get
+            Set
+                Me(Me.tableQ_CONTAS_RECEBER.TPADESCRICAOColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
         Public Function IsCTRDATAPAGAMENTONull() As Boolean
             Return Me.IsNull(Me.tableQ_CONTAS_RECEBER.CTRDATAPAGAMENTOColumn)
         End Function
@@ -7943,6 +7972,18 @@ Partial Public Class oracle
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
         Public Sub SetCTRVALORPAGONull()
             Me(Me.tableQ_CONTAS_RECEBER.CTRVALORPAGOColumn) = Global.System.Convert.DBNull
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Function IsTPADESCRICAONull() As Boolean
+            Return Me.IsNull(Me.tableQ_CONTAS_RECEBER.TPADESCRICAOColumn)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Sub SetTPADESCRICAONull()
+            Me(Me.tableQ_CONTAS_RECEBER.TPADESCRICAOColumn) = Global.System.Convert.DBNull
         End Sub
     End Class
     
@@ -13257,11 +13298,16 @@ Namespace oracleTableAdapters
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
         Private Sub InitCommandCollection()
-            Me._commandCollection = New Global.System.Data.OracleClient.OracleCommand(0) {}
+            Me._commandCollection = New Global.System.Data.OracleClient.OracleCommand(1) {}
             Me._commandCollection(0) = New Global.System.Data.OracleClient.OracleCommand()
             Me._commandCollection(0).Connection = Me.Connection
             Me._commandCollection(0).CommandText = "SELECT USRCODIGO, USRNOME, URSSENHA, USRADMINISTRADOR FROM MATRIX.USUARIOS"
             Me._commandCollection(0).CommandType = Global.System.Data.CommandType.Text
+            Me._commandCollection(1) = New Global.System.Data.OracleClient.OracleCommand()
+            Me._commandCollection(1).Connection = Me.Connection
+            Me._commandCollection(1).CommandText = "DELETE FROM USUARIOS"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"WHERE        (USRCODIGO = :Original_USRCODIGO)"
+            Me._commandCollection(1).CommandType = Global.System.Data.CommandType.Text
+            Me._commandCollection(1).Parameters.Add(New Global.System.Data.OracleClient.OracleParameter("Original_USRCODIGO", Global.System.Data.OracleClient.OracleType.Number, 22, Global.System.Data.ParameterDirection.Input, "USRCODIGO", Global.System.Data.DataRowVersion.Original, false, Nothing))
         End Sub
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
@@ -13446,6 +13492,29 @@ Namespace oracleTableAdapters
          Global.System.ComponentModel.DataObjectMethodAttribute(Global.System.ComponentModel.DataObjectMethodType.Update, true)>  _
         Public Overloads Overridable Function Update(ByVal USRNOME As String, ByVal URSSENHA As String, ByVal USRADMINISTRADOR As String, ByVal Original_USRCODIGO As Decimal, ByVal Original_USRNOME As String, ByVal Original_URSSENHA As String, ByVal Original_USRADMINISTRADOR As String) As Integer
             Return Me.Update(Original_USRCODIGO, USRNOME, URSSENHA, USRADMINISTRADOR, Original_USRCODIGO, Original_USRNOME, Original_URSSENHA, Original_USRADMINISTRADOR)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0"),  _
+         Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter"),  _
+         Global.System.ComponentModel.DataObjectMethodAttribute(Global.System.ComponentModel.DataObjectMethodType.Delete, false)>  _
+        Public Overloads Overridable Function deletaUsuarios(ByVal Original_USRCODIGO As Decimal) As Integer
+            Dim command As Global.System.Data.OracleClient.OracleCommand = Me.CommandCollection(1)
+            command.Parameters(0).Value = CType(Original_USRCODIGO,Decimal)
+            Dim previousConnectionState As Global.System.Data.ConnectionState = command.Connection.State
+            If ((command.Connection.State And Global.System.Data.ConnectionState.Open)  _
+                        <> Global.System.Data.ConnectionState.Open) Then
+                command.Connection.Open
+            End If
+            Dim returnValue As Integer
+            Try 
+                returnValue = command.ExecuteNonQuery
+            Finally
+                If (previousConnectionState = Global.System.Data.ConnectionState.Closed) Then
+                    command.Connection.Close
+                End If
+            End Try
+            Return returnValue
         End Function
     End Class
     
@@ -13951,6 +14020,7 @@ Namespace oracleTableAdapters
             tableMapping.ColumnMappings.Add("CTRJUROS", "CTRJUROS")
             tableMapping.ColumnMappings.Add("CTRVALORPAGO", "CTRVALORPAGO")
             tableMapping.ColumnMappings.Add("NOTCODIGO", "NOTCODIGO")
+            tableMapping.ColumnMappings.Add("TPADESCRICAO", "TPADESCRICAO")
             Me._adapter.TableMappings.Add(tableMapping)
         End Sub
         
@@ -13972,11 +14042,13 @@ Namespace oracleTableAdapters
                 " MATRIX.CONTASRECEBER.CTRDATAVENCIMENTO, MATRIX.CONTASRECEBER.CTRVALOREMITIDO, M"& _ 
                 "ATRIX.CONTASRECEBER.CTRDATAPAGAMENTO, "&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"                         MATRIX.CONTASRE"& _ 
                 "CEBER.CTRDESC, MATRIX.CONTASRECEBER.CTRJUROS, MATRIX.CONTASRECEBER.CTRVALORPAGO,"& _ 
-                " MATRIX.NOTAFISCAL.NOTCODIGO"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"FROM            MATRIX.NOTAFISCAL, MATRIX.CONTASRE"& _ 
-                "CEBER, MATRIX.ORDEMSERVICO, MATRIX.CLIENTE"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"WHERE        MATRIX.NOTAFISCAL.NOTCO"& _ 
-                "DIGO = MATRIX.CONTASRECEBER.NOTCODIGO AND MATRIX.NOTAFISCAL.ORDCODIGO = MATRIX.O"& _ 
-                "RDEMSERVICO.ORDCODIGO AND "&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"                         MATRIX.ORDEMSERVICO.CLICODI"& _ 
-                "GO = MATRIX.CLIENTE.CLICODIGO"
+                " MATRIX.NOTAFISCAL.NOTCODIGO, "&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"                         MATRIX.TIPOSPAGAMENTO.T"& _ 
+                "PADESCRICAO"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"FROM            MATRIX.NOTAFISCAL, MATRIX.CONTASRECEBER, MATRIX.ORD"& _ 
+                "EMSERVICO, MATRIX.CLIENTE, MATRIX.TIPOSPAGAMENTO"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"WHERE        MATRIX.NOTAFISCAL"& _ 
+                ".NOTCODIGO = MATRIX.CONTASRECEBER.NOTCODIGO AND MATRIX.NOTAFISCAL.ORDCODIGO = MA"& _ 
+                "TRIX.ORDEMSERVICO.ORDCODIGO AND "&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"                         MATRIX.ORDEMSERVICO.C"& _ 
+                "LICODIGO = MATRIX.CLIENTE.CLICODIGO AND MATRIX.CONTASRECEBER.TPACODIGO = MATRIX."& _ 
+                "TIPOSPAGAMENTO.TPACODIGO"
             Me._commandCollection(0).CommandType = Global.System.Data.CommandType.Text
         End Sub
         

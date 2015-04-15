@@ -193,6 +193,7 @@ Partial Class Form6
         Me.cboCodServico.Name = "cboCodServico"
         Me.cboCodServico.Size = New System.Drawing.Size(121, 21)
         Me.cboCodServico.TabIndex = 74
+        Me.cboCodServico.Visible = False
         '
         'Label5
         '
@@ -222,6 +223,7 @@ Partial Class Form6
         Me.botNovoServico.TabIndex = 73
         Me.botNovoServico.Text = "Novo"
         Me.botNovoServico.UseVisualStyleBackColor = True
+        Me.botNovoServico.Visible = False
         '
         'Label4
         '
@@ -376,6 +378,7 @@ Partial Class Form6
         Me.cboCodFuncionario.Name = "cboCodFuncionario"
         Me.cboCodFuncionario.Size = New System.Drawing.Size(121, 21)
         Me.cboCodFuncionario.TabIndex = 73
+        Me.cboCodFuncionario.Visible = False
         '
         'Label2
         '
@@ -489,6 +492,7 @@ Partial Class Form6
         Me.cboCodCliente.Name = "cboCodCliente"
         Me.cboCodCliente.Size = New System.Drawing.Size(121, 21)
         Me.cboCodCliente.TabIndex = 70
+        Me.cboCodCliente.Visible = False
         '
         'lblIM
         '
@@ -782,6 +786,7 @@ Partial Class Form6
         '
         'botLimpar
         '
+        Me.botLimpar.DialogResult = System.Windows.Forms.DialogResult.Cancel
         Me.botLimpar.Image = Global.Sistema_Matrix.My.Resources.Resources.limpar
         Me.botLimpar.Location = New System.Drawing.Point(115, 3)
         Me.botLimpar.Name = "botLimpar"

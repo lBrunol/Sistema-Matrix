@@ -25,11 +25,11 @@ Partial Class relatorioContasReceber
         Me.components = New System.ComponentModel.Container()
         Dim ReportDataSource1 As Microsoft.Reporting.WinForms.ReportDataSource = New Microsoft.Reporting.WinForms.ReportDataSource()
         Me.ReportViewer1 = New Microsoft.Reporting.WinForms.ReportViewer()
-        Me.oracle = New Sistema_Matrix.oracle()
         Me.Q_CONTAS_RECEBERBindingSource = New System.Windows.Forms.BindingSource(Me.components)
+        Me.oracle = New Sistema_Matrix.oracle()
         Me.Q_CONTAS_RECEBERTableAdapter = New Sistema_Matrix.oracleTableAdapters.Q_CONTAS_RECEBERTableAdapter()
-        CType(Me.oracle, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.Q_CONTAS_RECEBERBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.oracle, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'ReportViewer1
@@ -44,15 +44,15 @@ Partial Class relatorioContasReceber
         Me.ReportViewer1.Size = New System.Drawing.Size(919, 493)
         Me.ReportViewer1.TabIndex = 0
         '
-        'oracle
-        '
-        Me.oracle.DataSetName = "oracle"
-        Me.oracle.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
-        '
         'Q_CONTAS_RECEBERBindingSource
         '
         Me.Q_CONTAS_RECEBERBindingSource.DataMember = "Q_CONTAS_RECEBER"
         Me.Q_CONTAS_RECEBERBindingSource.DataSource = Me.oracle
+        '
+        'oracle
+        '
+        Me.oracle.DataSetName = "oracle"
+        Me.oracle.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
         '
         'Q_CONTAS_RECEBERTableAdapter
         '
@@ -66,8 +66,8 @@ Partial Class relatorioContasReceber
         Me.Controls.Add(Me.ReportViewer1)
         Me.Name = "relatorioContasReceber"
         Me.Text = "relatorioContasReceber"
-        CType(Me.oracle, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.Q_CONTAS_RECEBERBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.oracle, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
     End Sub

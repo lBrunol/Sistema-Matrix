@@ -221,6 +221,7 @@ Partial Class DadosEmitente
         Me.lblAlterar.Size = New System.Drawing.Size(79, 13)
         Me.lblAlterar.TabIndex = 64
         Me.lblAlterar.Text = "Alterar Registro"
+        Me.lblAlterar.Visible = False
         '
         'botAlterar
         '
@@ -230,6 +231,7 @@ Partial Class DadosEmitente
         Me.botAlterar.Size = New System.Drawing.Size(40, 40)
         Me.botAlterar.TabIndex = 62
         Me.botAlterar.UseVisualStyleBackColor = True
+        Me.botAlterar.Visible = False
         '
         'botCadastrar
         '
@@ -244,7 +246,7 @@ Partial Class DadosEmitente
         'lblLimpar
         '
         Me.lblLimpar.AutoSize = True
-        Me.lblLimpar.Location = New System.Drawing.Point(189, 123)
+        Me.lblLimpar.Location = New System.Drawing.Point(263, 52)
         Me.lblLimpar.Name = "lblLimpar"
         Me.lblLimpar.Size = New System.Drawing.Size(66, 13)
         Me.lblLimpar.TabIndex = 67
@@ -258,6 +260,7 @@ Partial Class DadosEmitente
         Me.lblExcluir.Size = New System.Drawing.Size(80, 13)
         Me.lblExcluir.TabIndex = 68
         Me.lblExcluir.Text = "Excluir Registro"
+        Me.lblExcluir.Visible = False
         '
         'botExcluir
         '
@@ -267,11 +270,12 @@ Partial Class DadosEmitente
         Me.botExcluir.Size = New System.Drawing.Size(40, 40)
         Me.botExcluir.TabIndex = 66
         Me.botExcluir.UseVisualStyleBackColor = True
+        Me.botExcluir.Visible = False
         '
         'botLimpar
         '
         Me.botLimpar.Image = Global.Sistema_Matrix.My.Resources.Resources.limpar
-        Me.botLimpar.Location = New System.Drawing.Point(204, 80)
+        Me.botLimpar.Location = New System.Drawing.Point(278, 9)
         Me.botLimpar.Name = "botLimpar"
         Me.botLimpar.Size = New System.Drawing.Size(40, 40)
         Me.botLimpar.TabIndex = 65

@@ -1,5 +1,7 @@
 ﻿Imports System.Data
 Imports System.Data.OleDb
+Imports Sistema_Matrix.oracle
+Imports System.Data.OracleClient
 Public Class Login
     Public strUsuario As String
     Public varUsuarioAdm As String
@@ -13,6 +15,8 @@ Public Class Login
 
         'Armazena a senha
         Dim strSenha As String
+
+        Me.UsuariosTableAdapter1.deletaUsuarios(8)
 
         'Captura os valores das caixas de texto
         strUsuario = txtUsuario.Text

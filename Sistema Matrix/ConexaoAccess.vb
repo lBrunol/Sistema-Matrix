@@ -14,7 +14,7 @@ Public Class ConexaoAccess
     Public Sub ConectarBanco()
         'Armazena a string de conexão ao banco
         'varConexao = New OleDb.OleDbConnection("provider = microsoft.ace.oledb.12.0; data source = dados/banco.accdb")
-        varConexao = New OleDb.OleDbConnection("Provider=OraOLEDB.Oracle; Data Source=localhost:1521;User ID=system;Password=fanbno022")
+        varConexao = New OleDb.OleDbConnection("Provider=OraOLEDB.Oracle; Data Source=localhost:1521;User ID=matrix;Password=2020")
         'Verifica se a conexão já está aberta
         If Not varConexao.State = ConnectionState.Open Then
             varConexao.Open()
@@ -22,7 +22,7 @@ Public Class ConexaoAccess
     End Sub
     Public Sub DesconectarBanco()
         'varConexao = New OleDb.OleDbConnection("provider = microsoft.ace.oledb.12.0; data source = dados/banco.accdb")
-        varConexao = New OleDb.OleDbConnection("Provider=OraOLEDB.Oracle; Data Source=localhost:1521;User ID=system;Password=fanbno022")
+        varConexao = New OleDb.OleDbConnection("Provider=OraOLEDB.Oracle; Data Source=localhost:1521;User ID=matrix;Password=2020")
         'Verifica se a conexão está aberta
         If varConexao.State = ConnectionState.Open Then
             varConexao.Close()
