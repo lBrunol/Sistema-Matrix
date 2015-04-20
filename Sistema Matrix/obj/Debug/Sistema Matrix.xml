@@ -6,279 +6,231 @@ SistemaMatrix
 </name>
 </assembly>
 <members>
-<member name="T:Sistema_Matrix.oracle.CLIENTEDataTable">
+<member name="T:Sistema_Matrix.bancoDataSet.clienteDataTable">
 	<summary>
 Represents the strongly named DataTable class.
 </summary>
-</member><member name="T:Sistema_Matrix.oracle.CLIPESSOAJURIDICADataTable">
+</member><member name="T:Sistema_Matrix.bancoDataSet.cliPessoaFisicaDataTable">
 	<summary>
 Represents the strongly named DataTable class.
 </summary>
-</member><member name="T:Sistema_Matrix.oracle.CLIPESSOFISICADataTable">
+</member><member name="T:Sistema_Matrix.bancoDataSet.cliPessoaJuridicaDataTable">
 	<summary>
 Represents the strongly named DataTable class.
 </summary>
-</member><member name="T:Sistema_Matrix.oracle.CONTASRECEBERDataTable">
+</member><member name="T:Sistema_Matrix.bancoDataSet.contasReceberDataTable">
 	<summary>
 Represents the strongly named DataTable class.
 </summary>
-</member><member name="T:Sistema_Matrix.oracle.DADOSEMITENTEDataTable">
+</member><member name="T:Sistema_Matrix.bancoDataSet.dadosEmitenteDataTable">
 	<summary>
 Represents the strongly named DataTable class.
 </summary>
-</member><member name="T:Sistema_Matrix.oracle.FUNCIONARIODataTable">
+</member><member name="T:Sistema_Matrix.bancoDataSet.funcionariosDataTable">
 	<summary>
 Represents the strongly named DataTable class.
 </summary>
-</member><member name="T:Sistema_Matrix.oracle.NOTAFISCALDataTable">
+</member><member name="T:Sistema_Matrix.bancoDataSet.notaFiscalDataTable">
 	<summary>
 Represents the strongly named DataTable class.
 </summary>
-</member><member name="T:Sistema_Matrix.oracle.ORDEMSERVICODataTable">
+</member><member name="T:Sistema_Matrix.bancoDataSet.ordemServicoDataTable">
 	<summary>
 Represents the strongly named DataTable class.
 </summary>
-</member><member name="T:Sistema_Matrix.oracle.SERVICOSDataTable">
+</member><member name="T:Sistema_Matrix.bancoDataSet.servicosDataTable">
 	<summary>
 Represents the strongly named DataTable class.
 </summary>
-</member><member name="T:Sistema_Matrix.oracle.SERVICOSOSDataTable">
+</member><member name="T:Sistema_Matrix.bancoDataSet.servicos_osDataTable">
 	<summary>
 Represents the strongly named DataTable class.
 </summary>
-</member><member name="T:Sistema_Matrix.oracle.TIPOSPAGAMENTODataTable">
+</member><member name="T:Sistema_Matrix.bancoDataSet.tiposPagamentoDataTable">
 	<summary>
 Represents the strongly named DataTable class.
 </summary>
-</member><member name="T:Sistema_Matrix.oracle.USUARIOSDataTable">
+</member><member name="T:Sistema_Matrix.bancoDataSet.usuariosDataTable">
 	<summary>
 Represents the strongly named DataTable class.
 </summary>
-</member><member name="T:Sistema_Matrix.oracle.DataTable1DataTable">
-	<summary>
-Represents the strongly named DataTable class.
-</summary>
-</member><member name="T:Sistema_Matrix.oracle.Q_ORDEMDataTable">
-	<summary>
-Represents the strongly named DataTable class.
-</summary>
-</member><member name="T:Sistema_Matrix.oracle.Q_CONTAS_RECEBERDataTable">
-	<summary>
-Represents the strongly named DataTable class.
-</summary>
-</member><member name="T:Sistema_Matrix.oracle.CLIENTERow">
+</member><member name="T:Sistema_Matrix.bancoDataSet.clienteRow">
 	<summary>
 Represents strongly named DataRow class.
 </summary>
-</member><member name="T:Sistema_Matrix.oracle.CLIPESSOAJURIDICARow">
+</member><member name="T:Sistema_Matrix.bancoDataSet.cliPessoaFisicaRow">
 	<summary>
 Represents strongly named DataRow class.
 </summary>
-</member><member name="T:Sistema_Matrix.oracle.CLIPESSOFISICARow">
+</member><member name="T:Sistema_Matrix.bancoDataSet.cliPessoaJuridicaRow">
 	<summary>
 Represents strongly named DataRow class.
 </summary>
-</member><member name="T:Sistema_Matrix.oracle.CONTASRECEBERRow">
+</member><member name="T:Sistema_Matrix.bancoDataSet.contasReceberRow">
 	<summary>
 Represents strongly named DataRow class.
 </summary>
-</member><member name="T:Sistema_Matrix.oracle.DADOSEMITENTERow">
+</member><member name="T:Sistema_Matrix.bancoDataSet.dadosEmitenteRow">
 	<summary>
 Represents strongly named DataRow class.
 </summary>
-</member><member name="T:Sistema_Matrix.oracle.FUNCIONARIORow">
+</member><member name="T:Sistema_Matrix.bancoDataSet.funcionariosRow">
 	<summary>
 Represents strongly named DataRow class.
 </summary>
-</member><member name="T:Sistema_Matrix.oracle.NOTAFISCALRow">
+</member><member name="T:Sistema_Matrix.bancoDataSet.notaFiscalRow">
 	<summary>
 Represents strongly named DataRow class.
 </summary>
-</member><member name="T:Sistema_Matrix.oracle.ORDEMSERVICORow">
+</member><member name="T:Sistema_Matrix.bancoDataSet.ordemServicoRow">
 	<summary>
 Represents strongly named DataRow class.
 </summary>
-</member><member name="T:Sistema_Matrix.oracle.SERVICOSRow">
+</member><member name="T:Sistema_Matrix.bancoDataSet.servicosRow">
 	<summary>
 Represents strongly named DataRow class.
 </summary>
-</member><member name="T:Sistema_Matrix.oracle.SERVICOSOSRow">
+</member><member name="T:Sistema_Matrix.bancoDataSet.servicos_osRow">
 	<summary>
 Represents strongly named DataRow class.
 </summary>
-</member><member name="T:Sistema_Matrix.oracle.TIPOSPAGAMENTORow">
+</member><member name="T:Sistema_Matrix.bancoDataSet.tiposPagamentoRow">
 	<summary>
 Represents strongly named DataRow class.
 </summary>
-</member><member name="T:Sistema_Matrix.oracle.USUARIOSRow">
+</member><member name="T:Sistema_Matrix.bancoDataSet.usuariosRow">
 	<summary>
 Represents strongly named DataRow class.
 </summary>
-</member><member name="T:Sistema_Matrix.oracle.DataTable1Row">
-	<summary>
-Represents strongly named DataRow class.
-</summary>
-</member><member name="T:Sistema_Matrix.oracle.Q_ORDEMRow">
-	<summary>
-Represents strongly named DataRow class.
-</summary>
-</member><member name="T:Sistema_Matrix.oracle.Q_CONTAS_RECEBERRow">
-	<summary>
-Represents strongly named DataRow class.
-</summary>
-</member><member name="T:Sistema_Matrix.oracle.CLIENTERowChangeEvent">
+</member><member name="T:Sistema_Matrix.bancoDataSet.clienteRowChangeEvent">
 	<summary>
 Row event argument class
 </summary>
-</member><member name="T:Sistema_Matrix.oracle.CLIPESSOAJURIDICARowChangeEvent">
+</member><member name="T:Sistema_Matrix.bancoDataSet.cliPessoaFisicaRowChangeEvent">
 	<summary>
 Row event argument class
 </summary>
-</member><member name="T:Sistema_Matrix.oracle.CLIPESSOFISICARowChangeEvent">
+</member><member name="T:Sistema_Matrix.bancoDataSet.cliPessoaJuridicaRowChangeEvent">
 	<summary>
 Row event argument class
 </summary>
-</member><member name="T:Sistema_Matrix.oracle.CONTASRECEBERRowChangeEvent">
+</member><member name="T:Sistema_Matrix.bancoDataSet.contasReceberRowChangeEvent">
 	<summary>
 Row event argument class
 </summary>
-</member><member name="T:Sistema_Matrix.oracle.DADOSEMITENTERowChangeEvent">
+</member><member name="T:Sistema_Matrix.bancoDataSet.dadosEmitenteRowChangeEvent">
 	<summary>
 Row event argument class
 </summary>
-</member><member name="T:Sistema_Matrix.oracle.FUNCIONARIORowChangeEvent">
+</member><member name="T:Sistema_Matrix.bancoDataSet.funcionariosRowChangeEvent">
 	<summary>
 Row event argument class
 </summary>
-</member><member name="T:Sistema_Matrix.oracle.NOTAFISCALRowChangeEvent">
+</member><member name="T:Sistema_Matrix.bancoDataSet.notaFiscalRowChangeEvent">
 	<summary>
 Row event argument class
 </summary>
-</member><member name="T:Sistema_Matrix.oracle.ORDEMSERVICORowChangeEvent">
+</member><member name="T:Sistema_Matrix.bancoDataSet.ordemServicoRowChangeEvent">
 	<summary>
 Row event argument class
 </summary>
-</member><member name="T:Sistema_Matrix.oracle.SERVICOSRowChangeEvent">
+</member><member name="T:Sistema_Matrix.bancoDataSet.servicosRowChangeEvent">
 	<summary>
 Row event argument class
 </summary>
-</member><member name="T:Sistema_Matrix.oracle.SERVICOSOSRowChangeEvent">
+</member><member name="T:Sistema_Matrix.bancoDataSet.servicos_osRowChangeEvent">
 	<summary>
 Row event argument class
 </summary>
-</member><member name="T:Sistema_Matrix.oracle.TIPOSPAGAMENTORowChangeEvent">
+</member><member name="T:Sistema_Matrix.bancoDataSet.tiposPagamentoRowChangeEvent">
 	<summary>
 Row event argument class
 </summary>
-</member><member name="T:Sistema_Matrix.oracle.USUARIOSRowChangeEvent">
+</member><member name="T:Sistema_Matrix.bancoDataSet.usuariosRowChangeEvent">
 	<summary>
 Row event argument class
 </summary>
-</member><member name="T:Sistema_Matrix.oracle.DataTable1RowChangeEvent">
-	<summary>
-Row event argument class
-</summary>
-</member><member name="T:Sistema_Matrix.oracle.Q_ORDEMRowChangeEvent">
-	<summary>
-Row event argument class
-</summary>
-</member><member name="T:Sistema_Matrix.oracle.Q_CONTAS_RECEBERRowChangeEvent">
-	<summary>
-Row event argument class
-</summary>
-</member><member name="T:Sistema_Matrix.oracle">
+</member><member name="T:Sistema_Matrix.bancoDataSet">
 	<summary>
 Represents a strongly typed in-memory cache of data.
 </summary>
-</member><member name="T:Sistema_Matrix.oracleTableAdapters.CLIENTETableAdapter">
+</member><member name="T:Sistema_Matrix.bancoDataSetTableAdapters.clienteTableAdapter">
 	<summary>
 Represents the connection and commands used to retrieve and save data.
 </summary>
-</member><member name="T:Sistema_Matrix.oracleTableAdapters.CLIPESSOAJURIDICATableAdapter">
+</member><member name="T:Sistema_Matrix.bancoDataSetTableAdapters.cliPessoaFisicaTableAdapter">
 	<summary>
 Represents the connection and commands used to retrieve and save data.
 </summary>
-</member><member name="T:Sistema_Matrix.oracleTableAdapters.CLIPESSOFISICATableAdapter">
+</member><member name="T:Sistema_Matrix.bancoDataSetTableAdapters.cliPessoaJuridicaTableAdapter">
 	<summary>
 Represents the connection and commands used to retrieve and save data.
 </summary>
-</member><member name="T:Sistema_Matrix.oracleTableAdapters.CONTASRECEBERTableAdapter">
+</member><member name="T:Sistema_Matrix.bancoDataSetTableAdapters.contasReceberTableAdapter">
 	<summary>
 Represents the connection and commands used to retrieve and save data.
 </summary>
-</member><member name="T:Sistema_Matrix.oracleTableAdapters.DADOSEMITENTETableAdapter">
+</member><member name="T:Sistema_Matrix.bancoDataSetTableAdapters.dadosEmitenteTableAdapter">
 	<summary>
 Represents the connection and commands used to retrieve and save data.
 </summary>
-</member><member name="T:Sistema_Matrix.oracleTableAdapters.FUNCIONARIOTableAdapter">
+</member><member name="T:Sistema_Matrix.bancoDataSetTableAdapters.funcionariosTableAdapter">
 	<summary>
 Represents the connection and commands used to retrieve and save data.
 </summary>
-</member><member name="T:Sistema_Matrix.oracleTableAdapters.NOTAFISCALTableAdapter">
+</member><member name="T:Sistema_Matrix.bancoDataSetTableAdapters.notaFiscalTableAdapter">
 	<summary>
 Represents the connection and commands used to retrieve and save data.
 </summary>
-</member><member name="T:Sistema_Matrix.oracleTableAdapters.ORDEMSERVICOTableAdapter">
+</member><member name="T:Sistema_Matrix.bancoDataSetTableAdapters.ordemServicoTableAdapter">
 	<summary>
 Represents the connection and commands used to retrieve and save data.
 </summary>
-</member><member name="T:Sistema_Matrix.oracleTableAdapters.SERVICOSTableAdapter">
+</member><member name="T:Sistema_Matrix.bancoDataSetTableAdapters.servicosTableAdapter">
 	<summary>
 Represents the connection and commands used to retrieve and save data.
 </summary>
-</member><member name="T:Sistema_Matrix.oracleTableAdapters.SERVICOSOSTableAdapter">
+</member><member name="T:Sistema_Matrix.bancoDataSetTableAdapters.servicos_osTableAdapter">
 	<summary>
 Represents the connection and commands used to retrieve and save data.
 </summary>
-</member><member name="T:Sistema_Matrix.oracleTableAdapters.TIPOSPAGAMENTOTableAdapter">
+</member><member name="T:Sistema_Matrix.bancoDataSetTableAdapters.tiposPagamentoTableAdapter">
 	<summary>
 Represents the connection and commands used to retrieve and save data.
 </summary>
-</member><member name="T:Sistema_Matrix.oracleTableAdapters.USUARIOSTableAdapter">
+</member><member name="T:Sistema_Matrix.bancoDataSetTableAdapters.usuariosTableAdapter">
 	<summary>
 Represents the connection and commands used to retrieve and save data.
 </summary>
-</member><member name="T:Sistema_Matrix.oracleTableAdapters.DataTable1TableAdapter">
-	<summary>
-Represents the connection and commands used to retrieve and save data.
-</summary>
-</member><member name="T:Sistema_Matrix.oracleTableAdapters.Q_ORDEMTableAdapter">
-	<summary>
-Represents the connection and commands used to retrieve and save data.
-</summary>
-</member><member name="T:Sistema_Matrix.oracleTableAdapters.Q_CONTAS_RECEBERTableAdapter">
-	<summary>
-Represents the connection and commands used to retrieve and save data.
-</summary>
-</member><member name="M:Sistema_Matrix.oracleTableAdapters.TableAdapterManager.UpdateUpdatedRows(Sistema_Matrix.oracle,System.Collections.Generic.List{System.Data.DataRow},System.Collections.Generic.List{System.Data.DataRow})">
+</member><member name="M:Sistema_Matrix.bancoDataSetTableAdapters.TableAdapterManager.UpdateUpdatedRows(Sistema_Matrix.bancoDataSet,System.Collections.Generic.List{System.Data.DataRow},System.Collections.Generic.List{System.Data.DataRow})">
 	<summary>
 Update rows in top-down order.
 </summary>
-</member><member name="M:Sistema_Matrix.oracleTableAdapters.TableAdapterManager.UpdateInsertedRows(Sistema_Matrix.oracle,System.Collections.Generic.List{System.Data.DataRow})">
+</member><member name="M:Sistema_Matrix.bancoDataSetTableAdapters.TableAdapterManager.UpdateInsertedRows(Sistema_Matrix.bancoDataSet,System.Collections.Generic.List{System.Data.DataRow})">
 	<summary>
 Insert rows in top-down order.
 </summary>
-</member><member name="M:Sistema_Matrix.oracleTableAdapters.TableAdapterManager.UpdateDeletedRows(Sistema_Matrix.oracle,System.Collections.Generic.List{System.Data.DataRow})">
+</member><member name="M:Sistema_Matrix.bancoDataSetTableAdapters.TableAdapterManager.UpdateDeletedRows(Sistema_Matrix.bancoDataSet,System.Collections.Generic.List{System.Data.DataRow})">
 	<summary>
 Delete rows in bottom-up order.
 </summary>
-</member><member name="M:Sistema_Matrix.oracleTableAdapters.TableAdapterManager.GetRealUpdatedRows(System.Data.DataRow[],System.Collections.Generic.List{System.Data.DataRow})">
+</member><member name="M:Sistema_Matrix.bancoDataSetTableAdapters.TableAdapterManager.GetRealUpdatedRows(System.Data.DataRow[],System.Collections.Generic.List{System.Data.DataRow})">
 	<summary>
 Remove inserted rows that become updated rows after calling TableAdapter.Update(inserted rows) first
 </summary>
-</member><member name="M:Sistema_Matrix.oracleTableAdapters.TableAdapterManager.UpdateAll(Sistema_Matrix.oracle)">
+</member><member name="M:Sistema_Matrix.bancoDataSetTableAdapters.TableAdapterManager.UpdateAll(Sistema_Matrix.bancoDataSet)">
 	<summary>
 Update all changes to the dataset.
 </summary>
-</member><member name="T:Sistema_Matrix.oracleTableAdapters.TableAdapterManager.UpdateOrderOption">
+</member><member name="T:Sistema_Matrix.bancoDataSetTableAdapters.TableAdapterManager.UpdateOrderOption">
 	<summary>
 Update Order Option
 </summary>
-</member><member name="T:Sistema_Matrix.oracleTableAdapters.TableAdapterManager.SelfReferenceComparer">
+</member><member name="T:Sistema_Matrix.bancoDataSetTableAdapters.TableAdapterManager.SelfReferenceComparer">
 	<summary>
 Used to sort self-referenced table's rows
 </summary>
-</member><member name="T:Sistema_Matrix.oracleTableAdapters.TableAdapterManager">
+</member><member name="T:Sistema_Matrix.bancoDataSetTableAdapters.TableAdapterManager">
 	<summary>
 TableAdapterManager is used to coordinate TableAdapters in the dataset to enable Hierarchical Update scenarios
 </summary>

@@ -1,10 +1,9 @@
 ﻿Imports System.Data
 Imports System.Data.OleDb
-Imports Sistema_Matrix.oracle
 Imports System.Data.OracleClient
 Public Class Login
     Public strUsuario As String
-    Public varUsuarioAdm As String
+    Public varUsuarioAdm As Boolean
     Public tabela As DataTable
     Public leitor As OleDbDataReader
     Public strsql As String
@@ -15,8 +14,6 @@ Public Class Login
 
         'Armazena a senha
         Dim strSenha As String
-
-        Me.UsuariosTableAdapter1.deletaUsuarios(8)
 
         'Captura os valores das caixas de texto
         strUsuario = txtUsuario.Text
@@ -47,7 +44,7 @@ Public Class Login
                         'Oculta o formulário de login
                         Me.Hide()
                         'Verifica se o usuário que logou é administrador
-                        varUsuarioAdm = leitor.GetString(2).ToString
+                        varUsuarioAdm = leitor.GetBoolean(2)
                         'Mostra a tela principal
                         telaPrincipal.Show()
                         'Limpa os campos do formulário
