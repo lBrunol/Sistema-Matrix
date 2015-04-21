@@ -100,10 +100,10 @@ Partial Class formConsultaUsuarios
         'lblCodServico
         '
         Me.lblCodServico.AutoSize = True
-        Me.lblCodServico.Font = New System.Drawing.Font("Century Gothic", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblCodServico.Font = New System.Drawing.Font("Century Gothic", 9.75!)
         Me.lblCodServico.Location = New System.Drawing.Point(417, 27)
         Me.lblCodServico.Name = "lblCodServico"
-        Me.lblCodServico.Size = New System.Drawing.Size(68, 21)
+        Me.lblCodServico.Size = New System.Drawing.Size(58, 17)
         Me.lblCodServico.TabIndex = 66
         Me.lblCodServico.Text = "Código"
         Me.lblCodServico.Visible = False
@@ -168,10 +168,10 @@ Partial Class formConsultaUsuarios
         'lblDescricao
         '
         Me.lblDescricao.AutoSize = True
-        Me.lblDescricao.Font = New System.Drawing.Font("Century Gothic", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblDescricao.Font = New System.Drawing.Font("Century Gothic", 9.75!)
         Me.lblDescricao.Location = New System.Drawing.Point(8, 256)
         Me.lblDescricao.Name = "lblDescricao"
-        Me.lblDescricao.Size = New System.Drawing.Size(93, 21)
+        Me.lblDescricao.Size = New System.Drawing.Size(78, 17)
         Me.lblDescricao.TabIndex = 42
         Me.lblDescricao.Text = "Descrição*"
         '
@@ -196,10 +196,10 @@ Partial Class formConsultaUsuarios
         'lblNome
         '
         Me.lblNome.AutoSize = True
-        Me.lblNome.Font = New System.Drawing.Font("Century Gothic", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblNome.Font = New System.Drawing.Font("Century Gothic", 9.75!)
         Me.lblNome.Location = New System.Drawing.Point(6, 114)
         Me.lblNome.Name = "lblNome"
-        Me.lblNome.Size = New System.Drawing.Size(63, 21)
+        Me.lblNome.Size = New System.Drawing.Size(54, 17)
         Me.lblNome.TabIndex = 28
         Me.lblNome.Text = "Nome*"
         '
@@ -217,10 +217,10 @@ Partial Class formConsultaUsuarios
         'lblValor
         '
         Me.lblValor.AutoSize = True
-        Me.lblValor.Font = New System.Drawing.Font("Century Gothic", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblValor.Font = New System.Drawing.Font("Century Gothic", 9.75!)
         Me.lblValor.Location = New System.Drawing.Point(8, 184)
         Me.lblValor.Name = "lblValor"
-        Me.lblValor.Size = New System.Drawing.Size(56, 21)
+        Me.lblValor.Size = New System.Drawing.Size(48, 17)
         Me.lblValor.TabIndex = 39
         Me.lblValor.Text = "Valor*"
         '
