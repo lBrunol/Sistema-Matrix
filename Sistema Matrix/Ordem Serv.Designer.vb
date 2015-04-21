@@ -139,10 +139,10 @@ Partial Class Form6
         'lblDescricaoOS
         '
         Me.lblDescricaoOS.AutoSize = True
-        Me.lblDescricaoOS.Font = New System.Drawing.Font("Century Gothic", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblDescricaoOS.Font = New System.Drawing.Font("Century Gothic", 9.75!)
         Me.lblDescricaoOS.Location = New System.Drawing.Point(311, 89)
         Me.lblDescricaoOS.Name = "lblDescricaoOS"
-        Me.lblDescricaoOS.Size = New System.Drawing.Size(205, 21)
+        Me.lblDescricaoOS.Size = New System.Drawing.Size(170, 17)
         Me.lblDescricaoOS.TabIndex = 91
         Me.lblDescricaoOS.Text = "Descrição da Ocorrência"
         '
@@ -204,10 +204,10 @@ Partial Class Form6
         'Label5
         '
         Me.Label5.AutoSize = True
-        Me.Label5.Font = New System.Drawing.Font("Century Gothic", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label5.Font = New System.Drawing.Font("Century Gothic", 9.75!)
         Me.Label5.Location = New System.Drawing.Point(484, 20)
         Me.Label5.Name = "Label5"
-        Me.Label5.Size = New System.Drawing.Size(56, 21)
+        Me.Label5.Size = New System.Drawing.Size(45, 17)
         Me.Label5.TabIndex = 79
         Me.Label5.Text = "Qtde."
         '
@@ -236,10 +236,10 @@ Partial Class Form6
         'Label4
         '
         Me.Label4.AutoSize = True
-        Me.Label4.Font = New System.Drawing.Font("Century Gothic", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label4.Font = New System.Drawing.Font("Century Gothic", 9.75!)
         Me.Label4.Location = New System.Drawing.Point(548, 20)
         Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(87, 21)
+        Me.Label4.Size = New System.Drawing.Size(72, 17)
         Me.Label4.TabIndex = 78
         Me.Label4.Text = "Descrição"
         '
@@ -259,10 +259,10 @@ Partial Class Form6
         'lblValor
         '
         Me.lblValor.AutoSize = True
-        Me.lblValor.Font = New System.Drawing.Font("Century Gothic", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblValor.Font = New System.Drawing.Font("Century Gothic", 9.75!)
         Me.lblValor.Location = New System.Drawing.Point(353, 20)
         Me.lblValor.Name = "lblValor"
-        Me.lblValor.Size = New System.Drawing.Size(50, 21)
+        Me.lblValor.Size = New System.Drawing.Size(42, 17)
         Me.lblValor.TabIndex = 73
         Me.lblValor.Text = "Valor"
         '
@@ -311,10 +311,10 @@ Partial Class Form6
         'Label3
         '
         Me.Label3.AutoSize = True
-        Me.Label3.Font = New System.Drawing.Font("Century Gothic", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label3.Font = New System.Drawing.Font("Century Gothic", 9.75!)
         Me.Label3.Location = New System.Drawing.Point(106, 152)
         Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(181, 21)
+        Me.Label3.Size = New System.Drawing.Size(148, 17)
         Me.Label3.TabIndex = 61
         Me.Label3.Text = "Data de Fechamento"
         '
@@ -355,10 +355,10 @@ Partial Class Form6
         'lblDataAbertura
         '
         Me.lblDataAbertura.AutoSize = True
-        Me.lblDataAbertura.Font = New System.Drawing.Font("Century Gothic", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblDataAbertura.Font = New System.Drawing.Font("Century Gothic", 9.75!)
         Me.lblDataAbertura.Location = New System.Drawing.Point(106, 89)
         Me.lblDataAbertura.Name = "lblDataAbertura"
-        Me.lblDataAbertura.Size = New System.Drawing.Size(152, 21)
+        Me.lblDataAbertura.Size = New System.Drawing.Size(122, 17)
         Me.lblDataAbertura.TabIndex = 59
         Me.lblDataAbertura.Text = "Data de Abertura"
         '
@@ -403,10 +403,10 @@ Partial Class Form6
         'Label2
         '
         Me.Label2.AutoSize = True
-        Me.Label2.Font = New System.Drawing.Font("Century Gothic", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label2.Font = New System.Drawing.Font("Century Gothic", 9.75!)
         Me.Label2.Location = New System.Drawing.Point(512, 20)
         Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(60, 21)
+        Me.Label2.Size = New System.Drawing.Size(50, 17)
         Me.Label2.TabIndex = 70
         Me.Label2.Text = "Cargo"
         '
@@ -477,7 +477,7 @@ Partial Class Form6
         Me.grpCliente.Controls.Add(Me.lblIE)
         Me.grpCliente.Controls.Add(Me.mtxIE)
         Me.grpCliente.Controls.Add(Me.lblRG)
-        Me.grpCliente.Font = New System.Drawing.Font("Century Gothic", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.grpCliente.Font = New System.Drawing.Font("Century Gothic", 12.0!)
         Me.grpCliente.Location = New System.Drawing.Point(9, 220)
         Me.grpCliente.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
         Me.grpCliente.Name = "grpCliente"
@@ -490,10 +490,10 @@ Partial Class Form6
         'lblRazaoSocial
         '
         Me.lblRazaoSocial.AutoSize = True
-        Me.lblRazaoSocial.Font = New System.Drawing.Font("Century Gothic", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblRazaoSocial.Font = New System.Drawing.Font("Century Gothic", 9.75!)
         Me.lblRazaoSocial.Location = New System.Drawing.Point(542, 228)
         Me.lblRazaoSocial.Name = "lblRazaoSocial"
-        Me.lblRazaoSocial.Size = New System.Drawing.Size(108, 21)
+        Me.lblRazaoSocial.Size = New System.Drawing.Size(91, 17)
         Me.lblRazaoSocial.TabIndex = 72
         Me.lblRazaoSocial.Text = "Razão Social"
         Me.lblRazaoSocial.Visible = False
@@ -524,10 +524,10 @@ Partial Class Form6
         'lblIM
         '
         Me.lblIM.AutoSize = True
-        Me.lblIM.Font = New System.Drawing.Font("Century Gothic", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblIM.Font = New System.Drawing.Font("Century Gothic", 9.75!)
         Me.lblIM.Location = New System.Drawing.Point(358, 228)
         Me.lblIM.Name = "lblIM"
-        Me.lblIM.Size = New System.Drawing.Size(30, 21)
+        Me.lblIM.Size = New System.Drawing.Size(22, 17)
         Me.lblIM.TabIndex = 68
         Me.lblIM.Text = "IM"
         Me.lblIM.Visible = False
@@ -571,10 +571,10 @@ Partial Class Form6
         'lblTelefone
         '
         Me.lblTelefone.AutoSize = True
-        Me.lblTelefone.Font = New System.Drawing.Font("Century Gothic", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblTelefone.Font = New System.Drawing.Font("Century Gothic", 9.75!)
         Me.lblTelefone.Location = New System.Drawing.Point(570, 167)
         Me.lblTelefone.Name = "lblTelefone"
-        Me.lblTelefone.Size = New System.Drawing.Size(76, 21)
+        Me.lblTelefone.Size = New System.Drawing.Size(61, 17)
         Me.lblTelefone.TabIndex = 58
         Me.lblTelefone.Text = "Telefone"
         '
@@ -592,10 +592,10 @@ Partial Class Form6
         'lblComplemento
         '
         Me.lblComplemento.AutoSize = True
-        Me.lblComplemento.Font = New System.Drawing.Font("Century Gothic", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblComplemento.Font = New System.Drawing.Font("Century Gothic", 9.75!)
         Me.lblComplemento.Location = New System.Drawing.Point(419, 105)
         Me.lblComplemento.Name = "lblComplemento"
-        Me.lblComplemento.Size = New System.Drawing.Size(124, 21)
+        Me.lblComplemento.Size = New System.Drawing.Size(104, 17)
         Me.lblComplemento.TabIndex = 56
         Me.lblComplemento.Text = "Complemento"
         '
@@ -657,60 +657,60 @@ Partial Class Form6
         'lblUF
         '
         Me.lblUF.AutoSize = True
-        Me.lblUF.Font = New System.Drawing.Font("Century Gothic", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblUF.Font = New System.Drawing.Font("Century Gothic", 9.75!)
         Me.lblUF.Location = New System.Drawing.Point(489, 167)
         Me.lblUF.Name = "lblUF"
-        Me.lblUF.Size = New System.Drawing.Size(29, 21)
+        Me.lblUF.Size = New System.Drawing.Size(22, 17)
         Me.lblUF.TabIndex = 49
         Me.lblUF.Text = "UF"
         '
         'lblCidade
         '
         Me.lblCidade.AutoSize = True
-        Me.lblCidade.Font = New System.Drawing.Font("Century Gothic", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblCidade.Font = New System.Drawing.Font("Century Gothic", 9.75!)
         Me.lblCidade.Location = New System.Drawing.Point(210, 167)
         Me.lblCidade.Name = "lblCidade"
-        Me.lblCidade.Size = New System.Drawing.Size(69, 21)
+        Me.lblCidade.Size = New System.Drawing.Size(57, 17)
         Me.lblCidade.TabIndex = 48
         Me.lblCidade.Text = "Cidade"
         '
         'lblCEP
         '
         Me.lblCEP.AutoSize = True
-        Me.lblCEP.Font = New System.Drawing.Font("Century Gothic", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblCEP.Font = New System.Drawing.Font("Century Gothic", 9.75!)
         Me.lblCEP.Location = New System.Drawing.Point(570, 105)
         Me.lblCEP.Name = "lblCEP"
-        Me.lblCEP.Size = New System.Drawing.Size(44, 21)
+        Me.lblCEP.Size = New System.Drawing.Size(36, 17)
         Me.lblCEP.TabIndex = 47
         Me.lblCEP.Text = "Cep"
         '
         'lblNumEndereco
         '
         Me.lblNumEndereco.AutoSize = True
-        Me.lblNumEndereco.Font = New System.Drawing.Font("Century Gothic", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblNumEndereco.Font = New System.Drawing.Font("Century Gothic", 9.75!)
         Me.lblNumEndereco.Location = New System.Drawing.Point(357, 105)
         Me.lblNumEndereco.Name = "lblNumEndereco"
-        Me.lblNumEndereco.Size = New System.Drawing.Size(28, 21)
+        Me.lblNumEndereco.Size = New System.Drawing.Size(23, 17)
         Me.lblNumEndereco.TabIndex = 46
         Me.lblNumEndereco.Text = "Nº"
         '
         'lblBairro
         '
         Me.lblBairro.AutoSize = True
-        Me.lblBairro.Font = New System.Drawing.Font("Century Gothic", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblBairro.Font = New System.Drawing.Font("Century Gothic", 9.75!)
         Me.lblBairro.Location = New System.Drawing.Point(12, 167)
         Me.lblBairro.Name = "lblBairro"
-        Me.lblBairro.Size = New System.Drawing.Size(53, 21)
+        Me.lblBairro.Size = New System.Drawing.Size(44, 17)
         Me.lblBairro.TabIndex = 45
         Me.lblBairro.Text = "Bairro"
         '
         'lblEndereco
         '
         Me.lblEndereco.AutoSize = True
-        Me.lblEndereco.Font = New System.Drawing.Font("Century Gothic", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblEndereco.Font = New System.Drawing.Font("Century Gothic", 9.75!)
         Me.lblEndereco.Location = New System.Drawing.Point(7, 105)
         Me.lblEndereco.Name = "lblEndereco"
-        Me.lblEndereco.Size = New System.Drawing.Size(85, 21)
+        Me.lblEndereco.Size = New System.Drawing.Size(69, 17)
         Me.lblEndereco.TabIndex = 44
         Me.lblEndereco.Text = "Endereço"
         '
@@ -728,10 +728,10 @@ Partial Class Form6
         'lblSelecionar
         '
         Me.lblSelecionar.AutoSize = True
-        Me.lblSelecionar.Font = New System.Drawing.Font("Century Gothic", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblSelecionar.Font = New System.Drawing.Font("Century Gothic", 9.75!)
         Me.lblSelecionar.Location = New System.Drawing.Point(7, 34)
         Me.lblSelecionar.Name = "lblSelecionar"
-        Me.lblSelecionar.Size = New System.Drawing.Size(158, 21)
+        Me.lblSelecionar.Size = New System.Drawing.Size(132, 17)
         Me.lblSelecionar.TabIndex = 1
         Me.lblSelecionar.Text = "Selecione o Cliente"
         '
@@ -772,10 +772,10 @@ Partial Class Form6
         'lblCNPJ
         '
         Me.lblCNPJ.AutoSize = True
-        Me.lblCNPJ.Font = New System.Drawing.Font("Century Gothic", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblCNPJ.Font = New System.Drawing.Font("Century Gothic", 9.75!)
         Me.lblCNPJ.Location = New System.Drawing.Point(12, 229)
         Me.lblCNPJ.Name = "lblCNPJ"
-        Me.lblCNPJ.Size = New System.Drawing.Size(52, 21)
+        Me.lblCNPJ.Size = New System.Drawing.Size(43, 17)
         Me.lblCNPJ.TabIndex = 63
         Me.lblCNPJ.Text = "CNPJ"
         Me.lblCNPJ.Visible = False
@@ -818,10 +818,10 @@ Partial Class Form6
         'lblRG
         '
         Me.lblRG.AutoSize = True
-        Me.lblRG.Font = New System.Drawing.Font("Century Gothic", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblRG.Font = New System.Drawing.Font("Century Gothic", 9.75!)
         Me.lblRG.Location = New System.Drawing.Point(196, 228)
         Me.lblRG.Name = "lblRG"
-        Me.lblRG.Size = New System.Drawing.Size(34, 21)
+        Me.lblRG.Size = New System.Drawing.Size(27, 17)
         Me.lblRG.TabIndex = 10
         Me.lblRG.Text = "RG"
         '
@@ -850,10 +850,10 @@ Partial Class Form6
         'Label1
         '
         Me.Label1.AutoSize = True
-        Me.Label1.Font = New System.Drawing.Font("Century Gothic", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label1.Font = New System.Drawing.Font("Century Gothic", 9.75!)
         Me.Label1.Location = New System.Drawing.Point(9, 89)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(68, 21)
+        Me.Label1.Size = New System.Drawing.Size(58, 17)
         Me.Label1.TabIndex = 0
         Me.Label1.Text = "Código"
         '
@@ -891,11 +891,11 @@ Partial Class Form6
         'tabConsultaOrdem
         '
         Me.tabConsultaOrdem.Controls.Add(Me.dtgOrdemServico)
-        Me.tabConsultaOrdem.Location = New System.Drawing.Point(4, 22)
+        Me.tabConsultaOrdem.Location = New System.Drawing.Point(4, 26)
         Me.tabConsultaOrdem.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
         Me.tabConsultaOrdem.Name = "tabConsultaOrdem"
         Me.tabConsultaOrdem.Padding = New System.Windows.Forms.Padding(3, 4, 3, 4)
-        Me.tabConsultaOrdem.Size = New System.Drawing.Size(844, 836)
+        Me.tabConsultaOrdem.Size = New System.Drawing.Size(844, 832)
         Me.tabConsultaOrdem.TabIndex = 0
         Me.tabConsultaOrdem.Text = "Consulta"
         Me.tabConsultaOrdem.UseVisualStyleBackColor = True
