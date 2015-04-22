@@ -22,8 +22,8 @@ Partial Class formConsultaUsuarios
     'Não o modifique usando o editor de códigos.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
-        Dim DataGridViewCellStyle1 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle2 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle7 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle8 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Me.tabServico = New System.Windows.Forms.TabControl()
         Me.tabCadastroServicos = New System.Windows.Forms.TabPage()
         Me.lblCodServico = New System.Windows.Forms.Label()
@@ -58,12 +58,10 @@ Partial Class formConsultaUsuarios
         '
         Me.tabServico.Controls.Add(Me.tabCadastroServicos)
         Me.tabServico.Controls.Add(Me.tabConsultaServicos)
-        Me.tabServico.Font = New System.Drawing.Font("Century Gothic", 9.75!)
-        Me.tabServico.Location = New System.Drawing.Point(16, 16)
-        Me.tabServico.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
+        Me.tabServico.Location = New System.Drawing.Point(12, 12)
         Me.tabServico.Name = "tabServico"
         Me.tabServico.SelectedIndex = 0
-        Me.tabServico.Size = New System.Drawing.Size(666, 539)
+        Me.tabServico.Size = New System.Drawing.Size(457, 453)
         Me.tabServico.TabIndex = 0
         '
         'tabCadastroServicos
@@ -88,11 +86,10 @@ Partial Class formConsultaUsuarios
         Me.tabCadastroServicos.Controls.Add(Me.botExcluir)
         Me.tabCadastroServicos.Controls.Add(Me.botCadastrar)
         Me.tabCadastroServicos.Controls.Add(Me.botLimpar)
-        Me.tabCadastroServicos.Location = New System.Drawing.Point(4, 26)
-        Me.tabCadastroServicos.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
+        Me.tabCadastroServicos.Location = New System.Drawing.Point(4, 22)
         Me.tabCadastroServicos.Name = "tabCadastroServicos"
-        Me.tabCadastroServicos.Padding = New System.Windows.Forms.Padding(3, 4, 3, 4)
-        Me.tabCadastroServicos.Size = New System.Drawing.Size(658, 509)
+        Me.tabCadastroServicos.Padding = New System.Windows.Forms.Padding(3)
+        Me.tabCadastroServicos.Size = New System.Drawing.Size(449, 427)
         Me.tabCadastroServicos.TabIndex = 1
         Me.tabCadastroServicos.Text = "Dados Cadastrais"
         Me.tabCadastroServicos.UseVisualStyleBackColor = True
@@ -100,49 +97,47 @@ Partial Class formConsultaUsuarios
         'lblCodServico
         '
         Me.lblCodServico.AutoSize = True
-        Me.lblCodServico.Font = New System.Drawing.Font("Century Gothic", 9.75!)
-        Me.lblCodServico.Location = New System.Drawing.Point(417, 27)
+        Me.lblCodServico.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblCodServico.Location = New System.Drawing.Point(313, 21)
         Me.lblCodServico.Name = "lblCodServico"
-        Me.lblCodServico.Size = New System.Drawing.Size(58, 17)
+        Me.lblCodServico.Size = New System.Drawing.Size(59, 20)
         Me.lblCodServico.TabIndex = 66
         Me.lblCodServico.Text = "Código"
         Me.lblCodServico.Visible = False
         '
         'txtCodigoServico
         '
-        Me.txtCodigoServico.Location = New System.Drawing.Point(418, 61)
-        Me.txtCodigoServico.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
+        Me.txtCodigoServico.Location = New System.Drawing.Point(314, 47)
         Me.txtCodigoServico.Name = "txtCodigoServico"
-        Me.txtCodigoServico.Size = New System.Drawing.Size(132, 23)
+        Me.txtCodigoServico.Size = New System.Drawing.Size(100, 20)
         Me.txtCodigoServico.TabIndex = 65
         Me.txtCodigoServico.Tag = "Não"
         Me.txtCodigoServico.Visible = False
         '
         'txtValor
         '
-        Me.txtValor.Location = New System.Drawing.Point(10, 214)
-        Me.txtValor.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
+        Me.txtValor.Location = New System.Drawing.Point(8, 164)
         Me.txtValor.Name = "txtValor"
-        Me.txtValor.Size = New System.Drawing.Size(203, 23)
+        Me.txtValor.Size = New System.Drawing.Size(153, 20)
         Me.txtValor.TabIndex = 2
         '
         'lblCampoObrigatorio
         '
         Me.lblCampoObrigatorio.AutoSize = True
-        Me.lblCampoObrigatorio.Font = New System.Drawing.Font("Century Gothic", 9.75!)
+        Me.lblCampoObrigatorio.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lblCampoObrigatorio.ForeColor = System.Drawing.Color.Red
-        Me.lblCampoObrigatorio.Location = New System.Drawing.Point(9, 428)
+        Me.lblCampoObrigatorio.Location = New System.Drawing.Point(7, 327)
         Me.lblCampoObrigatorio.Name = "lblCampoObrigatorio"
-        Me.lblCampoObrigatorio.Size = New System.Drawing.Size(154, 17)
+        Me.lblCampoObrigatorio.Size = New System.Drawing.Size(108, 13)
         Me.lblCampoObrigatorio.TabIndex = 61
         Me.lblCampoObrigatorio.Text = "*Campos Obrigatórios"
         '
         'lblInserir
         '
         Me.lblInserir.AutoSize = True
-        Me.lblInserir.Location = New System.Drawing.Point(247, 84)
+        Me.lblInserir.Location = New System.Drawing.Point(185, 64)
         Me.lblInserir.Name = "lblInserir"
-        Me.lblInserir.Size = New System.Drawing.Size(85, 17)
+        Me.lblInserir.Size = New System.Drawing.Size(65, 13)
         Me.lblInserir.TabIndex = 59
         Me.lblInserir.Text = "Modo Inserir"
         Me.lblInserir.Visible = False
@@ -150,66 +145,63 @@ Partial Class formConsultaUsuarios
         'lblLimpar
         '
         Me.lblLimpar.AutoSize = True
-        Me.lblLimpar.Location = New System.Drawing.Point(127, 84)
+        Me.lblLimpar.Location = New System.Drawing.Point(95, 64)
         Me.lblLimpar.Name = "lblLimpar"
-        Me.lblLimpar.Size = New System.Drawing.Size(87, 17)
+        Me.lblLimpar.Size = New System.Drawing.Size(66, 13)
         Me.lblLimpar.TabIndex = 46
         Me.lblLimpar.Text = "Limpar Tudo"
         '
         'lblCadastrar
         '
         Me.lblCadastrar.AutoSize = True
-        Me.lblCadastrar.Location = New System.Drawing.Point(24, 84)
+        Me.lblCadastrar.Location = New System.Drawing.Point(18, 64)
         Me.lblCadastrar.Name = "lblCadastrar"
-        Me.lblCadastrar.Size = New System.Drawing.Size(73, 17)
+        Me.lblCadastrar.Size = New System.Drawing.Size(52, 13)
         Me.lblCadastrar.TabIndex = 45
         Me.lblCadastrar.Text = "Cadastrar"
         '
         'lblDescricao
         '
         Me.lblDescricao.AutoSize = True
-        Me.lblDescricao.Font = New System.Drawing.Font("Century Gothic", 9.75!)
-        Me.lblDescricao.Location = New System.Drawing.Point(8, 256)
+        Me.lblDescricao.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblDescricao.Location = New System.Drawing.Point(6, 196)
         Me.lblDescricao.Name = "lblDescricao"
-        Me.lblDescricao.Size = New System.Drawing.Size(78, 17)
+        Me.lblDescricao.Size = New System.Drawing.Size(86, 20)
         Me.lblDescricao.TabIndex = 42
         Me.lblDescricao.Text = "Descrição*"
         '
         'txtDescricao
         '
-        Me.txtDescricao.Location = New System.Drawing.Point(10, 286)
-        Me.txtDescricao.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
+        Me.txtDescricao.Location = New System.Drawing.Point(8, 219)
         Me.txtDescricao.Name = "txtDescricao"
-        Me.txtDescricao.Size = New System.Drawing.Size(463, 122)
+        Me.txtDescricao.Size = New System.Drawing.Size(349, 94)
         Me.txtDescricao.TabIndex = 3
         Me.txtDescricao.Tag = ""
         Me.txtDescricao.Text = ""
         '
         'txtNome
         '
-        Me.txtNome.Location = New System.Drawing.Point(8, 144)
-        Me.txtNome.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
+        Me.txtNome.Location = New System.Drawing.Point(6, 110)
         Me.txtNome.Name = "txtNome"
-        Me.txtNome.Size = New System.Drawing.Size(469, 23)
+        Me.txtNome.Size = New System.Drawing.Size(353, 20)
         Me.txtNome.TabIndex = 1
         '
         'lblNome
         '
         Me.lblNome.AutoSize = True
-        Me.lblNome.Font = New System.Drawing.Font("Century Gothic", 9.75!)
-        Me.lblNome.Location = New System.Drawing.Point(6, 114)
+        Me.lblNome.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblNome.Location = New System.Drawing.Point(4, 87)
         Me.lblNome.Name = "lblNome"
-        Me.lblNome.Size = New System.Drawing.Size(54, 17)
+        Me.lblNome.Size = New System.Drawing.Size(57, 20)
         Me.lblNome.TabIndex = 28
         Me.lblNome.Text = "Nome*"
         '
         'botModoNovo
         '
         Me.botModoNovo.Image = Global.Sistema_Matrix.My.Resources.Resources.adicionar
-        Me.botModoNovo.Location = New System.Drawing.Point(257, 27)
-        Me.botModoNovo.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
+        Me.botModoNovo.Location = New System.Drawing.Point(193, 21)
         Me.botModoNovo.Name = "botModoNovo"
-        Me.botModoNovo.Size = New System.Drawing.Size(54, 52)
+        Me.botModoNovo.Size = New System.Drawing.Size(40, 40)
         Me.botModoNovo.TabIndex = 8
         Me.botModoNovo.UseVisualStyleBackColor = True
         Me.botModoNovo.Visible = False
@@ -217,19 +209,19 @@ Partial Class formConsultaUsuarios
         'lblValor
         '
         Me.lblValor.AutoSize = True
-        Me.lblValor.Font = New System.Drawing.Font("Century Gothic", 9.75!)
-        Me.lblValor.Location = New System.Drawing.Point(8, 184)
+        Me.lblValor.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblValor.Location = New System.Drawing.Point(6, 141)
         Me.lblValor.Name = "lblValor"
-        Me.lblValor.Size = New System.Drawing.Size(48, 17)
+        Me.lblValor.Size = New System.Drawing.Size(52, 20)
         Me.lblValor.TabIndex = 39
         Me.lblValor.Text = "Valor*"
         '
         'lblAlterar
         '
         Me.lblAlterar.AutoSize = True
-        Me.lblAlterar.Location = New System.Drawing.Point(9, 84)
+        Me.lblAlterar.Location = New System.Drawing.Point(7, 64)
         Me.lblAlterar.Name = "lblAlterar"
-        Me.lblAlterar.Size = New System.Drawing.Size(105, 17)
+        Me.lblAlterar.Size = New System.Drawing.Size(79, 13)
         Me.lblAlterar.TabIndex = 60
         Me.lblAlterar.Text = "Alterar Registro"
         Me.lblAlterar.Visible = False
@@ -237,9 +229,9 @@ Partial Class formConsultaUsuarios
         'lblExcluir
         '
         Me.lblExcluir.AutoSize = True
-        Me.lblExcluir.Location = New System.Drawing.Point(127, 84)
+        Me.lblExcluir.Location = New System.Drawing.Point(95, 64)
         Me.lblExcluir.Name = "lblExcluir"
-        Me.lblExcluir.Size = New System.Drawing.Size(102, 17)
+        Me.lblExcluir.Size = New System.Drawing.Size(80, 13)
         Me.lblExcluir.TabIndex = 58
         Me.lblExcluir.Text = "Excluir Registro"
         Me.lblExcluir.Visible = False
@@ -247,10 +239,9 @@ Partial Class formConsultaUsuarios
         'botAlterar
         '
         Me.botAlterar.Image = Global.Sistema_Matrix.My.Resources.Resources.alterar
-        Me.botAlterar.Location = New System.Drawing.Point(31, 27)
-        Me.botAlterar.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
+        Me.botAlterar.Location = New System.Drawing.Point(23, 21)
         Me.botAlterar.Name = "botAlterar"
-        Me.botAlterar.Size = New System.Drawing.Size(54, 52)
+        Me.botAlterar.Size = New System.Drawing.Size(40, 40)
         Me.botAlterar.TabIndex = 6
         Me.botAlterar.UseVisualStyleBackColor = True
         Me.botAlterar.Visible = False
@@ -258,10 +249,9 @@ Partial Class formConsultaUsuarios
         'botExcluir
         '
         Me.botExcluir.Image = Global.Sistema_Matrix.My.Resources.Resources.excluir
-        Me.botExcluir.Location = New System.Drawing.Point(143, 27)
-        Me.botExcluir.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
+        Me.botExcluir.Location = New System.Drawing.Point(107, 21)
         Me.botExcluir.Name = "botExcluir"
-        Me.botExcluir.Size = New System.Drawing.Size(54, 52)
+        Me.botExcluir.Size = New System.Drawing.Size(40, 40)
         Me.botExcluir.TabIndex = 7
         Me.botExcluir.UseVisualStyleBackColor = True
         Me.botExcluir.Visible = False
@@ -270,20 +260,18 @@ Partial Class formConsultaUsuarios
         '
         Me.botCadastrar.Image = Global.Sistema_Matrix.My.Resources.Resources.salvar
         Me.botCadastrar.ImageAlign = System.Drawing.ContentAlignment.TopLeft
-        Me.botCadastrar.Location = New System.Drawing.Point(31, 27)
-        Me.botCadastrar.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
+        Me.botCadastrar.Location = New System.Drawing.Point(23, 21)
         Me.botCadastrar.Name = "botCadastrar"
-        Me.botCadastrar.Size = New System.Drawing.Size(54, 52)
+        Me.botCadastrar.Size = New System.Drawing.Size(40, 40)
         Me.botCadastrar.TabIndex = 4
         Me.botCadastrar.UseVisualStyleBackColor = True
         '
         'botLimpar
         '
         Me.botLimpar.Image = Global.Sistema_Matrix.My.Resources.Resources.limpar
-        Me.botLimpar.Location = New System.Drawing.Point(143, 27)
-        Me.botLimpar.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
+        Me.botLimpar.Location = New System.Drawing.Point(107, 21)
         Me.botLimpar.Name = "botLimpar"
-        Me.botLimpar.Size = New System.Drawing.Size(54, 52)
+        Me.botLimpar.Size = New System.Drawing.Size(40, 40)
         Me.botLimpar.TabIndex = 5
         Me.botLimpar.UseVisualStyleBackColor = True
         '
@@ -292,11 +280,10 @@ Partial Class formConsultaUsuarios
         Me.tabConsultaServicos.AutoScroll = True
         Me.tabConsultaServicos.Controls.Add(Me.Label1)
         Me.tabConsultaServicos.Controls.Add(Me.dtgConsultaServicos)
-        Me.tabConsultaServicos.Location = New System.Drawing.Point(4, 26)
-        Me.tabConsultaServicos.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
+        Me.tabConsultaServicos.Location = New System.Drawing.Point(4, 22)
         Me.tabConsultaServicos.Name = "tabConsultaServicos"
-        Me.tabConsultaServicos.Padding = New System.Windows.Forms.Padding(3, 4, 3, 4)
-        Me.tabConsultaServicos.Size = New System.Drawing.Size(658, 509)
+        Me.tabConsultaServicos.Padding = New System.Windows.Forms.Padding(3)
+        Me.tabConsultaServicos.Size = New System.Drawing.Size(492, 386)
         Me.tabConsultaServicos.TabIndex = 2
         Me.tabConsultaServicos.Text = "Consulta"
         Me.tabConsultaServicos.UseVisualStyleBackColor = True
@@ -304,10 +291,10 @@ Partial Class formConsultaUsuarios
         'Label1
         '
         Me.Label1.AutoSize = True
-        Me.Label1.Font = New System.Drawing.Font("Century Gothic", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label1.Location = New System.Drawing.Point(8, 4)
+        Me.Label1.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label1.Location = New System.Drawing.Point(6, 3)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(171, 21)
+        Me.Label1.Size = New System.Drawing.Size(158, 20)
         Me.Label1.TabIndex = 2
         Me.Label1.Text = "Consulta de Serviços"
         '
@@ -315,37 +302,34 @@ Partial Class formConsultaUsuarios
         '
         Me.dtgConsultaServicos.AllowUserToAddRows = False
         Me.dtgConsultaServicos.AllowUserToDeleteRows = False
-        DataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        Me.dtgConsultaServicos.AlternatingRowsDefaultCellStyle = DataGridViewCellStyle1
+        DataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        Me.dtgConsultaServicos.AlternatingRowsDefaultCellStyle = DataGridViewCellStyle7
         Me.dtgConsultaServicos.BackgroundColor = System.Drawing.SystemColors.Control
         Me.dtgConsultaServicos.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
         Me.dtgConsultaServicos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.dtgConsultaServicos.Cursor = System.Windows.Forms.Cursors.Hand
-        DataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window
-        DataGridViewCellStyle2.Font = New System.Drawing.Font("Century Gothic", 9.75!)
-        DataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText
-        DataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.ActiveCaption
-        DataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText
-        DataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
-        Me.dtgConsultaServicos.DefaultCellStyle = DataGridViewCellStyle2
+        DataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle8.BackColor = System.Drawing.SystemColors.Window
+        DataGridViewCellStyle8.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle8.ForeColor = System.Drawing.SystemColors.ControlText
+        DataGridViewCellStyle8.SelectionBackColor = System.Drawing.SystemColors.ActiveCaption
+        DataGridViewCellStyle8.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
+        Me.dtgConsultaServicos.DefaultCellStyle = DataGridViewCellStyle8
         Me.dtgConsultaServicos.EditMode = System.Windows.Forms.DataGridViewEditMode.EditProgrammatically
-        Me.dtgConsultaServicos.Location = New System.Drawing.Point(8, 51)
-        Me.dtgConsultaServicos.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
+        Me.dtgConsultaServicos.Location = New System.Drawing.Point(6, 39)
         Me.dtgConsultaServicos.MultiSelect = False
         Me.dtgConsultaServicos.Name = "dtgConsultaServicos"
-        Me.dtgConsultaServicos.Size = New System.Drawing.Size(640, 446)
+        Me.dtgConsultaServicos.Size = New System.Drawing.Size(480, 341)
         Me.dtgConsultaServicos.TabIndex = 0
         '
         'formConsultaUsuarios
         '
         Me.AcceptButton = Me.botCadastrar
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 17.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(698, 570)
+        Me.ClientSize = New System.Drawing.Size(487, 480)
         Me.Controls.Add(Me.tabServico)
-        Me.Font = New System.Drawing.Font("Century Gothic", 9.75!)
-        Me.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
         Me.Name = "formConsultaUsuarios"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "Serviços"

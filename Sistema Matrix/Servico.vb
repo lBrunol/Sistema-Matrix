@@ -246,4 +246,9 @@ Public Class formConsultaUsuarios
     Private Sub formConsultaUsuarios_FormClosed(sender As Object, e As FormClosedEventArgs) Handles MyBase.FormClosed
         Funcoes.HabilitaBotaoLogOff()
     End Sub
+
+
+    Private Sub tabCadastroServicos_Click(sender As Object, e As EventArgs) Handles tabCadastroServicos.Click
+
+    End Sub
 End Class

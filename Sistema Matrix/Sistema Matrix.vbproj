@@ -99,10 +99,11 @@
     <Import Include="System.Xml.Linq" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="bancoDataSet.Designer.vb">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>bancoDataSet.xsd</DependentUpon>
+    <Compile Include="Backup e Restauracao.Designer.vb">
+      <DependentUpon>Backup e Restauracao.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Backup e Restauracao.vb">
+      <SubType>Form</SubType>
     </Compile>
     <Compile Include="ConsultaUsuarios.Designer.vb">
       <DependentUpon>ConsultaUsuarios.vb</DependentUpon>
@@ -132,6 +133,26 @@
       <DependentUpon>Confirma Nota Fiscal.vb</DependentUpon>
     </Compile>
     <Compile Include="Confirma Nota Fiscal.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="oracle.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>oracle.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="oracle.vb">
+      <DependentUpon>oracle.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="relatorioContasReceber.Designer.vb">
+      <DependentUpon>relatorioContasReceber.vb</DependentUpon>
+    </Compile>
+    <Compile Include="relatorioContasReceber.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RelatorioOrdemServico.Designer.vb">
+      <DependentUpon>RelatorioOrdemServico.vb</DependentUpon>
+    </Compile>
+    <Compile Include="RelatorioOrdemServico.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Servico.Designer.vb">
@@ -188,12 +209,6 @@
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
     <Compile Include="ConexaoAccess.vb" />
-    <Compile Include="tiposPagamento.Designer.vb">
-      <DependentUpon>tiposPagamento.vb</DependentUpon>
-    </Compile>
-    <Compile Include="tiposPagamento.vb">
-      <SubType>Form</SubType>
-    </Compile>
     <Compile Include="Usuario.Designer.vb">
       <DependentUpon>Usuario.vb</DependentUpon>
     </Compile>
@@ -202,6 +217,9 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="Backup e Restauracao.resx">
+      <DependentUpon>Backup e Restauracao.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="ConsultaUsuarios.resx">
       <DependentUpon>ConsultaUsuarios.vb</DependentUpon>
     </EmbeddedResource>
@@ -216,6 +234,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Confirma Nota Fiscal.resx">
       <DependentUpon>Confirma Nota Fiscal.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="relatorioContasReceber.resx">
+      <DependentUpon>relatorioContasReceber.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RelatorioOrdemServico.resx">
+      <DependentUpon>RelatorioOrdemServico.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Report1.rdlc" />
     <EmbeddedResource Include="Report2.rdlc" />
@@ -243,26 +267,12 @@
     <EmbeddedResource Include="Tela Princ.resx">
       <DependentUpon>Tela Princ.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="tiposPagamento.resx">
-      <DependentUpon>tiposPagamento.vb</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="Usuario.resx">
       <DependentUpon>Usuario.vb</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
     <None Include="app.config" />
-    <None Include="bancoDataSet.xsc">
-      <DependentUpon>bancoDataSet.xsd</DependentUpon>
-    </None>
-    <None Include="bancoDataSet.xsd">
-      <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>bancoDataSet.Designer.vb</LastGenOutput>
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="bancoDataSet.xss">
-      <DependentUpon>bancoDataSet.xsd</DependentUpon>
-    </None>
     <None Include="My Project\app.manifest" />
     <None Include="My Project\Application.myapp">
       <Generator>MyApplicationCodeGenerator</Generator>
@@ -273,6 +283,17 @@
       <Generator>SettingsSingleFileGenerator</Generator>
       <CustomToolNamespace>My</CustomToolNamespace>
       <LastGenOutput>Settings.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="oracle.xsc">
+      <DependentUpon>oracle.xsd</DependentUpon>
+    </None>
+    <None Include="oracle.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <SubType>Designer</SubType>
+      <LastGenOutput>oracle1.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="oracle.xss">
+      <DependentUpon>oracle.xsd</DependentUpon>
     </None>
   </ItemGroup>
   <ItemGroup>
