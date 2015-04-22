@@ -26,22 +26,22 @@ Partial Class tiposPagamento
         Me.lblTitulo = New System.Windows.Forms.Label()
         Me.TabControl1 = New System.Windows.Forms.TabControl()
         Me.tabCadastro = New System.Windows.Forms.TabPage()
-        Me.tabConsulta = New System.Windows.Forms.TabPage()
-        Me.DataGridView1 = New System.Windows.Forms.DataGridView()
-        Me.lblCodigo = New System.Windows.Forms.Label()
-        Me.txtCodigo = New System.Windows.Forms.TextBox()
-        Me.lblDescricao = New System.Windows.Forms.Label()
-        Me.txtDescricao = New System.Windows.Forms.TextBox()
         Me.lblInserir = New System.Windows.Forms.Label()
         Me.lblLimpar = New System.Windows.Forms.Label()
         Me.lblCadastrar = New System.Windows.Forms.Label()
         Me.botModoNovo = New System.Windows.Forms.Button()
         Me.lblAlterar = New System.Windows.Forms.Label()
         Me.lblExcluir = New System.Windows.Forms.Label()
-        Me.botAlterar = New System.Windows.Forms.Button()
-        Me.botExcluir = New System.Windows.Forms.Button()
         Me.botLimpar = New System.Windows.Forms.Button()
         Me.botCadastrar = New System.Windows.Forms.Button()
+        Me.lblDescricao = New System.Windows.Forms.Label()
+        Me.txtDescricao = New System.Windows.Forms.TextBox()
+        Me.lblCodigo = New System.Windows.Forms.Label()
+        Me.txtCodigo = New System.Windows.Forms.TextBox()
+        Me.botAlterar = New System.Windows.Forms.Button()
+        Me.botExcluir = New System.Windows.Forms.Button()
+        Me.tabConsulta = New System.Windows.Forms.TabPage()
+        Me.DataGridView1 = New System.Windows.Forms.DataGridView()
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.TabControl1.SuspendLayout()
         Me.tabCadastro.SuspendLayout()
@@ -78,14 +78,14 @@ Partial Class tiposPagamento
         Me.tabCadastro.Controls.Add(Me.botModoNovo)
         Me.tabCadastro.Controls.Add(Me.lblAlterar)
         Me.tabCadastro.Controls.Add(Me.lblExcluir)
-        Me.tabCadastro.Controls.Add(Me.botAlterar)
-        Me.tabCadastro.Controls.Add(Me.botExcluir)
         Me.tabCadastro.Controls.Add(Me.botLimpar)
         Me.tabCadastro.Controls.Add(Me.botCadastrar)
         Me.tabCadastro.Controls.Add(Me.lblDescricao)
         Me.tabCadastro.Controls.Add(Me.txtDescricao)
         Me.tabCadastro.Controls.Add(Me.lblCodigo)
         Me.tabCadastro.Controls.Add(Me.txtCodigo)
+        Me.tabCadastro.Controls.Add(Me.botAlterar)
+        Me.tabCadastro.Controls.Add(Me.botExcluir)
         Me.tabCadastro.Location = New System.Drawing.Point(4, 22)
         Me.tabCadastro.Name = "tabCadastro"
         Me.tabCadastro.Padding = New System.Windows.Forms.Padding(3)
@@ -93,65 +93,6 @@ Partial Class tiposPagamento
         Me.tabCadastro.TabIndex = 0
         Me.tabCadastro.Text = "Cadastro"
         Me.tabCadastro.UseVisualStyleBackColor = True
-        '
-        'tabConsulta
-        '
-        Me.tabConsulta.Controls.Add(Me.DataGridView1)
-        Me.tabConsulta.Location = New System.Drawing.Point(4, 22)
-        Me.tabConsulta.Name = "tabConsulta"
-        Me.tabConsulta.Padding = New System.Windows.Forms.Padding(3)
-        Me.tabConsulta.Size = New System.Drawing.Size(332, 202)
-        Me.tabConsulta.TabIndex = 1
-        Me.tabConsulta.Text = "Consulta"
-        Me.tabConsulta.UseVisualStyleBackColor = True
-        '
-        'DataGridView1
-        '
-        Me.DataGridView1.BackgroundColor = System.Drawing.Color.Azure
-        Me.DataGridView1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
-        Me.DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.DataGridView1.Location = New System.Drawing.Point(6, 13)
-        Me.DataGridView1.Name = "DataGridView1"
-        Me.DataGridView1.Size = New System.Drawing.Size(320, 245)
-        Me.DataGridView1.TabIndex = 16
-        '
-        'lblCodigo
-        '
-        Me.lblCodigo.AutoSize = True
-        Me.lblCodigo.Font = New System.Drawing.Font("Century Gothic", 9.75!)
-        Me.lblCodigo.Location = New System.Drawing.Point(6, 90)
-        Me.lblCodigo.Name = "lblCodigo"
-        Me.lblCodigo.Size = New System.Drawing.Size(58, 17)
-        Me.lblCodigo.TabIndex = 16
-        Me.lblCodigo.Text = "Código"
-        '
-        'txtCodigo
-        '
-        Me.txtCodigo.Font = New System.Drawing.Font("Century Gothic", 9.75!)
-        Me.txtCodigo.Location = New System.Drawing.Point(6, 110)
-        Me.txtCodigo.Multiline = True
-        Me.txtCodigo.Name = "txtCodigo"
-        Me.txtCodigo.Size = New System.Drawing.Size(320, 23)
-        Me.txtCodigo.TabIndex = 15
-        '
-        'lblDescricao
-        '
-        Me.lblDescricao.AutoSize = True
-        Me.lblDescricao.Font = New System.Drawing.Font("Century Gothic", 9.75!)
-        Me.lblDescricao.Location = New System.Drawing.Point(6, 141)
-        Me.lblDescricao.Name = "lblDescricao"
-        Me.lblDescricao.Size = New System.Drawing.Size(72, 17)
-        Me.lblDescricao.TabIndex = 18
-        Me.lblDescricao.Text = "Descrição"
-        '
-        'txtDescricao
-        '
-        Me.txtDescricao.Font = New System.Drawing.Font("Century Gothic", 9.75!)
-        Me.txtDescricao.Location = New System.Drawing.Point(6, 161)
-        Me.txtDescricao.Multiline = True
-        Me.txtDescricao.Name = "txtDescricao"
-        Me.txtDescricao.Size = New System.Drawing.Size(320, 23)
-        Me.txtDescricao.TabIndex = 17
         '
         'lblInserir
         '
@@ -211,6 +152,65 @@ Partial Class tiposPagamento
         Me.lblExcluir.Text = "Excluir Registro"
         Me.lblExcluir.Visible = False
         '
+        'botLimpar
+        '
+        Me.botLimpar.DialogResult = System.Windows.Forms.DialogResult.Cancel
+        Me.botLimpar.Image = Global.Sistema_Matrix.My.Resources.Resources.limpar
+        Me.botLimpar.Location = New System.Drawing.Point(186, 6)
+        Me.botLimpar.Name = "botLimpar"
+        Me.botLimpar.Size = New System.Drawing.Size(40, 40)
+        Me.botLimpar.TabIndex = 62
+        Me.botLimpar.UseVisualStyleBackColor = True
+        '
+        'botCadastrar
+        '
+        Me.botCadastrar.Image = Global.Sistema_Matrix.My.Resources.Resources.salvar
+        Me.botCadastrar.ImageAlign = System.Drawing.ContentAlignment.TopLeft
+        Me.botCadastrar.Location = New System.Drawing.Point(102, 6)
+        Me.botCadastrar.Name = "botCadastrar"
+        Me.botCadastrar.Size = New System.Drawing.Size(40, 40)
+        Me.botCadastrar.TabIndex = 61
+        Me.botCadastrar.UseVisualStyleBackColor = True
+        '
+        'lblDescricao
+        '
+        Me.lblDescricao.AutoSize = True
+        Me.lblDescricao.Font = New System.Drawing.Font("Century Gothic", 9.75!)
+        Me.lblDescricao.Location = New System.Drawing.Point(6, 141)
+        Me.lblDescricao.Name = "lblDescricao"
+        Me.lblDescricao.Size = New System.Drawing.Size(72, 17)
+        Me.lblDescricao.TabIndex = 18
+        Me.lblDescricao.Text = "Descrição"
+        '
+        'txtDescricao
+        '
+        Me.txtDescricao.Font = New System.Drawing.Font("Century Gothic", 9.75!)
+        Me.txtDescricao.Location = New System.Drawing.Point(6, 161)
+        Me.txtDescricao.Multiline = True
+        Me.txtDescricao.Name = "txtDescricao"
+        Me.txtDescricao.Size = New System.Drawing.Size(320, 23)
+        Me.txtDescricao.TabIndex = 17
+        '
+        'lblCodigo
+        '
+        Me.lblCodigo.AutoSize = True
+        Me.lblCodigo.Font = New System.Drawing.Font("Century Gothic", 9.75!)
+        Me.lblCodigo.Location = New System.Drawing.Point(6, 90)
+        Me.lblCodigo.Name = "lblCodigo"
+        Me.lblCodigo.Size = New System.Drawing.Size(58, 17)
+        Me.lblCodigo.TabIndex = 16
+        Me.lblCodigo.Text = "Código"
+        '
+        'txtCodigo
+        '
+        Me.txtCodigo.Enabled = False
+        Me.txtCodigo.Font = New System.Drawing.Font("Century Gothic", 9.75!)
+        Me.txtCodigo.Location = New System.Drawing.Point(6, 110)
+        Me.txtCodigo.Multiline = True
+        Me.txtCodigo.Name = "txtCodigo"
+        Me.txtCodigo.Size = New System.Drawing.Size(320, 23)
+        Me.txtCodigo.TabIndex = 15
+        '
         'botAlterar
         '
         Me.botAlterar.Image = Global.Sistema_Matrix.My.Resources.Resources.alterar
@@ -231,24 +231,26 @@ Partial Class tiposPagamento
         Me.botExcluir.UseVisualStyleBackColor = True
         Me.botExcluir.Visible = False
         '
-        'botLimpar
+        'tabConsulta
         '
-        Me.botLimpar.Image = Global.Sistema_Matrix.My.Resources.Resources.limpar
-        Me.botLimpar.Location = New System.Drawing.Point(186, 6)
-        Me.botLimpar.Name = "botLimpar"
-        Me.botLimpar.Size = New System.Drawing.Size(40, 40)
-        Me.botLimpar.TabIndex = 62
-        Me.botLimpar.UseVisualStyleBackColor = True
+        Me.tabConsulta.Controls.Add(Me.DataGridView1)
+        Me.tabConsulta.Location = New System.Drawing.Point(4, 22)
+        Me.tabConsulta.Name = "tabConsulta"
+        Me.tabConsulta.Padding = New System.Windows.Forms.Padding(3)
+        Me.tabConsulta.Size = New System.Drawing.Size(332, 202)
+        Me.tabConsulta.TabIndex = 1
+        Me.tabConsulta.Text = "Consulta"
+        Me.tabConsulta.UseVisualStyleBackColor = True
         '
-        'botCadastrar
+        'DataGridView1
         '
-        Me.botCadastrar.Image = Global.Sistema_Matrix.My.Resources.Resources.salvar
-        Me.botCadastrar.ImageAlign = System.Drawing.ContentAlignment.TopLeft
-        Me.botCadastrar.Location = New System.Drawing.Point(102, 6)
-        Me.botCadastrar.Name = "botCadastrar"
-        Me.botCadastrar.Size = New System.Drawing.Size(40, 40)
-        Me.botCadastrar.TabIndex = 61
-        Me.botCadastrar.UseVisualStyleBackColor = True
+        Me.DataGridView1.BackgroundColor = System.Drawing.Color.Azure
+        Me.DataGridView1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
+        Me.DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.DataGridView1.Location = New System.Drawing.Point(6, 13)
+        Me.DataGridView1.Name = "DataGridView1"
+        Me.DataGridView1.Size = New System.Drawing.Size(320, 245)
+        Me.DataGridView1.TabIndex = 16
         '
         'PictureBox1
         '
@@ -263,9 +265,11 @@ Partial Class tiposPagamento
         '
         'tiposPagamento
         '
+        Me.AcceptButton = Me.botCadastrar
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.SystemColors.Window
+        Me.CancelButton = Me.botLimpar
         Me.ClientSize = New System.Drawing.Size(368, 388)
         Me.Controls.Add(Me.PictureBox1)
         Me.Controls.Add(Me.TabControl1)

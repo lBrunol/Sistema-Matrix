@@ -967,11 +967,11 @@ Partial Class Form6
         Me.AutoScroll = True
         Me.AutoSize = True
         Me.CancelButton = Me.botLimpar
-        Me.ClientSize = New System.Drawing.Size(880, 893)
+        Me.ClientSize = New System.Drawing.Size(880, 684)
         Me.Controls.Add(Me.tabOrdemServico)
         Me.Font = New System.Drawing.Font("Century Gothic", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
-        Me.MaximumSize = New System.Drawing.Size(896, 932)
+        Me.MaximumSize = New System.Drawing.Size(896, 722)
         Me.Name = "Form6"
         Me.SizeGripStyle = System.Windows.Forms.SizeGripStyle.Show
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen

@@ -197,26 +197,26 @@ Module Funcoes
         'Atribui os códigos manualmente no banco, a função faz um select verificando o maior número e adiciona mais 1
         'a este gerando o código do novo registro.
         'Funciona através da passagem do nome do campo e da tabela
-        Dim strsql As String
-        Dim tabela As DataTable
-        Dim objBanco As New ConexaoAccess
-        Dim valorCod As Integer
+        Dim strsqlF As String
+        Dim tabelaF As DataTable
+        Dim objBancoF As New ConexaoAccess
+        Dim valorCodF As Integer
 
-        strsql = "SELECT MAX (" & nomeCampo & ") FROM " & nomeTabela & ""
+        strsqlF = "SELECT MAX (" & nomeCampo & ") FROM " & nomeTabela & ""
 
-        tabela = New DataTable
+        tabelaF = New DataTable
         'Executa o método para buscar no banco
-        tabela = objBanco.ExecutaDataTable(strsql)
+        tabelaF = objBancoF.ExecutaDataTable(strsqlF)
         'Verifica se a linha retornada é diferente de vazio
-        If tabela.Rows(0)(0).ToString <> "" Then
+        If tabelaF.Rows(0)(0).ToString <> "" Then
             'Converte o código retornado em inteiro e adiciona mais 1
-            valorCod = CInt(tabela.Rows(0)(0))
-            valorCod = valorCod + 1
+            valorCodF = CInt(tabelaF.Rows(0)(0))
+            valorCodF = valorCodF + 1
         Else
-            valorCod = 1
+            valorCodF = 1
         End If
 
-        Return valorCod
+        Return valorCodF
 
     End Function
 
