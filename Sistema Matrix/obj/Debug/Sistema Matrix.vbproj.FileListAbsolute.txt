@@ -214,3 +214,34 @@ C:\Users\CASA\Documents\GitHub\Sistema-Matrix\Sistema Matrix\obj\Debug\RdlCompil
 C:\Users\CASA\Documents\GitHub\Sistema-Matrix\Sistema Matrix\bin\Debug\Sistema Matrix.exe.config
 C:\Users\CASA\Documents\GitHub\Sistema-Matrix\Sistema Matrix\obj\Debug\Sistema_Matrix.relatorioContasReceber.resources
 C:\Users\CASA\Documents\GitHub\Sistema-Matrix\Sistema Matrix\obj\Debug\Sistema_Matrix.RelatorioOrdemServico.resources
+C:\Users\Fabiano\Documents\GitHub\Sistema-Matrix\Sistema Matrix\bin\Debug\Sistema Matrix.exe.config
+C:\Users\Fabiano\Documents\GitHub\Sistema-Matrix\Sistema Matrix\obj\Debug\Interop.Microsoft.Vbe.Interop.Forms.dll
+C:\Users\Fabiano\Documents\GitHub\Sistema-Matrix\Sistema Matrix\obj\Debug\Interop.ORAOLEDBLib.dll
+C:\Users\Fabiano\Documents\GitHub\Sistema-Matrix\Sistema Matrix\obj\Debug\Sistema Matrix.vbproj.ResolveComReference.cache
+C:\Users\Fabiano\Documents\GitHub\Sistema-Matrix\Sistema Matrix\obj\Debug\Sistema Matrix.exe
+C:\Users\Fabiano\Documents\GitHub\Sistema-Matrix\Sistema Matrix\obj\Debug\Sistema Matrix.xml
+C:\Users\Fabiano\Documents\GitHub\Sistema-Matrix\Sistema Matrix\obj\Debug\Sistema Matrix.pdb
+C:\Users\Fabiano\Documents\GitHub\Sistema-Matrix\Sistema Matrix\bin\Debug\Sistema Matrix.exe
+C:\Users\Fabiano\Documents\GitHub\Sistema-Matrix\Sistema Matrix\bin\Debug\Sistema Matrix.pdb
+C:\Users\Fabiano\Documents\GitHub\Sistema-Matrix\Sistema Matrix\bin\Debug\Sistema Matrix.xml
+C:\Users\Fabiano\Documents\GitHub\Sistema-Matrix\Sistema Matrix\bin\Debug\Interop.Microsoft.Vbe.Interop.Forms.dll
+C:\Users\Fabiano\Documents\GitHub\Sistema-Matrix\Sistema Matrix\bin\Debug\Interop.ORAOLEDBLib.dll
+C:\Users\Fabiano\Documents\GitHub\Sistema-Matrix\Sistema Matrix\obj\Debug\Sistema Matrix.vbprojResolveAssemblyReference.cache
+C:\Users\Fabiano\Documents\GitHub\Sistema-Matrix\Sistema Matrix\obj\Debug\Sistema_Matrix.ConsultaUsuarios.resources
+C:\Users\Fabiano\Documents\GitHub\Sistema-Matrix\Sistema Matrix\obj\Debug\Sistema_Matrix.DadosEmitente.resources
+C:\Users\Fabiano\Documents\GitHub\Sistema-Matrix\Sistema Matrix\obj\Debug\Sistema_Matrix.NotasFiscais.resources
+C:\Users\Fabiano\Documents\GitHub\Sistema-Matrix\Sistema Matrix\obj\Debug\Sistema_Matrix.ContasReceber.resources
+C:\Users\Fabiano\Documents\GitHub\Sistema-Matrix\Sistema Matrix\obj\Debug\Sistema_Matrix.confirmaNotaFiscal.resources
+C:\Users\Fabiano\Documents\GitHub\Sistema-Matrix\Sistema Matrix\obj\Debug\Sistema_Matrix.relatorioContasReceber.resources
+C:\Users\Fabiano\Documents\GitHub\Sistema-Matrix\Sistema Matrix\obj\Debug\Sistema_Matrix.RelatorioOrdemServico.resources
+C:\Users\Fabiano\Documents\GitHub\Sistema-Matrix\Sistema Matrix\obj\Debug\Sistema_Matrix.formConsultaUsuarios.resources
+C:\Users\Fabiano\Documents\GitHub\Sistema-Matrix\Sistema Matrix\obj\Debug\Sistema_Matrix.Clientes.resources
+C:\Users\Fabiano\Documents\GitHub\Sistema-Matrix\Sistema Matrix\obj\Debug\Sistema_Matrix.Form6.resources
+C:\Users\Fabiano\Documents\GitHub\Sistema-Matrix\Sistema Matrix\obj\Debug\Sistema_Matrix.Funcionarios.resources
+C:\Users\Fabiano\Documents\GitHub\Sistema-Matrix\Sistema Matrix\obj\Debug\Sistema_Matrix.Login.resources
+C:\Users\Fabiano\Documents\GitHub\Sistema-Matrix\Sistema Matrix\obj\Debug\Sistema_Matrix.Resources.resources
+C:\Users\Fabiano\Documents\GitHub\Sistema-Matrix\Sistema Matrix\obj\Debug\Sistema_Matrix.telaPrincipal.resources
+C:\Users\Fabiano\Documents\GitHub\Sistema-Matrix\Sistema Matrix\obj\Debug\Sistema_Matrix.Usuario.resources
+C:\Users\Fabiano\Documents\GitHub\Sistema-Matrix\Sistema Matrix\obj\Debug\Sistema Matrix.vbproj.GenerateResource.Cache
+C:\Users\Fabiano\Documents\GitHub\Sistema-Matrix\Sistema Matrix\obj\Debug\RdlCompile.cache
+C:\Users\Fabiano\Documents\GitHub\Sistema-Matrix\Sistema Matrix\obj\Debug\RdlCompile.compiled

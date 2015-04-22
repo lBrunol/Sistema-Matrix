@@ -374,7 +374,7 @@ Partial Class Form6
         '
         Me.cboCodFuncionario.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.cboCodFuncionario.FormattingEnabled = True
-        Me.cboCodFuncionario.Location = New System.Drawing.Point(310, 13)
+        Me.cboCodFuncionario.Location = New System.Drawing.Point(307, 37)
         Me.cboCodFuncionario.Name = "cboCodFuncionario"
         Me.cboCodFuncionario.Size = New System.Drawing.Size(121, 21)
         Me.cboCodFuncionario.TabIndex = 73
@@ -917,7 +917,7 @@ Partial Class Form6
         Me.AutoScroll = True
         Me.AutoSize = True
         Me.CancelButton = Me.botLimpar
-        Me.ClientSize = New System.Drawing.Size(754, 683)
+        Me.ClientSize = New System.Drawing.Size(754, 682)
         Me.Controls.Add(Me.tabOrdemServico)
         Me.MaximumSize = New System.Drawing.Size(770, 721)
         Me.Name = "Form6"
