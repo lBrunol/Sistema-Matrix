@@ -245,3 +245,4 @@ C:\Users\Fabiano\Documents\GitHub\Sistema-Matrix\Sistema Matrix\obj\Debug\Sistem
 C:\Users\Fabiano\Documents\GitHub\Sistema-Matrix\Sistema Matrix\obj\Debug\Sistema Matrix.vbproj.GenerateResource.Cache
 C:\Users\Fabiano\Documents\GitHub\Sistema-Matrix\Sistema Matrix\obj\Debug\RdlCompile.cache
 C:\Users\Fabiano\Documents\GitHub\Sistema-Matrix\Sistema Matrix\obj\Debug\RdlCompile.compiled
+C:\Users\Fabiano\Documents\GitHub\Sistema-Matrix\Sistema Matrix\obj\Debug\Sistema_Matrix.txtBancoDeDados.resources
