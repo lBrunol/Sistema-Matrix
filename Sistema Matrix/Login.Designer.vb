@@ -32,7 +32,6 @@ Partial Class Login
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.lblEntrar = New System.Windows.Forms.Label()
         Me.lblLimpar = New System.Windows.Forms.Label()
-        Me.UsuariosTableAdapter1 = New Sistema_Matrix.oracleTableAdapters.USUARIOSTableAdapter()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
@@ -122,10 +121,6 @@ Partial Class Login
         Me.lblLimpar.TabIndex = 6
         Me.lblLimpar.Text = "Limpar"
         '
-        'UsuariosTableAdapter1
-        '
-        Me.UsuariosTableAdapter1.ClearBeforeFill = True
-        '
         'Login
         '
         Me.AcceptButton = Me.botOk
@@ -162,6 +157,5 @@ Partial Class Login
     Friend WithEvents txtSenha As System.Windows.Forms.TextBox
     Friend WithEvents lblEntrar As System.Windows.Forms.Label
     Friend WithEvents lblLimpar As System.Windows.Forms.Label
-    Friend WithEvents UsuariosTableAdapter1 As Sistema_Matrix.oracleTableAdapters.USUARIOSTableAdapter
 
 End Class

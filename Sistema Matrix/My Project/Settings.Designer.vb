@@ -74,6 +74,17 @@ Namespace My
                 Return CType(Me("conexaoOracl"),String)
             End Get
         End Property
+        
+        <Global.System.Configuration.ApplicationScopedSettingAttribute(),  _
+         Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.Configuration.SpecialSettingAttribute(Global.System.Configuration.SpecialSetting.ConnectionString),  _
+         Global.System.Configuration.DefaultSettingValueAttribute("Provider=Microsoft.ACE.OLEDB.12.0;Data Source=|DataDirectory|\bin\Debug\dados\ban"& _ 
+            "co.accdb")>  _
+        Public ReadOnly Property conexaoBanco() As String
+            Get
+                Return CType(Me("conexaoBanco"),String)
+            End Get
+        End Property
     End Class
 End Namespace
 
