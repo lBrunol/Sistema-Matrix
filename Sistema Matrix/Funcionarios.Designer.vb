@@ -57,6 +57,16 @@ Partial Class Funcionarios
         Me.colMatricula = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.colNome = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.colCargo = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.txtEndereco = New System.Windows.Forms.TextBox()
+        Me.Label2 = New System.Windows.Forms.Label()
+        Me.Label3 = New System.Windows.Forms.Label()
+        Me.txtBairro = New System.Windows.Forms.TextBox()
+        Me.Label4 = New System.Windows.Forms.Label()
+        Me.txtCidade = New System.Windows.Forms.TextBox()
+        Me.Label5 = New System.Windows.Forms.Label()
+        Me.txtTelefone = New System.Windows.Forms.TextBox()
+        Me.Label6 = New System.Windows.Forms.Label()
+        Me.txtSalario = New System.Windows.Forms.TextBox()
         Me.tabFuncionarios.SuspendLayout()
         Me.tabCadastroFuncionarios.SuspendLayout()
         Me.tabConsultaFuncionarios.SuspendLayout()
@@ -84,7 +94,7 @@ Partial Class Funcionarios
         '
         Me.lblCargo.AutoSize = True
         Me.lblCargo.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblCargo.Location = New System.Drawing.Point(8, 196)
+        Me.lblCargo.Location = New System.Drawing.Point(11, 303)
         Me.lblCargo.Name = "lblCargo"
         Me.lblCargo.Size = New System.Drawing.Size(58, 20)
         Me.lblCargo.TabIndex = 40
@@ -92,7 +102,7 @@ Partial Class Funcionarios
         '
         'txtCargo
         '
-        Me.txtCargo.Location = New System.Drawing.Point(12, 219)
+        Me.txtCargo.Location = New System.Drawing.Point(12, 326)
         Me.txtCargo.Name = "txtCargo"
         Me.txtCargo.Size = New System.Drawing.Size(132, 20)
         Me.txtCargo.TabIndex = 3
@@ -101,7 +111,7 @@ Partial Class Funcionarios
         '
         Me.lblDataAdmissao.AutoSize = True
         Me.lblDataAdmissao.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblDataAdmissao.Location = New System.Drawing.Point(8, 261)
+        Me.lblDataAdmissao.Location = New System.Drawing.Point(335, 365)
         Me.lblDataAdmissao.Name = "lblDataAdmissao"
         Me.lblDataAdmissao.Size = New System.Drawing.Size(146, 20)
         Me.lblDataAdmissao.TabIndex = 42
@@ -208,14 +218,24 @@ Partial Class Funcionarios
         '
         Me.tabFuncionarios.Controls.Add(Me.tabCadastroFuncionarios)
         Me.tabFuncionarios.Controls.Add(Me.tabConsultaFuncionarios)
-        Me.tabFuncionarios.Location = New System.Drawing.Point(15, 4)
+        Me.tabFuncionarios.Location = New System.Drawing.Point(15, 12)
         Me.tabFuncionarios.Name = "tabFuncionarios"
         Me.tabFuncionarios.SelectedIndex = 0
-        Me.tabFuncionarios.Size = New System.Drawing.Size(401, 403)
+        Me.tabFuncionarios.Size = New System.Drawing.Size(589, 545)
         Me.tabFuncionarios.TabIndex = 71
         '
         'tabCadastroFuncionarios
         '
+        Me.tabCadastroFuncionarios.Controls.Add(Me.txtSalario)
+        Me.tabCadastroFuncionarios.Controls.Add(Me.Label6)
+        Me.tabCadastroFuncionarios.Controls.Add(Me.txtTelefone)
+        Me.tabCadastroFuncionarios.Controls.Add(Me.Label5)
+        Me.tabCadastroFuncionarios.Controls.Add(Me.txtCidade)
+        Me.tabCadastroFuncionarios.Controls.Add(Me.Label4)
+        Me.tabCadastroFuncionarios.Controls.Add(Me.txtBairro)
+        Me.tabCadastroFuncionarios.Controls.Add(Me.Label3)
+        Me.tabCadastroFuncionarios.Controls.Add(Me.Label2)
+        Me.tabCadastroFuncionarios.Controls.Add(Me.txtEndereco)
         Me.tabCadastroFuncionarios.Controls.Add(Me.botHoje)
         Me.tabCadastroFuncionarios.Controls.Add(Me.mtxDataAdmissao)
         Me.tabCadastroFuncionarios.Controls.Add(Me.lblCampoObrigatorio)
@@ -239,16 +259,16 @@ Partial Class Funcionarios
         Me.tabCadastroFuncionarios.Location = New System.Drawing.Point(4, 22)
         Me.tabCadastroFuncionarios.Name = "tabCadastroFuncionarios"
         Me.tabCadastroFuncionarios.Padding = New System.Windows.Forms.Padding(3)
-        Me.tabCadastroFuncionarios.Size = New System.Drawing.Size(393, 377)
+        Me.tabCadastroFuncionarios.Size = New System.Drawing.Size(581, 519)
         Me.tabCadastroFuncionarios.TabIndex = 0
         Me.tabCadastroFuncionarios.Text = "Funcionários"
         Me.tabCadastroFuncionarios.UseVisualStyleBackColor = True
         '
         'botHoje
         '
-        Me.botHoje.Location = New System.Drawing.Point(150, 281)
+        Me.botHoje.Location = New System.Drawing.Point(380, 420)
         Me.botHoje.Name = "botHoje"
-        Me.botHoje.Size = New System.Drawing.Size(39, 23)
+        Me.botHoje.Size = New System.Drawing.Size(47, 23)
         Me.botHoje.TabIndex = 73
         Me.botHoje.TabStop = False
         Me.botHoje.Text = "Hoje"
@@ -256,7 +276,7 @@ Partial Class Funcionarios
         '
         'mtxDataAdmissao
         '
-        Me.mtxDataAdmissao.Location = New System.Drawing.Point(12, 284)
+        Me.mtxDataAdmissao.Location = New System.Drawing.Point(339, 394)
         Me.mtxDataAdmissao.Name = "mtxDataAdmissao"
         Me.mtxDataAdmissao.Size = New System.Drawing.Size(132, 20)
         Me.mtxDataAdmissao.TabIndex = 4
@@ -266,7 +286,7 @@ Partial Class Funcionarios
         Me.lblCampoObrigatorio.AutoSize = True
         Me.lblCampoObrigatorio.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lblCampoObrigatorio.ForeColor = System.Drawing.Color.Red
-        Me.lblCampoObrigatorio.Location = New System.Drawing.Point(275, 361)
+        Me.lblCampoObrigatorio.Location = New System.Drawing.Point(13, 430)
         Me.lblCampoObrigatorio.Name = "lblCampoObrigatorio"
         Me.lblCampoObrigatorio.Size = New System.Drawing.Size(108, 13)
         Me.lblCampoObrigatorio.TabIndex = 71
@@ -418,12 +438,97 @@ Partial Class Funcionarios
         Me.colCargo.ReadOnly = True
         Me.colCargo.Width = 170
         '
+        'txtEndereco
+        '
+        Me.txtEndereco.Location = New System.Drawing.Point(12, 207)
+        Me.txtEndereco.Name = "txtEndereco"
+        Me.txtEndereco.Size = New System.Drawing.Size(554, 20)
+        Me.txtEndereco.TabIndex = 74
+        '
+        'Label2
+        '
+        Me.Label2.AutoSize = True
+        Me.Label2.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label2.Location = New System.Drawing.Point(8, 184)
+        Me.Label2.Name = "Label2"
+        Me.Label2.Size = New System.Drawing.Size(84, 20)
+        Me.Label2.TabIndex = 75
+        Me.Label2.Text = "Endereço*"
+        '
+        'Label3
+        '
+        Me.Label3.AutoSize = True
+        Me.Label3.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label3.Location = New System.Drawing.Point(12, 244)
+        Me.Label3.Name = "Label3"
+        Me.Label3.Size = New System.Drawing.Size(51, 20)
+        Me.Label3.TabIndex = 76
+        Me.Label3.Text = "Bairro"
+        '
+        'txtBairro
+        '
+        Me.txtBairro.Location = New System.Drawing.Point(12, 267)
+        Me.txtBairro.Name = "txtBairro"
+        Me.txtBairro.Size = New System.Drawing.Size(227, 20)
+        Me.txtBairro.TabIndex = 77
+        '
+        'Label4
+        '
+        Me.Label4.AutoSize = True
+        Me.Label4.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label4.Location = New System.Drawing.Point(336, 244)
+        Me.Label4.Name = "Label4"
+        Me.Label4.Size = New System.Drawing.Size(59, 20)
+        Me.Label4.TabIndex = 78
+        Me.Label4.Text = "Cidade"
+        '
+        'txtCidade
+        '
+        Me.txtCidade.Location = New System.Drawing.Point(339, 267)
+        Me.txtCidade.Name = "txtCidade"
+        Me.txtCidade.Size = New System.Drawing.Size(227, 20)
+        Me.txtCidade.TabIndex = 79
+        '
+        'Label5
+        '
+        Me.Label5.AutoSize = True
+        Me.Label5.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label5.Location = New System.Drawing.Point(336, 303)
+        Me.Label5.Name = "Label5"
+        Me.Label5.Size = New System.Drawing.Size(71, 20)
+        Me.Label5.TabIndex = 80
+        Me.Label5.Text = "Telefone"
+        '
+        'txtTelefone
+        '
+        Me.txtTelefone.Location = New System.Drawing.Point(339, 326)
+        Me.txtTelefone.Name = "txtTelefone"
+        Me.txtTelefone.Size = New System.Drawing.Size(133, 20)
+        Me.txtTelefone.TabIndex = 81
+        '
+        'Label6
+        '
+        Me.Label6.AutoSize = True
+        Me.Label6.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label6.Location = New System.Drawing.Point(12, 365)
+        Me.Label6.Name = "Label6"
+        Me.Label6.Size = New System.Drawing.Size(58, 20)
+        Me.Label6.TabIndex = 82
+        Me.Label6.Text = "Salario"
+        '
+        'txtSalario
+        '
+        Me.txtSalario.Location = New System.Drawing.Point(11, 394)
+        Me.txtSalario.Name = "txtSalario"
+        Me.txtSalario.Size = New System.Drawing.Size(133, 20)
+        Me.txtSalario.TabIndex = 83
+        '
         'Funcionarios
         '
         Me.AcceptButton = Me.botCadastrar
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(432, 419)
+        Me.ClientSize = New System.Drawing.Size(617, 567)
         Me.Controls.Add(Me.tabFuncionarios)
         Me.Name = "Funcionarios"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
@@ -472,4 +577,14 @@ Partial Class Funcionarios
     Friend WithEvents lblMatricula As System.Windows.Forms.Label
     Friend WithEvents txtMatricula As System.Windows.Forms.TextBox
     Friend WithEvents Label1 As System.Windows.Forms.Label
+    Friend WithEvents Label2 As System.Windows.Forms.Label
+    Friend WithEvents txtEndereco As System.Windows.Forms.TextBox
+    Friend WithEvents txtBairro As System.Windows.Forms.TextBox
+    Friend WithEvents Label3 As System.Windows.Forms.Label
+    Friend WithEvents txtCidade As System.Windows.Forms.TextBox
+    Friend WithEvents Label4 As System.Windows.Forms.Label
+    Friend WithEvents Label5 As System.Windows.Forms.Label
+    Friend WithEvents Label6 As System.Windows.Forms.Label
+    Friend WithEvents txtTelefone As System.Windows.Forms.TextBox
+    Friend WithEvents txtSalario As System.Windows.Forms.TextBox
 End Class
