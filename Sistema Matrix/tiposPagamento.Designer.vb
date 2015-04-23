@@ -22,9 +22,10 @@ Partial Class tiposPagamento
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
+        Me.components = New System.ComponentModel.Container()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(tiposPagamento))
         Me.lblTitulo = New System.Windows.Forms.Label()
-        Me.TabControl1 = New System.Windows.Forms.TabControl()
+        Me.abaTiposPagamento = New System.Windows.Forms.TabControl()
         Me.tabCadastro = New System.Windows.Forms.TabPage()
         Me.lblInserir = New System.Windows.Forms.Label()
         Me.lblLimpar = New System.Windows.Forms.Label()
@@ -41,13 +42,18 @@ Partial Class tiposPagamento
         Me.botAlterar = New System.Windows.Forms.Button()
         Me.botExcluir = New System.Windows.Forms.Button()
         Me.tabConsulta = New System.Windows.Forms.TabPage()
-        Me.DataGridView1 = New System.Windows.Forms.DataGridView()
+        Me.dtgConsultaTiposPagamento = New System.Windows.Forms.DataGridView()
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
-        Me.TabControl1.SuspendLayout()
+        Me.TiposPagamentoBindingSource = New System.Windows.Forms.BindingSource(Me.components)
+        Me.BancoDataSet = New Sistema_Matrix.bancoDataSet()
+        Me.TiposPagamentoTableAdapter = New Sistema_Matrix.bancoDataSetTableAdapters.tiposPagamentoTableAdapter()
+        Me.abaTiposPagamento.SuspendLayout()
         Me.tabCadastro.SuspendLayout()
         Me.tabConsulta.SuspendLayout()
-        CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.dtgConsultaTiposPagamento, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.TiposPagamentoBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.BancoDataSet, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'lblTitulo
@@ -60,15 +66,15 @@ Partial Class tiposPagamento
         Me.lblTitulo.TabIndex = 13
         Me.lblTitulo.Text = "Tipos de Pagamento"
         '
-        'TabControl1
+        'abaTiposPagamento
         '
-        Me.TabControl1.Controls.Add(Me.tabCadastro)
-        Me.TabControl1.Controls.Add(Me.tabConsulta)
-        Me.TabControl1.Location = New System.Drawing.Point(16, 145)
-        Me.TabControl1.Name = "TabControl1"
-        Me.TabControl1.SelectedIndex = 0
-        Me.TabControl1.Size = New System.Drawing.Size(340, 228)
-        Me.TabControl1.TabIndex = 15
+        Me.abaTiposPagamento.Controls.Add(Me.tabCadastro)
+        Me.abaTiposPagamento.Controls.Add(Me.tabConsulta)
+        Me.abaTiposPagamento.Location = New System.Drawing.Point(16, 145)
+        Me.abaTiposPagamento.Name = "abaTiposPagamento"
+        Me.abaTiposPagamento.SelectedIndex = 0
+        Me.abaTiposPagamento.Size = New System.Drawing.Size(340, 228)
+        Me.abaTiposPagamento.TabIndex = 15
         '
         'tabCadastro
         '
@@ -97,7 +103,7 @@ Partial Class tiposPagamento
         'lblInserir
         '
         Me.lblInserir.AutoSize = True
-        Me.lblInserir.Location = New System.Drawing.Point(264, 49)
+        Me.lblInserir.Location = New System.Drawing.Point(91, 49)
         Me.lblInserir.Name = "lblInserir"
         Me.lblInserir.Size = New System.Drawing.Size(65, 13)
         Me.lblInserir.TabIndex = 69
@@ -107,7 +113,7 @@ Partial Class tiposPagamento
         'lblLimpar
         '
         Me.lblLimpar.AutoSize = True
-        Me.lblLimpar.Location = New System.Drawing.Point(174, 49)
+        Me.lblLimpar.Location = New System.Drawing.Point(248, 46)
         Me.lblLimpar.Name = "lblLimpar"
         Me.lblLimpar.Size = New System.Drawing.Size(66, 13)
         Me.lblLimpar.TabIndex = 67
@@ -116,7 +122,7 @@ Partial Class tiposPagamento
         'lblCadastrar
         '
         Me.lblCadastrar.AutoSize = True
-        Me.lblCadastrar.Location = New System.Drawing.Point(97, 49)
+        Me.lblCadastrar.Location = New System.Drawing.Point(171, 49)
         Me.lblCadastrar.Name = "lblCadastrar"
         Me.lblCadastrar.Size = New System.Drawing.Size(52, 13)
         Me.lblCadastrar.TabIndex = 66
@@ -125,7 +131,7 @@ Partial Class tiposPagamento
         'botModoNovo
         '
         Me.botModoNovo.Image = Global.Sistema_Matrix.My.Resources.Resources.adicionar
-        Me.botModoNovo.Location = New System.Drawing.Point(272, 6)
+        Me.botModoNovo.Location = New System.Drawing.Point(99, 6)
         Me.botModoNovo.Name = "botModoNovo"
         Me.botModoNovo.Size = New System.Drawing.Size(40, 40)
         Me.botModoNovo.TabIndex = 65
@@ -135,7 +141,7 @@ Partial Class tiposPagamento
         'lblAlterar
         '
         Me.lblAlterar.AutoSize = True
-        Me.lblAlterar.Location = New System.Drawing.Point(86, 49)
+        Me.lblAlterar.Location = New System.Drawing.Point(160, 49)
         Me.lblAlterar.Name = "lblAlterar"
         Me.lblAlterar.Size = New System.Drawing.Size(79, 13)
         Me.lblAlterar.TabIndex = 70
@@ -145,7 +151,7 @@ Partial Class tiposPagamento
         'lblExcluir
         '
         Me.lblExcluir.AutoSize = True
-        Me.lblExcluir.Location = New System.Drawing.Point(174, 49)
+        Me.lblExcluir.Location = New System.Drawing.Point(248, 49)
         Me.lblExcluir.Name = "lblExcluir"
         Me.lblExcluir.Size = New System.Drawing.Size(80, 13)
         Me.lblExcluir.TabIndex = 68
@@ -156,7 +162,7 @@ Partial Class tiposPagamento
         '
         Me.botLimpar.DialogResult = System.Windows.Forms.DialogResult.Cancel
         Me.botLimpar.Image = Global.Sistema_Matrix.My.Resources.Resources.limpar
-        Me.botLimpar.Location = New System.Drawing.Point(186, 6)
+        Me.botLimpar.Location = New System.Drawing.Point(260, 3)
         Me.botLimpar.Name = "botLimpar"
         Me.botLimpar.Size = New System.Drawing.Size(40, 40)
         Me.botLimpar.TabIndex = 62
@@ -166,7 +172,7 @@ Partial Class tiposPagamento
         '
         Me.botCadastrar.Image = Global.Sistema_Matrix.My.Resources.Resources.salvar
         Me.botCadastrar.ImageAlign = System.Drawing.ContentAlignment.TopLeft
-        Me.botCadastrar.Location = New System.Drawing.Point(102, 6)
+        Me.botCadastrar.Location = New System.Drawing.Point(176, 6)
         Me.botCadastrar.Name = "botCadastrar"
         Me.botCadastrar.Size = New System.Drawing.Size(40, 40)
         Me.botCadastrar.TabIndex = 61
@@ -214,7 +220,7 @@ Partial Class tiposPagamento
         'botAlterar
         '
         Me.botAlterar.Image = Global.Sistema_Matrix.My.Resources.Resources.alterar
-        Me.botAlterar.Location = New System.Drawing.Point(102, 6)
+        Me.botAlterar.Location = New System.Drawing.Point(176, 6)
         Me.botAlterar.Name = "botAlterar"
         Me.botAlterar.Size = New System.Drawing.Size(40, 40)
         Me.botAlterar.TabIndex = 63
@@ -224,7 +230,7 @@ Partial Class tiposPagamento
         'botExcluir
         '
         Me.botExcluir.Image = Global.Sistema_Matrix.My.Resources.Resources.excluir
-        Me.botExcluir.Location = New System.Drawing.Point(186, 6)
+        Me.botExcluir.Location = New System.Drawing.Point(260, 6)
         Me.botExcluir.Name = "botExcluir"
         Me.botExcluir.Size = New System.Drawing.Size(40, 40)
         Me.botExcluir.TabIndex = 64
@@ -233,7 +239,7 @@ Partial Class tiposPagamento
         '
         'tabConsulta
         '
-        Me.tabConsulta.Controls.Add(Me.DataGridView1)
+        Me.tabConsulta.Controls.Add(Me.dtgConsultaTiposPagamento)
         Me.tabConsulta.Location = New System.Drawing.Point(4, 22)
         Me.tabConsulta.Name = "tabConsulta"
         Me.tabConsulta.Padding = New System.Windows.Forms.Padding(3)
@@ -242,15 +248,16 @@ Partial Class tiposPagamento
         Me.tabConsulta.Text = "Consulta"
         Me.tabConsulta.UseVisualStyleBackColor = True
         '
-        'DataGridView1
+        'dtgConsultaTiposPagamento
         '
-        Me.DataGridView1.BackgroundColor = System.Drawing.Color.Azure
-        Me.DataGridView1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
-        Me.DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.DataGridView1.Location = New System.Drawing.Point(6, 13)
-        Me.DataGridView1.Name = "DataGridView1"
-        Me.DataGridView1.Size = New System.Drawing.Size(320, 245)
-        Me.DataGridView1.TabIndex = 16
+        Me.dtgConsultaTiposPagamento.AllowUserToAddRows = False
+        Me.dtgConsultaTiposPagamento.BackgroundColor = System.Drawing.Color.Azure
+        Me.dtgConsultaTiposPagamento.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
+        Me.dtgConsultaTiposPagamento.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.dtgConsultaTiposPagamento.Location = New System.Drawing.Point(6, 13)
+        Me.dtgConsultaTiposPagamento.Name = "dtgConsultaTiposPagamento"
+        Me.dtgConsultaTiposPagamento.Size = New System.Drawing.Size(320, 183)
+        Me.dtgConsultaTiposPagamento.TabIndex = 16
         '
         'PictureBox1
         '
@@ -263,6 +270,20 @@ Partial Class tiposPagamento
         Me.PictureBox1.TabIndex = 16
         Me.PictureBox1.TabStop = False
         '
+        'TiposPagamentoBindingSource
+        '
+        Me.TiposPagamentoBindingSource.DataMember = "tiposPagamento"
+        Me.TiposPagamentoBindingSource.DataSource = Me.BancoDataSet
+        '
+        'BancoDataSet
+        '
+        Me.BancoDataSet.DataSetName = "bancoDataSet"
+        Me.BancoDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
+        '
+        'TiposPagamentoTableAdapter
+        '
+        Me.TiposPagamentoTableAdapter.ClearBeforeFill = True
+        '
         'tiposPagamento
         '
         Me.AcceptButton = Me.botCadastrar
@@ -272,25 +293,27 @@ Partial Class tiposPagamento
         Me.CancelButton = Me.botLimpar
         Me.ClientSize = New System.Drawing.Size(368, 388)
         Me.Controls.Add(Me.PictureBox1)
-        Me.Controls.Add(Me.TabControl1)
+        Me.Controls.Add(Me.abaTiposPagamento)
         Me.Controls.Add(Me.lblTitulo)
         Me.Name = "tiposPagamento"
         Me.Text = "Tipos de Pagamento"
-        Me.TabControl1.ResumeLayout(False)
+        Me.abaTiposPagamento.ResumeLayout(False)
         Me.tabCadastro.ResumeLayout(False)
         Me.tabCadastro.PerformLayout()
         Me.tabConsulta.ResumeLayout(False)
-        CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.dtgConsultaTiposPagamento, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.TiposPagamentoBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.BancoDataSet, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
     End Sub
     Friend WithEvents lblTitulo As System.Windows.Forms.Label
-    Friend WithEvents TabControl1 As System.Windows.Forms.TabControl
+    Friend WithEvents abaTiposPagamento As System.Windows.Forms.TabControl
     Friend WithEvents tabCadastro As System.Windows.Forms.TabPage
     Friend WithEvents tabConsulta As System.Windows.Forms.TabPage
-    Friend WithEvents DataGridView1 As System.Windows.Forms.DataGridView
+    Friend WithEvents dtgConsultaTiposPagamento As System.Windows.Forms.DataGridView
     Friend WithEvents lblDescricao As System.Windows.Forms.Label
     Friend WithEvents txtDescricao As System.Windows.Forms.TextBox
     Friend WithEvents lblCodigo As System.Windows.Forms.Label
@@ -306,4 +329,7 @@ Partial Class tiposPagamento
     Friend WithEvents botLimpar As System.Windows.Forms.Button
     Friend WithEvents botCadastrar As System.Windows.Forms.Button
     Friend WithEvents PictureBox1 As System.Windows.Forms.PictureBox
+    Friend WithEvents BancoDataSet As Sistema_Matrix.bancoDataSet
+    Friend WithEvents TiposPagamentoBindingSource As System.Windows.Forms.BindingSource
+    Friend WithEvents TiposPagamentoTableAdapter As Sistema_Matrix.bancoDataSetTableAdapters.tiposPagamentoTableAdapter
 End Class

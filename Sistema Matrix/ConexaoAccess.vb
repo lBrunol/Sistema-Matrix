@@ -52,6 +52,23 @@ Public Class ConexaoAccess
         End Try
         Return mDataTable
     End Function
+    Public Sub carregaDataGrid(ByVal dataGrid As DataGridView, ByVal sql As String)
+        Dim mDataTable As New DataTable
+        Try
+            ConectarBanco()
+            mDataTable = ExecutaDataTable(sql)
+            dataGrid.DataSource = mDataTable
+            dataGrid.Refresh()
+        Catch ex As SqlClient.SqlException
+            MessageBox.Show(ex.Number & ex.Message, "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error)
+        Catch ex As Exception
+            If Err.Number = 5 Then
+
+            Else
+                MessageBox.Show(Err.Number & " " & ex.Message, "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error)
+            End If
+        End Try
+    End Sub
     Public Function ExecutaDataRead(ByVal sql As String) As OleDbDataReader
         'varLeitor = Nothing
         Try

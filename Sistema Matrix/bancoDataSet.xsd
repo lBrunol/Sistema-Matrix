@@ -821,7 +821,16 @@
               <Mapping SourceColumn="tpaCodigo" DataSetColumn="tpaCodigo" />
               <Mapping SourceColumn="tpaDescricao" DataSetColumn="tpaDescricao" />
             </Mappings>
-            <Sources />
+            <Sources>
+              <DbSource ConnectionRef="conexaoBanco (MySettings)" DbObjectName="tiposPagamento" DbObjectType="Table" GenerateMethods="Get" GenerateShortCommands="true" GeneratorGetMethodName="selectTiposPagamento" GetMethodModifier="Public" GetMethodName="selectTiposPagamento" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="selectTiposPagamento" UserSourceName="selectTiposPagamento">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT tpaCodigo, tpaDescricao FROM tiposPagamento</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </Sources>
           </TableAdapter>
           <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="usuariosTableAdapter" GeneratorDataComponentClassName="usuariosTableAdapter" Name="usuarios" UserDataComponentName="usuariosTableAdapter">
             <MainSource>
