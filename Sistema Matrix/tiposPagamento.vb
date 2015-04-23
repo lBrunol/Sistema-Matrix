@@ -15,9 +15,6 @@ Public Class tiposPagamento
     Private leitor As OleDbDataReader
     'String que armazena os comandos SQL
     Private strSQL As String
-
-
-
     Private Sub botCadastrar_Click(sender As Object, e As EventArgs) Handles botCadastrar.Click
         'Armazena na variável o valor que foi retornado pela função, o argumento é o próprio form
         valorRetornado = Funcoes.verificaVazio(Me)
@@ -53,42 +50,17 @@ Public Class tiposPagamento
         dtgConsultaTiposPagamento.Columns(1).Width = 200
 
     End Sub
-
-    Private Sub zeraVariaveisBanco()
-        'Fecha a conexão com banco
-        objBanco.DesconectarBanco()
-        'Zera a variável strSQL
-        strSQL = String.Empty
-        'Testa se a variável leitor foi alterada, se sim a conexão com banco de dados será fechada
-        If leitor IsNot Nothing Then
-            leitor.Close()
-            leitor = Nothing
-        End If
-    End Sub
-
     Private Sub botLimpar_Click(sender As Object, e As EventArgs) Handles botLimpar.Click
         'Função para limpar os campos do formulário
         Funcoes.Limpar(Me)
         'Chama a função privada para atribuir código
         geraCodigo()
     End Sub
-
-    Private Sub geraCodigo()
-        'Atribui o valor retornado pela função atribuiCodigo a textbox do Código
-        valorCodigo = atribuiCodigo("tpaCodigo", "tiposPagamento")
-        txtCodigo.Text = valorCodigo
-    End Sub
     Private Sub tabConsulta_Enter(sender As Object, e As EventArgs) Handles tabConsulta.Enter
         strSQL = "SELECT tpaCodigo as Código, tpaDescricao as Descrição FROM tiposPagamento"
         objBanco.carregaDataGrid(dtgConsultaTiposPagamento, strSQL)
         dtgConsultaTiposPagamento.Refresh()
     End Sub
-
-    Private Sub dtgConsultaTiposPagamento_CellContentClick(sender As Object, e As DataGridViewCellEventArgs) Handles dtgConsultaTiposPagamento.CellContentClick
-        
-
-    End Sub
-
     Private Sub dtgConsultaTiposPagamento_CellDoubleClick(sender As Object, e As DataGridViewCellEventArgs) Handles dtgConsultaTiposPagamento.CellDoubleClick
         Try
             'Armazena na variável o código da linha que será utilizada na clausula where do select
@@ -98,7 +70,16 @@ Public Class tiposPagamento
             abaTiposPagamento.SelectTab(0)
 
             'Função que mostra os botões de alteração
-            mostraEscondeBotoesAlteracao()
+            mostraBotoesAlteracao()
+
+            'String com comando SQL
+            strSQL = "SELECT * FROM tiposPagamento WHERE tpaCodigo = " & valorCodigo
+            leitor = objBanco.ExecutaDataRead(strSQL)
+            'Le os dados
+            leitor.Read()
+            'Atribui os dados aos campos
+            txtCodigo.Text = leitor.Item(0)
+            txtDescricao.Text = leitor.Item(1)
 
         Catch exc As SqlClient.SqlException
             MsgBox("Erro com banco de dados" & vbCrLf & Err.Description, vbCritical, "Erro com Banco de dados")
@@ -109,8 +90,58 @@ Public Class tiposPagamento
             zeraVariaveisBanco()
         End Try
     End Sub
+    Private Sub botModoNovo_Click(sender As Object, e As EventArgs) Handles botModoNovo.Click
+        escondeBotoesAlteracao()
+        Funcoes.Limpar(Me)
+        geraCodigo()
+    End Sub
 
-    Sub mostraEscondeBotoesAlteracao()
+    Private Sub botAlterar_Click(sender As Object, e As EventArgs) Handles botAlterar.Click
+        Try
+            'String com comando SQL
+            strSQL = "UPDATE tiposPagamento SET tpaDescricao = '" & txtDescricao.Text & "' WHERE tpaCodigo = " & txtCodigo.Text
+            'Executa a instrução
+            objBanco.ExecutaQuery(strSQL)
+            MsgBox("Dados alterados com sucesso", vbInformation, "Sucesso")
+            escondeBotoesAlteracao()
+            Funcoes.Limpar(Me)
+            geraCodigo()
+        Catch exc As SqlClient.SqlException
+            MsgBox("Erro com banco de dados" & vbCrLf & Err.Description, vbCritical, "Erro com Banco de dados")
+        Catch exc As Exception
+            MsgBox("Erro" & vbCrLf & Err.Number & vbCrLf & Err.Description, vbCritical, "Erro")
+        Finally
+            'Sub que fecha as conexões com banco e zera as variáveis usadas
+            zeraVariaveisBanco()
+        End Try
+    End Sub
+
+    Private Sub botExcluir_Click(sender As Object, e As EventArgs) Handles botExcluir.Click
+        Try
+            'Mensagem de confirmação
+            If MsgBox("Deseja realmente excluir este registro?", vbExclamation + vbYesNo, "Confirme") = vbYes Then
+                'String com comando SQL
+                strSQL = "DELETE FROM tiposPagamento WHERE tpaCodigo = " & txtCodigo.Text
+                'Executa a instrução
+                objBanco.ExecutaQuery(strSQL)
+                MsgBox("Dados excluídos com sucesso", vbInformation, "Sucesso")
+                'Esconde os botões de alteração e exclusão
+                escondeBotoesAlteracao()
+                'Limpa os campos
+                Funcoes.Limpar(Me)
+                'Gera a PK
+                geraCodigo()
+            End If
+        Catch exc As SqlClient.SqlException
+            MsgBox("Erro com banco de dados" & vbCrLf & Err.Description, vbCritical, "Erro com Banco de dados")
+        Catch exc As Exception
+            MsgBox("Erro" & vbCrLf & Err.Number & vbCrLf & Err.Description, vbCritical, "Erro")
+        Finally
+            'Sub que fecha as conexões com banco e zera as variáveis usadas
+            zeraVariaveisBanco()
+        End Try
+    End Sub
+    Private Sub mostraBotoesAlteracao()
         'Exibe os botões de alteração e exclusão e oculta os de adição
         botCadastrar.Visible = False
         lblCadastrar.Visible = False
@@ -123,5 +154,34 @@ Public Class tiposPagamento
         lblExcluir.Visible = True
         botModoNovo.Visible = True
         lblInserir.Visible = True
+    End Sub
+    Private Sub escondeBotoesAlteracao()
+        botCadastrar.Visible = True
+        lblCadastrar.Visible = True
+        botLimpar.Visible = True
+        lblLimpar.Visible = True
+
+        botAlterar.Visible = False
+        lblAlterar.Visible = False
+        botExcluir.Visible = False
+        lblExcluir.Visible = False
+        botModoNovo.Visible = False
+        lblInserir.Visible = False
+    End Sub
+    Private Sub geraCodigo()
+        'Atribui o valor retornado pela função atribuiCodigo a textbox do Código
+        valorCodigo = atribuiCodigo("tpaCodigo", "tiposPagamento")
+        txtCodigo.Text = valorCodigo
+    End Sub
+    Private Sub zeraVariaveisBanco()
+        'Fecha a conexão com banco
+        objBanco.DesconectarBanco()
+        'Zera a variável strSQL
+        strSQL = String.Empty
+        'Testa se a variável leitor foi alterada, se sim a conexão com banco de dados será fechada
+        If leitor IsNot Nothing Then
+            leitor.Close()
+            leitor = Nothing
+        End If
     End Sub
 End Class
