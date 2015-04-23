@@ -34,13 +34,13 @@ Partial Class tiposPagamento
         Me.lblAlterar = New System.Windows.Forms.Label()
         Me.lblExcluir = New System.Windows.Forms.Label()
         Me.botLimpar = New System.Windows.Forms.Button()
-        Me.botCadastrar = New System.Windows.Forms.Button()
         Me.lblDescricao = New System.Windows.Forms.Label()
         Me.txtDescricao = New System.Windows.Forms.TextBox()
         Me.lblCodigo = New System.Windows.Forms.Label()
         Me.txtCodigo = New System.Windows.Forms.TextBox()
         Me.botAlterar = New System.Windows.Forms.Button()
         Me.botExcluir = New System.Windows.Forms.Button()
+        Me.botCadastrar = New System.Windows.Forms.Button()
         Me.tabConsulta = New System.Windows.Forms.TabPage()
         Me.dtgConsultaTiposPagamento = New System.Windows.Forms.DataGridView()
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
@@ -84,14 +84,14 @@ Partial Class tiposPagamento
         Me.tabCadastro.Controls.Add(Me.botModoNovo)
         Me.tabCadastro.Controls.Add(Me.lblAlterar)
         Me.tabCadastro.Controls.Add(Me.lblExcluir)
-        Me.tabCadastro.Controls.Add(Me.botLimpar)
-        Me.tabCadastro.Controls.Add(Me.botCadastrar)
         Me.tabCadastro.Controls.Add(Me.lblDescricao)
         Me.tabCadastro.Controls.Add(Me.txtDescricao)
         Me.tabCadastro.Controls.Add(Me.lblCodigo)
         Me.tabCadastro.Controls.Add(Me.txtCodigo)
         Me.tabCadastro.Controls.Add(Me.botAlterar)
         Me.tabCadastro.Controls.Add(Me.botExcluir)
+        Me.tabCadastro.Controls.Add(Me.botCadastrar)
+        Me.tabCadastro.Controls.Add(Me.botLimpar)
         Me.tabCadastro.Location = New System.Drawing.Point(4, 22)
         Me.tabCadastro.Name = "tabCadastro"
         Me.tabCadastro.Padding = New System.Windows.Forms.Padding(3)
@@ -168,16 +168,6 @@ Partial Class tiposPagamento
         Me.botLimpar.TabIndex = 62
         Me.botLimpar.UseVisualStyleBackColor = True
         '
-        'botCadastrar
-        '
-        Me.botCadastrar.Image = Global.Sistema_Matrix.My.Resources.Resources.salvar
-        Me.botCadastrar.ImageAlign = System.Drawing.ContentAlignment.TopLeft
-        Me.botCadastrar.Location = New System.Drawing.Point(176, 6)
-        Me.botCadastrar.Name = "botCadastrar"
-        Me.botCadastrar.Size = New System.Drawing.Size(40, 40)
-        Me.botCadastrar.TabIndex = 61
-        Me.botCadastrar.UseVisualStyleBackColor = True
-        '
         'lblDescricao
         '
         Me.lblDescricao.AutoSize = True
@@ -230,12 +220,22 @@ Partial Class tiposPagamento
         'botExcluir
         '
         Me.botExcluir.Image = Global.Sistema_Matrix.My.Resources.Resources.excluir
-        Me.botExcluir.Location = New System.Drawing.Point(260, 6)
+        Me.botExcluir.Location = New System.Drawing.Point(260, 4)
         Me.botExcluir.Name = "botExcluir"
         Me.botExcluir.Size = New System.Drawing.Size(40, 40)
         Me.botExcluir.TabIndex = 64
         Me.botExcluir.UseVisualStyleBackColor = True
         Me.botExcluir.Visible = False
+        '
+        'botCadastrar
+        '
+        Me.botCadastrar.Image = Global.Sistema_Matrix.My.Resources.Resources.salvar
+        Me.botCadastrar.ImageAlign = System.Drawing.ContentAlignment.TopLeft
+        Me.botCadastrar.Location = New System.Drawing.Point(176, 6)
+        Me.botCadastrar.Name = "botCadastrar"
+        Me.botCadastrar.Size = New System.Drawing.Size(40, 40)
+        Me.botCadastrar.TabIndex = 61
+        Me.botCadastrar.UseVisualStyleBackColor = True
         '
         'tabConsulta
         '

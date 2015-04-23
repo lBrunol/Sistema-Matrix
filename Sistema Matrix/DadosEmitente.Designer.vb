@@ -22,7 +22,6 @@ Partial Class DadosEmitente
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
-        Me.components = New System.ComponentModel.Container()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(DadosEmitente))
         Me.lblTitulo = New System.Windows.Forms.Label()
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
@@ -48,12 +47,7 @@ Partial Class DadosEmitente
         Me.lblExcluir = New System.Windows.Forms.Label()
         Me.botExcluir = New System.Windows.Forms.Button()
         Me.botLimpar = New System.Windows.Forms.Button()
-        Me.BancoDataSet = New Sistema_Matrix.bancoDataSet()
-        Me.DadosEmitenteBindingSource = New System.Windows.Forms.BindingSource(Me.components)
-        Me.DadosEmitenteTableAdapter = New Sistema_Matrix.bancoDataSetTableAdapters.dadosEmitenteTableAdapter()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.BancoDataSet, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.DadosEmitenteBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'lblTitulo
@@ -89,7 +83,6 @@ Partial Class DadosEmitente
         '
         'txtNomeFantasia
         '
-        Me.txtNomeFantasia.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.DadosEmitenteBindingSource, "demNomeFantasia", True))
         Me.txtNomeFantasia.Font = New System.Drawing.Font("Century Gothic", 9.75!)
         Me.txtNomeFantasia.Location = New System.Drawing.Point(12, 164)
         Me.txtNomeFantasia.Multiline = True
@@ -288,20 +281,6 @@ Partial Class DadosEmitente
         Me.botLimpar.TabIndex = 65
         Me.botLimpar.UseVisualStyleBackColor = True
         '
-        'BancoDataSet
-        '
-        Me.BancoDataSet.DataSetName = "bancoDataSet"
-        Me.BancoDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
-        '
-        'DadosEmitenteBindingSource
-        '
-        Me.DadosEmitenteBindingSource.DataMember = "dadosEmitente"
-        Me.DadosEmitenteBindingSource.DataSource = Me.BancoDataSet
-        '
-        'DadosEmitenteTableAdapter
-        '
-        Me.DadosEmitenteTableAdapter.ClearBeforeFill = True
-        '
         'DadosEmitente
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -336,8 +315,6 @@ Partial Class DadosEmitente
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "Dados do Emitente"
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.BancoDataSet, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.DadosEmitenteBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -366,7 +343,4 @@ Partial Class DadosEmitente
     Friend WithEvents lblExcluir As System.Windows.Forms.Label
     Friend WithEvents botExcluir As System.Windows.Forms.Button
     Friend WithEvents botLimpar As System.Windows.Forms.Button
-    Friend WithEvents BancoDataSet As Sistema_Matrix.bancoDataSet
-    Friend WithEvents DadosEmitenteBindingSource As System.Windows.Forms.BindingSource
-    Friend WithEvents DadosEmitenteTableAdapter As Sistema_Matrix.bancoDataSetTableAdapters.dadosEmitenteTableAdapter
 End Class
