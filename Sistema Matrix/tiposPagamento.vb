@@ -2,7 +2,6 @@
 Imports System.Data
 Imports Sistema_Matrix.ConexaoAccess
 Public Class tiposPagamento
-
     'Armazena o valor da PK
     Public valorCodigo As Integer
     'Variável que recebe o valor retornado pela função que verifica se os campos estão vazios
@@ -15,6 +14,11 @@ Public Class tiposPagamento
     Private leitor As OleDbDataReader
     'String que armazena os comandos SQL
     Private strSQL As String
+    Private Sub geraCodigo()
+        'Atribui o valor retornado pela função atribuiCodigo a textbox do Código
+        valorCodigo = atribuiCodigo("tpaCodigo", "tiposPagamento")
+        txtCodigo.Text = valorCodigo
+    End Sub
     Private Sub botCadastrar_Click(sender As Object, e As EventArgs) Handles botCadastrar.Click
         'Armazena na variável o valor que foi retornado pela função, o argumento é o próprio form
         valorRetornado = Funcoes.verificaVazio(Me)
@@ -59,7 +63,11 @@ Public Class tiposPagamento
     Private Sub tabConsulta_Enter(sender As Object, e As EventArgs) Handles tabConsulta.Enter
         strSQL = "SELECT tpaCodigo as Código, tpaDescricao as Descrição FROM tiposPagamento"
         objBanco.carregaDataGrid(dtgConsultaTiposPagamento, strSQL)
+        'Atualiza o datagrid
         dtgConsultaTiposPagamento.Refresh()
+        'Coloca a seleção no datagrid
+        dtgConsultaTiposPagamento.Select()
+
     End Sub
     Private Sub dtgConsultaTiposPagamento_CellDoubleClick(sender As Object, e As DataGridViewCellEventArgs) Handles dtgConsultaTiposPagamento.CellDoubleClick
         Try
@@ -80,7 +88,6 @@ Public Class tiposPagamento
             'Atribui os dados aos campos
             txtCodigo.Text = leitor.Item(0)
             txtDescricao.Text = leitor.Item(1)
-
         Catch exc As SqlClient.SqlException
             MsgBox("Erro com banco de dados" & vbCrLf & Err.Description, vbCritical, "Erro com Banco de dados")
         Catch exc As Exception
@@ -115,7 +122,6 @@ Public Class tiposPagamento
             zeraVariaveisBanco()
         End Try
     End Sub
-
     Private Sub botExcluir_Click(sender As Object, e As EventArgs) Handles botExcluir.Click
         Try
             'Mensagem de confirmação
@@ -167,11 +173,6 @@ Public Class tiposPagamento
         lblExcluir.Visible = False
         botModoNovo.Visible = False
         lblInserir.Visible = False
-    End Sub
-    Private Sub geraCodigo()
-        'Atribui o valor retornado pela função atribuiCodigo a textbox do Código
-        valorCodigo = atribuiCodigo("tpaCodigo", "tiposPagamento")
-        txtCodigo.Text = valorCodigo
     End Sub
     Private Sub zeraVariaveisBanco()
         'Fecha a conexão com banco

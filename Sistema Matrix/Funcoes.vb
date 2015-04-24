@@ -1,4 +1,6 @@
 ﻿Imports Sistema_Matrix.ConexaoAccess
+Imports System.Data.OleDb
+
 Module Funcoes
     Public i As Integer
     Public j As Integer
@@ -198,24 +200,23 @@ Module Funcoes
         'a este gerando o código do novo registro.
         'Funciona através da passagem do nome do campo e da tabela
         Dim strsqlF As String
-        Dim tabelaF As DataTable
         Dim objBancoF As New ConexaoAccess
         Dim valorCodF As Integer
+        Dim leitorF As OleDbDataReader
 
+        'String que armazena o comando e recebe os parâmetros da função
         strsqlF = "SELECT MAX (" & nomeCampo & ") FROM " & nomeTabela & ""
+        leitorF = objBancoF.ExecutaDataRead(strsqlF)
 
-        tabelaF = New DataTable
-        'Executa o método para buscar no banco
-        tabelaF = objBancoF.ExecutaDataTable(strsqlF)
         'Verifica se a linha retornada é diferente de vazio
-        If tabelaF.Rows(0)(0).ToString <> "" Then
+        leitorF.Read()
+        If leitorF.Item(0).ToString <> "" Then
             'Converte o código retornado em inteiro e adiciona mais 1
-            valorCodF = CInt(tabelaF.Rows(0)(0))
+            valorCodF = CInt(leitorF.Item(0))
             valorCodF = valorCodF + 1
         Else
             valorCodF = 1
         End If
-
         Return valorCodF
 
     End Function

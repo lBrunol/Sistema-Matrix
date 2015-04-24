@@ -1,1 +1,5 @@
 *.suo
+*.laccdb
+Sistema Matrix.v12.suo
+*.Cache
+Sistema Matrix/bin/Debug/Sistema Matrix.exe

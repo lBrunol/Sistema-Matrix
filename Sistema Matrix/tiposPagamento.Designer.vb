@@ -33,7 +33,6 @@ Partial Class tiposPagamento
         Me.botModoNovo = New System.Windows.Forms.Button()
         Me.lblAlterar = New System.Windows.Forms.Label()
         Me.lblExcluir = New System.Windows.Forms.Label()
-        Me.botLimpar = New System.Windows.Forms.Button()
         Me.lblDescricao = New System.Windows.Forms.Label()
         Me.txtDescricao = New System.Windows.Forms.TextBox()
         Me.lblCodigo = New System.Windows.Forms.Label()
@@ -41,6 +40,7 @@ Partial Class tiposPagamento
         Me.botAlterar = New System.Windows.Forms.Button()
         Me.botExcluir = New System.Windows.Forms.Button()
         Me.botCadastrar = New System.Windows.Forms.Button()
+        Me.botLimpar = New System.Windows.Forms.Button()
         Me.tabConsulta = New System.Windows.Forms.TabPage()
         Me.dtgConsultaTiposPagamento = New System.Windows.Forms.DataGridView()
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
@@ -158,16 +158,6 @@ Partial Class tiposPagamento
         Me.lblExcluir.Text = "Excluir Registro"
         Me.lblExcluir.Visible = False
         '
-        'botLimpar
-        '
-        Me.botLimpar.DialogResult = System.Windows.Forms.DialogResult.Cancel
-        Me.botLimpar.Image = Global.Sistema_Matrix.My.Resources.Resources.limpar
-        Me.botLimpar.Location = New System.Drawing.Point(260, 3)
-        Me.botLimpar.Name = "botLimpar"
-        Me.botLimpar.Size = New System.Drawing.Size(40, 40)
-        Me.botLimpar.TabIndex = 62
-        Me.botLimpar.UseVisualStyleBackColor = True
-        '
         'lblDescricao
         '
         Me.lblDescricao.AutoSize = True
@@ -236,6 +226,16 @@ Partial Class tiposPagamento
         Me.botCadastrar.Size = New System.Drawing.Size(40, 40)
         Me.botCadastrar.TabIndex = 61
         Me.botCadastrar.UseVisualStyleBackColor = True
+        '
+        'botLimpar
+        '
+        Me.botLimpar.DialogResult = System.Windows.Forms.DialogResult.Cancel
+        Me.botLimpar.Image = Global.Sistema_Matrix.My.Resources.Resources.limpar
+        Me.botLimpar.Location = New System.Drawing.Point(260, 3)
+        Me.botLimpar.Name = "botLimpar"
+        Me.botLimpar.Size = New System.Drawing.Size(40, 40)
+        Me.botLimpar.TabIndex = 62
+        Me.botLimpar.UseVisualStyleBackColor = True
         '
         'tabConsulta
         '
