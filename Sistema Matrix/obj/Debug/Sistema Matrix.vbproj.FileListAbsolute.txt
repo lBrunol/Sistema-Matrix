@@ -246,3 +246,34 @@ C:\Users\Fabiano\Documents\GitHub\Sistema-Matrix\Sistema Matrix\obj\Debug\RdlCom
 C:\Users\Fabiano\Documents\GitHub\Sistema-Matrix\Sistema Matrix\obj\Debug\Sistema_Matrix.txtBancoDeDados.resources
 C:\Users\CASA\Documents\GitHub\Sistema-Matrix\Sistema Matrix\obj\Debug\Sistema_Matrix.txtBancoDeDados.resources
 C:\Users\CASA\Documents\GitHub\Sistema-Matrix\Sistema Matrix\obj\Debug\Sistema_Matrix.tiposPagamento.resources
+C:\Users\Familia\Documents\GitHub\Sistema-Matrix nv\trunk\Sistema Matrix\bin\Debug\Sistema Matrix.exe.config
+C:\Users\Familia\Documents\GitHub\Sistema-Matrix nv\trunk\Sistema Matrix\obj\Debug\Interop.Microsoft.Vbe.Interop.Forms.dll
+C:\Users\Familia\Documents\GitHub\Sistema-Matrix nv\trunk\Sistema Matrix\obj\Debug\Interop.ORAOLEDBLib.dll
+C:\Users\Familia\Documents\GitHub\Sistema-Matrix nv\trunk\Sistema Matrix\obj\Debug\Sistema Matrix.vbproj.ResolveComReference.cache
+C:\Users\Familia\Documents\GitHub\Sistema-Matrix nv\trunk\Sistema Matrix\obj\Debug\Sistema Matrix.exe
+C:\Users\Familia\Documents\GitHub\Sistema-Matrix nv\trunk\Sistema Matrix\obj\Debug\Sistema Matrix.xml
+C:\Users\Familia\Documents\GitHub\Sistema-Matrix nv\trunk\Sistema Matrix\obj\Debug\Sistema Matrix.pdb
+C:\Users\Familia\Documents\GitHub\Sistema-Matrix nv\trunk\Sistema Matrix\bin\Debug\Sistema Matrix.exe
+C:\Users\Familia\Documents\GitHub\Sistema-Matrix nv\trunk\Sistema Matrix\bin\Debug\Sistema Matrix.pdb
+C:\Users\Familia\Documents\GitHub\Sistema-Matrix nv\trunk\Sistema Matrix\bin\Debug\Sistema Matrix.xml
+C:\Users\Familia\Documents\GitHub\Sistema-Matrix nv\trunk\Sistema Matrix\bin\Debug\Interop.Microsoft.Vbe.Interop.Forms.dll
+C:\Users\Familia\Documents\GitHub\Sistema-Matrix nv\trunk\Sistema Matrix\bin\Debug\Interop.ORAOLEDBLib.dll
+C:\Users\Familia\Documents\GitHub\Sistema-Matrix nv\trunk\Sistema Matrix\obj\Debug\Sistema Matrix.vbprojResolveAssemblyReference.cache
+C:\Users\Familia\Documents\GitHub\Sistema-Matrix nv\trunk\Sistema Matrix\obj\Debug\Sistema_Matrix.txtBancoDeDados.resources
+C:\Users\Familia\Documents\GitHub\Sistema-Matrix nv\trunk\Sistema Matrix\obj\Debug\Sistema_Matrix.ConsultaUsuarios.resources
+C:\Users\Familia\Documents\GitHub\Sistema-Matrix nv\trunk\Sistema Matrix\obj\Debug\Sistema_Matrix.DadosEmitente.resources
+C:\Users\Familia\Documents\GitHub\Sistema-Matrix nv\trunk\Sistema Matrix\obj\Debug\Sistema_Matrix.NotasFiscais.resources
+C:\Users\Familia\Documents\GitHub\Sistema-Matrix nv\trunk\Sistema Matrix\obj\Debug\Sistema_Matrix.ContasReceber.resources
+C:\Users\Familia\Documents\GitHub\Sistema-Matrix nv\trunk\Sistema Matrix\obj\Debug\Sistema_Matrix.confirmaNotaFiscal.resources
+C:\Users\Familia\Documents\GitHub\Sistema-Matrix nv\trunk\Sistema Matrix\obj\Debug\Sistema_Matrix.formConsultaUsuarios.resources
+C:\Users\Familia\Documents\GitHub\Sistema-Matrix nv\trunk\Sistema Matrix\obj\Debug\Sistema_Matrix.Clientes.resources
+C:\Users\Familia\Documents\GitHub\Sistema-Matrix nv\trunk\Sistema Matrix\obj\Debug\Sistema_Matrix.Form6.resources
+C:\Users\Familia\Documents\GitHub\Sistema-Matrix nv\trunk\Sistema Matrix\obj\Debug\Sistema_Matrix.Funcionarios.resources
+C:\Users\Familia\Documents\GitHub\Sistema-Matrix nv\trunk\Sistema Matrix\obj\Debug\Sistema_Matrix.Login.resources
+C:\Users\Familia\Documents\GitHub\Sistema-Matrix nv\trunk\Sistema Matrix\obj\Debug\Sistema_Matrix.Resources.resources
+C:\Users\Familia\Documents\GitHub\Sistema-Matrix nv\trunk\Sistema Matrix\obj\Debug\Sistema_Matrix.telaPrincipal.resources
+C:\Users\Familia\Documents\GitHub\Sistema-Matrix nv\trunk\Sistema Matrix\obj\Debug\Sistema_Matrix.tiposPagamento.resources
+C:\Users\Familia\Documents\GitHub\Sistema-Matrix nv\trunk\Sistema Matrix\obj\Debug\Sistema_Matrix.Usuario.resources
+C:\Users\Familia\Documents\GitHub\Sistema-Matrix nv\trunk\Sistema Matrix\obj\Debug\Sistema Matrix.vbproj.GenerateResource.Cache
+C:\Users\Familia\Documents\GitHub\Sistema-Matrix nv\trunk\Sistema Matrix\obj\Debug\RdlCompile.cache
+C:\Users\Familia\Documents\GitHub\Sistema-Matrix nv\trunk\Sistema Matrix\obj\Debug\RdlCompile.compiled

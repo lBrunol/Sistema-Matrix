@@ -13,11 +13,11 @@ Public Class telaPrincipal
         End If
     End Sub
 
-    Private Sub CadastroDeClientesToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles CadastroDeClientesToolStripMenuItem.Click
+    Private Sub CadastroDeClientesToolStripMenuItem_Click(sender As Object, e As EventArgs)
         abreFormularios(Clientes)
     End Sub
 
-    Private Sub menuCadastroFornecedor_Click(sender As Object, e As EventArgs) Handles menuCadastroFornecedor.Click
+    Private Sub menuCadastroFornecedor_Click(sender As Object, e As EventArgs)
         abreFormularios(Funcionarios)
     End Sub
 
@@ -25,7 +25,7 @@ Public Class telaPrincipal
         abreFormularios(Funcionarios)
     End Sub
 
-    Private Sub menuSair_Click(sender As Object, e As EventArgs) Handles menuSair.Click
+    Private Sub menuSair_Click(sender As Object, e As EventArgs)
 
         If (MsgBox("Deseja realmente encerrar o sistema?", vbQuestion + vbYesNo, "Confirme") = vbYes) Then
             Me.Close()
@@ -48,11 +48,11 @@ Public Class telaPrincipal
         abreFormularios(Form6)
     End Sub
 
-    Private Sub OrdemDeServiçoToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles OrdemDeServiçoToolStripMenuItem.Click
+    Private Sub OrdemDeServiçoToolStripMenuItem_Click(sender As Object, e As EventArgs)
         abreFormularios(Form6)
     End Sub
 
-    Private Sub menuSobre_Click(sender As Object, e As EventArgs) Handles menuSobre.Click
+    Private Sub menuSobre_Click(sender As Object, e As EventArgs)
         MsgBox("Em Construção", vbInformation, "Aviso")
     End Sub
 
@@ -75,15 +75,15 @@ Public Class telaPrincipal
         Login.Show()
     End Sub
 
-    Private Sub CadastroToolStripMenuItem3_Click(sender As Object, e As EventArgs) Handles menuCadastroUsuario.Click
+    Private Sub CadastroToolStripMenuItem3_Click(sender As Object, e As EventArgs)
         abreFormularios(Usuario)
     End Sub
 
-    Private Sub ServiçosToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles ServiçosToolStripMenuItem.Click
+    Private Sub ServiçosToolStripMenuItem_Click(sender As Object, e As EventArgs)
         abreFormularios(formConsultaUsuarios)
     End Sub
 
-    Private Sub menuAlteracaoUsuario_Click(sender As Object, e As EventArgs) Handles menuAlteracaoUsuario.Click
+    Private Sub menuAlteracaoUsuario_Click(sender As Object, e As EventArgs)
         abreFormularios(ConsultaUsuarios)
     End Sub
 

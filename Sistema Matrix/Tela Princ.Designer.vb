@@ -24,20 +24,11 @@ Partial Class telaPrincipal
     Private Sub InitializeComponent()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(telaPrincipal))
         Me.MenuStrip1 = New System.Windows.Forms.MenuStrip()
-        Me.menuCadastroCliente = New System.Windows.Forms.ToolStripMenuItem()
-        Me.CadastroDeClientesToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.menuCadastroFornecedor = New System.Windows.Forms.ToolStripMenuItem()
-        Me.ServiçosToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.menuSair = New System.Windows.Forms.ToolStripMenuItem()
-        Me.FaturamentoToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.OrdemDeServiçoToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.menuAdministrador = New System.Windows.Forms.ToolStripMenuItem()
-        Me.menuGerenciaUsuario = New System.Windows.Forms.ToolStripMenuItem()
-        Me.menuCadastroUsuario = New System.Windows.Forms.ToolStripMenuItem()
-        Me.menuAlteracaoUsuario = New System.Windows.Forms.ToolStripMenuItem()
-        Me.AjudaToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.menuSobre = New System.Windows.Forms.ToolStripMenuItem()
         Me.FlowLayoutPanel1 = New System.Windows.Forms.FlowLayoutPanel()
+        Me.txtBoasVindas = New System.Windows.Forms.TextBox()
+        Me.lblLogoff = New System.Windows.Forms.Label()
+        Me.botAjuda = New System.Windows.Forms.Button()
+        Me.botLogoff = New System.Windows.Forms.Button()
         Me.botCadastro = New System.Windows.Forms.Button()
         Me.botServicos = New System.Windows.Forms.Button()
         Me.botFuncionario = New System.Windows.Forms.Button()
@@ -47,105 +38,18 @@ Partial Class telaPrincipal
         Me.botDadosEmitente = New System.Windows.Forms.Button()
         Me.botConfirmaNotasFiscais = New System.Windows.Forms.Button()
         Me.botRelatorio = New System.Windows.Forms.Button()
-        Me.txtBoasVindas = New System.Windows.Forms.TextBox()
-        Me.lblLogoff = New System.Windows.Forms.Label()
-        Me.botLogoff = New System.Windows.Forms.Button()
         Me.Button1 = New System.Windows.Forms.Button()
-        Me.MenuStrip1.SuspendLayout()
+        Me.lblAjuda = New System.Windows.Forms.Label()
         Me.FlowLayoutPanel1.SuspendLayout()
         Me.SuspendLayout()
         '
         'MenuStrip1
         '
-        Me.MenuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.menuCadastroCliente, Me.FaturamentoToolStripMenuItem, Me.menuAdministrador, Me.AjudaToolStripMenuItem})
         Me.MenuStrip1.Location = New System.Drawing.Point(0, 0)
         Me.MenuStrip1.Name = "MenuStrip1"
         Me.MenuStrip1.Size = New System.Drawing.Size(697, 24)
         Me.MenuStrip1.TabIndex = 0
         Me.MenuStrip1.Text = "MenuStrip1"
-        '
-        'menuCadastroCliente
-        '
-        Me.menuCadastroCliente.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.CadastroDeClientesToolStripMenuItem, Me.menuCadastroFornecedor, Me.ServiçosToolStripMenuItem, Me.menuSair})
-        Me.menuCadastroCliente.Name = "menuCadastroCliente"
-        Me.menuCadastroCliente.Size = New System.Drawing.Size(46, 20)
-        Me.menuCadastroCliente.Text = "Geral"
-        '
-        'CadastroDeClientesToolStripMenuItem
-        '
-        Me.CadastroDeClientesToolStripMenuItem.Name = "CadastroDeClientesToolStripMenuItem"
-        Me.CadastroDeClientesToolStripMenuItem.Size = New System.Drawing.Size(142, 22)
-        Me.CadastroDeClientesToolStripMenuItem.Text = "Clientes"
-        '
-        'menuCadastroFornecedor
-        '
-        Me.menuCadastroFornecedor.Name = "menuCadastroFornecedor"
-        Me.menuCadastroFornecedor.Size = New System.Drawing.Size(142, 22)
-        Me.menuCadastroFornecedor.Text = "Funcionários"
-        '
-        'ServiçosToolStripMenuItem
-        '
-        Me.ServiçosToolStripMenuItem.Name = "ServiçosToolStripMenuItem"
-        Me.ServiçosToolStripMenuItem.Size = New System.Drawing.Size(142, 22)
-        Me.ServiçosToolStripMenuItem.Text = "Serviços"
-        '
-        'menuSair
-        '
-        Me.menuSair.Name = "menuSair"
-        Me.menuSair.Size = New System.Drawing.Size(142, 22)
-        Me.menuSair.Text = "Sair"
-        '
-        'FaturamentoToolStripMenuItem
-        '
-        Me.FaturamentoToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.OrdemDeServiçoToolStripMenuItem})
-        Me.FaturamentoToolStripMenuItem.Name = "FaturamentoToolStripMenuItem"
-        Me.FaturamentoToolStripMenuItem.Size = New System.Drawing.Size(113, 20)
-        Me.FaturamentoToolStripMenuItem.Text = "Ordem de Serviço"
-        '
-        'OrdemDeServiçoToolStripMenuItem
-        '
-        Me.OrdemDeServiçoToolStripMenuItem.Name = "OrdemDeServiçoToolStripMenuItem"
-        Me.OrdemDeServiçoToolStripMenuItem.Size = New System.Drawing.Size(168, 22)
-        Me.OrdemDeServiçoToolStripMenuItem.Text = "Ordem de Serviço"
-        '
-        'menuAdministrador
-        '
-        Me.menuAdministrador.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.menuGerenciaUsuario})
-        Me.menuAdministrador.Name = "menuAdministrador"
-        Me.menuAdministrador.Size = New System.Drawing.Size(95, 20)
-        Me.menuAdministrador.Text = "Administrador"
-        '
-        'menuGerenciaUsuario
-        '
-        Me.menuGerenciaUsuario.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.menuCadastroUsuario, Me.menuAlteracaoUsuario})
-        Me.menuGerenciaUsuario.Name = "menuGerenciaUsuario"
-        Me.menuGerenciaUsuario.Size = New System.Drawing.Size(184, 22)
-        Me.menuGerenciaUsuario.Text = "Gerencia de Usuários"
-        '
-        'menuCadastroUsuario
-        '
-        Me.menuCadastroUsuario.Name = "menuCadastroUsuario"
-        Me.menuCadastroUsuario.Size = New System.Drawing.Size(124, 22)
-        Me.menuCadastroUsuario.Text = "Cadastro"
-        '
-        'menuAlteracaoUsuario
-        '
-        Me.menuAlteracaoUsuario.Name = "menuAlteracaoUsuario"
-        Me.menuAlteracaoUsuario.Size = New System.Drawing.Size(124, 22)
-        Me.menuAlteracaoUsuario.Text = "Alteração"
-        '
-        'AjudaToolStripMenuItem
-        '
-        Me.AjudaToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.menuSobre})
-        Me.AjudaToolStripMenuItem.Name = "AjudaToolStripMenuItem"
-        Me.AjudaToolStripMenuItem.Size = New System.Drawing.Size(50, 20)
-        Me.AjudaToolStripMenuItem.Text = "Ajuda"
-        '
-        'menuSobre
-        '
-        Me.menuSobre.Name = "menuSobre"
-        Me.menuSobre.Size = New System.Drawing.Size(158, 22)
-        Me.menuSobre.Text = "Sobre o Sistema"
         '
         'FlowLayoutPanel1
         '
@@ -164,6 +68,56 @@ Partial Class telaPrincipal
         Me.FlowLayoutPanel1.Name = "FlowLayoutPanel1"
         Me.FlowLayoutPanel1.Size = New System.Drawing.Size(673, 667)
         Me.FlowLayoutPanel1.TabIndex = 1
+        '
+        'txtBoasVindas
+        '
+        Me.txtBoasVindas.BackColor = System.Drawing.SystemColors.ButtonFace
+        Me.txtBoasVindas.BorderStyle = System.Windows.Forms.BorderStyle.None
+        Me.txtBoasVindas.Enabled = False
+        Me.txtBoasVindas.Location = New System.Drawing.Point(530, 704)
+        Me.txtBoasVindas.Multiline = True
+        Me.txtBoasVindas.Name = "txtBoasVindas"
+        Me.txtBoasVindas.Size = New System.Drawing.Size(142, 20)
+        Me.txtBoasVindas.TabIndex = 2
+        Me.txtBoasVindas.TabStop = False
+        Me.txtBoasVindas.TextAlign = System.Windows.Forms.HorizontalAlignment.Right
+        '
+        'lblLogoff
+        '
+        Me.lblLogoff.AutoSize = True
+        Me.lblLogoff.BackColor = System.Drawing.Color.White
+        Me.lblLogoff.Location = New System.Drawing.Point(613, 8)
+        Me.lblLogoff.Name = "lblLogoff"
+        Me.lblLogoff.Size = New System.Drawing.Size(37, 13)
+        Me.lblLogoff.TabIndex = 4
+        Me.lblLogoff.Text = "Logoff"
+        '
+        'botAjuda
+        '
+        Me.botAjuda.BackgroundImage = Global.Sistema_Matrix.My.Resources.Resources.botao_ajuda
+        Me.botAjuda.Location = New System.Drawing.Point(565, 0)
+        Me.botAjuda.Name = "botAjuda"
+        Me.botAjuda.Size = New System.Drawing.Size(33, 29)
+        Me.botAjuda.TabIndex = 5
+        Me.botAjuda.UseVisualStyleBackColor = True
+        '
+        'botLogoff
+        '
+        Me.botLogoff.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
+            Or System.Windows.Forms.AnchorStyles.Left) _
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.botLogoff.AutoSize = True
+        Me.botLogoff.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.botLogoff.Image = Global.Sistema_Matrix.My.Resources.Resources.logoff
+        Me.botLogoff.Location = New System.Drawing.Point(653, 2)
+        Me.botLogoff.Margin = New System.Windows.Forms.Padding(0)
+        Me.botLogoff.MaximumSize = New System.Drawing.Size(32, 25)
+        Me.botLogoff.Name = "botLogoff"
+        Me.botLogoff.RightToLeft = System.Windows.Forms.RightToLeft.No
+        Me.botLogoff.Size = New System.Drawing.Size(32, 25)
+        Me.botLogoff.TabIndex = 3
+        Me.botLogoff.TabStop = False
+        Me.botLogoff.UseVisualStyleBackColor = True
         '
         'botCadastro
         '
@@ -318,47 +272,6 @@ Partial Class telaPrincipal
         Me.botRelatorio.TextAlign = System.Drawing.ContentAlignment.BottomCenter
         Me.botRelatorio.UseVisualStyleBackColor = False
         '
-        'txtBoasVindas
-        '
-        Me.txtBoasVindas.BackColor = System.Drawing.SystemColors.ButtonFace
-        Me.txtBoasVindas.BorderStyle = System.Windows.Forms.BorderStyle.None
-        Me.txtBoasVindas.Enabled = False
-        Me.txtBoasVindas.Location = New System.Drawing.Point(530, 704)
-        Me.txtBoasVindas.Multiline = True
-        Me.txtBoasVindas.Name = "txtBoasVindas"
-        Me.txtBoasVindas.Size = New System.Drawing.Size(142, 20)
-        Me.txtBoasVindas.TabIndex = 2
-        Me.txtBoasVindas.TabStop = False
-        Me.txtBoasVindas.TextAlign = System.Windows.Forms.HorizontalAlignment.Right
-        '
-        'lblLogoff
-        '
-        Me.lblLogoff.AutoSize = True
-        Me.lblLogoff.BackColor = System.Drawing.Color.White
-        Me.lblLogoff.Location = New System.Drawing.Point(613, 8)
-        Me.lblLogoff.Name = "lblLogoff"
-        Me.lblLogoff.Size = New System.Drawing.Size(37, 13)
-        Me.lblLogoff.TabIndex = 4
-        Me.lblLogoff.Text = "Logoff"
-        '
-        'botLogoff
-        '
-        Me.botLogoff.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
-            Or System.Windows.Forms.AnchorStyles.Left) _
-            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.botLogoff.AutoSize = True
-        Me.botLogoff.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.botLogoff.Image = Global.Sistema_Matrix.My.Resources.Resources.logoff
-        Me.botLogoff.Location = New System.Drawing.Point(653, 2)
-        Me.botLogoff.Margin = New System.Windows.Forms.Padding(0)
-        Me.botLogoff.MaximumSize = New System.Drawing.Size(32, 25)
-        Me.botLogoff.Name = "botLogoff"
-        Me.botLogoff.RightToLeft = System.Windows.Forms.RightToLeft.No
-        Me.botLogoff.Size = New System.Drawing.Size(32, 25)
-        Me.botLogoff.TabIndex = 3
-        Me.botLogoff.TabStop = False
-        Me.botLogoff.UseVisualStyleBackColor = True
-        '
         'Button1
         '
         Me.Button1.BackColor = System.Drawing.Color.Blue
@@ -376,12 +289,24 @@ Partial Class telaPrincipal
         Me.Button1.TextAlign = System.Drawing.ContentAlignment.BottomCenter
         Me.Button1.UseVisualStyleBackColor = False
         '
+        'lblAjuda
+        '
+        Me.lblAjuda.AutoSize = True
+        Me.lblAjuda.Font = New System.Drawing.Font("Century Gothic", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblAjuda.Location = New System.Drawing.Point(520, 9)
+        Me.lblAjuda.Name = "lblAjuda"
+        Me.lblAjuda.Size = New System.Drawing.Size(43, 17)
+        Me.lblAjuda.TabIndex = 6
+        Me.lblAjuda.Text = "Ajuda"
+        '
         'telaPrincipal
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.SystemColors.Window
         Me.ClientSize = New System.Drawing.Size(697, 736)
+        Me.Controls.Add(Me.lblAjuda)
+        Me.Controls.Add(Me.botAjuda)
         Me.Controls.Add(Me.lblLogoff)
         Me.Controls.Add(Me.botLogoff)
         Me.Controls.Add(Me.txtBoasVindas)
@@ -391,39 +316,26 @@ Partial Class telaPrincipal
         Me.Name = "telaPrincipal"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "Matrix Systems - ME"
-        Me.MenuStrip1.ResumeLayout(False)
-        Me.MenuStrip1.PerformLayout()
         Me.FlowLayoutPanel1.ResumeLayout(False)
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
     End Sub
     Friend WithEvents MenuStrip1 As System.Windows.Forms.MenuStrip
-    Friend WithEvents menuCadastroCliente As System.Windows.Forms.ToolStripMenuItem
-    Friend WithEvents CadastroDeClientesToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
-    Friend WithEvents menuCadastroFornecedor As System.Windows.Forms.ToolStripMenuItem
-    Friend WithEvents menuSair As System.Windows.Forms.ToolStripMenuItem
-    Friend WithEvents FaturamentoToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
-    Friend WithEvents OrdemDeServiçoToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
-    Friend WithEvents AjudaToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
-    Friend WithEvents menuSobre As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents botCadastro As System.Windows.Forms.Button
     Friend WithEvents FlowLayoutPanel1 As System.Windows.Forms.FlowLayoutPanel
     Friend WithEvents botServicos As System.Windows.Forms.Button
     Friend WithEvents botFuncionario As System.Windows.Forms.Button
     Friend WithEvents botOS As System.Windows.Forms.Button
-    Friend WithEvents menuAdministrador As System.Windows.Forms.ToolStripMenuItem
-    Friend WithEvents menuGerenciaUsuario As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents txtBoasVindas As System.Windows.Forms.TextBox
     Friend WithEvents botLogoff As System.Windows.Forms.Button
     Friend WithEvents lblLogoff As System.Windows.Forms.Label
-    Friend WithEvents menuCadastroUsuario As System.Windows.Forms.ToolStripMenuItem
-    Friend WithEvents menuAlteracaoUsuario As System.Windows.Forms.ToolStripMenuItem
-    Friend WithEvents ServiçosToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents botConsultaContasReceber As System.Windows.Forms.Button
     Friend WithEvents botConsultaNotasFiscais As System.Windows.Forms.Button
     Friend WithEvents botDadosEmitente As System.Windows.Forms.Button
     Friend WithEvents botConfirmaNotasFiscais As System.Windows.Forms.Button
     Friend WithEvents botRelatorio As System.Windows.Forms.Button
     Friend WithEvents Button1 As System.Windows.Forms.Button
+    Friend WithEvents botAjuda As System.Windows.Forms.Button
+    Friend WithEvents lblAjuda As System.Windows.Forms.Label
 End Class
