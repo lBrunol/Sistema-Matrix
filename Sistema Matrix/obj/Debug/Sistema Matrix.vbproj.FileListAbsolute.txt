@@ -277,3 +277,9 @@ C:\Users\Familia\Documents\GitHub\Sistema-Matrix nv\trunk\Sistema Matrix\obj\Deb
 C:\Users\Familia\Documents\GitHub\Sistema-Matrix nv\trunk\Sistema Matrix\obj\Debug\Sistema Matrix.vbproj.GenerateResource.Cache
 C:\Users\Familia\Documents\GitHub\Sistema-Matrix nv\trunk\Sistema Matrix\obj\Debug\RdlCompile.cache
 C:\Users\Familia\Documents\GitHub\Sistema-Matrix nv\trunk\Sistema Matrix\obj\Debug\RdlCompile.compiled
+C:\Users\i7\Documents\Projeto\Matrix\trunk\Sistema Matrix\bin\Debug\Sistema Matrix.exe.config
+C:\Users\i7\Documents\Projeto\Matrix\trunk\Sistema Matrix\obj\Debug\Interop.ORAOLEDBLib.dll
+C:\Users\i7\Documents\Projeto\Matrix\trunk\Sistema Matrix\obj\Debug\Sistema Matrix.vbproj.ResolveComReference.cache
+C:\Users\i7\Documents\Projeto\Matrix\trunk\Sistema Matrix\obj\Debug\Sistema Matrix.exe
+C:\Users\i7\Documents\Projeto\Matrix\trunk\Sistema Matrix\obj\Debug\Sistema Matrix.xml
+C:\Users\i7\Documents\Projeto\Matrix\trunk\Sistema Matrix\obj\Debug\Sistema Matrix.pdb
