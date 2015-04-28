@@ -13,8 +13,8 @@ Public Class DadosEmitente
 
     Private Sub DadosEmitente_Load(sender As System.Object, e As System.EventArgs) Handles MyBase.Load
         'Carrega as mascaras nas caixas de texto
-        'mtxCep.Mask = "00000-000"
-        'mtxTelefone.Mask = "(00)0000-0000"
+        mtxCep.Mask = "00000-000"
+        mtxTelefone.Mask = "(00)0000-0000"
 
 
     End Sub
@@ -40,8 +40,8 @@ Public Class DadosEmitente
         varIM = txtIM.Text
         varIE = txtIE.Text
         varEndereco = txtEndereco.Text
-        ' varCep = mtxCep.Text
-        'varTelefone = mtxTelefone.Text
+        varCep = mtxCep.Text
+        varTelefone = mtxTelefone.Text
 
         'Atribui o valor retornado pela função atribuiCodigo a variável do Código
         valorCodCliente = atribuiCodigo("demCodigo", "dadosEmitente")
@@ -54,9 +54,9 @@ Public Class DadosEmitente
         If valRetornado = 0 Then
 
             'Retira a máscara das caixas de texto
-            'varCep = Replace(mtxCep.Text, "-", "")
+            varCep = Replace(mtxCep.Text, "-", "")
 
-            ' varTelefone = Replace(mtxTelefone.Text, "(", "")
+            varTelefone = Replace(mtxTelefone.Text, "(", "")
             varTelefone = Replace(varTelefone, ")", "")
             varTelefone = Replace(varTelefone, "-", "")
 
@@ -123,14 +123,14 @@ Public Class DadosEmitente
         varIM = txtIM.Text
         varIE = txtIE.Text
         varEndereco = txtEndereco.Text
-        ' varCep = mtxCep.Text
-        ' varTelefone = mtxTelefone.Text
+        varCep = mtxCep.Text
+        varTelefone = mtxTelefone.Text
 
         Try
             'Retira a máscara das caixas de texto
-            '  varCep = Replace(mtxCep.Text, "-", "")
+            varCep = Replace(mtxCep.Text, "-", "")
 
-            '  varTelefone = Replace(mtxTelefone.Text, "(", "")
+            varTelefone = Replace(mtxTelefone.Text, "(", "")
             varTelefone = Replace(varTelefone, ")", "")
             varTelefone = Replace(varTelefone, "-", "")
 
