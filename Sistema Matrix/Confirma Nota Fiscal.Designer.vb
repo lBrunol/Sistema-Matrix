@@ -336,6 +336,7 @@ Partial Class confirmaNotaFiscal
         Me.txtInscricaoMunicipalPrestador.Name = "txtInscricaoMunicipalPrestador"
         Me.txtInscricaoMunicipalPrestador.Size = New System.Drawing.Size(185, 23)
         Me.txtInscricaoMunicipalPrestador.TabIndex = 9
+        Me.txtInscricaoMunicipalPrestador.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         '
         'grpServicos
         '
@@ -485,7 +486,7 @@ Partial Class confirmaNotaFiscal
         Me.AutoScroll = True
         Me.BackColor = System.Drawing.SystemColors.ButtonHighlight
         Me.CancelButton = Me.botCancelar
-        Me.ClientSize = New System.Drawing.Size(718, 686)
+        Me.ClientSize = New System.Drawing.Size(735, 686)
         Me.Controls.Add(Me.lblFaturarNotaFiscal)
         Me.Controls.Add(Me.botFaturarNotaFiscal)
         Me.Controls.Add(Me.lblCancelar)

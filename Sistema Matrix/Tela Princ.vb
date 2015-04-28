@@ -104,10 +104,10 @@ Public Class telaPrincipal
     End Sub
 
     Private Sub botRelatorio_Click(sender As Object, e As EventArgs) Handles botRelatorio.Click
-        abreFormularios(RelatorioOrdemServico)
+        'abreFormularios(RelatorioOrdemServico)
     End Sub
 
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
-        abreFormularios(relatorioContasReceber)
+        'abreFormularios(relatorioContasReceber)
     End Sub
 End Class

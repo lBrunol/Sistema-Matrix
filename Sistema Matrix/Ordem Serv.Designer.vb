@@ -85,9 +85,9 @@ Partial Class Form6
         Me.botLimpar = New System.Windows.Forms.Button()
         Me.txtCodigo = New System.Windows.Forms.TextBox()
         Me.Label1 = New System.Windows.Forms.Label()
-        Me.botAlterar = New System.Windows.Forms.Button()
         Me.botCadastrar = New System.Windows.Forms.Button()
         Me.lblLimpar = New System.Windows.Forms.Label()
+        Me.botAlterar = New System.Windows.Forms.Button()
         Me.tabConsultaOrdem = New System.Windows.Forms.TabPage()
         Me.dtgOrdemServico = New System.Windows.Forms.DataGridView()
         Me.colCodigo = New System.Windows.Forms.DataGridViewTextBoxColumn()
@@ -124,9 +124,9 @@ Partial Class Form6
         Me.tabCadastraOrdem.Controls.Add(Me.botLimpar)
         Me.tabCadastraOrdem.Controls.Add(Me.txtCodigo)
         Me.tabCadastraOrdem.Controls.Add(Me.Label1)
-        Me.tabCadastraOrdem.Controls.Add(Me.botAlterar)
         Me.tabCadastraOrdem.Controls.Add(Me.botCadastrar)
         Me.tabCadastraOrdem.Controls.Add(Me.lblLimpar)
+        Me.tabCadastraOrdem.Controls.Add(Me.botAlterar)
         Me.tabCadastraOrdem.Location = New System.Drawing.Point(4, 26)
         Me.tabCadastraOrdem.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
         Me.tabCadastraOrdem.Name = "tabCadastraOrdem"
@@ -470,13 +470,13 @@ Partial Class Form6
         Me.grpCliente.Controls.Add(Me.cboCliente)
         Me.grpCliente.Controls.Add(Me.lblSelecionar)
         Me.grpCliente.Controls.Add(Me.lblCPF)
-        Me.grpCliente.Controls.Add(Me.mtxRG)
-        Me.grpCliente.Controls.Add(Me.mtxCPF)
         Me.grpCliente.Controls.Add(Me.lblCNPJ)
         Me.grpCliente.Controls.Add(Me.mtxCNPJ)
         Me.grpCliente.Controls.Add(Me.lblIE)
         Me.grpCliente.Controls.Add(Me.mtxIE)
         Me.grpCliente.Controls.Add(Me.lblRG)
+        Me.grpCliente.Controls.Add(Me.mtxCPF)
+        Me.grpCliente.Controls.Add(Me.mtxRG)
         Me.grpCliente.Font = New System.Drawing.Font("Century Gothic", 12.0!)
         Me.grpCliente.Location = New System.Drawing.Point(9, 220)
         Me.grpCliente.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
@@ -790,6 +790,7 @@ Partial Class Form6
         Me.mtxCNPJ.Size = New System.Drawing.Size(151, 20)
         Me.mtxCNPJ.TabIndex = 65
         Me.mtxCNPJ.TabStop = False
+        Me.mtxCNPJ.Tag = "Auto"
         Me.mtxCNPJ.Visible = False
         '
         'lblIE
@@ -813,6 +814,7 @@ Partial Class Form6
         Me.mtxIE.Size = New System.Drawing.Size(151, 20)
         Me.mtxIE.TabIndex = 66
         Me.mtxIE.TabStop = False
+        Me.mtxIE.Tag = "Auto"
         Me.mtxIE.Visible = False
         '
         'lblRG
@@ -857,21 +859,9 @@ Partial Class Form6
         Me.Label1.TabIndex = 0
         Me.Label1.Text = "Código"
         '
-        'botAlterar
-        '
-        Me.botAlterar.Image = Global.Sistema_Matrix.My.Resources.Resources.alterar
-        Me.botAlterar.Location = New System.Drawing.Point(36, 4)
-        Me.botAlterar.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
-        Me.botAlterar.Name = "botAlterar"
-        Me.botAlterar.Size = New System.Drawing.Size(47, 52)
-        Me.botAlterar.TabIndex = 82
-        Me.botAlterar.UseVisualStyleBackColor = True
-        Me.botAlterar.Visible = False
-        '
         'botCadastrar
         '
         Me.botCadastrar.Image = Global.Sistema_Matrix.My.Resources.Resources.salvar
-        Me.botCadastrar.ImageAlign = System.Drawing.ContentAlignment.TopLeft
         Me.botCadastrar.Location = New System.Drawing.Point(36, 4)
         Me.botCadastrar.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
         Me.botCadastrar.Name = "botCadastrar"
@@ -887,6 +877,17 @@ Partial Class Form6
         Me.lblLimpar.Size = New System.Drawing.Size(87, 17)
         Me.lblLimpar.TabIndex = 86
         Me.lblLimpar.Text = "Limpar Tudo"
+        '
+        'botAlterar
+        '
+        Me.botAlterar.Image = Global.Sistema_Matrix.My.Resources.Resources.alterar
+        Me.botAlterar.Location = New System.Drawing.Point(36, 4)
+        Me.botAlterar.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
+        Me.botAlterar.Name = "botAlterar"
+        Me.botAlterar.Size = New System.Drawing.Size(47, 52)
+        Me.botAlterar.TabIndex = 82
+        Me.botAlterar.UseVisualStyleBackColor = True
+        Me.botAlterar.Visible = False
         '
         'tabConsultaOrdem
         '

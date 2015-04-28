@@ -1,6 +1,5 @@
 ﻿Imports System.Data
 Imports System.Data.OleDb
-Imports System.Data.OracleClient
 Public Class Login
     Public strUsuario As String
     Public varUsuarioAdm As Boolean
@@ -74,5 +73,10 @@ Public Class Login
 
     Private Sub Login_FormClosed(sender As Object, e As FormClosedEventArgs) Handles MyBase.FormClosed
         Application.Exit()
+    End Sub
+
+    Private Sub Login_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        txtUsuario.Text = "bruno"
+        txtSenha.Text = "fanbno022"
     End Sub
 End Class

@@ -285,7 +285,6 @@ C:\Users\i7\Documents\Projeto\Matrix\trunk\Sistema Matrix\obj\Debug\Sistema Matr
 C:\Users\i7\Documents\Projeto\Matrix\trunk\Sistema Matrix\obj\Debug\Sistema Matrix.pdb
 C:\Users\CASA\Documents\Projetos SVN\Sistema Matrix\trunk\Sistema Matrix\bin\Debug\Sistema Matrix.exe.config
 C:\Users\CASA\Documents\Projetos SVN\Sistema Matrix\trunk\Sistema Matrix\obj\Debug\Interop.Microsoft.Vbe.Interop.Forms.dll
-C:\Users\CASA\Documents\Projetos SVN\Sistema Matrix\trunk\Sistema Matrix\obj\Debug\Interop.ORAOLEDBLib.dll
 C:\Users\CASA\Documents\Projetos SVN\Sistema Matrix\trunk\Sistema Matrix\obj\Debug\Sistema Matrix.vbproj.ResolveComReference.cache
 C:\Users\CASA\Documents\Projetos SVN\Sistema Matrix\trunk\Sistema Matrix\obj\Debug\Sistema Matrix.exe
 C:\Users\CASA\Documents\Projetos SVN\Sistema Matrix\trunk\Sistema Matrix\obj\Debug\Sistema Matrix.xml
@@ -313,4 +312,3 @@ C:\Users\CASA\Documents\Projetos SVN\Sistema Matrix\trunk\Sistema Matrix\bin\Deb
 C:\Users\CASA\Documents\Projetos SVN\Sistema Matrix\trunk\Sistema Matrix\bin\Debug\Sistema Matrix.pdb
 C:\Users\CASA\Documents\Projetos SVN\Sistema Matrix\trunk\Sistema Matrix\bin\Debug\Sistema Matrix.xml
 C:\Users\CASA\Documents\Projetos SVN\Sistema Matrix\trunk\Sistema Matrix\bin\Debug\Interop.Microsoft.Vbe.Interop.Forms.dll
-C:\Users\CASA\Documents\Projetos SVN\Sistema Matrix\trunk\Sistema Matrix\bin\Debug\Interop.ORAOLEDBLib.dll

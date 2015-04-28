@@ -9,13 +9,13 @@ Public Class Form6
     Public strsql As String
     Public valorCodOS As Integer
     Public objBanco As New ConexaoAccess
-    Public k As Integer
     Public valanterior As Integer = 109
     Public codServ As Integer
     Public codCli As Integer
     Public codFun As Integer
     Public tipCliente As String
     Public varOK As Boolean = True
+    Public codOrdemServicoAtual As Integer
     Private Sub Form6_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         
         Dim i As Integer = 0
@@ -129,6 +129,7 @@ Public Class Form6
         grpServico.Controls.Add(cboServico1(i))
 
         'Carrega as combo box
+        Dim k As Integer
 
         strsql = "SELECT * FROM servicos"
         tabela = objBanco.ExecutaDataTable(strsql)
@@ -277,7 +278,7 @@ Public Class Form6
                 strsql = "SELECT * FROM funcionarios WHERE funMatricula = " & codFun
                 leitor = objBanco.ExecutaDataRead(strsql)
                 leitor.Read()
-                txtCargo.Text = leitor.Item(2).ToString
+                txtCargo.Text = leitor.Item(5).ToString
                 habilitaDesabilitaControles(grpFuncionario, True)
             Catch exc As SqlClient.SqlException
                 MsgBox("Erro com banco de dados" & vbCrLf & Err.Description, vbCritical, "Erro com Banco de dados")
@@ -316,9 +317,11 @@ Public Class Form6
                 strsql = "INSERT INTO servicos_os(seoData, seoQuantidade, ordCodigo, svcCodigo) VALUES ('" & Today & "', '" & txtQtde.Text & "' , " & valorCodOS & ", " & codServ & ")"
                 objBanco.ExecutaQuery(strsql)
                 MsgBox("Dados inseridos com sucesso", vbInformation, "Aviso")
-                'Limpar(Me)
-                'valorCodOS = atribuiCodigo("ordCodigo", "ordemServico")
-                'txtCodigo.Text = valorCodOS
+                If MsgBox("Deseja faturar a Ordem de serviço agora?", vbQuestion & vbYesNo, "Confirme") = vbYes Then
+                    codOrdemServicoAtual = CInt(Me.txtCodigo.Text)
+                    Me.Hide()
+                    confirmaNotaFiscal.Show()
+                End If
                 habilitaDesabilitaControles(Me, True)
                 mtxDataAbertura.Enabled = False
                 cboCliente.ResetText()
@@ -326,8 +329,6 @@ Public Class Form6
                 cboServico.ResetText()
                 mtxDataAbertura.Text = Date.Today
                 modoNovo()
-            Else
-                Exit Sub
             End If
         Catch exc As SqlClient.SqlException
             MsgBox("Erro com banco de dados" & vbCrLf & Err.Description, vbCritical, "Erro com Banco de dados")
@@ -427,13 +428,13 @@ Public Class Form6
                 txtCargo.Text = leitor.Item("funCargo").ToString
 
 
-                strsql = "SELECT ordemServico.ordCodigo, servicos.svcNome, servicos.svcValor, servicos.svcDescricao, servicos_os.seoQuantidade FROM ordemServico INNER JOIN (servicos INNER JOIN servicos_os ON servicos.svcCodigo = servicos_os.svcCodigo) ON ordemServico.ordCodigo = servicos_os.ordCodigo WHERE ordemServico.ordCodigo = " & valorCodOS
+                strsql = "SELECT ordemServico.ordCodigo, servicos.svcNome, servicos.svcValorHora, servicos.svcDescricao, servicos_os.seoQuantidade FROM ordemServico INNER JOIN (servicos INNER JOIN servicos_os ON servicos.svcCodigo = servicos_os.svcCodigo) ON ordemServico.ordCodigo = servicos_os.ordCodigo WHERE ordemServico.ordCodigo = " & valorCodOS
 
                 leitor = objBanco.ExecutaDataRead(strsql)
                 leitor.Read()
 
                 cboServico.SelectedItem = leitor.Item("svcNome").ToString
-                txtValor.Text = leitor.Item("svcValor").ToString
+                txtValor.Text = leitor.Item("svcValorHora").ToString
                 txtQtde.Text = leitor.Item("seoQuantidade").ToString
                 txtDescrição.Text = leitor.Item("svcDescricao").ToString
 
@@ -564,9 +565,5 @@ Public Class Form6
 
     Private Sub Form6_FormClosed(sender As Object, e As FormClosedEventArgs) Handles MyBase.FormClosed
         Funcoes.HabilitaBotaoLogOff()
-    End Sub
-
-    Private Sub lblCPF_Click(sender As Object, e As EventArgs) Handles lblCPF.Click
-
     End Sub
 End Class

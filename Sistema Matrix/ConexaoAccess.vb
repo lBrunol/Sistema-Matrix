@@ -1,7 +1,6 @@
 ﻿Imports System.Data.OleDb
 Imports System.Data.ConnectionState
 Imports System.Data.DataSet
-Imports System.Data.OracleClient
 Public Class ConexaoAccess
     Private varConexao As New OleDbConnection ' objeto oledb Connection
     Private varComando As New OleDbCommand ' objeto oledb Command
@@ -14,7 +13,6 @@ Public Class ConexaoAccess
     Public Sub ConectarBanco()
         'Armazena a string de conexão ao banco
         varConexao = New OleDb.OleDbConnection("provider = microsoft.ace.oledb.12.0; data source = dados/banco.accdb")
-        'varConexao = New OleDb.OleDbConnection("Provider=OraOLEDB.Oracle; Data Source=localhost:1521;User ID=matrix;Password=2020")
         'Verifica se a conexão já está aberta
         If Not varConexao.State = ConnectionState.Open Then
             varConexao.Open()
@@ -22,7 +20,6 @@ Public Class ConexaoAccess
     End Sub
     Public Sub DesconectarBanco()
         varConexao = New OleDb.OleDbConnection("provider = microsoft.ace.oledb.12.0; data source = dados/banco.accdb")
-        'varConexao = New OleDb.OleDbConnection("Provider=OraOLEDB.Oracle; Data Source=localhost:1521;User ID=matrix;Password=2020")
         'Verifica se a conexão está aberta
         If varConexao.State = ConnectionState.Open Then
             varConexao.Close()
@@ -82,11 +79,11 @@ Public Class ConexaoAccess
         Catch ex As SqlClient.SqlException
             MessageBox.Show(ex.Number & ex.Message, "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error)
         Catch ex As Exception
-            If Err.Number = 5 Then
+            'If Err.Number = 5 Then
 
-            Else
-                MessageBox.Show(Err.Number & " " & ex.Message, "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error)
-            End If
+            ' Else
+            MessageBox.Show(Err.Number & " " & ex.Message, "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error)
+            'End If
         End Try
         Return varLeitor
     End Function
