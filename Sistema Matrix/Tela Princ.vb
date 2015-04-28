@@ -63,11 +63,11 @@ Public Class telaPrincipal
     Private Sub telaPrincipal_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         'Atribui o nome do usuário logado na label e verifica se o usuário que logou é administrador
         txtBoasVindas.Text = "Olá " & Login.strUsuario
-        If Login.varUsuarioAdm = True Then
-            menuAdministrador.Visible = False
-        Else
-            menuAdministrador.Visible = True
-        End If
+        'If Login.varUsuarioAdm = True Then
+        ' menuAdministrador.Visible = False
+        'Else
+        'menuAdministrador.Visible = True
+        'End If
     End Sub
 
     Private Sub botLogoff_Click(sender As Object, e As EventArgs) Handles botLogoff.Click

@@ -94,12 +94,12 @@ Partial Class telaPrincipal
         '
         'botAjuda
         '
-        Me.botAjuda.BackgroundImage = Global.Sistema_Matrix.My.Resources.Resources.botao_ajuda
-        Me.botAjuda.Location = New System.Drawing.Point(565, 0)
-        Me.botAjuda.Name = "botAjuda"
-        Me.botAjuda.Size = New System.Drawing.Size(33, 29)
-        Me.botAjuda.TabIndex = 5
-        Me.botAjuda.UseVisualStyleBackColor = True
+        'Me.botAjuda.BackgroundImage = Global.Sistema_Matrix.My.Resources.Resources.botao_ajuda
+        'Me.botAjuda.Location = New System.Drawing.Point(565, 0)
+        'Me.botAjuda.Name = "botAjuda"
+        'Me.botAjuda.Size = New System.Drawing.Size(33, 29)
+        'Me.botAjuda.TabIndex = 5
+        'Me.botAjuda.UseVisualStyleBackColor = True
         '
         'botLogoff
         '
