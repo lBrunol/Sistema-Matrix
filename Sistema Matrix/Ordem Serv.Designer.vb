@@ -75,13 +75,13 @@ Partial Class Form6
         Me.cboCliente = New System.Windows.Forms.ComboBox()
         Me.lblSelecionar = New System.Windows.Forms.Label()
         Me.lblCPF = New System.Windows.Forms.Label()
-        Me.mtxRG = New System.Windows.Forms.MaskedTextBox()
-        Me.mtxCPF = New System.Windows.Forms.MaskedTextBox()
         Me.lblCNPJ = New System.Windows.Forms.Label()
         Me.mtxCNPJ = New System.Windows.Forms.MaskedTextBox()
         Me.lblIE = New System.Windows.Forms.Label()
         Me.mtxIE = New System.Windows.Forms.MaskedTextBox()
         Me.lblRG = New System.Windows.Forms.Label()
+        Me.mtxCPF = New System.Windows.Forms.MaskedTextBox()
+        Me.mtxRG = New System.Windows.Forms.MaskedTextBox()
         Me.botLimpar = New System.Windows.Forms.Button()
         Me.txtCodigo = New System.Windows.Forms.TextBox()
         Me.Label1 = New System.Windows.Forms.Label()
@@ -95,6 +95,8 @@ Partial Class Form6
         Me.colStatus = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.colTipo = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.tabOrdemServico = New System.Windows.Forms.TabControl()
+        Me.Label6 = New System.Windows.Forms.Label()
+        Me.txtValorTotal = New System.Windows.Forms.TextBox()
         Me.tabCadastraOrdem.SuspendLayout()
         Me.grpServico.SuspendLayout()
         Me.grpFuncionario.SuspendLayout()
@@ -106,6 +108,8 @@ Partial Class Form6
         '
         'tabCadastraOrdem
         '
+        Me.tabCadastraOrdem.Controls.Add(Me.txtValorTotal)
+        Me.tabCadastraOrdem.Controls.Add(Me.Label6)
         Me.tabCadastraOrdem.Controls.Add(Me.lblDescricaoOS)
         Me.tabCadastraOrdem.Controls.Add(Me.txtDescricaoOS)
         Me.tabCadastraOrdem.Controls.Add(Me.lblInserir)
@@ -140,7 +144,7 @@ Partial Class Form6
         '
         Me.lblDescricaoOS.AutoSize = True
         Me.lblDescricaoOS.Font = New System.Drawing.Font("Century Gothic", 9.75!)
-        Me.lblDescricaoOS.Location = New System.Drawing.Point(311, 99)
+        Me.lblDescricaoOS.Location = New System.Drawing.Point(308, 4)
         Me.lblDescricaoOS.Name = "lblDescricaoOS"
         Me.lblDescricaoOS.Size = New System.Drawing.Size(170, 17)
         Me.lblDescricaoOS.TabIndex = 91
@@ -150,10 +154,10 @@ Partial Class Form6
         '
         Me.txtDescricaoOS.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.txtDescricaoOS.Font = New System.Drawing.Font("Century Gothic", 9.75!)
-        Me.txtDescricaoOS.Location = New System.Drawing.Point(316, 119)
+        Me.txtDescricaoOS.Location = New System.Drawing.Point(316, 25)
         Me.txtDescricaoOS.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
         Me.txtDescricaoOS.Name = "txtDescricaoOS"
-        Me.txtDescricaoOS.Size = New System.Drawing.Size(490, 103)
+        Me.txtDescricaoOS.Size = New System.Drawing.Size(504, 117)
         Me.txtDescricaoOS.TabIndex = 90
         Me.txtDescricaoOS.TabStop = False
         Me.txtDescricaoOS.Text = ""
@@ -745,30 +749,6 @@ Partial Class Form6
         Me.lblCPF.TabIndex = 9
         Me.lblCPF.Text = "CPF"
         '
-        'mtxRG
-        '
-        Me.mtxRG.Font = New System.Drawing.Font("Century Gothic", 9.75!)
-        Me.mtxRG.Location = New System.Drawing.Point(201, 259)
-        Me.mtxRG.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
-        Me.mtxRG.Mask = "00,000,000-0"
-        Me.mtxRG.Name = "mtxRG"
-        Me.mtxRG.Size = New System.Drawing.Size(151, 23)
-        Me.mtxRG.TabIndex = 62
-        Me.mtxRG.TabStop = False
-        Me.mtxRG.Tag = "Auto"
-        '
-        'mtxCPF
-        '
-        Me.mtxCPF.Font = New System.Drawing.Font("Century Gothic", 9.75!)
-        Me.mtxCPF.Location = New System.Drawing.Point(12, 259)
-        Me.mtxCPF.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
-        Me.mtxCPF.Mask = "000,000,000-00"
-        Me.mtxCPF.Name = "mtxCPF"
-        Me.mtxCPF.Size = New System.Drawing.Size(151, 23)
-        Me.mtxCPF.TabIndex = 61
-        Me.mtxCPF.TabStop = False
-        Me.mtxCPF.Tag = "Auto"
-        '
         'lblCNPJ
         '
         Me.lblCNPJ.AutoSize = True
@@ -826,6 +806,30 @@ Partial Class Form6
         Me.lblRG.Size = New System.Drawing.Size(27, 17)
         Me.lblRG.TabIndex = 10
         Me.lblRG.Text = "RG"
+        '
+        'mtxCPF
+        '
+        Me.mtxCPF.Font = New System.Drawing.Font("Century Gothic", 9.75!)
+        Me.mtxCPF.Location = New System.Drawing.Point(12, 259)
+        Me.mtxCPF.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
+        Me.mtxCPF.Mask = "000,000,000-00"
+        Me.mtxCPF.Name = "mtxCPF"
+        Me.mtxCPF.Size = New System.Drawing.Size(151, 23)
+        Me.mtxCPF.TabIndex = 61
+        Me.mtxCPF.TabStop = False
+        Me.mtxCPF.Tag = "Auto"
+        '
+        'mtxRG
+        '
+        Me.mtxRG.Font = New System.Drawing.Font("Century Gothic", 9.75!)
+        Me.mtxRG.Location = New System.Drawing.Point(201, 259)
+        Me.mtxRG.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
+        Me.mtxRG.Mask = "00,000,000-0"
+        Me.mtxRG.Name = "mtxRG"
+        Me.mtxRG.Size = New System.Drawing.Size(151, 23)
+        Me.mtxRG.TabIndex = 62
+        Me.mtxRG.TabStop = False
+        Me.mtxRG.Tag = "Auto"
         '
         'botLimpar
         '
@@ -959,6 +963,27 @@ Partial Class Form6
         Me.tabOrdemServico.Size = New System.Drawing.Size(852, 862)
         Me.tabOrdemServico.TabIndex = 1
         '
+        'Label6
+        '
+        Me.Label6.AutoSize = True
+        Me.Label6.Font = New System.Drawing.Font("Century Gothic", 9.75!)
+        Me.Label6.Location = New System.Drawing.Point(313, 166)
+        Me.Label6.Name = "Label6"
+        Me.Label6.Size = New System.Drawing.Size(77, 17)
+        Me.Label6.TabIndex = 92
+        Me.Label6.Text = "Valor Total"
+        '
+        'txtValorTotal
+        '
+        Me.txtValorTotal.Font = New System.Drawing.Font("Century Gothic", 9.75!)
+        Me.txtValorTotal.Location = New System.Drawing.Point(316, 187)
+        Me.txtValorTotal.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
+        Me.txtValorTotal.Name = "txtValorTotal"
+        Me.txtValorTotal.Size = New System.Drawing.Size(108, 23)
+        Me.txtValorTotal.TabIndex = 93
+        Me.txtValorTotal.TabStop = False
+        Me.txtValorTotal.Tag = "Auto"
+        '
         'Form6
         '
         Me.AcceptButton = Me.botCadastrar
@@ -968,7 +993,7 @@ Partial Class Form6
         Me.AutoScroll = True
         Me.AutoSize = True
         Me.CancelButton = Me.botLimpar
-        Me.ClientSize = New System.Drawing.Size(880, 684)
+        Me.ClientSize = New System.Drawing.Size(880, 683)
         Me.Controls.Add(Me.tabOrdemServico)
         Me.Font = New System.Drawing.Font("Century Gothic", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
@@ -1065,4 +1090,6 @@ Partial Class Form6
     Friend WithEvents colCliente As System.Windows.Forms.DataGridViewTextBoxColumn
     Friend WithEvents colStatus As System.Windows.Forms.DataGridViewTextBoxColumn
     Friend WithEvents colTipo As System.Windows.Forms.DataGridViewTextBoxColumn
+    Friend WithEvents txtValorTotal As System.Windows.Forms.TextBox
+    Friend WithEvents Label6 As System.Windows.Forms.Label
 End Class
