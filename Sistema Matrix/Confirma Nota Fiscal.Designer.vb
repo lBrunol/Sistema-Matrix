@@ -60,12 +60,14 @@ Partial Class confirmaNotaFiscal
         Me.lblValorTotal = New System.Windows.Forms.Label()
         Me.lblCodigoServico = New System.Windows.Forms.Label()
         Me.txtCodigoServico = New System.Windows.Forms.TextBox()
-        Me.TextBox3 = New System.Windows.Forms.TextBox()
+        Me.txtValorTotal = New System.Windows.Forms.TextBox()
         Me.lblCancelar = New System.Windows.Forms.Label()
         Me.lblFaturarNotaFiscal = New System.Windows.Forms.Label()
         Me.botFaturarNotaFiscal = New System.Windows.Forms.Button()
         Me.botCancelar = New System.Windows.Forms.Button()
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
+        Me.lblCódigo = New System.Windows.Forms.Label()
+        Me.lblServico = New System.Windows.Forms.Label()
         Me.grpPrestadorServico.SuspendLayout()
         Me.grpTomadorServico.SuspendLayout()
         Me.grpServicos.SuspendLayout()
@@ -340,11 +342,13 @@ Partial Class confirmaNotaFiscal
         '
         'grpServicos
         '
+        Me.grpServicos.Controls.Add(Me.lblServico)
+        Me.grpServicos.Controls.Add(Me.lblCódigo)
         Me.grpServicos.Controls.Add(Me.lstServicos)
         Me.grpServicos.Font = New System.Drawing.Font("Century Gothic", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.grpServicos.Location = New System.Drawing.Point(12, 371)
         Me.grpServicos.Name = "grpServicos"
-        Me.grpServicos.Size = New System.Drawing.Size(640, 142)
+        Me.grpServicos.Size = New System.Drawing.Size(640, 151)
         Me.grpServicos.TabIndex = 16
         Me.grpServicos.TabStop = False
         Me.grpServicos.Text = "Discriminação dos Serviços"
@@ -354,7 +358,7 @@ Partial Class confirmaNotaFiscal
         Me.lstServicos.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.lstServicos.FormattingEnabled = True
         Me.lstServicos.ItemHeight = 17
-        Me.lstServicos.Location = New System.Drawing.Point(9, 22)
+        Me.lstServicos.Location = New System.Drawing.Point(9, 36)
         Me.lstServicos.Name = "lstServicos"
         Me.lstServicos.Size = New System.Drawing.Size(625, 104)
         Me.lstServicos.TabIndex = 14
@@ -367,9 +371,9 @@ Partial Class confirmaNotaFiscal
         Me.grpValores.Controls.Add(Me.lblValorTotal)
         Me.grpValores.Controls.Add(Me.lblCodigoServico)
         Me.grpValores.Controls.Add(Me.txtCodigoServico)
-        Me.grpValores.Controls.Add(Me.TextBox3)
+        Me.grpValores.Controls.Add(Me.txtValorTotal)
         Me.grpValores.Font = New System.Drawing.Font("Century Gothic", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.grpValores.Location = New System.Drawing.Point(12, 521)
+        Me.grpValores.Location = New System.Drawing.Point(12, 528)
         Me.grpValores.Name = "grpValores"
         Me.grpValores.Size = New System.Drawing.Size(640, 169)
         Me.grpValores.TabIndex = 17
@@ -423,12 +427,12 @@ Partial Class confirmaNotaFiscal
         Me.txtCodigoServico.Size = New System.Drawing.Size(460, 23)
         Me.txtCodigoServico.TabIndex = 16
         '
-        'TextBox3
+        'txtValorTotal
         '
-        Me.TextBox3.Location = New System.Drawing.Point(9, 45)
-        Me.TextBox3.Name = "TextBox3"
-        Me.TextBox3.Size = New System.Drawing.Size(129, 23)
-        Me.TextBox3.TabIndex = 15
+        Me.txtValorTotal.Location = New System.Drawing.Point(9, 45)
+        Me.txtValorTotal.Name = "txtValorTotal"
+        Me.txtValorTotal.Size = New System.Drawing.Size(129, 23)
+        Me.txtValorTotal.TabIndex = 15
         '
         'lblCancelar
         '
@@ -478,6 +482,26 @@ Partial Class confirmaNotaFiscal
         Me.PictureBox1.TabIndex = 9
         Me.PictureBox1.TabStop = False
         '
+        'lblCódigo
+        '
+        Me.lblCódigo.AutoSize = True
+        Me.lblCódigo.Font = New System.Drawing.Font("Century Gothic", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblCódigo.Location = New System.Drawing.Point(6, 19)
+        Me.lblCódigo.Name = "lblCódigo"
+        Me.lblCódigo.Size = New System.Drawing.Size(40, 16)
+        Me.lblCódigo.TabIndex = 16
+        Me.lblCódigo.Text = "Qtde."
+        '
+        'lblServico
+        '
+        Me.lblServico.AutoSize = True
+        Me.lblServico.Font = New System.Drawing.Font("Century Gothic", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblServico.Location = New System.Drawing.Point(67, 19)
+        Me.lblServico.Name = "lblServico"
+        Me.lblServico.Size = New System.Drawing.Size(48, 16)
+        Me.lblServico.TabIndex = 17
+        Me.lblServico.Text = "Serviço"
+        '
         'confirmaNotaFiscal
         '
         Me.AcceptButton = Me.botFaturarNotaFiscal
@@ -486,7 +510,7 @@ Partial Class confirmaNotaFiscal
         Me.AutoScroll = True
         Me.BackColor = System.Drawing.SystemColors.ButtonHighlight
         Me.CancelButton = Me.botCancelar
-        Me.ClientSize = New System.Drawing.Size(735, 686)
+        Me.ClientSize = New System.Drawing.Size(735, 707)
         Me.Controls.Add(Me.lblFaturarNotaFiscal)
         Me.Controls.Add(Me.botFaturarNotaFiscal)
         Me.Controls.Add(Me.lblCancelar)
@@ -506,6 +530,7 @@ Partial Class confirmaNotaFiscal
         Me.grpTomadorServico.ResumeLayout(False)
         Me.grpTomadorServico.PerformLayout()
         Me.grpServicos.ResumeLayout(False)
+        Me.grpServicos.PerformLayout()
         Me.grpValores.ResumeLayout(False)
         Me.grpValores.PerformLayout()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
@@ -551,9 +576,11 @@ Partial Class confirmaNotaFiscal
     Friend WithEvents lblValorTotal As System.Windows.Forms.Label
     Friend WithEvents lblCodigoServico As System.Windows.Forms.Label
     Friend WithEvents txtCodigoServico As System.Windows.Forms.TextBox
-    Friend WithEvents TextBox3 As System.Windows.Forms.TextBox
+    Friend WithEvents txtValorTotal As System.Windows.Forms.TextBox
     Friend WithEvents lblCancelar As System.Windows.Forms.Label
     Friend WithEvents botCancelar As System.Windows.Forms.Button
     Friend WithEvents lblFaturarNotaFiscal As System.Windows.Forms.Label
     Friend WithEvents botFaturarNotaFiscal As System.Windows.Forms.Button
+    Friend WithEvents lblServico As System.Windows.Forms.Label
+    Friend WithEvents lblCódigo As System.Windows.Forms.Label
 End Class

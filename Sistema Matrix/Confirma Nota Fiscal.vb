@@ -25,7 +25,7 @@ Public Class confirmaNotaFiscal
         Next
     End Sub
     Private Sub Nota_Fiscal_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        codOrdemAtual = 8
+        'codOrdemAtual = 8
 
         'Armazena o código do cliente
         Dim codCliente As Integer
@@ -93,15 +93,44 @@ Public Class confirmaNotaFiscal
 
             'Carrega a lista com serviços
             strSQL = "SELECT servicos_os.seoQuantidade, servicos.svcNome, servicos.svcCodigoServico, servicos.svcNome, servicos.svcAliquota, servicos.svcValorHora FROM ordemServico INNER JOIN (servicos INNER JOIN servicos_os ON servicos.svcCodigo = servicos_os.svcCodigo) ON ordemServico.ordCodigo = servicos_os.ordCodigo WHERE ordemServico.ordCodigo = " & codOrdemAtual
+            'Recebe a consulta
             leitor = objBanco.ExecutaDataRead(strSQL)
+
+            'Armazena o serviço retornado
             Dim armazenaServico As String
-            'Dim valorTotal As Integer
-            While leitor.Read
+            'Vetor que armazena o valor do serviço sem aliquota
+            Dim valorServico(50) As Integer
+            'Vetor que armazena o valor do serviço + aliquota
+            Dim valorServicoAliquota(50) As Integer
+            'Vetor que armazena o valor total da nota + aliquota
+            Dim valorTotalAliquota As Integer
+            'Contador do while
+            Dim i As Integer = 0
+            'Enquanto houver leitura...
+            While leitor.Read()
+                'Le os dados de quantidade e serviço e armazena na variável
                 armazenaServico = leitor.Item(0).ToString & vbTab & leitor.Item(1)
-                'valorTotal = valorTotal + (CInt(leitor.Item(0))
+                'Guarda o valor de cada serviço * quantidade + aliquota
+                valorServicoAliquota(i) = (((CInt(leitor.Item(0)) * CInt(leitor.Item(5))) / 100) * 5) + (CInt(leitor.Item(0)) * CInt(leitor.Item(5)))
+                'Guarda o valor de cada serviço * quantidade
+                valorServico(i) = CInt(leitor.Item(0)) * CInt(leitor.Item(5))
+                'Incrementa
+                i = i + 1
+                'Adiciona os itens na lista
                 lstServicos.Items.Add(armazenaServico)
             End While
-
+            'Loop que soma os vetores
+            For k As Integer = 0 To i - 1
+                valorTotalAliquota = valorTotalAliquota + valorServicoAliquota(k)
+            Next
+            'Seta o valor total na textbox
+            txtValorTotal.Text = FormatCurrency(valorTotalAliquota)
+            'Recebe novamente os dados
+            leitor = objBanco.ExecutaDataRead(strSQL)
+            'Lê novamente
+            leitor.Read()
+            'Seta o código e nome do serviço
+            txtCodigoServico.Text = leitor.Item(2).ToString & " - " & leitor.Item(1).ToString
         Catch exc As SqlClient.SqlException
             MsgBox("Erro com banco de dados" & vbCrLf & Err.Description, vbCritical, "Erro com Banco de dados")
         Catch exc As Exception
