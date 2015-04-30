@@ -88,10 +88,10 @@ Partial Class tiposPagamento
         Me.tabCadastro.Controls.Add(Me.txtDescricao)
         Me.tabCadastro.Controls.Add(Me.lblCodigo)
         Me.tabCadastro.Controls.Add(Me.txtCodigo)
-        Me.tabCadastro.Controls.Add(Me.botAlterar)
         Me.tabCadastro.Controls.Add(Me.botExcluir)
         Me.tabCadastro.Controls.Add(Me.botCadastrar)
         Me.tabCadastro.Controls.Add(Me.botLimpar)
+        Me.tabCadastro.Controls.Add(Me.botAlterar)
         Me.tabCadastro.Location = New System.Drawing.Point(4, 22)
         Me.tabCadastro.Name = "tabCadastro"
         Me.tabCadastro.Padding = New System.Windows.Forms.Padding(3)

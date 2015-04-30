@@ -13,6 +13,8 @@ Public Class confirmaNotaFiscal
     Private leitor As OleDbDataReader
     'String que armazena os comandos SQL
     Private strSQL As String
+    'Armazena o código da nota
+    Private valorCodigo As Integer
     Private Sub atribuiTag(formReferenciado As Control)
         'Função que faz um loop em todos os controles do formulário para atribuir a a tag "auto" para que eles possam ser
         'desabilitados posteriormente
@@ -25,8 +27,8 @@ Public Class confirmaNotaFiscal
         Next
     End Sub
     Private Sub Nota_Fiscal_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        'codOrdemAtual = 8
-
+        codOrdemAtual = 8
+        Me.Select()
         'Armazena o código do cliente
         Dim codCliente As Integer
 
@@ -40,6 +42,9 @@ Public Class confirmaNotaFiscal
         atribuiTag(Me)
         'Retira a tag da textbox que não necessita estar desabilitada
         txtOutrasInformacoes.Tag = ""
+        txtNomeTitular.Tag = ""
+        txtSSN.Tag = ""
+        txtNumCartao.Tag = ""
         'Desabilita os campos de preenchimento automático
         habilitaDesabilitaControles(Me, True)
 
@@ -159,5 +164,89 @@ Public Class confirmaNotaFiscal
             leitor.Close()
             leitor = Nothing
         End If
+    End Sub
+
+    Private Sub rdbAvista_CheckedChanged(sender As Object, e As EventArgs) Handles rdbAvista.CheckedChanged
+        cdbBoleto.Visible = False
+        lblSelecioneDias.Visible = False
+
+        lblSSN.Visible = False
+        lblNomeTitular.Visible = False
+        lblParcelas.Visible = False
+        lblBandeira.Visible = False
+        lblNumCartao.Visible = False
+        txtNomeTitular.Visible = False
+        txtNumCartao.Visible = False
+        cdbParcelas.Visible = False
+        txtSSN.Visible = False
+        cdbCartao.Visible = False
+    End Sub
+
+    Private Sub rdbBoleto_CheckedChanged(sender As Object, e As EventArgs) Handles rdbBoleto.CheckedChanged
+        cdbBoleto.Visible = True
+        lblSelecioneDias.Visible = True
+
+        lblSSN.Visible = False
+        lblNomeTitular.Visible = False
+        lblParcelas.Visible = False
+        lblBandeira.Visible = False
+        lblNumCartao.Visible = False
+        txtNomeTitular.Visible = False
+        txtNumCartao.Visible = False
+        cdbParcelas.Visible = False
+        txtSSN.Visible = False
+        cdbCartao.Visible = False
+    End Sub
+
+    Private Sub rdbCartaoCredito_CheckedChanged(sender As Object, e As EventArgs) Handles rdbCartaoCredito.CheckedChanged
+        cdbBoleto.Visible = False
+        lblSelecioneDias.Visible = False
+
+        lblSSN.Visible = True
+        lblNomeTitular.Visible = True
+        lblParcelas.Visible = True
+        lblBandeira.Visible = True
+        lblNumCartao.Visible = True
+        txtNomeTitular.Visible = True
+        txtNumCartao.Visible = True
+        cdbParcelas.Visible = True
+        txtSSN.Visible = True
+        cdbCartao.Visible = True
+    End Sub
+
+    Private Sub botFaturarNotaFiscal_Click(sender As Object, e As EventArgs) Handles botFaturarNotaFiscal.Click
+
+        'If rdbAvista.Checked = False And rdbBoleto.Checked = False And rdbCartaoCredito.Checked = False Then
+        '    MsgBox("Preencha as informações de pagamento", vbExclamation, "Atenção")
+        'ElseIf rdbAvista.Checked = True Then
+        '    'Grava Nota no banco
+        '    gravaNota()
+        'ElseIf rdbBoleto.Checked = True Then
+        '    If cdbBoleto.Text = "" Then
+        '        MsgBox("Preencha a quantidade de dias para geração dos boletos", vbExclamation, "Aviso")
+        '        cdbBoleto.Focus()
+        '    Else
+        '        Dim quantidadeDias As Integer
+        '        quantidadeDias = CInt(cdbBoleto.Text)
+        '    End If
+        'End If
+
+        'Instrução SQL
+        geraCodigo()
+        strSQL = "INSERT INTO notaFiscal (notCodigo, notHora, notValor, notData, notCodVer, notOutrasInformacoes, ordCodigo, demCodigo) VALUES (" & valorCodigo & ", '" & DateTime.Now & "', '" & txtValorTotal.Text & "' , '" & DateTime.Today & "', 909066336, '" & txtOutrasInformacoes.Text & "', " & codOrdemAtual & ", " & CInt(txtCnpjCpfTomador.Text) & ")"
+        'Executa a instrução de inserção no banco através do objeto da classe ConexaoAccess
+        objBanco.ExecutaQuery(strSQL)
+        MsgBox("Nota faturada", vbInformation, "Aviso")
+        'Sub que fecha as conexões com banco e zera as variáveis usadas
+        'zeraVariaveisBanco()
+    End Sub
+
+    Private Sub geraCodigo()
+        'Atribui o valor retornado pela função atribuiCodigo a textbox do Código
+        valorCodigo = atribuiCodigo("notCodigo", "notaFiscal")
+    End Sub
+
+    Private Sub gravaNota()
+        
     End Sub
 End Class

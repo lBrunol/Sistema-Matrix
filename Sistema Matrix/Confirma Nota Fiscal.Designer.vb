@@ -53,6 +53,8 @@ Partial Class confirmaNotaFiscal
         Me.txtRazaoSocialNomePrestador = New System.Windows.Forms.TextBox()
         Me.txtInscricaoMunicipalPrestador = New System.Windows.Forms.TextBox()
         Me.grpServicos = New System.Windows.Forms.GroupBox()
+        Me.lblServico = New System.Windows.Forms.Label()
+        Me.lblCódigo = New System.Windows.Forms.Label()
         Me.lstServicos = New System.Windows.Forms.ListBox()
         Me.grpValores = New System.Windows.Forms.GroupBox()
         Me.lblOutrasInformacoes = New System.Windows.Forms.Label()
@@ -66,13 +68,29 @@ Partial Class confirmaNotaFiscal
         Me.botFaturarNotaFiscal = New System.Windows.Forms.Button()
         Me.botCancelar = New System.Windows.Forms.Button()
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
-        Me.lblCódigo = New System.Windows.Forms.Label()
-        Me.lblServico = New System.Windows.Forms.Label()
+        Me.GroupBox1 = New System.Windows.Forms.GroupBox()
+        Me.lblParcelas = New System.Windows.Forms.Label()
+        Me.cdbParcelas = New System.Windows.Forms.ComboBox()
+        Me.lblNomeTitular = New System.Windows.Forms.Label()
+        Me.txtNomeTitular = New System.Windows.Forms.TextBox()
+        Me.lblSSN = New System.Windows.Forms.Label()
+        Me.txtSSN = New System.Windows.Forms.TextBox()
+        Me.lblNumCartao = New System.Windows.Forms.Label()
+        Me.txtNumCartao = New System.Windows.Forms.TextBox()
+        Me.lblBandeira = New System.Windows.Forms.Label()
+        Me.lblSelecioneDias = New System.Windows.Forms.Label()
+        Me.cdbCartao = New System.Windows.Forms.ComboBox()
+        Me.cdbBoleto = New System.Windows.Forms.ComboBox()
+        Me.rdbCartaoCredito = New System.Windows.Forms.RadioButton()
+        Me.rdbBoleto = New System.Windows.Forms.RadioButton()
+        Me.rdbAvista = New System.Windows.Forms.RadioButton()
+        Me.Label2 = New System.Windows.Forms.Label()
         Me.grpPrestadorServico.SuspendLayout()
         Me.grpTomadorServico.SuspendLayout()
         Me.grpServicos.SuspendLayout()
         Me.grpValores.SuspendLayout()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.GroupBox1.SuspendLayout()
         Me.SuspendLayout()
         '
         'lblTitulo
@@ -353,6 +371,26 @@ Partial Class confirmaNotaFiscal
         Me.grpServicos.TabStop = False
         Me.grpServicos.Text = "Discriminação dos Serviços"
         '
+        'lblServico
+        '
+        Me.lblServico.AutoSize = True
+        Me.lblServico.Font = New System.Drawing.Font("Century Gothic", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblServico.Location = New System.Drawing.Point(67, 19)
+        Me.lblServico.Name = "lblServico"
+        Me.lblServico.Size = New System.Drawing.Size(48, 16)
+        Me.lblServico.TabIndex = 17
+        Me.lblServico.Text = "Serviço"
+        '
+        'lblCódigo
+        '
+        Me.lblCódigo.AutoSize = True
+        Me.lblCódigo.Font = New System.Drawing.Font("Century Gothic", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblCódigo.Location = New System.Drawing.Point(6, 19)
+        Me.lblCódigo.Name = "lblCódigo"
+        Me.lblCódigo.Size = New System.Drawing.Size(40, 16)
+        Me.lblCódigo.TabIndex = 16
+        Me.lblCódigo.Text = "Qtde."
+        '
         'lstServicos
         '
         Me.lstServicos.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
@@ -482,25 +520,187 @@ Partial Class confirmaNotaFiscal
         Me.PictureBox1.TabIndex = 9
         Me.PictureBox1.TabStop = False
         '
-        'lblCódigo
+        'GroupBox1
         '
-        Me.lblCódigo.AutoSize = True
-        Me.lblCódigo.Font = New System.Drawing.Font("Century Gothic", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblCódigo.Location = New System.Drawing.Point(6, 19)
-        Me.lblCódigo.Name = "lblCódigo"
-        Me.lblCódigo.Size = New System.Drawing.Size(40, 16)
-        Me.lblCódigo.TabIndex = 16
-        Me.lblCódigo.Text = "Qtde."
+        Me.GroupBox1.Controls.Add(Me.lblParcelas)
+        Me.GroupBox1.Controls.Add(Me.cdbParcelas)
+        Me.GroupBox1.Controls.Add(Me.lblNomeTitular)
+        Me.GroupBox1.Controls.Add(Me.txtNomeTitular)
+        Me.GroupBox1.Controls.Add(Me.lblSSN)
+        Me.GroupBox1.Controls.Add(Me.txtSSN)
+        Me.GroupBox1.Controls.Add(Me.lblNumCartao)
+        Me.GroupBox1.Controls.Add(Me.txtNumCartao)
+        Me.GroupBox1.Controls.Add(Me.lblBandeira)
+        Me.GroupBox1.Controls.Add(Me.lblSelecioneDias)
+        Me.GroupBox1.Controls.Add(Me.rdbCartaoCredito)
+        Me.GroupBox1.Controls.Add(Me.rdbBoleto)
+        Me.GroupBox1.Controls.Add(Me.rdbAvista)
+        Me.GroupBox1.Controls.Add(Me.Label2)
+        Me.GroupBox1.Controls.Add(Me.cdbCartao)
+        Me.GroupBox1.Controls.Add(Me.cdbBoleto)
+        Me.GroupBox1.Font = New System.Drawing.Font("Century Gothic", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.GroupBox1.Location = New System.Drawing.Point(12, 703)
+        Me.GroupBox1.Name = "GroupBox1"
+        Me.GroupBox1.Size = New System.Drawing.Size(640, 190)
+        Me.GroupBox1.TabIndex = 64
+        Me.GroupBox1.TabStop = False
+        Me.GroupBox1.Text = "Informações de Pagamento"
         '
-        'lblServico
+        'lblParcelas
         '
-        Me.lblServico.AutoSize = True
-        Me.lblServico.Font = New System.Drawing.Font("Century Gothic", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblServico.Location = New System.Drawing.Point(67, 19)
-        Me.lblServico.Name = "lblServico"
-        Me.lblServico.Size = New System.Drawing.Size(48, 16)
-        Me.lblServico.TabIndex = 17
-        Me.lblServico.Text = "Serviço"
+        Me.lblParcelas.AutoSize = True
+        Me.lblParcelas.Location = New System.Drawing.Point(530, 137)
+        Me.lblParcelas.Name = "lblParcelas"
+        Me.lblParcelas.Size = New System.Drawing.Size(62, 17)
+        Me.lblParcelas.TabIndex = 33
+        Me.lblParcelas.Text = "Parcelas"
+        Me.lblParcelas.Visible = False
+        '
+        'cdbParcelas
+        '
+        Me.cdbParcelas.FormattingEnabled = True
+        Me.cdbParcelas.Items.AddRange(New Object() {"1", "2", "3", "6"})
+        Me.cdbParcelas.Location = New System.Drawing.Point(533, 155)
+        Me.cdbParcelas.Name = "cdbParcelas"
+        Me.cdbParcelas.Size = New System.Drawing.Size(85, 25)
+        Me.cdbParcelas.TabIndex = 7
+        Me.cdbParcelas.Visible = False
+        '
+        'lblNomeTitular
+        '
+        Me.lblNomeTitular.AutoSize = True
+        Me.lblNomeTitular.Location = New System.Drawing.Point(288, 137)
+        Me.lblNomeTitular.Name = "lblNomeTitular"
+        Me.lblNomeTitular.Size = New System.Drawing.Size(111, 17)
+        Me.lblNomeTitular.TabIndex = 31
+        Me.lblNomeTitular.Text = "Nome do titular"
+        Me.lblNomeTitular.Visible = False
+        '
+        'txtNomeTitular
+        '
+        Me.txtNomeTitular.Location = New System.Drawing.Point(291, 157)
+        Me.txtNomeTitular.Name = "txtNomeTitular"
+        Me.txtNomeTitular.Size = New System.Drawing.Size(226, 23)
+        Me.txtNomeTitular.TabIndex = 6
+        Me.txtNomeTitular.Visible = False
+        '
+        'lblSSN
+        '
+        Me.lblSSN.AutoSize = True
+        Me.lblSSN.Location = New System.Drawing.Point(198, 137)
+        Me.lblSSN.Name = "lblSSN"
+        Me.lblSSN.Size = New System.Drawing.Size(30, 17)
+        Me.lblSSN.TabIndex = 29
+        Me.lblSSN.Text = "SSN"
+        Me.lblSSN.Visible = False
+        '
+        'txtSSN
+        '
+        Me.txtSSN.Location = New System.Drawing.Point(201, 157)
+        Me.txtSSN.Name = "txtSSN"
+        Me.txtSSN.Size = New System.Drawing.Size(70, 23)
+        Me.txtSSN.TabIndex = 5
+        Me.txtSSN.Visible = False
+        '
+        'lblNumCartao
+        '
+        Me.lblNumCartao.AutoSize = True
+        Me.lblNumCartao.Location = New System.Drawing.Point(6, 137)
+        Me.lblNumCartao.Name = "lblNumCartao"
+        Me.lblNumCartao.Size = New System.Drawing.Size(133, 17)
+        Me.lblNumCartao.TabIndex = 27
+        Me.lblNumCartao.Text = "Número do Cartão"
+        Me.lblNumCartao.Visible = False
+        '
+        'txtNumCartao
+        '
+        Me.txtNumCartao.Location = New System.Drawing.Point(9, 157)
+        Me.txtNumCartao.Name = "txtNumCartao"
+        Me.txtNumCartao.Size = New System.Drawing.Size(171, 23)
+        Me.txtNumCartao.TabIndex = 4
+        Me.txtNumCartao.Visible = False
+        '
+        'lblBandeira
+        '
+        Me.lblBandeira.AutoSize = True
+        Me.lblBandeira.Location = New System.Drawing.Point(6, 88)
+        Me.lblBandeira.Name = "lblBandeira"
+        Me.lblBandeira.Size = New System.Drawing.Size(65, 17)
+        Me.lblBandeira.TabIndex = 25
+        Me.lblBandeira.Text = "Bandeira"
+        Me.lblBandeira.Visible = False
+        '
+        'lblSelecioneDias
+        '
+        Me.lblSelecioneDias.AutoSize = True
+        Me.lblSelecioneDias.Location = New System.Drawing.Point(6, 85)
+        Me.lblSelecioneDias.Name = "lblSelecioneDias"
+        Me.lblSelecioneDias.Size = New System.Drawing.Size(214, 17)
+        Me.lblSelecioneDias.TabIndex = 24
+        Me.lblSelecioneDias.Text = "Selecione a quantidade de dias"
+        Me.lblSelecioneDias.Visible = False
+        '
+        'cdbCartao
+        '
+        Me.cdbCartao.FormattingEnabled = True
+        Me.cdbCartao.Items.AddRange(New Object() {"Master", "Visa"})
+        Me.cdbCartao.Location = New System.Drawing.Point(9, 108)
+        Me.cdbCartao.Name = "cdbCartao"
+        Me.cdbCartao.Size = New System.Drawing.Size(134, 25)
+        Me.cdbCartao.TabIndex = 3
+        Me.cdbCartao.Visible = False
+        '
+        'cdbBoleto
+        '
+        Me.cdbBoleto.FormattingEnabled = True
+        Me.cdbBoleto.Items.AddRange(New Object() {"30", "60", "90"})
+        Me.cdbBoleto.Location = New System.Drawing.Point(9, 108)
+        Me.cdbBoleto.Name = "cdbBoleto"
+        Me.cdbBoleto.Size = New System.Drawing.Size(134, 25)
+        Me.cdbBoleto.TabIndex = 2
+        Me.cdbBoleto.Visible = False
+        '
+        'rdbCartaoCredito
+        '
+        Me.rdbCartaoCredito.AutoSize = True
+        Me.rdbCartaoCredito.Location = New System.Drawing.Point(183, 52)
+        Me.rdbCartaoCredito.Name = "rdbCartaoCredito"
+        Me.rdbCartaoCredito.Size = New System.Drawing.Size(147, 21)
+        Me.rdbCartaoCredito.TabIndex = 21
+        Me.rdbCartaoCredito.TabStop = True
+        Me.rdbCartaoCredito.Text = "Cartão de Crédito"
+        Me.rdbCartaoCredito.UseVisualStyleBackColor = True
+        '
+        'rdbBoleto
+        '
+        Me.rdbBoleto.AutoSize = True
+        Me.rdbBoleto.Location = New System.Drawing.Point(102, 52)
+        Me.rdbBoleto.Name = "rdbBoleto"
+        Me.rdbBoleto.Size = New System.Drawing.Size(67, 21)
+        Me.rdbBoleto.TabIndex = 20
+        Me.rdbBoleto.TabStop = True
+        Me.rdbBoleto.Text = "Boleto"
+        Me.rdbBoleto.UseVisualStyleBackColor = True
+        '
+        'rdbAvista
+        '
+        Me.rdbAvista.AutoSize = True
+        Me.rdbAvista.Location = New System.Drawing.Point(9, 52)
+        Me.rdbAvista.Name = "rdbAvista"
+        Me.rdbAvista.Size = New System.Drawing.Size(70, 21)
+        Me.rdbAvista.TabIndex = 19
+        Me.rdbAvista.TabStop = True
+        Me.rdbAvista.Text = "A Vista"
+        Me.rdbAvista.UseVisualStyleBackColor = True
+        '
+        'Label2
+        '
+        Me.Label2.AutoSize = True
+        Me.Label2.Location = New System.Drawing.Point(6, 25)
+        Me.Label2.Name = "Label2"
+        Me.Label2.Size = New System.Drawing.Size(137, 17)
+        Me.Label2.TabIndex = 18
+        Me.Label2.Text = "Tipo de Pagamento"
         '
         'confirmaNotaFiscal
         '
@@ -510,7 +710,8 @@ Partial Class confirmaNotaFiscal
         Me.AutoScroll = True
         Me.BackColor = System.Drawing.SystemColors.ButtonHighlight
         Me.CancelButton = Me.botCancelar
-        Me.ClientSize = New System.Drawing.Size(735, 707)
+        Me.ClientSize = New System.Drawing.Size(735, 642)
+        Me.Controls.Add(Me.GroupBox1)
         Me.Controls.Add(Me.lblFaturarNotaFiscal)
         Me.Controls.Add(Me.botFaturarNotaFiscal)
         Me.Controls.Add(Me.lblCancelar)
@@ -534,6 +735,8 @@ Partial Class confirmaNotaFiscal
         Me.grpValores.ResumeLayout(False)
         Me.grpValores.PerformLayout()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.GroupBox1.ResumeLayout(False)
+        Me.GroupBox1.PerformLayout()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -583,4 +786,21 @@ Partial Class confirmaNotaFiscal
     Friend WithEvents botFaturarNotaFiscal As System.Windows.Forms.Button
     Friend WithEvents lblServico As System.Windows.Forms.Label
     Friend WithEvents lblCódigo As System.Windows.Forms.Label
+    Friend WithEvents GroupBox1 As System.Windows.Forms.GroupBox
+    Friend WithEvents lblParcelas As System.Windows.Forms.Label
+    Friend WithEvents cdbParcelas As System.Windows.Forms.ComboBox
+    Friend WithEvents lblNomeTitular As System.Windows.Forms.Label
+    Friend WithEvents txtNomeTitular As System.Windows.Forms.TextBox
+    Friend WithEvents lblSSN As System.Windows.Forms.Label
+    Friend WithEvents txtSSN As System.Windows.Forms.TextBox
+    Friend WithEvents lblNumCartao As System.Windows.Forms.Label
+    Friend WithEvents txtNumCartao As System.Windows.Forms.TextBox
+    Friend WithEvents lblBandeira As System.Windows.Forms.Label
+    Friend WithEvents lblSelecioneDias As System.Windows.Forms.Label
+    Friend WithEvents cdbCartao As System.Windows.Forms.ComboBox
+    Friend WithEvents cdbBoleto As System.Windows.Forms.ComboBox
+    Friend WithEvents rdbCartaoCredito As System.Windows.Forms.RadioButton
+    Friend WithEvents rdbBoleto As System.Windows.Forms.RadioButton
+    Friend WithEvents rdbAvista As System.Windows.Forms.RadioButton
+    Friend WithEvents Label2 As System.Windows.Forms.Label
 End Class
