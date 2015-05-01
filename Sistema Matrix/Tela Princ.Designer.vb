@@ -27,6 +27,7 @@ Partial Class telaPrincipal
         Me.FlowLayoutPanel1 = New System.Windows.Forms.FlowLayoutPanel()
         Me.txtBoasVindas = New System.Windows.Forms.TextBox()
         Me.lblLogoff = New System.Windows.Forms.Label()
+        Me.lblAjuda = New System.Windows.Forms.Label()
         Me.botAjuda = New System.Windows.Forms.Button()
         Me.botLogoff = New System.Windows.Forms.Button()
         Me.botCadastro = New System.Windows.Forms.Button()
@@ -39,7 +40,6 @@ Partial Class telaPrincipal
         Me.botConfirmaNotasFiscais = New System.Windows.Forms.Button()
         Me.botRelatorio = New System.Windows.Forms.Button()
         Me.Button1 = New System.Windows.Forms.Button()
-        Me.lblAjuda = New System.Windows.Forms.Label()
         Me.FlowLayoutPanel1.SuspendLayout()
         Me.SuspendLayout()
         '
@@ -92,14 +92,23 @@ Partial Class telaPrincipal
         Me.lblLogoff.TabIndex = 4
         Me.lblLogoff.Text = "Logoff"
         '
+        'lblAjuda
+        '
+        Me.lblAjuda.AutoSize = True
+        Me.lblAjuda.Font = New System.Drawing.Font("Century Gothic", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblAjuda.Location = New System.Drawing.Point(520, 9)
+        Me.lblAjuda.Name = "lblAjuda"
+        Me.lblAjuda.Size = New System.Drawing.Size(43, 17)
+        Me.lblAjuda.TabIndex = 6
+        Me.lblAjuda.Text = "Ajuda"
+        '
         'botAjuda
         '
-        'Me.botAjuda.BackgroundImage = Global.Sistema_Matrix.My.Resources.Resources.botao_ajuda
-        'Me.botAjuda.Location = New System.Drawing.Point(565, 0)
-        'Me.botAjuda.Name = "botAjuda"
-        'Me.botAjuda.Size = New System.Drawing.Size(33, 29)
-        'Me.botAjuda.TabIndex = 5
-        'Me.botAjuda.UseVisualStyleBackColor = True
+        Me.botAjuda.BackgroundImage = Global.Sistema_Matrix.My.Resources.Resources.botao_ajuda
+        Me.botAjuda.Location = New System.Drawing.Point(569, 0)
+        Me.botAjuda.Name = "botAjuda"
+        Me.botAjuda.Size = New System.Drawing.Size(31, 32)
+        Me.botAjuda.TabIndex = 7
         '
         'botLogoff
         '
@@ -288,16 +297,6 @@ Partial Class telaPrincipal
         Me.Button1.Text = "Relatório de Contas a Receber"
         Me.Button1.TextAlign = System.Drawing.ContentAlignment.BottomCenter
         Me.Button1.UseVisualStyleBackColor = False
-        '
-        'lblAjuda
-        '
-        Me.lblAjuda.AutoSize = True
-        Me.lblAjuda.Font = New System.Drawing.Font("Century Gothic", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblAjuda.Location = New System.Drawing.Point(520, 9)
-        Me.lblAjuda.Name = "lblAjuda"
-        Me.lblAjuda.Size = New System.Drawing.Size(43, 17)
-        Me.lblAjuda.TabIndex = 6
-        Me.lblAjuda.Text = "Ajuda"
         '
         'telaPrincipal
         '

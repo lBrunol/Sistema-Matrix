@@ -110,4 +110,8 @@ Public Class telaPrincipal
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
         'abreFormularios(relatorioContasReceber)
     End Sub
+
+    Private Sub FlowLayoutPanel1_Paint(sender As Object, e As PaintEventArgs) Handles FlowLayoutPanel1.Paint
+
+    End Sub
 End Class
