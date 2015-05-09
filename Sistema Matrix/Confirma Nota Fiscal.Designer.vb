@@ -79,12 +79,12 @@ Partial Class confirmaNotaFiscal
         Me.txtNumCartao = New System.Windows.Forms.TextBox()
         Me.lblBandeira = New System.Windows.Forms.Label()
         Me.lblSelecioneDias = New System.Windows.Forms.Label()
-        Me.cdbCartao = New System.Windows.Forms.ComboBox()
-        Me.cdbBoleto = New System.Windows.Forms.ComboBox()
         Me.rdbCartaoCredito = New System.Windows.Forms.RadioButton()
         Me.rdbBoleto = New System.Windows.Forms.RadioButton()
         Me.rdbAvista = New System.Windows.Forms.RadioButton()
         Me.Label2 = New System.Windows.Forms.Label()
+        Me.cdbCartao = New System.Windows.Forms.ComboBox()
+        Me.cdbBoleto = New System.Windows.Forms.ComboBox()
         Me.grpPrestadorServico.SuspendLayout()
         Me.grpTomadorServico.SuspendLayout()
         Me.grpServicos.SuspendLayout()
@@ -536,8 +536,8 @@ Partial Class confirmaNotaFiscal
         Me.GroupBox1.Controls.Add(Me.rdbBoleto)
         Me.GroupBox1.Controls.Add(Me.rdbAvista)
         Me.GroupBox1.Controls.Add(Me.Label2)
-        Me.GroupBox1.Controls.Add(Me.cdbCartao)
         Me.GroupBox1.Controls.Add(Me.cdbBoleto)
+        Me.GroupBox1.Controls.Add(Me.cdbCartao)
         Me.GroupBox1.Font = New System.Drawing.Font("Century Gothic", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.GroupBox1.Location = New System.Drawing.Point(12, 703)
         Me.GroupBox1.Name = "GroupBox1"
@@ -640,26 +640,6 @@ Partial Class confirmaNotaFiscal
         Me.lblSelecioneDias.Text = "Selecione a quantidade de dias"
         Me.lblSelecioneDias.Visible = False
         '
-        'cdbCartao
-        '
-        Me.cdbCartao.FormattingEnabled = True
-        Me.cdbCartao.Items.AddRange(New Object() {"Master", "Visa"})
-        Me.cdbCartao.Location = New System.Drawing.Point(9, 108)
-        Me.cdbCartao.Name = "cdbCartao"
-        Me.cdbCartao.Size = New System.Drawing.Size(134, 25)
-        Me.cdbCartao.TabIndex = 3
-        Me.cdbCartao.Visible = False
-        '
-        'cdbBoleto
-        '
-        Me.cdbBoleto.FormattingEnabled = True
-        Me.cdbBoleto.Items.AddRange(New Object() {"30", "60", "90"})
-        Me.cdbBoleto.Location = New System.Drawing.Point(9, 108)
-        Me.cdbBoleto.Name = "cdbBoleto"
-        Me.cdbBoleto.Size = New System.Drawing.Size(134, 25)
-        Me.cdbBoleto.TabIndex = 2
-        Me.cdbBoleto.Visible = False
-        '
         'rdbCartaoCredito
         '
         Me.rdbCartaoCredito.AutoSize = True
@@ -701,6 +681,26 @@ Partial Class confirmaNotaFiscal
         Me.Label2.Size = New System.Drawing.Size(137, 17)
         Me.Label2.TabIndex = 18
         Me.Label2.Text = "Tipo de Pagamento"
+        '
+        'cdbCartao
+        '
+        Me.cdbCartao.FormattingEnabled = True
+        Me.cdbCartao.Items.AddRange(New Object() {"Master", "Visa"})
+        Me.cdbCartao.Location = New System.Drawing.Point(9, 108)
+        Me.cdbCartao.Name = "cdbCartao"
+        Me.cdbCartao.Size = New System.Drawing.Size(134, 25)
+        Me.cdbCartao.TabIndex = 3
+        Me.cdbCartao.Visible = False
+        '
+        'cdbBoleto
+        '
+        Me.cdbBoleto.FormattingEnabled = True
+        Me.cdbBoleto.Items.AddRange(New Object() {"30", "60", "90"})
+        Me.cdbBoleto.Location = New System.Drawing.Point(9, 108)
+        Me.cdbBoleto.Name = "cdbBoleto"
+        Me.cdbBoleto.Size = New System.Drawing.Size(134, 25)
+        Me.cdbBoleto.TabIndex = 2
+        Me.cdbBoleto.Visible = False
         '
         'confirmaNotaFiscal
         '

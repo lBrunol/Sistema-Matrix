@@ -1,6 +1,7 @@
 ﻿Imports System.Data
 Imports System.Data.OleDb
 Imports Sistema_Matrix.ConexaoAccess
+Imports System.Math
 
 Public Class confirmaNotaFiscal
     'Recebe o código da ordem do formulário de ordens de serviço
@@ -15,6 +16,11 @@ Public Class confirmaNotaFiscal
     Private strSQL As String
     'Armazena o código da nota
     Private valorCodigo As Integer
+    'Armazena a quantidade de parcelas dos boletos
+    Private quantidadeParcelasBoleto As Integer
+    'Armazena a quantidade de parcelas dos cartões
+    Private quantidadeParcelasCartao As Integer
+
     Private Sub atribuiTag(formReferenciado As Control)
         'Função que faz um loop em todos os controles do formulário para atribuir a a tag "auto" para que eles possam ser
         'desabilitados posteriormente
@@ -216,29 +222,118 @@ Public Class confirmaNotaFiscal
 
     Private Sub botFaturarNotaFiscal_Click(sender As Object, e As EventArgs) Handles botFaturarNotaFiscal.Click
 
-        'If rdbAvista.Checked = False And rdbBoleto.Checked = False And rdbCartaoCredito.Checked = False Then
-        '    MsgBox("Preencha as informações de pagamento", vbExclamation, "Atenção")
-        'ElseIf rdbAvista.Checked = True Then
-        '    'Grava Nota no banco
-        '    gravaNota()
-        'ElseIf rdbBoleto.Checked = True Then
-        '    If cdbBoleto.Text = "" Then
-        '        MsgBox("Preencha a quantidade de dias para geração dos boletos", vbExclamation, "Aviso")
-        '        cdbBoleto.Focus()
-        '    Else
-        '        Dim quantidadeDias As Integer
-        '        quantidadeDias = CInt(cdbBoleto.Text)
-        '    End If
-        'End If
+        'Armazena o valor total da nf em uma variável
+        Dim valorTotal As Double
+        'Atribui
+        valorTotal = CDbl(txtValorTotal.Text)
+        'Código do contas a receber
+        Dim valorCodigoContasReceber As Integer
+        'String com valor total
+        Dim strValorTotal As String
+        'Transforma o valor em string e substitui a , por .
+        strValorTotal = Replace(valorTotal, ",", ".")
 
-        'Instrução SQL
-        geraCodigo()
-        strSQL = "INSERT INTO notaFiscal (notCodigo, notHora, notValor, notData, notCodVer, notOutrasInformacoes, ordCodigo, demCodigo) VALUES (" & valorCodigo & ", '" & DateTime.Now & "', '" & txtValorTotal.Text & "' , '" & DateTime.Today & "', 909066336, '" & txtOutrasInformacoes.Text & "', " & codOrdemAtual & ", " & CInt(txtCnpjCpfTomador.Text) & ")"
-        'Executa a instrução de inserção no banco através do objeto da classe ConexaoAccess
-        objBanco.ExecutaQuery(strSQL)
-        MsgBox("Nota faturada", vbInformation, "Aviso")
-        'Sub que fecha as conexões com banco e zera as variáveis usadas
-        'zeraVariaveisBanco()
+        If rdbAvista.Checked = False And rdbBoleto.Checked = False And rdbCartaoCredito.Checked = False Then
+            MsgBox("Preencha as informações de pagamento", vbExclamation, "Atenção")
+        ElseIf rdbAvista.Checked = True Then
+            'Grava Nota no banco
+            geraCodigo()
+            strSQL = "INSERT INTO notaFiscal (notCodigo, notHora, notValor, notData, notCodVer, notOutrasInformacoes, ordCodigo, demCodigo) VALUES (" & valorCodigo & ", '" & DateTime.Today & "', '" & txtValorTotal.Text & "' , '" & DateTime.Today & "', 909066336, '" & txtOutrasInformacoes.Text & "', " & codOrdemAtual & ", " & CInt(txtCnpjCpfTomador.Text) & ")"
+            'Executa a instrução de inserção no banco através do objeto da classe ConexaoAccess
+            objBanco.ExecutaQuery(strSQL)
+            'Verifica o ultimo código na tabela referenciada e atribui a variável
+            valorCodigoContasReceber = Funcoes.atribuiCodigo("ctrCodigo", "contasReceber")
+            strSQL = "INSERT INTO contasReceber(ctrCodigo, ctrDataEmissao, ctrDataVencimento, ctrValorEmitido, ctrDataPagamento, ctrDesc, ctrJuros, ctrValorPago, notCodigo, tpaCodigo) VALUES(" & valorCodigoContasReceber & ",'" & DateTime.Today & "', '" & DateTime.Today & "', " & strValorTotal & " , '" & DateTime.Today & "',0, 0," & strValorTotal & "," & valorCodigo & ", 3)"
+            objBanco.ExecutaQuery(strSQL)
+            MsgBox("Nota faturada", vbInformation, "Aviso")
+            'Sub que fecha as conexões com banco e zera as variáveis usadas
+            zeraVariaveisBanco()
+        ElseIf rdbBoleto.Checked = True Then
+            If cdbBoleto.Text = "" Then
+                MsgBox("Preencha a quantidade de dias para geração dos boletos", vbExclamation, "Aviso")
+                cdbBoleto.Focus()
+            Else
+                'Vetor que armazena o valor das parcelas
+                Dim valorParcelasBoleto(11) As Double
+                'Vetor que armazena o valor das parcelas convetidos para string
+                Dim strParcelasBoleto(11) As String
+                'Armazena os dias as datas de vencimento
+                Dim varDias As Integer = 30
+
+                'Grava nota fiscal no banco
+                geraCodigo()
+                strSQL = "INSERT INTO notaFiscal (notCodigo, notHora, notValor, notData, notCodVer, notOutrasInformacoes, ordCodigo, demCodigo) VALUES (" & valorCodigo & ", '" & DateTime.Today & "', '" & txtValorTotal.Text & "' , '" & DateTime.Today & "', 909066336, '" & txtOutrasInformacoes.Text & "', " & codOrdemAtual & ", " & CInt(txtCnpjCpfTomador.Text) & ")"
+                'Executa a instrução de inserção no banco através do objeto da classe ConexaoAccess
+                objBanco.ExecutaQuery(strSQL)
+
+                'Loop que atribui a divisão das parcelas conforme o número escolhido a variável parcelas
+                For i As Integer = 0 To quantidadeParcelasBoleto - 1
+                    valorParcelasBoleto(i) = Round(valorTotal / quantidadeParcelasBoleto, 2, MidpointRounding.AwayFromZero)
+                Next
+                'Caso a divisão não seja exata, ele coloca 0,01 centavos para exatificar a conta
+                If valorTotal Mod quantidadeParcelasBoleto <> 0 Then
+                    valorParcelasBoleto(quantidadeParcelasBoleto - 1) = Round(((valorTotal / 3) - 0.01), 2, MidpointRounding.AwayFromZero)
+                End If
+                'Loop que transforma o valor em string e substitui a , por .
+                For k As Integer = 0 To quantidadeParcelasBoleto - 1
+                    strParcelasBoleto(k) = Replace(valorParcelasBoleto(k), ",", ".")
+                Next
+                'Verifica o ultimo código na tabela referenciada e atribui a variável
+                valorCodigoContasReceber = Funcoes.atribuiCodigo("ctrCodigo", "contasReceber")
+                'Loop para gravar na tabela contas a receber
+                For l As Integer = 0 To quantidadeParcelasBoleto - 1
+                    strSQL = "INSERT INTO contasReceber(ctrCodigo, ctrDataEmissao, ctrDataVencimento, ctrValorEmitido, ctrDataPagamento, ctrDesc, ctrJuros, ctrValorPago, notCodigo, tpaCodigo) VALUES(" & valorCodigoContasReceber & ",'" & DateTime.Today & "', '" & DateTime.Today.AddDays(varDias) & "', " & strParcelasBoleto(l) & " , '" & vbNullString & "',0, 0, 0," & valorCodigo & ", 1)"
+                    objBanco.ExecutaQuery(strSQL)
+                    valorCodigoContasReceber = valorCodigoContasReceber + 1
+                    varDias = varDias + 30
+                Next
+                MsgBox("Nota faturada", vbInformation, "Aviso")
+                'Sub que fecha as conexões com banco e zera as variáveis usadas
+                zeraVariaveisBanco()
+            End If
+        ElseIf rdbCartaoCredito.Checked = True Then
+            If txtNomeTitular.Text = "" Or txtNomeTitular.Text = "" Or txtSSN.Text = "" Or cdbCartao.Text = "" Or cdbParcelas.Text = "" Then
+                MsgBox("Existem campos de preenchimento obrigatório vazios", vbExclamation, "Aviso")
+            Else
+                'Vetor que armazena o valor das parcelas
+                Dim valorParcelasCartao(11) As Double
+                'Vetor que armazena o valor das parcelas convetidos para string
+                Dim strParcelasCartao(11) As String
+                'Armazena os dias as datas de vencimento
+                Dim varDias As Integer = 30
+
+                'Grava nota fiscal no banco
+                geraCodigo()
+                strSQL = "INSERT INTO notaFiscal (notCodigo, notHora, notValor, notData, notCodVer, notOutrasInformacoes, ordCodigo, demCodigo) VALUES (" & valorCodigo & ", '" & DateTime.Today & "', '" & txtValorTotal.Text & "' , '" & DateTime.Today & "', 909066336, '" & txtOutrasInformacoes.Text & "', " & codOrdemAtual & ", " & CInt(txtCnpjCpfTomador.Text) & ")"
+                'Executa a instrução de inserção no banco através do objeto da classe ConexaoAccess
+                objBanco.ExecutaQuery(strSQL)
+
+                'Loop que atribui a divisão das parcelas conforme o número escolhido a variável parcelas
+                For i As Integer = 0 To quantidadeParcelasCartao - 1
+                    valorParcelasCartao(i) = Round(valorTotal / quantidadeParcelasCartao, 2, MidpointRounding.AwayFromZero)
+                Next
+                'Caso a divisão não seja exata, ele coloca 0,01 centavos para exatificar a conta
+                If valorTotal Mod quantidadeParcelasCartao <> 0 Then
+                    valorParcelasCartao(quantidadeParcelasCartao - 1) = Round(((valorTotal / quantidadeParcelasCartao) - 0.01), 2, MidpointRounding.AwayFromZero)
+                End If
+                'Loop que transforma o valor em string e substitui a , por .
+                For k As Integer = 0 To quantidadeParcelasCartao - 1
+                    strParcelasCartao(k) = Replace(valorParcelasCartao(k), ",", ".")
+                Next
+                'Verifica o ultimo código na tabela referenciada e atribui a variável
+                valorCodigoContasReceber = Funcoes.atribuiCodigo("ctrCodigo", "contasReceber")
+                'Loop para gravar na tabela contas a receber
+                For l As Integer = 0 To quantidadeParcelasCartao - 1
+                    strSQL = "INSERT INTO contasReceber(ctrCodigo, ctrDataEmissao, ctrDataVencimento, ctrValorEmitido, ctrDataPagamento, ctrDesc, ctrJuros, ctrValorPago, notCodigo, tpaCodigo) VALUES(" & valorCodigoContasReceber & ",'" & DateTime.Today & "', '" & DateTime.Today.AddDays(varDias) & "', " & strParcelasCartao(l) & " , '" & vbNullString & "',0, 0, 0," & valorCodigo & ", 4)"
+                    objBanco.ExecutaQuery(strSQL)
+                    valorCodigoContasReceber = valorCodigoContasReceber + 1
+                    varDias = varDias + 30
+                Next
+                MsgBox("Nota faturada", vbInformation, "Aviso")
+                'Sub que fecha as conexões com banco e zera as variáveis usadas
+                zeraVariaveisBanco()
+            End If
+        End If
     End Sub
 
     Private Sub geraCodigo()
@@ -248,5 +343,33 @@ Public Class confirmaNotaFiscal
 
     Private Sub gravaNota()
         
+    End Sub
+
+    Private Sub cdbBoleto_SelectedIndexChanged(sender As Object, e As EventArgs) Handles cdbBoleto.SelectedIndexChanged
+        Select cdbBoleto.SelectedIndex
+            Case 0
+                quantidadeParcelasBoleto = 1
+            Case 1
+                quantidadeParcelasBoleto = 2
+            Case 2
+                quantidadeParcelasBoleto = 3
+            Case Else
+                MsgBox("Ocorreu um erro, por favor, contate o administrador do sistema", vbCritical, "Erro")
+        End Select
+    End Sub
+
+    Private Sub cdbParcelas_SelectedIndexChanged(sender As Object, e As EventArgs) Handles cdbParcelas.SelectedIndexChanged
+        Select Case cdbParcelas.SelectedIndex
+            Case 0
+                quantidadeParcelasCartao = 1
+            Case 1
+                quantidadeParcelasCartao = 2
+            Case 2
+                quantidadeParcelasCartao = 3
+            Case 3
+                quantidadeParcelasCartao = 6
+            Case Else
+                MsgBox("Ocorreu um erro, por favor, contate o administrador do sistema", vbCritical, "Erro")
+        End Select
     End Sub
 End Class
