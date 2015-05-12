@@ -22,11 +22,20 @@ Partial Class Form6
     'Não o modifique usando o editor de códigos.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(Form6))
         Me.tabCadastraOrdem = New System.Windows.Forms.TabPage()
+        Me.lblTitulo = New System.Windows.Forms.Label()
+        Me.PictureBox1 = New System.Windows.Forms.PictureBox()
+        Me.lblVisualizarNota = New System.Windows.Forms.Label()
+        Me.lblFaturarNotaFiscal = New System.Windows.Forms.Label()
+        Me.botFaturarNotaFiscal = New System.Windows.Forms.Button()
+        Me.txtValorTotal = New System.Windows.Forms.TextBox()
+        Me.Label6 = New System.Windows.Forms.Label()
         Me.lblDescricaoOS = New System.Windows.Forms.Label()
         Me.txtDescricaoOS = New System.Windows.Forms.RichTextBox()
         Me.lblInserir = New System.Windows.Forms.Label()
         Me.grpServico = New System.Windows.Forms.GroupBox()
+        Me.lblSelecioneServico = New System.Windows.Forms.Label()
         Me.cboCodServico = New System.Windows.Forms.ComboBox()
         Me.Label5 = New System.Windows.Forms.Label()
         Me.txtQtde = New System.Windows.Forms.TextBox()
@@ -45,6 +54,7 @@ Partial Class Form6
         Me.lblDataAbertura = New System.Windows.Forms.Label()
         Me.lblExcluir = New System.Windows.Forms.Label()
         Me.grpFuncionario = New System.Windows.Forms.GroupBox()
+        Me.lblSelecioneFuncionario = New System.Windows.Forms.Label()
         Me.cboCodFuncionario = New System.Windows.Forms.ComboBox()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.txtCargo = New System.Windows.Forms.TextBox()
@@ -88,6 +98,7 @@ Partial Class Form6
         Me.botCadastrar = New System.Windows.Forms.Button()
         Me.lblLimpar = New System.Windows.Forms.Label()
         Me.botAlterar = New System.Windows.Forms.Button()
+        Me.botVisualizarNota = New System.Windows.Forms.Button()
         Me.tabConsultaOrdem = New System.Windows.Forms.TabPage()
         Me.dtgOrdemServico = New System.Windows.Forms.DataGridView()
         Me.colCodigo = New System.Windows.Forms.DataGridViewTextBoxColumn()
@@ -95,9 +106,8 @@ Partial Class Form6
         Me.colStatus = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.colTipo = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.tabOrdemServico = New System.Windows.Forms.TabControl()
-        Me.Label6 = New System.Windows.Forms.Label()
-        Me.txtValorTotal = New System.Windows.Forms.TextBox()
         Me.tabCadastraOrdem.SuspendLayout()
+        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.grpServico.SuspendLayout()
         Me.grpFuncionario.SuspendLayout()
         Me.grpCliente.SuspendLayout()
@@ -108,6 +118,11 @@ Partial Class Form6
         '
         'tabCadastraOrdem
         '
+        Me.tabCadastraOrdem.Controls.Add(Me.lblTitulo)
+        Me.tabCadastraOrdem.Controls.Add(Me.PictureBox1)
+        Me.tabCadastraOrdem.Controls.Add(Me.lblVisualizarNota)
+        Me.tabCadastraOrdem.Controls.Add(Me.lblFaturarNotaFiscal)
+        Me.tabCadastraOrdem.Controls.Add(Me.botFaturarNotaFiscal)
         Me.tabCadastraOrdem.Controls.Add(Me.txtValorTotal)
         Me.tabCadastraOrdem.Controls.Add(Me.Label6)
         Me.tabCadastraOrdem.Controls.Add(Me.lblDescricaoOS)
@@ -131,6 +146,7 @@ Partial Class Form6
         Me.tabCadastraOrdem.Controls.Add(Me.botCadastrar)
         Me.tabCadastraOrdem.Controls.Add(Me.lblLimpar)
         Me.tabCadastraOrdem.Controls.Add(Me.botAlterar)
+        Me.tabCadastraOrdem.Controls.Add(Me.botVisualizarNota)
         Me.tabCadastraOrdem.Location = New System.Drawing.Point(4, 26)
         Me.tabCadastraOrdem.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
         Me.tabCadastraOrdem.Name = "tabCadastraOrdem"
@@ -140,11 +156,83 @@ Partial Class Form6
         Me.tabCadastraOrdem.Text = "Detalhe Ordem"
         Me.tabCadastraOrdem.UseVisualStyleBackColor = True
         '
+        'lblTitulo
+        '
+        Me.lblTitulo.AutoSize = True
+        Me.lblTitulo.Font = New System.Drawing.Font("Century Gothic", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblTitulo.Location = New System.Drawing.Point(12, 69)
+        Me.lblTitulo.Name = "lblTitulo"
+        Me.lblTitulo.Size = New System.Drawing.Size(150, 21)
+        Me.lblTitulo.TabIndex = 99
+        Me.lblTitulo.Text = "Ordem de Serviço"
+        '
+        'PictureBox1
+        '
+        Me.PictureBox1.BackgroundImage = CType(resources.GetObject("PictureBox1.BackgroundImage"), System.Drawing.Image)
+        Me.PictureBox1.InitialImage = CType(resources.GetObject("PictureBox1.InitialImage"), System.Drawing.Image)
+        Me.PictureBox1.Location = New System.Drawing.Point(16, 108)
+        Me.PictureBox1.Name = "PictureBox1"
+        Me.PictureBox1.Size = New System.Drawing.Size(90, 90)
+        Me.PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize
+        Me.PictureBox1.TabIndex = 98
+        Me.PictureBox1.TabStop = False
+        '
+        'lblVisualizarNota
+        '
+        Me.lblVisualizarNota.AutoSize = True
+        Me.lblVisualizarNota.Location = New System.Drawing.Point(394, 46)
+        Me.lblVisualizarNota.Name = "lblVisualizarNota"
+        Me.lblVisualizarNota.Size = New System.Drawing.Size(142, 17)
+        Me.lblVisualizarNota.TabIndex = 97
+        Me.lblVisualizarNota.Text = "Visualizar Nota Fiscal"
+        Me.lblVisualizarNota.Visible = False
+        '
+        'lblFaturarNotaFiscal
+        '
+        Me.lblFaturarNotaFiscal.AutoSize = True
+        Me.lblFaturarNotaFiscal.Location = New System.Drawing.Point(393, 46)
+        Me.lblFaturarNotaFiscal.Name = "lblFaturarNotaFiscal"
+        Me.lblFaturarNotaFiscal.Size = New System.Drawing.Size(128, 17)
+        Me.lblFaturarNotaFiscal.TabIndex = 95
+        Me.lblFaturarNotaFiscal.Text = "Faturar Nota Fiscal"
+        Me.lblFaturarNotaFiscal.Visible = False
+        '
+        'botFaturarNotaFiscal
+        '
+        Me.botFaturarNotaFiscal.Image = CType(resources.GetObject("botFaturarNotaFiscal.Image"), System.Drawing.Image)
+        Me.botFaturarNotaFiscal.Location = New System.Drawing.Point(438, 4)
+        Me.botFaturarNotaFiscal.Name = "botFaturarNotaFiscal"
+        Me.botFaturarNotaFiscal.Size = New System.Drawing.Size(40, 40)
+        Me.botFaturarNotaFiscal.TabIndex = 94
+        Me.botFaturarNotaFiscal.UseVisualStyleBackColor = True
+        Me.botFaturarNotaFiscal.Visible = False
+        '
+        'txtValorTotal
+        '
+        Me.txtValorTotal.Font = New System.Drawing.Font("Century Gothic", 9.75!)
+        Me.txtValorTotal.Location = New System.Drawing.Point(712, 108)
+        Me.txtValorTotal.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
+        Me.txtValorTotal.Name = "txtValorTotal"
+        Me.txtValorTotal.Size = New System.Drawing.Size(108, 23)
+        Me.txtValorTotal.TabIndex = 93
+        Me.txtValorTotal.TabStop = False
+        Me.txtValorTotal.Tag = "Auto"
+        '
+        'Label6
+        '
+        Me.Label6.AutoSize = True
+        Me.Label6.Font = New System.Drawing.Font("Century Gothic", 9.75!)
+        Me.Label6.Location = New System.Drawing.Point(709, 87)
+        Me.Label6.Name = "Label6"
+        Me.Label6.Size = New System.Drawing.Size(77, 17)
+        Me.Label6.TabIndex = 92
+        Me.Label6.Text = "Valor Total"
+        '
         'lblDescricaoOS
         '
         Me.lblDescricaoOS.AutoSize = True
         Me.lblDescricaoOS.Font = New System.Drawing.Font("Century Gothic", 9.75!)
-        Me.lblDescricaoOS.Location = New System.Drawing.Point(308, 4)
+        Me.lblDescricaoOS.Location = New System.Drawing.Point(351, 87)
         Me.lblDescricaoOS.Name = "lblDescricaoOS"
         Me.lblDescricaoOS.Size = New System.Drawing.Size(170, 17)
         Me.lblDescricaoOS.TabIndex = 91
@@ -154,10 +242,10 @@ Partial Class Form6
         '
         Me.txtDescricaoOS.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.txtDescricaoOS.Font = New System.Drawing.Font("Century Gothic", 9.75!)
-        Me.txtDescricaoOS.Location = New System.Drawing.Point(316, 25)
+        Me.txtDescricaoOS.Location = New System.Drawing.Point(354, 109)
         Me.txtDescricaoOS.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
         Me.txtDescricaoOS.Name = "txtDescricaoOS"
-        Me.txtDescricaoOS.Size = New System.Drawing.Size(504, 117)
+        Me.txtDescricaoOS.Size = New System.Drawing.Size(352, 117)
         Me.txtDescricaoOS.TabIndex = 90
         Me.txtDescricaoOS.TabStop = False
         Me.txtDescricaoOS.Text = ""
@@ -166,7 +254,7 @@ Partial Class Form6
         '
         Me.lblInserir.AutoSize = True
         Me.lblInserir.Font = New System.Drawing.Font("Century Gothic", 9.75!)
-        Me.lblInserir.Location = New System.Drawing.Point(225, 60)
+        Me.lblInserir.Location = New System.Drawing.Point(537, 46)
         Me.lblInserir.Name = "lblInserir"
         Me.lblInserir.Size = New System.Drawing.Size(85, 17)
         Me.lblInserir.TabIndex = 88
@@ -175,6 +263,7 @@ Partial Class Form6
         '
         'grpServico
         '
+        Me.grpServico.Controls.Add(Me.lblSelecioneServico)
         Me.grpServico.Controls.Add(Me.cboCodServico)
         Me.grpServico.Controls.Add(Me.Label5)
         Me.grpServico.Controls.Add(Me.txtQtde)
@@ -193,6 +282,16 @@ Partial Class Form6
         Me.grpServico.TabIndex = 63
         Me.grpServico.TabStop = False
         Me.grpServico.Text = "Serviços"
+        '
+        'lblSelecioneServico
+        '
+        Me.lblSelecioneServico.AutoSize = True
+        Me.lblSelecioneServico.Font = New System.Drawing.Font("Century Gothic", 9.75!)
+        Me.lblSelecioneServico.Location = New System.Drawing.Point(7, 29)
+        Me.lblSelecioneServico.Name = "lblSelecioneServico"
+        Me.lblSelecioneServico.Size = New System.Drawing.Size(138, 17)
+        Me.lblSelecioneServico.TabIndex = 75
+        Me.lblSelecioneServico.Text = "Selecione o Servico*"
         '
         'cboCodServico
         '
@@ -295,7 +394,7 @@ Partial Class Form6
         'mtxDataFechamento
         '
         Me.mtxDataFechamento.Font = New System.Drawing.Font("Century Gothic", 9.75!)
-        Me.mtxDataFechamento.Location = New System.Drawing.Point(111, 186)
+        Me.mtxDataFechamento.Location = New System.Drawing.Point(211, 202)
         Me.mtxDataFechamento.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
         Me.mtxDataFechamento.Mask = "00/00/0000"
         Me.mtxDataFechamento.Name = "mtxDataFechamento"
@@ -306,7 +405,7 @@ Partial Class Form6
         '
         Me.lblCadastrar.AutoSize = True
         Me.lblCadastrar.Font = New System.Drawing.Font("Century Gothic", 9.75!)
-        Me.lblCadastrar.Location = New System.Drawing.Point(30, 60)
+        Me.lblCadastrar.Location = New System.Drawing.Point(748, 46)
         Me.lblCadastrar.Name = "lblCadastrar"
         Me.lblCadastrar.Size = New System.Drawing.Size(73, 17)
         Me.lblCadastrar.TabIndex = 85
@@ -316,7 +415,7 @@ Partial Class Form6
         '
         Me.Label3.AutoSize = True
         Me.Label3.Font = New System.Drawing.Font("Century Gothic", 9.75!)
-        Me.Label3.Location = New System.Drawing.Point(106, 166)
+        Me.Label3.Location = New System.Drawing.Point(206, 181)
         Me.Label3.Name = "Label3"
         Me.Label3.Size = New System.Drawing.Size(148, 17)
         Me.Label3.TabIndex = 61
@@ -325,10 +424,10 @@ Partial Class Form6
         'botModoNovo
         '
         Me.botModoNovo.Image = Global.Sistema_Matrix.My.Resources.Resources.adicionar
-        Me.botModoNovo.Location = New System.Drawing.Point(234, 4)
+        Me.botModoNovo.Location = New System.Drawing.Point(554, 4)
         Me.botModoNovo.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
         Me.botModoNovo.Name = "botModoNovo"
-        Me.botModoNovo.Size = New System.Drawing.Size(47, 52)
+        Me.botModoNovo.Size = New System.Drawing.Size(40, 40)
         Me.botModoNovo.TabIndex = 84
         Me.botModoNovo.UseVisualStyleBackColor = True
         Me.botModoNovo.Visible = False
@@ -337,7 +436,7 @@ Partial Class Form6
         '
         Me.mtxDataAbertura.Enabled = False
         Me.mtxDataAbertura.Font = New System.Drawing.Font("Century Gothic", 9.75!)
-        Me.mtxDataAbertura.Location = New System.Drawing.Point(111, 119)
+        Me.mtxDataAbertura.Location = New System.Drawing.Point(209, 151)
         Me.mtxDataAbertura.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
         Me.mtxDataAbertura.Mask = "00/00/0000"
         Me.mtxDataAbertura.Name = "mtxDataAbertura"
@@ -349,7 +448,7 @@ Partial Class Form6
         '
         Me.lblAlterar.AutoSize = True
         Me.lblAlterar.Font = New System.Drawing.Font("Century Gothic", 9.75!)
-        Me.lblAlterar.Location = New System.Drawing.Point(17, 60)
+        Me.lblAlterar.Location = New System.Drawing.Point(735, 46)
         Me.lblAlterar.Name = "lblAlterar"
         Me.lblAlterar.Size = New System.Drawing.Size(105, 17)
         Me.lblAlterar.TabIndex = 89
@@ -360,7 +459,7 @@ Partial Class Form6
         '
         Me.lblDataAbertura.AutoSize = True
         Me.lblDataAbertura.Font = New System.Drawing.Font("Century Gothic", 9.75!)
-        Me.lblDataAbertura.Location = New System.Drawing.Point(106, 98)
+        Me.lblDataAbertura.Location = New System.Drawing.Point(206, 130)
         Me.lblDataAbertura.Name = "lblDataAbertura"
         Me.lblDataAbertura.Size = New System.Drawing.Size(122, 17)
         Me.lblDataAbertura.TabIndex = 59
@@ -370,7 +469,7 @@ Partial Class Form6
         '
         Me.lblExcluir.AutoSize = True
         Me.lblExcluir.Font = New System.Drawing.Font("Century Gothic", 9.75!)
-        Me.lblExcluir.Location = New System.Drawing.Point(120, 60)
+        Me.lblExcluir.Location = New System.Drawing.Point(628, 46)
         Me.lblExcluir.Name = "lblExcluir"
         Me.lblExcluir.Size = New System.Drawing.Size(102, 17)
         Me.lblExcluir.TabIndex = 87
@@ -379,6 +478,7 @@ Partial Class Form6
         '
         'grpFuncionario
         '
+        Me.grpFuncionario.Controls.Add(Me.lblSelecioneFuncionario)
         Me.grpFuncionario.Controls.Add(Me.cboCodFuncionario)
         Me.grpFuncionario.Controls.Add(Me.Label2)
         Me.grpFuncionario.Controls.Add(Me.txtCargo)
@@ -392,6 +492,16 @@ Partial Class Form6
         Me.grpFuncionario.TabIndex = 49
         Me.grpFuncionario.TabStop = False
         Me.grpFuncionario.Text = "Funcionário"
+        '
+        'lblSelecioneFuncionario
+        '
+        Me.lblSelecioneFuncionario.AutoSize = True
+        Me.lblSelecioneFuncionario.Font = New System.Drawing.Font("Century Gothic", 9.75!)
+        Me.lblSelecioneFuncionario.Location = New System.Drawing.Point(7, 27)
+        Me.lblSelecioneFuncionario.Name = "lblSelecioneFuncionario"
+        Me.lblSelecioneFuncionario.Size = New System.Drawing.Size(167, 17)
+        Me.lblSelecioneFuncionario.TabIndex = 74
+        Me.lblSelecioneFuncionario.Text = "Selecione o Funcionário*"
         '
         'cboCodFuncionario
         '
@@ -408,7 +518,7 @@ Partial Class Form6
         '
         Me.Label2.AutoSize = True
         Me.Label2.Font = New System.Drawing.Font("Century Gothic", 9.75!)
-        Me.Label2.Location = New System.Drawing.Point(512, 30)
+        Me.Label2.Location = New System.Drawing.Point(514, 29)
         Me.Label2.Name = "Label2"
         Me.Label2.Size = New System.Drawing.Size(50, 17)
         Me.Label2.TabIndex = 70
@@ -440,10 +550,10 @@ Partial Class Form6
         '
         Me.botExcluir.Enabled = False
         Me.botExcluir.Image = Global.Sistema_Matrix.My.Resources.Resources.excluir
-        Me.botExcluir.Location = New System.Drawing.Point(134, 4)
+        Me.botExcluir.Location = New System.Drawing.Point(652, 4)
         Me.botExcluir.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
         Me.botExcluir.Name = "botExcluir"
-        Me.botExcluir.Size = New System.Drawing.Size(47, 52)
+        Me.botExcluir.Size = New System.Drawing.Size(40, 40)
         Me.botExcluir.TabIndex = 83
         Me.botExcluir.UseVisualStyleBackColor = True
         Me.botExcluir.Visible = False
@@ -735,9 +845,9 @@ Partial Class Form6
         Me.lblSelecionar.Font = New System.Drawing.Font("Century Gothic", 9.75!)
         Me.lblSelecionar.Location = New System.Drawing.Point(7, 44)
         Me.lblSelecionar.Name = "lblSelecionar"
-        Me.lblSelecionar.Size = New System.Drawing.Size(132, 17)
+        Me.lblSelecionar.Size = New System.Drawing.Size(138, 17)
         Me.lblSelecionar.TabIndex = 1
-        Me.lblSelecionar.Text = "Selecione o Cliente"
+        Me.lblSelecionar.Text = "Selecione o Cliente*"
         '
         'lblCPF
         '
@@ -835,10 +945,10 @@ Partial Class Form6
         '
         Me.botLimpar.DialogResult = System.Windows.Forms.DialogResult.Cancel
         Me.botLimpar.Image = Global.Sistema_Matrix.My.Resources.Resources.limpar
-        Me.botLimpar.Location = New System.Drawing.Point(134, 4)
+        Me.botLimpar.Location = New System.Drawing.Point(651, 4)
         Me.botLimpar.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
         Me.botLimpar.Name = "botLimpar"
-        Me.botLimpar.Size = New System.Drawing.Size(47, 52)
+        Me.botLimpar.Size = New System.Drawing.Size(40, 40)
         Me.botLimpar.TabIndex = 81
         Me.botLimpar.UseVisualStyleBackColor = True
         '
@@ -846,7 +956,7 @@ Partial Class Form6
         '
         Me.txtCodigo.Enabled = False
         Me.txtCodigo.Font = New System.Drawing.Font("Century Gothic", 9.75!)
-        Me.txtCodigo.Location = New System.Drawing.Point(9, 119)
+        Me.txtCodigo.Location = New System.Drawing.Point(207, 103)
         Me.txtCodigo.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
         Me.txtCodigo.Name = "txtCodigo"
         Me.txtCodigo.Size = New System.Drawing.Size(73, 23)
@@ -857,7 +967,7 @@ Partial Class Form6
         '
         Me.Label1.AutoSize = True
         Me.Label1.Font = New System.Drawing.Font("Century Gothic", 9.75!)
-        Me.Label1.Location = New System.Drawing.Point(9, 98)
+        Me.Label1.Location = New System.Drawing.Point(206, 83)
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(58, 17)
         Me.Label1.TabIndex = 0
@@ -866,17 +976,17 @@ Partial Class Form6
         'botCadastrar
         '
         Me.botCadastrar.Image = Global.Sistema_Matrix.My.Resources.Resources.salvar
-        Me.botCadastrar.Location = New System.Drawing.Point(36, 4)
+        Me.botCadastrar.Location = New System.Drawing.Point(756, 4)
         Me.botCadastrar.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
         Me.botCadastrar.Name = "botCadastrar"
-        Me.botCadastrar.Size = New System.Drawing.Size(47, 52)
+        Me.botCadastrar.Size = New System.Drawing.Size(40, 40)
         Me.botCadastrar.TabIndex = 80
         Me.botCadastrar.UseVisualStyleBackColor = True
         '
         'lblLimpar
         '
         Me.lblLimpar.AutoSize = True
-        Me.lblLimpar.Location = New System.Drawing.Point(120, 60)
+        Me.lblLimpar.Location = New System.Drawing.Point(628, 47)
         Me.lblLimpar.Name = "lblLimpar"
         Me.lblLimpar.Size = New System.Drawing.Size(87, 17)
         Me.lblLimpar.TabIndex = 86
@@ -885,13 +995,23 @@ Partial Class Form6
         'botAlterar
         '
         Me.botAlterar.Image = Global.Sistema_Matrix.My.Resources.Resources.alterar
-        Me.botAlterar.Location = New System.Drawing.Point(36, 4)
+        Me.botAlterar.Location = New System.Drawing.Point(756, 4)
         Me.botAlterar.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
         Me.botAlterar.Name = "botAlterar"
-        Me.botAlterar.Size = New System.Drawing.Size(47, 52)
+        Me.botAlterar.Size = New System.Drawing.Size(40, 40)
         Me.botAlterar.TabIndex = 82
         Me.botAlterar.UseVisualStyleBackColor = True
         Me.botAlterar.Visible = False
+        '
+        'botVisualizarNota
+        '
+        Me.botVisualizarNota.Image = CType(resources.GetObject("botVisualizarNota.Image"), System.Drawing.Image)
+        Me.botVisualizarNota.Location = New System.Drawing.Point(439, 5)
+        Me.botVisualizarNota.Name = "botVisualizarNota"
+        Me.botVisualizarNota.Size = New System.Drawing.Size(40, 40)
+        Me.botVisualizarNota.TabIndex = 96
+        Me.botVisualizarNota.UseVisualStyleBackColor = True
+        Me.botVisualizarNota.Visible = False
         '
         'tabConsultaOrdem
         '
@@ -913,11 +1033,11 @@ Partial Class Form6
         Me.dtgOrdemServico.BackgroundColor = System.Drawing.SystemColors.Control
         Me.dtgOrdemServico.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.dtgOrdemServico.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.colCodigo, Me.colCliente, Me.colStatus, Me.colTipo})
-        Me.dtgOrdemServico.Location = New System.Drawing.Point(7, 107)
+        Me.dtgOrdemServico.Location = New System.Drawing.Point(6, 27)
         Me.dtgOrdemServico.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
         Me.dtgOrdemServico.Name = "dtgOrdemServico"
         Me.dtgOrdemServico.ReadOnly = True
-        Me.dtgOrdemServico.Size = New System.Drawing.Size(812, 693)
+        Me.dtgOrdemServico.Size = New System.Drawing.Size(812, 561)
         Me.dtgOrdemServico.TabIndex = 0
         '
         'colCodigo
@@ -963,27 +1083,6 @@ Partial Class Form6
         Me.tabOrdemServico.Size = New System.Drawing.Size(852, 862)
         Me.tabOrdemServico.TabIndex = 1
         '
-        'Label6
-        '
-        Me.Label6.AutoSize = True
-        Me.Label6.Font = New System.Drawing.Font("Century Gothic", 9.75!)
-        Me.Label6.Location = New System.Drawing.Point(313, 166)
-        Me.Label6.Name = "Label6"
-        Me.Label6.Size = New System.Drawing.Size(77, 17)
-        Me.Label6.TabIndex = 92
-        Me.Label6.Text = "Valor Total"
-        '
-        'txtValorTotal
-        '
-        Me.txtValorTotal.Font = New System.Drawing.Font("Century Gothic", 9.75!)
-        Me.txtValorTotal.Location = New System.Drawing.Point(316, 187)
-        Me.txtValorTotal.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
-        Me.txtValorTotal.Name = "txtValorTotal"
-        Me.txtValorTotal.Size = New System.Drawing.Size(108, 23)
-        Me.txtValorTotal.TabIndex = 93
-        Me.txtValorTotal.TabStop = False
-        Me.txtValorTotal.Tag = "Auto"
-        '
         'Form6
         '
         Me.AcceptButton = Me.botCadastrar
@@ -1005,6 +1104,7 @@ Partial Class Form6
         Me.TransparencyKey = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(128, Byte), Integer), CType(CType(128, Byte), Integer))
         Me.tabCadastraOrdem.ResumeLayout(False)
         Me.tabCadastraOrdem.PerformLayout()
+        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.grpServico.ResumeLayout(False)
         Me.grpServico.PerformLayout()
         Me.grpFuncionario.ResumeLayout(False)
@@ -1092,4 +1192,12 @@ Partial Class Form6
     Friend WithEvents colTipo As System.Windows.Forms.DataGridViewTextBoxColumn
     Friend WithEvents txtValorTotal As System.Windows.Forms.TextBox
     Friend WithEvents Label6 As System.Windows.Forms.Label
+    Friend WithEvents lblSelecioneServico As System.Windows.Forms.Label
+    Friend WithEvents lblSelecioneFuncionario As System.Windows.Forms.Label
+    Friend WithEvents lblFaturarNotaFiscal As System.Windows.Forms.Label
+    Friend WithEvents botFaturarNotaFiscal As System.Windows.Forms.Button
+    Friend WithEvents lblVisualizarNota As System.Windows.Forms.Label
+    Friend WithEvents botVisualizarNota As System.Windows.Forms.Button
+    Friend WithEvents PictureBox1 As System.Windows.Forms.PictureBox
+    Friend WithEvents lblTitulo As System.Windows.Forms.Label
 End Class

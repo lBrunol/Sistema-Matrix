@@ -33,8 +33,8 @@ Public Class confirmaNotaFiscal
         Next
     End Sub
     Private Sub Nota_Fiscal_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        codOrdemAtual = 8
-        Me.Select()
+        'codOrdemAtual = 8
+        botFaturarNotaFiscal.Select()
         'Armazena o código do cliente
         Dim codCliente As Integer
 

@@ -32,7 +32,7 @@ Namespace My
         
         <Global.System.Diagnostics.DebuggerStepThroughAttribute()>  _
         Protected Overrides Sub OnCreateMainForm()
-            Me.MainForm = Global.Sistema_Matrix.confirmaNotaFiscal
+            Me.MainForm = Global.Sistema_Matrix.Login
         End Sub
     End Class
 End Namespace

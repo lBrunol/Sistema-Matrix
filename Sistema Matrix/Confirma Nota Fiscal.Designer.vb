@@ -83,8 +83,8 @@ Partial Class confirmaNotaFiscal
         Me.rdbBoleto = New System.Windows.Forms.RadioButton()
         Me.rdbAvista = New System.Windows.Forms.RadioButton()
         Me.Label2 = New System.Windows.Forms.Label()
-        Me.cdbCartao = New System.Windows.Forms.ComboBox()
         Me.cdbBoleto = New System.Windows.Forms.ComboBox()
+        Me.cdbCartao = New System.Windows.Forms.ComboBox()
         Me.grpPrestadorServico.SuspendLayout()
         Me.grpTomadorServico.SuspendLayout()
         Me.grpServicos.SuspendLayout()
@@ -549,7 +549,7 @@ Partial Class confirmaNotaFiscal
         'lblParcelas
         '
         Me.lblParcelas.AutoSize = True
-        Me.lblParcelas.Location = New System.Drawing.Point(530, 137)
+        Me.lblParcelas.Location = New System.Drawing.Point(530, 133)
         Me.lblParcelas.Name = "lblParcelas"
         Me.lblParcelas.Size = New System.Drawing.Size(62, 17)
         Me.lblParcelas.TabIndex = 33
@@ -560,7 +560,7 @@ Partial Class confirmaNotaFiscal
         '
         Me.cdbParcelas.FormattingEnabled = True
         Me.cdbParcelas.Items.AddRange(New Object() {"1", "2", "3", "6"})
-        Me.cdbParcelas.Location = New System.Drawing.Point(533, 155)
+        Me.cdbParcelas.Location = New System.Drawing.Point(533, 151)
         Me.cdbParcelas.Name = "cdbParcelas"
         Me.cdbParcelas.Size = New System.Drawing.Size(85, 25)
         Me.cdbParcelas.TabIndex = 7
@@ -569,7 +569,7 @@ Partial Class confirmaNotaFiscal
         'lblNomeTitular
         '
         Me.lblNomeTitular.AutoSize = True
-        Me.lblNomeTitular.Location = New System.Drawing.Point(288, 137)
+        Me.lblNomeTitular.Location = New System.Drawing.Point(288, 133)
         Me.lblNomeTitular.Name = "lblNomeTitular"
         Me.lblNomeTitular.Size = New System.Drawing.Size(111, 17)
         Me.lblNomeTitular.TabIndex = 31
@@ -578,7 +578,7 @@ Partial Class confirmaNotaFiscal
         '
         'txtNomeTitular
         '
-        Me.txtNomeTitular.Location = New System.Drawing.Point(291, 157)
+        Me.txtNomeTitular.Location = New System.Drawing.Point(291, 153)
         Me.txtNomeTitular.Name = "txtNomeTitular"
         Me.txtNomeTitular.Size = New System.Drawing.Size(226, 23)
         Me.txtNomeTitular.TabIndex = 6
@@ -587,7 +587,7 @@ Partial Class confirmaNotaFiscal
         'lblSSN
         '
         Me.lblSSN.AutoSize = True
-        Me.lblSSN.Location = New System.Drawing.Point(198, 137)
+        Me.lblSSN.Location = New System.Drawing.Point(198, 133)
         Me.lblSSN.Name = "lblSSN"
         Me.lblSSN.Size = New System.Drawing.Size(30, 17)
         Me.lblSSN.TabIndex = 29
@@ -596,7 +596,7 @@ Partial Class confirmaNotaFiscal
         '
         'txtSSN
         '
-        Me.txtSSN.Location = New System.Drawing.Point(201, 157)
+        Me.txtSSN.Location = New System.Drawing.Point(201, 153)
         Me.txtSSN.Name = "txtSSN"
         Me.txtSSN.Size = New System.Drawing.Size(70, 23)
         Me.txtSSN.TabIndex = 5
@@ -605,7 +605,7 @@ Partial Class confirmaNotaFiscal
         'lblNumCartao
         '
         Me.lblNumCartao.AutoSize = True
-        Me.lblNumCartao.Location = New System.Drawing.Point(6, 137)
+        Me.lblNumCartao.Location = New System.Drawing.Point(6, 133)
         Me.lblNumCartao.Name = "lblNumCartao"
         Me.lblNumCartao.Size = New System.Drawing.Size(133, 17)
         Me.lblNumCartao.TabIndex = 27
@@ -614,7 +614,7 @@ Partial Class confirmaNotaFiscal
         '
         'txtNumCartao
         '
-        Me.txtNumCartao.Location = New System.Drawing.Point(9, 157)
+        Me.txtNumCartao.Location = New System.Drawing.Point(9, 153)
         Me.txtNumCartao.Name = "txtNumCartao"
         Me.txtNumCartao.Size = New System.Drawing.Size(171, 23)
         Me.txtNumCartao.TabIndex = 4
@@ -623,7 +623,7 @@ Partial Class confirmaNotaFiscal
         'lblBandeira
         '
         Me.lblBandeira.AutoSize = True
-        Me.lblBandeira.Location = New System.Drawing.Point(6, 88)
+        Me.lblBandeira.Location = New System.Drawing.Point(6, 84)
         Me.lblBandeira.Name = "lblBandeira"
         Me.lblBandeira.Size = New System.Drawing.Size(65, 17)
         Me.lblBandeira.TabIndex = 25
@@ -633,7 +633,7 @@ Partial Class confirmaNotaFiscal
         'lblSelecioneDias
         '
         Me.lblSelecioneDias.AutoSize = True
-        Me.lblSelecioneDias.Location = New System.Drawing.Point(6, 85)
+        Me.lblSelecioneDias.Location = New System.Drawing.Point(6, 81)
         Me.lblSelecioneDias.Name = "lblSelecioneDias"
         Me.lblSelecioneDias.Size = New System.Drawing.Size(214, 17)
         Me.lblSelecioneDias.TabIndex = 24
@@ -678,29 +678,29 @@ Partial Class confirmaNotaFiscal
         Me.Label2.AutoSize = True
         Me.Label2.Location = New System.Drawing.Point(6, 25)
         Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(137, 17)
+        Me.Label2.Size = New System.Drawing.Size(143, 17)
         Me.Label2.TabIndex = 18
-        Me.Label2.Text = "Tipo de Pagamento"
-        '
-        'cdbCartao
-        '
-        Me.cdbCartao.FormattingEnabled = True
-        Me.cdbCartao.Items.AddRange(New Object() {"Master", "Visa"})
-        Me.cdbCartao.Location = New System.Drawing.Point(9, 108)
-        Me.cdbCartao.Name = "cdbCartao"
-        Me.cdbCartao.Size = New System.Drawing.Size(134, 25)
-        Me.cdbCartao.TabIndex = 3
-        Me.cdbCartao.Visible = False
+        Me.Label2.Text = "Tipo de Pagamento*"
         '
         'cdbBoleto
         '
         Me.cdbBoleto.FormattingEnabled = True
         Me.cdbBoleto.Items.AddRange(New Object() {"30", "60", "90"})
-        Me.cdbBoleto.Location = New System.Drawing.Point(9, 108)
+        Me.cdbBoleto.Location = New System.Drawing.Point(9, 104)
         Me.cdbBoleto.Name = "cdbBoleto"
         Me.cdbBoleto.Size = New System.Drawing.Size(134, 25)
         Me.cdbBoleto.TabIndex = 2
         Me.cdbBoleto.Visible = False
+        '
+        'cdbCartao
+        '
+        Me.cdbCartao.FormattingEnabled = True
+        Me.cdbCartao.Items.AddRange(New Object() {"Master", "Visa"})
+        Me.cdbCartao.Location = New System.Drawing.Point(9, 104)
+        Me.cdbCartao.Name = "cdbCartao"
+        Me.cdbCartao.Size = New System.Drawing.Size(134, 25)
+        Me.cdbCartao.TabIndex = 3
+        Me.cdbCartao.Visible = False
         '
         'confirmaNotaFiscal
         '

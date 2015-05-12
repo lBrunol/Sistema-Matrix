@@ -76,8 +76,8 @@ Public Class Form6
     Private Sub cboCliente_SelectedIndexChanged(sender As Object, e As EventArgs) Handles cboCliente.SelectedIndexChanged
         If varOK = True And cboCliente.SelectedIndex <> -1 Then
             cboCodCliente.SelectedIndex = cboCliente.SelectedIndex
-
         End If
+        cboFuncionario.Select()
     End Sub
 
     Private Sub botNovoServico_Click(sender As Object, e As EventArgs) Handles botNovoServico.Click
@@ -235,12 +235,17 @@ Public Class Form6
         If varOK = True And cboFuncionario.SelectedIndex <> -1 Then
             cboCodFuncionario.SelectedIndex = cboFuncionario.SelectedIndex
         End If
+        cboServico.Select()
     End Sub
 
     Private Sub cboServico_SelectedIndexChanged(sender As Object, e As EventArgs) Handles cboServico.SelectedIndexChanged
         If varOK = True And cboServico.SelectedIndex <> -1 Then
             cboCodServico.SelectedIndex = cboServico.SelectedIndex
+            If txtQtde.Text <> "" Then
+                txtValorTotal.Text = FormatCurrency(calculaValorTotal())
+            End If
         End If
+        txtQtde.Select()
     End Sub
 
     Private Sub cboCodServico_SelectedIndexChanged(sender As Object, e As EventArgs) Handles cboCodServico.SelectedIndexChanged
@@ -250,7 +255,7 @@ Public Class Form6
                 strsql = "SELECT * FROM servicos WHERE svcCodigo = " & codServ
                 leitor = objBanco.ExecutaDataRead(strsql)
                 leitor.Read()
-                txtValor.Text = leitor.Item(2).ToString
+                txtValor.Text = FormatCurrency(leitor.Item(2).ToString)
                 txtDescrição.Text = leitor.Item(3).ToString
                 habilitaDesabilitaControles(grpServico, True)
                 txtQtde.Text = "1"
@@ -299,18 +304,25 @@ Public Class Form6
 
     Private Sub botCadastrar_Click(sender As Object, e As EventArgs) Handles botCadastrar.Click
         Dim dataFechamento As String
-        dataFechamento = mtxDataFechamento.Text
 
-        If mtxDataFechamento.Text = "  /  /" Then
-            dataFechamento = Replace(mtxDataFechamento.Text, "/", "")
-            dataFechamento = Replace(dataFechamento, " ", "")
+        If txtQtde.Text = "" Then
+            txtQtde.Text = "1"
         End If
+        txtValorTotal.Text = FormatCurrency(calculaValorTotal())
+        dataFechamento = vbNullString
+
+        ' If mtxDataFechamento.Text = "  /  /" Then
+        dataFechamento = Replace(mtxDataFechamento.Text, "/", "")
+        dataFechamento = Replace(dataFechamento, " ", "")
+        'MsgBox(mtxDataFechamento.Text)
+        MsgBox(dataFechamento)
+       ' End If
         Try
             If cboCliente.Text = "" Or cboFuncionario.Text = "" Or cboServico.Text = "" Then
                 MsgBox("Por favor, preencha as ComboBox para prosseguir", vbExclamation, "Aviso")
             ElseIf MsgBox("Atenção, depois de confirmar está mensagem, não será mais possível alterar ou excluir a Ordem de Serviço" & vbCrLf & "Deseja prosseguir?", vbQuestion + vbYesNo, "Aviso") = vbYes Then
                 'Inseri os dados da ordem de serviço    
-                strsql = "INSERT INTO ordemServico (ordCodigo , ordOcorrencia, ordDataAbertura, ordDataFechamento, cliCodigo, funMatricula) VALUES (" & valorCodOS & " ,'" & txtDescricaoOS.Text & "', '" & mtxDataAbertura.Text & "' , '" & dataFechamento & "' , " & codCli & ", " & codFun & ")"
+                strsql = "INSERT INTO ordemServico (ordCodigo , ordOcorrencia, ordDataAbertura, ordDataFechamento, cliCodigo, funMatricula) VALUES (" & valorCodOS & " ,'" & txtDescricaoOS.Text & "', '" & mtxDataAbertura.Text & "' , '" & vbNullString & "' , " & codCli & ", " & codFun & ")"
                 objBanco.ExecutaQuery(strsql)
 
                 'Adiciona os dados de serviço na tabela servicos_os
@@ -380,9 +392,30 @@ Public Class Form6
     Private Sub dtgOrdemServico_CellDoubleClick(sender As Object, e As DataGridViewCellEventArgs) Handles dtgOrdemServico.CellDoubleClick
         varOK = False
         Try
+
             'Armazena na variável o código da linha que será utilizada na clausula where do select
             valorCodOS = dtgOrdemServico.CurrentRow.Cells(0).Value
             tipCliente = dtgOrdemServico.CurrentRow.Cells(3).Value.ToString
+
+            strsql = "SELECT ordCodigo FROM notaFiscal WHERE ordCodigo =" & valorCodOS
+            leitor = objBanco.ExecutaDataRead(strsql)
+
+            If leitor.Read() Then
+                If leitor.Item(0).ToString Then
+                    botVisualizarNota.Visible = True
+                    lblVisualizarNota.Visible = True
+                    botFaturarNotaFiscal.Visible = False
+                    lblFaturarNotaFiscal.Visible = False
+                End If
+            Else
+                botVisualizarNota.Visible = False
+                lblVisualizarNota.Visible = False
+
+                botFaturarNotaFiscal.Visible = True
+                lblFaturarNotaFiscal.Visible = True
+            End If
+
+
             'Seleciona a primeira aba do tab
             tabOrdemServico.SelectTab(0)
 
@@ -481,7 +514,7 @@ Public Class Form6
                 leitor.Read()
 
                 cboServico.SelectedItem = leitor.Item("svcNome").ToString
-                txtValor.Text = leitor.Item("svcValor").ToString
+                txtValor.Text = leitor.Item("svcValorHora").ToString
                 txtQtde.Text = leitor.Item("seoQuantidade").ToString
                 txtDescrição.Text = leitor.Item("svcDescricao").ToString
 
@@ -554,6 +587,10 @@ Public Class Form6
         botExcluir.Visible = False
         lblExcluir.Visible = False
         botModoNovo.Visible = False
+        botVisualizarNota.Visible = False
+        lblVisualizarNota.Visible = False
+        botFaturarNotaFiscal.Visible = False
+        lblFaturarNotaFiscal.Visible = False
         lblInserir.Visible = False
         cboCliente.Enabled = True
         cboFuncionario.Enabled = True
@@ -565,5 +602,30 @@ Public Class Form6
 
     Private Sub Form6_FormClosed(sender As Object, e As FormClosedEventArgs) Handles MyBase.FormClosed
         Funcoes.HabilitaBotaoLogOff()
+    End Sub
+    Private Sub botFaturarNotaFiscal_Click(sender As Object, e As EventArgs) Handles botFaturarNotaFiscal.Click
+        If MsgBox("Deseja faturar a Ordem de serviço agora?", vbQuestion & vbYesNo, "Confirme") = vbYes Then
+            codOrdemServicoAtual = CInt(Me.txtCodigo.Text)
+            Me.Hide()
+            confirmaNotaFiscal.Show()
+        End If
+    End Sub
+    Private Function calculaValorTotal()
+        Dim quantidadeOs As Double
+        Dim valorUnitario As Double
+        Dim valorTotal As Double
+        quantidadeOs = txtQtde.Text
+        valorUnitario = txtValor.Text
+        valorTotal = valorUnitario * quantidadeOs
+        valorTotal = valorTotal
+        Return valorTotal
+
+    End Function
+
+    Private Sub txtQtde_Leave(sender As Object, e As EventArgs) Handles txtQtde.Leave
+        If txtQtde.Text = "" Then
+            txtQtde.Text = "1"
+        End If
+        txtValorTotal.Text = FormatCurrency(calculaValorTotal())
     End Sub
 End Class
