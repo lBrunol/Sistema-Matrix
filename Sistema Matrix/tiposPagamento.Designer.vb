@@ -37,10 +37,10 @@ Partial Class tiposPagamento
         Me.txtDescricao = New System.Windows.Forms.TextBox()
         Me.lblCodigo = New System.Windows.Forms.Label()
         Me.txtCodigo = New System.Windows.Forms.TextBox()
-        Me.botAlterar = New System.Windows.Forms.Button()
         Me.botExcluir = New System.Windows.Forms.Button()
         Me.botCadastrar = New System.Windows.Forms.Button()
         Me.botLimpar = New System.Windows.Forms.Button()
+        Me.botAlterar = New System.Windows.Forms.Button()
         Me.tabConsulta = New System.Windows.Forms.TabPage()
         Me.dtgConsultaTiposPagamento = New System.Windows.Forms.DataGridView()
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
@@ -103,9 +103,10 @@ Partial Class tiposPagamento
         'lblInserir
         '
         Me.lblInserir.AutoSize = True
-        Me.lblInserir.Location = New System.Drawing.Point(91, 49)
+        Me.lblInserir.Font = New System.Drawing.Font("Century Gothic", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblInserir.Location = New System.Drawing.Point(85, 49)
         Me.lblInserir.Name = "lblInserir"
-        Me.lblInserir.Size = New System.Drawing.Size(65, 13)
+        Me.lblInserir.Size = New System.Drawing.Size(73, 16)
         Me.lblInserir.TabIndex = 69
         Me.lblInserir.Text = "Modo Inserir"
         Me.lblInserir.Visible = False
@@ -113,18 +114,20 @@ Partial Class tiposPagamento
         'lblLimpar
         '
         Me.lblLimpar.AutoSize = True
-        Me.lblLimpar.Location = New System.Drawing.Point(248, 46)
+        Me.lblLimpar.Font = New System.Drawing.Font("Century Gothic", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblLimpar.Location = New System.Drawing.Point(248, 47)
         Me.lblLimpar.Name = "lblLimpar"
-        Me.lblLimpar.Size = New System.Drawing.Size(66, 13)
+        Me.lblLimpar.Size = New System.Drawing.Size(74, 16)
         Me.lblLimpar.TabIndex = 67
         Me.lblLimpar.Text = "Limpar Tudo"
         '
         'lblCadastrar
         '
         Me.lblCadastrar.AutoSize = True
-        Me.lblCadastrar.Location = New System.Drawing.Point(171, 49)
+        Me.lblCadastrar.Font = New System.Drawing.Font("Century Gothic", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblCadastrar.Location = New System.Drawing.Point(170, 49)
         Me.lblCadastrar.Name = "lblCadastrar"
-        Me.lblCadastrar.Size = New System.Drawing.Size(52, 13)
+        Me.lblCadastrar.Size = New System.Drawing.Size(63, 16)
         Me.lblCadastrar.TabIndex = 66
         Me.lblCadastrar.Text = "Cadastrar"
         '
@@ -141,9 +144,10 @@ Partial Class tiposPagamento
         'lblAlterar
         '
         Me.lblAlterar.AutoSize = True
+        Me.lblAlterar.Font = New System.Drawing.Font("Century Gothic", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lblAlterar.Location = New System.Drawing.Point(160, 49)
         Me.lblAlterar.Name = "lblAlterar"
-        Me.lblAlterar.Size = New System.Drawing.Size(79, 13)
+        Me.lblAlterar.Size = New System.Drawing.Size(86, 16)
         Me.lblAlterar.TabIndex = 70
         Me.lblAlterar.Text = "Alterar Registro"
         Me.lblAlterar.Visible = False
@@ -151,9 +155,10 @@ Partial Class tiposPagamento
         'lblExcluir
         '
         Me.lblExcluir.AutoSize = True
+        Me.lblExcluir.Font = New System.Drawing.Font("Century Gothic", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lblExcluir.Location = New System.Drawing.Point(248, 49)
         Me.lblExcluir.Name = "lblExcluir"
-        Me.lblExcluir.Size = New System.Drawing.Size(80, 13)
+        Me.lblExcluir.Size = New System.Drawing.Size(85, 16)
         Me.lblExcluir.TabIndex = 68
         Me.lblExcluir.Text = "Excluir Registro"
         Me.lblExcluir.Visible = False
@@ -197,16 +202,6 @@ Partial Class tiposPagamento
         Me.txtCodigo.Size = New System.Drawing.Size(320, 23)
         Me.txtCodigo.TabIndex = 15
         '
-        'botAlterar
-        '
-        Me.botAlterar.Image = Global.Sistema_Matrix.My.Resources.Resources.alterar
-        Me.botAlterar.Location = New System.Drawing.Point(176, 6)
-        Me.botAlterar.Name = "botAlterar"
-        Me.botAlterar.Size = New System.Drawing.Size(40, 40)
-        Me.botAlterar.TabIndex = 63
-        Me.botAlterar.UseVisualStyleBackColor = True
-        Me.botAlterar.Visible = False
-        '
         'botExcluir
         '
         Me.botExcluir.Image = Global.Sistema_Matrix.My.Resources.Resources.excluir
@@ -236,6 +231,16 @@ Partial Class tiposPagamento
         Me.botLimpar.Size = New System.Drawing.Size(40, 40)
         Me.botLimpar.TabIndex = 62
         Me.botLimpar.UseVisualStyleBackColor = True
+        '
+        'botAlterar
+        '
+        Me.botAlterar.Image = Global.Sistema_Matrix.My.Resources.Resources.alterar
+        Me.botAlterar.Location = New System.Drawing.Point(176, 6)
+        Me.botAlterar.Name = "botAlterar"
+        Me.botAlterar.Size = New System.Drawing.Size(40, 40)
+        Me.botAlterar.TabIndex = 63
+        Me.botAlterar.UseVisualStyleBackColor = True
+        Me.botAlterar.Visible = False
         '
         'tabConsulta
         '
@@ -295,6 +300,7 @@ Partial Class tiposPagamento
         Me.Controls.Add(Me.PictureBox1)
         Me.Controls.Add(Me.abaTiposPagamento)
         Me.Controls.Add(Me.lblTitulo)
+        Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.Name = "tiposPagamento"
         Me.Text = "Tipos de Pagamento"
         Me.abaTiposPagamento.ResumeLayout(False)

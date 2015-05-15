@@ -22,6 +22,7 @@ Partial Class Usuario
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(Usuario))
         Me.txtUsuario = New System.Windows.Forms.TextBox()
         Me.txtSenha = New System.Windows.Forms.TextBox()
         Me.txtConfirmaSenha = New System.Windows.Forms.TextBox()
@@ -163,6 +164,7 @@ Partial Class Usuario
         Me.Controls.Add(Me.txtConfirmaSenha)
         Me.Controls.Add(Me.txtSenha)
         Me.Controls.Add(Me.txtUsuario)
+        Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.Name = "Usuario"
         Me.Text = "Usuario"
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()

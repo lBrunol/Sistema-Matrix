@@ -894,6 +894,32 @@
             </Mappings>
             <Sources />
           </TableAdapter>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="relOrdensServicoTableAdapter" GeneratorDataComponentClassName="relOrdensServicoTableAdapter" Name="relOrdensServico" UserDataComponentName="relOrdensServicoTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="conexaoBanco (MySettings)" DbObjectType="Unknown" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT        ordemServico.ordCodigo, ordemServico.ordOcorrencia, ordemServico.ordDataAbertura, ordemServico.ordDataFechamento, ordemServico.ordValorTotal, 
+                         cliente.cliNome, funcionarios.funNome
+FROM            ((ordemServico INNER JOIN
+                         cliente ON ordemServico.cliCodigo = cliente.cliCodigo) INNER JOIN
+                         funcionarios ON ordemServico.funMatricula = funcionarios.funMatricula)</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="ordCodigo" DataSetColumn="ordCodigo" />
+              <Mapping SourceColumn="ordOcorrencia" DataSetColumn="ordOcorrencia" />
+              <Mapping SourceColumn="ordDataAbertura" DataSetColumn="ordDataAbertura" />
+              <Mapping SourceColumn="ordDataFechamento" DataSetColumn="ordDataFechamento" />
+              <Mapping SourceColumn="ordValorTotal" DataSetColumn="ordValorTotal" />
+              <Mapping SourceColumn="cliNome" DataSetColumn="cliNome" />
+              <Mapping SourceColumn="funNome" DataSetColumn="funNome" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
         </Tables>
         <Sources />
       </DataSource>
@@ -1293,6 +1319,37 @@
                 </xs:simpleType>
               </xs:element>
               <xs:element name="usrAdministrador" msprop:Generator_ColumnVarNameInTable="columnusrAdministrador" msprop:Generator_ColumnPropNameInRow="usrAdministrador" msprop:Generator_ColumnPropNameInTable="usrAdministradorColumn" msprop:Generator_UserColumnName="usrAdministrador" type="xs:boolean" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="relOrdensServico" msprop:Generator_TableClassName="relOrdensServicoDataTable" msprop:Generator_TableVarName="tablerelOrdensServico" msprop:Generator_RowChangedName="relOrdensServicoRowChanged" msprop:Generator_TablePropName="relOrdensServico" msprop:Generator_RowDeletingName="relOrdensServicoRowDeleting" msprop:Generator_RowChangingName="relOrdensServicoRowChanging" msprop:Generator_RowEvHandlerName="relOrdensServicoRowChangeEventHandler" msprop:Generator_RowDeletedName="relOrdensServicoRowDeleted" msprop:Generator_RowClassName="relOrdensServicoRow" msprop:Generator_UserTableName="relOrdensServico" msprop:Generator_RowEvArgName="relOrdensServicoRowChangeEvent">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="ordCodigo" msprop:Generator_ColumnVarNameInTable="columnordCodigo" msprop:Generator_ColumnPropNameInRow="ordCodigo" msprop:Generator_ColumnPropNameInTable="ordCodigoColumn" msprop:Generator_UserColumnName="ordCodigo" type="xs:int" minOccurs="0" />
+              <xs:element name="ordOcorrencia" msprop:Generator_ColumnVarNameInTable="columnordOcorrencia" msprop:Generator_ColumnPropNameInRow="ordOcorrencia" msprop:Generator_ColumnPropNameInTable="ordOcorrenciaColumn" msprop:Generator_UserColumnName="ordOcorrencia" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="536870910" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="ordDataAbertura" msprop:Generator_ColumnVarNameInTable="columnordDataAbertura" msprop:Generator_ColumnPropNameInRow="ordDataAbertura" msprop:Generator_ColumnPropNameInTable="ordDataAberturaColumn" msprop:Generator_UserColumnName="ordDataAbertura" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="ordDataFechamento" msprop:Generator_ColumnVarNameInTable="columnordDataFechamento" msprop:Generator_ColumnPropNameInRow="ordDataFechamento" msprop:Generator_ColumnPropNameInTable="ordDataFechamentoColumn" msprop:Generator_UserColumnName="ordDataFechamento" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="ordValorTotal" msprop:Generator_ColumnVarNameInTable="columnordValorTotal" msprop:Generator_ColumnPropNameInRow="ordValorTotal" msprop:Generator_ColumnPropNameInTable="ordValorTotalColumn" msprop:Generator_UserColumnName="ordValorTotal" type="xs:decimal" minOccurs="0" />
+              <xs:element name="cliNome" msprop:Generator_ColumnVarNameInTable="columncliNome" msprop:Generator_ColumnPropNameInRow="cliNome" msprop:Generator_ColumnPropNameInTable="cliNomeColumn" msprop:Generator_UserColumnName="cliNome" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="255" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="funNome" msprop:Generator_ColumnVarNameInTable="columnfunNome" msprop:Generator_ColumnPropNameInRow="funNome" msprop:Generator_ColumnPropNameInTable="funNomeColumn" msprop:Generator_UserColumnName="funNome" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="255" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
             </xs:sequence>
           </xs:complexType>
         </xs:element>

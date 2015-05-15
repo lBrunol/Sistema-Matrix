@@ -24,6 +24,7 @@ Partial Class ConsultaUsuarios
     Private Sub InitializeComponent()
         Dim DataGridViewCellStyle1 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Dim DataGridViewCellStyle2 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(ConsultaUsuarios))
         Me.tabUsuarios = New System.Windows.Forms.TabControl()
         Me.tabAlteracao = New System.Windows.Forms.TabPage()
         Me.chkAdministrador = New System.Windows.Forms.CheckBox()
@@ -243,6 +244,7 @@ Partial Class ConsultaUsuarios
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(523, 327)
         Me.Controls.Add(Me.tabUsuarios)
+        Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.Name = "ConsultaUsuarios"
         Me.Text = "ConsultaUsuarios"
         Me.tabUsuarios.ResumeLayout(False)

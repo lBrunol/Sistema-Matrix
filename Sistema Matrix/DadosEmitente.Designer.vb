@@ -54,18 +54,16 @@ Partial Class DadosEmitente
         '
         Me.lblTitulo.AutoSize = True
         Me.lblTitulo.Font = New System.Drawing.Font("Century Gothic", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblTitulo.Location = New System.Drawing.Point(11, 11)
-        Me.lblTitulo.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.lblTitulo.Location = New System.Drawing.Point(8, 9)
         Me.lblTitulo.Name = "lblTitulo"
-        Me.lblTitulo.Size = New System.Drawing.Size(198, 23)
+        Me.lblTitulo.Size = New System.Drawing.Size(160, 21)
         Me.lblTitulo.TabIndex = 12
         Me.lblTitulo.Text = "Dados do Emitente"
         '
         'PictureBox1
         '
         Me.PictureBox1.BackgroundImage = CType(resources.GetObject("PictureBox1.BackgroundImage"), System.Drawing.Image)
-        Me.PictureBox1.Location = New System.Drawing.Point(16, 50)
-        Me.PictureBox1.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.PictureBox1.Location = New System.Drawing.Point(12, 41)
         Me.PictureBox1.Name = "PictureBox1"
         Me.PictureBox1.Size = New System.Drawing.Size(90, 90)
         Me.PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize
@@ -76,115 +74,104 @@ Partial Class DadosEmitente
         '
         Me.lblCnpjCpfTomador.AutoSize = True
         Me.lblCnpjCpfTomador.Font = New System.Drawing.Font("Century Gothic", 9.75!)
-        Me.lblCnpjCpfTomador.Location = New System.Drawing.Point(12, 177)
-        Me.lblCnpjCpfTomador.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.lblCnpjCpfTomador.Location = New System.Drawing.Point(9, 144)
         Me.lblCnpjCpfTomador.Name = "lblCnpjCpfTomador"
-        Me.lblCnpjCpfTomador.Size = New System.Drawing.Size(136, 21)
+        Me.lblCnpjCpfTomador.Size = New System.Drawing.Size(106, 17)
         Me.lblCnpjCpfTomador.TabIndex = 16
         Me.lblCnpjCpfTomador.Text = "Nome Fantasia"
         '
         'txtNomeFantasia
         '
         Me.txtNomeFantasia.Font = New System.Drawing.Font("Century Gothic", 9.75!)
-        Me.txtNomeFantasia.Location = New System.Drawing.Point(16, 202)
-        Me.txtNomeFantasia.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.txtNomeFantasia.Location = New System.Drawing.Point(12, 164)
         Me.txtNomeFantasia.Multiline = True
         Me.txtNomeFantasia.Name = "txtNomeFantasia"
-        Me.txtNomeFantasia.Size = New System.Drawing.Size(421, 27)
+        Me.txtNomeFantasia.Size = New System.Drawing.Size(317, 23)
         Me.txtNomeFantasia.TabIndex = 1
         '
         'Label1
         '
         Me.Label1.AutoSize = True
         Me.Label1.Font = New System.Drawing.Font("Century Gothic", 9.75!)
-        Me.Label1.Location = New System.Drawing.Point(12, 240)
-        Me.Label1.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.Label1.Location = New System.Drawing.Point(9, 195)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(115, 21)
+        Me.Label1.Size = New System.Drawing.Size(91, 17)
         Me.Label1.TabIndex = 18
         Me.Label1.Text = "Razão Social"
         '
         'txtRazaoSocial
         '
         Me.txtRazaoSocial.Font = New System.Drawing.Font("Century Gothic", 9.75!)
-        Me.txtRazaoSocial.Location = New System.Drawing.Point(16, 265)
-        Me.txtRazaoSocial.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.txtRazaoSocial.Location = New System.Drawing.Point(12, 215)
         Me.txtRazaoSocial.Multiline = True
         Me.txtRazaoSocial.Name = "txtRazaoSocial"
-        Me.txtRazaoSocial.Size = New System.Drawing.Size(421, 27)
+        Me.txtRazaoSocial.Size = New System.Drawing.Size(317, 23)
         Me.txtRazaoSocial.TabIndex = 2
         '
         'Label2
         '
         Me.Label2.AutoSize = True
         Me.Label2.Font = New System.Drawing.Font("Century Gothic", 9.75!)
-        Me.Label2.Location = New System.Drawing.Point(12, 306)
-        Me.Label2.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.Label2.Location = New System.Drawing.Point(9, 249)
         Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(171, 21)
+        Me.Label2.Size = New System.Drawing.Size(131, 17)
         Me.Label2.TabIndex = 20
         Me.Label2.Text = "Inscrição Municipal"
         '
         'txtIM
         '
         Me.txtIM.Font = New System.Drawing.Font("Century Gothic", 9.75!)
-        Me.txtIM.Location = New System.Drawing.Point(16, 331)
-        Me.txtIM.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.txtIM.Location = New System.Drawing.Point(12, 269)
         Me.txtIM.Multiline = True
         Me.txtIM.Name = "txtIM"
-        Me.txtIM.Size = New System.Drawing.Size(207, 27)
+        Me.txtIM.Size = New System.Drawing.Size(156, 23)
         Me.txtIM.TabIndex = 3
         '
         'Label3
         '
         Me.Label3.AutoSize = True
         Me.Label3.Font = New System.Drawing.Font("Century Gothic", 9.75!)
-        Me.Label3.Location = New System.Drawing.Point(244, 306)
-        Me.Label3.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.Label3.Location = New System.Drawing.Point(183, 249)
         Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(162, 21)
+        Me.Label3.Size = New System.Drawing.Size(124, 17)
         Me.Label3.TabIndex = 22
         Me.Label3.Text = "Inscrição Estadual"
         '
         'txtIE
         '
         Me.txtIE.Font = New System.Drawing.Font("Century Gothic", 9.75!)
-        Me.txtIE.Location = New System.Drawing.Point(248, 331)
-        Me.txtIE.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.txtIE.Location = New System.Drawing.Point(186, 269)
         Me.txtIE.Multiline = True
         Me.txtIE.Name = "txtIE"
-        Me.txtIE.Size = New System.Drawing.Size(189, 27)
+        Me.txtIE.Size = New System.Drawing.Size(143, 23)
         Me.txtIE.TabIndex = 4
         '
         'Label4
         '
         Me.Label4.AutoSize = True
         Me.Label4.Font = New System.Drawing.Font("Century Gothic", 9.75!)
-        Me.Label4.Location = New System.Drawing.Point(12, 374)
-        Me.Label4.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.Label4.Location = New System.Drawing.Point(9, 304)
         Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(90, 21)
+        Me.Label4.Size = New System.Drawing.Size(69, 17)
         Me.Label4.TabIndex = 24
         Me.Label4.Text = "Endereço"
         '
         'txtEndereco
         '
         Me.txtEndereco.Font = New System.Drawing.Font("Century Gothic", 9.75!)
-        Me.txtEndereco.Location = New System.Drawing.Point(16, 399)
-        Me.txtEndereco.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.txtEndereco.Location = New System.Drawing.Point(12, 324)
         Me.txtEndereco.Multiline = True
         Me.txtEndereco.Name = "txtEndereco"
-        Me.txtEndereco.Size = New System.Drawing.Size(421, 27)
+        Me.txtEndereco.Size = New System.Drawing.Size(317, 23)
         Me.txtEndereco.TabIndex = 5
         '
         'Label5
         '
         Me.Label5.AutoSize = True
         Me.Label5.Font = New System.Drawing.Font("Century Gothic", 9.75!)
-        Me.Label5.Location = New System.Drawing.Point(244, 443)
-        Me.Label5.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.Label5.Location = New System.Drawing.Point(183, 360)
         Me.Label5.Name = "Label5"
-        Me.Label5.Size = New System.Drawing.Size(80, 21)
+        Me.Label5.Size = New System.Drawing.Size(61, 17)
         Me.Label5.TabIndex = 28
         Me.Label5.Text = "Telefone"
         '
@@ -192,30 +179,27 @@ Partial Class DadosEmitente
         '
         Me.Label6.AutoSize = True
         Me.Label6.Font = New System.Drawing.Font("Century Gothic", 9.75!)
-        Me.Label6.Location = New System.Drawing.Point(12, 443)
-        Me.Label6.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.Label6.Location = New System.Drawing.Point(9, 360)
         Me.Label6.Name = "Label6"
-        Me.Label6.Size = New System.Drawing.Size(43, 21)
+        Me.Label6.Size = New System.Drawing.Size(34, 17)
         Me.Label6.TabIndex = 26
         Me.Label6.Text = "CEP"
         '
         'lblCadastrar
         '
         Me.lblCadastrar.AutoSize = True
-        Me.lblCadastrar.Location = New System.Drawing.Point(265, 64)
-        Me.lblCadastrar.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.lblCadastrar.Location = New System.Drawing.Point(199, 52)
         Me.lblCadastrar.Name = "lblCadastrar"
-        Me.lblCadastrar.Size = New System.Drawing.Size(70, 17)
+        Me.lblCadastrar.Size = New System.Drawing.Size(52, 13)
         Me.lblCadastrar.TabIndex = 63
         Me.lblCadastrar.Text = "Cadastrar"
         '
         'lblAlterar
         '
         Me.lblAlterar.AutoSize = True
-        Me.lblAlterar.Location = New System.Drawing.Point(345, 64)
-        Me.lblAlterar.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.lblAlterar.Location = New System.Drawing.Point(259, 52)
         Me.lblAlterar.Name = "lblAlterar"
-        Me.lblAlterar.Size = New System.Drawing.Size(107, 17)
+        Me.lblAlterar.Size = New System.Drawing.Size(79, 13)
         Me.lblAlterar.TabIndex = 64
         Me.lblAlterar.Text = "Alterar Registro"
         Me.lblAlterar.Visible = False
@@ -223,10 +207,9 @@ Partial Class DadosEmitente
         'botAlterar
         '
         Me.botAlterar.Image = Global.Sistema_Matrix.My.Resources.Resources.alterar
-        Me.botAlterar.Location = New System.Drawing.Point(371, 11)
-        Me.botAlterar.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.botAlterar.Location = New System.Drawing.Point(278, 9)
         Me.botAlterar.Name = "botAlterar"
-        Me.botAlterar.Size = New System.Drawing.Size(53, 49)
+        Me.botAlterar.Size = New System.Drawing.Size(40, 40)
         Me.botAlterar.TabIndex = 62
         Me.botAlterar.UseVisualStyleBackColor = True
         Me.botAlterar.Visible = False
@@ -235,30 +218,27 @@ Partial Class DadosEmitente
         '
         Me.botCadastrar.Image = Global.Sistema_Matrix.My.Resources.Resources.salvar
         Me.botCadastrar.ImageAlign = System.Drawing.ContentAlignment.TopLeft
-        Me.botCadastrar.Location = New System.Drawing.Point(272, 11)
-        Me.botCadastrar.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.botCadastrar.Location = New System.Drawing.Point(204, 9)
         Me.botCadastrar.Name = "botCadastrar"
-        Me.botCadastrar.Size = New System.Drawing.Size(53, 49)
+        Me.botCadastrar.Size = New System.Drawing.Size(40, 40)
         Me.botCadastrar.TabIndex = 61
         Me.botCadastrar.UseVisualStyleBackColor = True
         '
         'lblLimpar
         '
         Me.lblLimpar.AutoSize = True
-        Me.lblLimpar.Location = New System.Drawing.Point(351, 64)
-        Me.lblLimpar.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.lblLimpar.Location = New System.Drawing.Point(263, 52)
         Me.lblLimpar.Name = "lblLimpar"
-        Me.lblLimpar.Size = New System.Drawing.Size(88, 17)
+        Me.lblLimpar.Size = New System.Drawing.Size(66, 13)
         Me.lblLimpar.TabIndex = 67
         Me.lblLimpar.Text = "Limpar Tudo"
         '
         'lblExcluir
         '
         Me.lblExcluir.AutoSize = True
-        Me.lblExcluir.Location = New System.Drawing.Point(345, 151)
-        Me.lblExcluir.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.lblExcluir.Location = New System.Drawing.Point(259, 123)
         Me.lblExcluir.Name = "lblExcluir"
-        Me.lblExcluir.Size = New System.Drawing.Size(106, 17)
+        Me.lblExcluir.Size = New System.Drawing.Size(80, 13)
         Me.lblExcluir.TabIndex = 68
         Me.lblExcluir.Text = "Excluir Registro"
         Me.lblExcluir.Visible = False
@@ -266,10 +246,9 @@ Partial Class DadosEmitente
         'botExcluir
         '
         Me.botExcluir.Image = Global.Sistema_Matrix.My.Resources.Resources.excluir
-        Me.botExcluir.Location = New System.Drawing.Point(371, 98)
-        Me.botExcluir.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.botExcluir.Location = New System.Drawing.Point(278, 80)
         Me.botExcluir.Name = "botExcluir"
-        Me.botExcluir.Size = New System.Drawing.Size(53, 49)
+        Me.botExcluir.Size = New System.Drawing.Size(40, 40)
         Me.botExcluir.TabIndex = 66
         Me.botExcluir.UseVisualStyleBackColor = True
         Me.botExcluir.Visible = False
@@ -277,33 +256,34 @@ Partial Class DadosEmitente
         'botLimpar
         '
         Me.botLimpar.Image = Global.Sistema_Matrix.My.Resources.Resources.limpar
-        Me.botLimpar.Location = New System.Drawing.Point(371, 11)
-        Me.botLimpar.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.botLimpar.Location = New System.Drawing.Point(278, 9)
         Me.botLimpar.Name = "botLimpar"
-        Me.botLimpar.Size = New System.Drawing.Size(53, 49)
+        Me.botLimpar.Size = New System.Drawing.Size(40, 40)
         Me.botLimpar.TabIndex = 65
         Me.botLimpar.UseVisualStyleBackColor = True
         '
         'mtxCep
         '
-        Me.mtxCep.Location = New System.Drawing.Point(16, 468)
+        Me.mtxCep.Location = New System.Drawing.Point(12, 380)
+        Me.mtxCep.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.mtxCep.Name = "mtxCep"
-        Me.mtxCep.Size = New System.Drawing.Size(189, 22)
+        Me.mtxCep.Size = New System.Drawing.Size(143, 20)
         Me.mtxCep.TabIndex = 69
         '
         'mtxTelefone
         '
-        Me.mtxTelefone.Location = New System.Drawing.Point(248, 468)
+        Me.mtxTelefone.Location = New System.Drawing.Point(186, 380)
+        Me.mtxTelefone.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.mtxTelefone.Name = "mtxTelefone"
-        Me.mtxTelefone.Size = New System.Drawing.Size(189, 22)
+        Me.mtxTelefone.Size = New System.Drawing.Size(143, 20)
         Me.mtxTelefone.TabIndex = 70
         '
         'DadosEmitente
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.SystemColors.Window
-        Me.ClientSize = New System.Drawing.Size(452, 517)
+        Me.ClientSize = New System.Drawing.Size(339, 420)
         Me.Controls.Add(Me.mtxTelefone)
         Me.Controls.Add(Me.mtxCep)
         Me.Controls.Add(Me.lblLimpar)
@@ -328,7 +308,7 @@ Partial Class DadosEmitente
         Me.Controls.Add(Me.txtNomeFantasia)
         Me.Controls.Add(Me.PictureBox1)
         Me.Controls.Add(Me.lblTitulo)
-        Me.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.Name = "DadosEmitente"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "Dados do Emitente"

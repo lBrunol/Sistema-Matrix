@@ -138,6 +138,7 @@ Partial Class Login
         Me.Controls.Add(Me.txtUsuario)
         Me.Controls.Add(Me.Label2)
         Me.Controls.Add(Me.Label1)
+        Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.MaximumSize = New System.Drawing.Size(330, 210)
         Me.MinimumSize = New System.Drawing.Size(330, 210)
         Me.Name = "Login"

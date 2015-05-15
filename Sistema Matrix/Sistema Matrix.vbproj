@@ -64,8 +64,7 @@
     <ApplicationManifest>My Project\app.manifest</ApplicationManifest>
   </PropertyGroup>
   <PropertyGroup>
-    <ApplicationIcon>
-    </ApplicationIcon>
+    <ApplicationIcon>favicon.ico</ApplicationIcon>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="Microsoft.ReportViewer.Common, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91" />
@@ -105,6 +104,9 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>bancoDataSet.xsd</DependentUpon>
     </Compile>
+    <Compile Include="bancoDataSet.vb">
+      <DependentUpon>bancoDataSet.xsd</DependentUpon>
+    </Compile>
     <Compile Include="ConsultaUsuarios.Designer.vb">
       <DependentUpon>ConsultaUsuarios.vb</DependentUpon>
     </Compile>
@@ -133,6 +135,12 @@
       <DependentUpon>Confirma Nota Fiscal.vb</DependentUpon>
     </Compile>
     <Compile Include="Confirma Nota Fiscal.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="relOrdensServico.Designer.vb">
+      <DependentUpon>relOrdensServico.vb</DependentUpon>
+    </Compile>
+    <Compile Include="relOrdensServico.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Servico.Designer.vb">
@@ -221,8 +229,12 @@
     <EmbeddedResource Include="Confirma Nota Fiscal.resx">
       <DependentUpon>Confirma Nota Fiscal.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="relOrdensServico.resx">
+      <DependentUpon>relOrdensServico.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Report1.rdlc" />
     <EmbeddedResource Include="Report2.rdlc" />
+    <EmbeddedResource Include="Report3.rdlc" />
     <EmbeddedResource Include="Servico.resx">
       <DependentUpon>Servico.vb</DependentUpon>
     </EmbeddedResource>
@@ -343,10 +355,14 @@
     <WCFMetadata Include="Service References\" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\botao-ajuda.gif" />
+    <None Include="bin\Debug\icones\botao-ajuda.gif" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="bin\Debug\icones\botao-ajuda.gif" />
+    <Content Include="favicon.ico" />
+    <Content Include="logo.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Resources\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

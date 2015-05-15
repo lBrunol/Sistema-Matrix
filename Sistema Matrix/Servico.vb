@@ -2,29 +2,32 @@
 Imports System.Data
 Imports Sistema_Matrix.ConexaoAccess
 
-Public Class formConsultaUsuarios
+Public Class formServicos
     'Declaração de variáveis públicas
     Public tabela As DataTable
     Public leitor As OleDbDataReader
     Public strsql As String
     Public valorCodServico As Integer
     Public objBanco As New ConexaoAccess
+    Public varNome As String
+    Public varValor As String
+    Public varDescricao As String
+    Public valRetornado As Integer
+    Public varCodigo As Integer
+    Public varAliquota As Integer
     Private Sub formServicos_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+
         txtNome.Focus()
         valorCodServico = atribuiCodigo("svcCodigo", "servicos")
         txtCodigoServico.Text = valorCodServico
+
+        strsql = "SELECT svcCodigo as Código, svcNome as Nome, svcValorHora as Valor, svcDescricao as Descrição FROM servicos"
+        'Procedimento da classe conexão access que carrega os dados no datagrid
+        objBanco.carregaDataGrid(dtgConsultaServicos, strsql)
+
     End Sub
     Private Sub botCadastrar_click(sender As Object, e As EventArgs) Handles botCadastrar.Click
-        'Variáveis para armazenar os campos de texto
-        Dim varNome As String
-        Dim varValor As String
-        Dim varDescricao As String
-        Dim valRetornado As Integer
 
-        varNome = txtNome.Text
-        varValor = txtValor.Text
-        varDescricao = txtDescricao.Text
-        varValor = CInt(varValor)
         'Função que verifica se os campos obrigatórios estão vazios
         valRetornado = Funcoes.verificaVazio(Me)
 
@@ -32,12 +35,20 @@ Public Class formConsultaUsuarios
         If valRetornado = 0 Then
             'Abre conexão com banco de dados
             Try
+                'Variáveis para armazenar os campos de texto
+                varNome = txtNome.Text
+                varValor = CInt(txtValor.Text)
+                varDescricao = txtDescricao.Text
+                varCodigo = txtCodigo.Text
+                varAliquota = txtAliquota.Text
                 'Comando para inclusão dos dados
-                strsql = "INSERT INTO servicos(svcCodigo, svcNome, svcValorHora, svcDescricao, svcCodigoServico, svcAliquota) VALUES (" & _
-                    valorCodServico & " , '" & _
-                    varNome & "','" & _
-                    varValor & "','" & _
-                    varDescricao & "', " & 1 & ", " & 5 & ")"
+                strsql = "INSERT INTO servicos(svcCodigo, svcCodigoServico, svcAliquota, svcNome, svcValorHora, svcDescricao) VALUES (" & _
+                    valorCodServico & " , " & _
+                    varCodigo & ", " & _
+                    varAliquota & ", '" & _
+                    varNome & "', " & _
+                    varValor & ", '" & _
+                    varDescricao & "')"
                 objBanco.ExecutaQuery(strsql)
                 MsgBox("Dados cadastrados com sucesso", vbInformation, "Aviso")
                 Funcoes.Limpar(Me)
@@ -86,10 +97,11 @@ Public Class formConsultaUsuarios
             botModoNovo.Visible = True
             lblInserir.Visible = True
 
-            'Verifica qual dos radio buttons estão marcados e carrega os valores do select nas textbox
             strsql = "SELECT servicos.* FROM servicos WHERE svcCodigo = " & valorCodServico
             leitor = objBanco.ExecutaDataRead(strsql)
             leitor.Read()
+            txtCodigo.Text = leitor.Item(4).ToString
+            txtAliquota.Text = leitor.Item(5).ToString
             txtNome.Text = leitor.Item(1).ToString
             txtValor.Text = leitor.Item(2).ToString
             txtDescricao.Text = leitor.Item(3).ToString
@@ -118,37 +130,25 @@ Public Class formConsultaUsuarios
         botModoNovo.Visible = False
         lblInserir.Visible = False
         Limpar(Me)
+        valorCodServico = atribuiCodigo("svcCodigo", "servicos")
+        txtCodigoServico.Text = valorCodServico
     End Sub
 
     Private Sub tabConsultaClientes_Enter(sender As Object, e As EventArgs) Handles tabConsultaServicos.Enter
-        dtgConsultaServicos.Rows.Clear()
+        'dtgConsultaServicos.Rows.Clear()
 
         Try
 
-            'Adiciona o cabeçalho das colunas
-            dtgConsultaServicos.ColumnCount = 4
-            dtgConsultaServicos.Columns(0).Name = "Codigo"
-            dtgConsultaServicos.Columns(1).Name = "Nome"
-            dtgConsultaServicos.Columns(2).Name = "Valor"
-            dtgConsultaServicos.Columns(3).Name = "Descrição"
+            strsql = "SELECT svcCodigo as Código, svcNome as Nome, svcValorHora as Valor, svcDescricao as Descrição FROM servicos"
+            'Procedimento da classe conexão access que carrega os dados no datagrid
+            objBanco.carregaDataGrid(dtgConsultaServicos, strsql)
+
 
             'Seta a largura das colunas
             dtgConsultaServicos.Columns(0).Width = "40"
             dtgConsultaServicos.Columns(1).Width = "160"
             dtgConsultaServicos.Columns(2).Width = "50"
             dtgConsultaServicos.Columns(3).Width = "170"
-
-            'Início da operação de consulta
-            tabela = New DataTable()
-
-            strsql = "SELECT servicos.* FROM servicos"
-            tabela = objBanco.ExecutaDataTable(strsql)
-            If tabela.Rows.Count > 0 Then
-                Dim i As Integer = 0
-                For i = 0 To tabela.Rows.Count - 1
-                    dtgConsultaServicos.Rows.Add(tabela.Rows(i)("svcCodigo"), tabela.Rows(i)("svcNome"), tabela.Rows(i)("svcValor"), tabela.Rows(i)("svcDescricao"))
-                Next
-            End If
 
         Catch exc As SqlClient.SqlException
             MsgBox("Erro com banco de dados" & vbCrLf & Err.Description, vbCritical, "Erro com Banco de dados")
@@ -192,29 +192,36 @@ Public Class formConsultaUsuarios
     End Sub
 
     Private Sub botAlterar_Click(sender As Object, e As EventArgs) Handles botAlterar.Click
-        'Variáveis para armazenar os campos de texto
-        Dim varNome As String
-        Dim varValor As String
-        Dim varDescricao As String
-        Dim valRetornado As Integer
 
-        varNome = txtNome.Text
-        varValor = txtValor.Text
-        varDescricao = txtDescricao.Text
-
-        varValor = Replace(txtValor.Text, "R$", "")
-        varValor = Replace(varValor, ",", ".")
         Try
             'Função que verifica se os campos obrigatórios estão vazios
             valRetornado = Funcoes.verificaVazio(Me)
 
             'Testa se o valor retornado pela função para dar continuidade aos comandos
             If valRetornado = 0 Then
+
+                varNome = txtNome.Text
+                varDescricao = txtDescricao.Text
+                varCodigo = txtCodigo.Text
+                varAliquota = txtAliquota.Text
+                varValor = Replace(txtValor.Text, "R$", "")
+                varValor = Replace(varValor, ",", ".")
+
                 'Comando SQL
-                strsql = "UPDATE servicos SET servicos.svcNome = '" & varNome & "', servicos.svcValor = " & varValor & ", servicos.svcDescricao = '" & varDescricao & "' WHERE servicos.svcCodigo = " & valorCodServico
+                strsql = "UPDATE servicos SET servicos.svcCodigoServico = " & varCodigo & ", servicos.svcAliquota = " & varAliquota & ", servicos.svcNome = '" & varNome & "', servicos.svcValorHora = " & varValor & ", servicos.svcDescricao = '" & varDescricao & "' WHERE servicos.svcCodigo = " & valorCodServico
                 objBanco.ExecutaQuery(strsql)
                 MsgBox("Dados alterados com sucesso", vbInformation, "Sucesso")
                 Funcoes.Limpar(Me)
+                botCadastrar.Visible = True
+                lblCadastrar.Visible = True
+                botLimpar.Visible = True
+                lblLimpar.Visible = True
+                botAlterar.Visible = False
+                lblAlterar.Visible = False
+                botExcluir.Visible = False
+                lblExcluir.Visible = False
+                botModoNovo.Visible = False
+                lblInserir.Visible = False
                 valorCodServico = atribuiCodigo("svcCodigo", "servicos")
                 txtCodigoServico.Text = valorCodServico
             End If
@@ -245,10 +252,5 @@ Public Class formConsultaUsuarios
 
     Private Sub formConsultaUsuarios_FormClosed(sender As Object, e As FormClosedEventArgs) Handles MyBase.FormClosed
         Funcoes.HabilitaBotaoLogOff()
-    End Sub
-
-
-    Private Sub tabCadastroServicos_Click(sender As Object, e As EventArgs) Handles tabCadastroServicos.Click
-
     End Sub
 End Class

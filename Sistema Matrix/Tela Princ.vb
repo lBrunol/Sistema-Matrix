@@ -37,7 +37,7 @@ Public Class telaPrincipal
     End Sub
 
     Private Sub botServicos_Click(sender As Object, e As EventArgs) Handles botServicos.Click
-        abreFormularios(formConsultaUsuarios)
+        abreFormularios(formServicos)
     End Sub
 
     Private Sub botFuncionario_Click(sender As Object, e As EventArgs) Handles botFuncionario.Click
@@ -80,7 +80,7 @@ Public Class telaPrincipal
     End Sub
 
     Private Sub ServiçosToolStripMenuItem_Click(sender As Object, e As EventArgs)
-        abreFormularios(formConsultaUsuarios)
+        abreFormularios(formServicos)
     End Sub
 
     Private Sub menuAlteracaoUsuario_Click(sender As Object, e As EventArgs)

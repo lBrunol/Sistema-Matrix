@@ -1095,6 +1095,7 @@ Partial Class Form6
         Me.ClientSize = New System.Drawing.Size(880, 683)
         Me.Controls.Add(Me.tabOrdemServico)
         Me.Font = New System.Drawing.Font("Century Gothic", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
         Me.MaximumSize = New System.Drawing.Size(896, 722)
         Me.Name = "Form6"

@@ -722,6 +722,7 @@ Partial Class confirmaNotaFiscal
         Me.Controls.Add(Me.grpPrestadorServico)
         Me.Controls.Add(Me.PictureBox1)
         Me.Controls.Add(Me.lblTitulo)
+        Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.KeyPreview = True
         Me.Name = "confirmaNotaFiscal"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen

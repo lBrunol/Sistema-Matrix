@@ -311,6 +311,7 @@ Partial Class telaPrincipal
         Me.Controls.Add(Me.txtBoasVindas)
         Me.Controls.Add(Me.FlowLayoutPanel1)
         Me.Controls.Add(Me.MenuStrip1)
+        Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.MainMenuStrip = Me.MenuStrip1
         Me.Name = "telaPrincipal"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
