@@ -1,5 +1,5 @@
 ﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
-Partial Class relOrdensServico
+Partial Class relContasReceber
     Inherits System.Windows.Forms.Form
 
     'Form overrides dispose to clean up the component list.
@@ -24,58 +24,58 @@ Partial Class relOrdensServico
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
         Dim ReportDataSource1 As Microsoft.Reporting.WinForms.ReportDataSource = New Microsoft.Reporting.WinForms.ReportDataSource()
-        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(relOrdensServico))
-        Me.relatorio = New Microsoft.Reporting.WinForms.ReportViewer()
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(relContasReceber))
+        Me.ReportViewer1 = New Microsoft.Reporting.WinForms.ReportViewer()
         Me.bancoMatrixDataSet = New Sistema_Matrix.bancoMatrixDataSet()
-        Me.relOrdensBindingSource = New System.Windows.Forms.BindingSource(Me.components)
-        Me.relOrdensTableAdapter = New Sistema_Matrix.bancoMatrixDataSetTableAdapters.relOrdensTableAdapter()
+        Me.relContasReceberBindingSource = New System.Windows.Forms.BindingSource(Me.components)
+        Me.relContasReceberTableAdapter = New Sistema_Matrix.bancoMatrixDataSetTableAdapters.relContasReceberTableAdapter()
         CType(Me.bancoMatrixDataSet, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.relOrdensBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.relContasReceberBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
-        'relatorio
+        'ReportViewer1
         '
-        Me.relatorio.Dock = System.Windows.Forms.DockStyle.Fill
-        ReportDataSource1.Name = "relOrdens"
-        ReportDataSource1.Value = Me.relOrdensBindingSource
-        Me.relatorio.LocalReport.DataSources.Add(ReportDataSource1)
-        Me.relatorio.LocalReport.ReportEmbeddedResource = "Sistema_Matrix.rltOrdensServico.rdlc"
-        Me.relatorio.Location = New System.Drawing.Point(0, 0)
-        Me.relatorio.Name = "relatorio"
-        Me.relatorio.Size = New System.Drawing.Size(1008, 684)
-        Me.relatorio.TabIndex = 0
+        Me.ReportViewer1.Dock = System.Windows.Forms.DockStyle.Fill
+        ReportDataSource1.Name = "relContasReceber"
+        ReportDataSource1.Value = Me.relContasReceberBindingSource
+        Me.ReportViewer1.LocalReport.DataSources.Add(ReportDataSource1)
+        Me.ReportViewer1.LocalReport.ReportEmbeddedResource = "Sistema_Matrix.rltContasReceber.rdlc"
+        Me.ReportViewer1.Location = New System.Drawing.Point(0, 0)
+        Me.ReportViewer1.Name = "ReportViewer1"
+        Me.ReportViewer1.Size = New System.Drawing.Size(1008, 684)
+        Me.ReportViewer1.TabIndex = 0
         '
         'bancoMatrixDataSet
         '
         Me.bancoMatrixDataSet.DataSetName = "bancoMatrixDataSet"
         Me.bancoMatrixDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
         '
-        'relOrdensBindingSource
+        'relContasReceberBindingSource
         '
-        Me.relOrdensBindingSource.DataMember = "relOrdens"
-        Me.relOrdensBindingSource.DataSource = Me.bancoMatrixDataSet
+        Me.relContasReceberBindingSource.DataMember = "relContasReceber"
+        Me.relContasReceberBindingSource.DataSource = Me.bancoMatrixDataSet
         '
-        'relOrdensTableAdapter
+        'relContasReceberTableAdapter
         '
-        Me.relOrdensTableAdapter.ClearBeforeFill = True
+        Me.relContasReceberTableAdapter.ClearBeforeFill = True
         '
-        'relOrdensServico
+        'relContasReceber
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(1008, 684)
-        Me.Controls.Add(Me.relatorio)
+        Me.Controls.Add(Me.ReportViewer1)
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
-        Me.Name = "relOrdensServico"
-        Me.Text = "Relatório de Ordens de Serviço"
+        Me.Name = "relContasReceber"
+        Me.Text = "Relatório de Contas a Receber"
         Me.WindowState = System.Windows.Forms.FormWindowState.Maximized
         CType(Me.bancoMatrixDataSet, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.relOrdensBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.relContasReceberBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
     End Sub
-    Friend WithEvents relatorio As Microsoft.Reporting.WinForms.ReportViewer
-    Friend WithEvents relOrdensBindingSource As System.Windows.Forms.BindingSource
+    Friend WithEvents ReportViewer1 As Microsoft.Reporting.WinForms.ReportViewer
+    Friend WithEvents relContasReceberBindingSource As System.Windows.Forms.BindingSource
     Friend WithEvents bancoMatrixDataSet As Sistema_Matrix.bancoMatrixDataSet
-    Friend WithEvents relOrdensTableAdapter As Sistema_Matrix.bancoMatrixDataSetTableAdapters.relOrdensTableAdapter
+    Friend WithEvents relContasReceberTableAdapter As Sistema_Matrix.bancoMatrixDataSetTableAdapters.relContasReceberTableAdapter
 End Class

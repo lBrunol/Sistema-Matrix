@@ -6,247 +6,263 @@ SistemaMatrix
 </name>
 </assembly>
 <members>
-<member name="T:Sistema_Matrix.bancoDataSet.clienteDataTable">
+<member name="T:Sistema_Matrix.bancoMatrixDataSet.clienteDataTable">
 	<summary>
 Represents the strongly named DataTable class.
 </summary>
-</member><member name="T:Sistema_Matrix.bancoDataSet.cliPessoaFisicaDataTable">
+</member><member name="T:Sistema_Matrix.bancoMatrixDataSet.cliPessoaFisicaDataTable">
 	<summary>
 Represents the strongly named DataTable class.
 </summary>
-</member><member name="T:Sistema_Matrix.bancoDataSet.cliPessoaJuridicaDataTable">
+</member><member name="T:Sistema_Matrix.bancoMatrixDataSet.cliPessoaJuridicaDataTable">
 	<summary>
 Represents the strongly named DataTable class.
 </summary>
-</member><member name="T:Sistema_Matrix.bancoDataSet.contasReceberDataTable">
+</member><member name="T:Sistema_Matrix.bancoMatrixDataSet.contasReceberDataTable">
 	<summary>
 Represents the strongly named DataTable class.
 </summary>
-</member><member name="T:Sistema_Matrix.bancoDataSet.dadosEmitenteDataTable">
+</member><member name="T:Sistema_Matrix.bancoMatrixDataSet.dadosEmitenteDataTable">
 	<summary>
 Represents the strongly named DataTable class.
 </summary>
-</member><member name="T:Sistema_Matrix.bancoDataSet.funcionariosDataTable">
+</member><member name="T:Sistema_Matrix.bancoMatrixDataSet.funcionariosDataTable">
 	<summary>
 Represents the strongly named DataTable class.
 </summary>
-</member><member name="T:Sistema_Matrix.bancoDataSet.notaFiscalDataTable">
+</member><member name="T:Sistema_Matrix.bancoMatrixDataSet.notaFiscalDataTable">
 	<summary>
 Represents the strongly named DataTable class.
 </summary>
-</member><member name="T:Sistema_Matrix.bancoDataSet.ordemServicoDataTable">
+</member><member name="T:Sistema_Matrix.bancoMatrixDataSet.ordemServicoDataTable">
 	<summary>
 Represents the strongly named DataTable class.
 </summary>
-</member><member name="T:Sistema_Matrix.bancoDataSet.servicosDataTable">
+</member><member name="T:Sistema_Matrix.bancoMatrixDataSet.servicosDataTable">
 	<summary>
 Represents the strongly named DataTable class.
 </summary>
-</member><member name="T:Sistema_Matrix.bancoDataSet.servicos_osDataTable">
+</member><member name="T:Sistema_Matrix.bancoMatrixDataSet.servicos_osDataTable">
 	<summary>
 Represents the strongly named DataTable class.
 </summary>
-</member><member name="T:Sistema_Matrix.bancoDataSet.tiposPagamentoDataTable">
+</member><member name="T:Sistema_Matrix.bancoMatrixDataSet.tiposPagamentoDataTable">
 	<summary>
 Represents the strongly named DataTable class.
 </summary>
-</member><member name="T:Sistema_Matrix.bancoDataSet.usuariosDataTable">
+</member><member name="T:Sistema_Matrix.bancoMatrixDataSet.usuariosDataTable">
 	<summary>
 Represents the strongly named DataTable class.
 </summary>
-</member><member name="T:Sistema_Matrix.bancoDataSet.relOrdensServicoDataTable">
+</member><member name="T:Sistema_Matrix.bancoMatrixDataSet.relOrdensDataTable">
 	<summary>
 Represents the strongly named DataTable class.
 </summary>
-</member><member name="T:Sistema_Matrix.bancoDataSet.clienteRow">
+</member><member name="T:Sistema_Matrix.bancoMatrixDataSet.relContasReceberDataTable">
+	<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member><member name="T:Sistema_Matrix.bancoMatrixDataSet.clienteRow">
 	<summary>
 Represents strongly named DataRow class.
 </summary>
-</member><member name="T:Sistema_Matrix.bancoDataSet.cliPessoaFisicaRow">
+</member><member name="T:Sistema_Matrix.bancoMatrixDataSet.cliPessoaFisicaRow">
 	<summary>
 Represents strongly named DataRow class.
 </summary>
-</member><member name="T:Sistema_Matrix.bancoDataSet.cliPessoaJuridicaRow">
+</member><member name="T:Sistema_Matrix.bancoMatrixDataSet.cliPessoaJuridicaRow">
 	<summary>
 Represents strongly named DataRow class.
 </summary>
-</member><member name="T:Sistema_Matrix.bancoDataSet.contasReceberRow">
+</member><member name="T:Sistema_Matrix.bancoMatrixDataSet.contasReceberRow">
 	<summary>
 Represents strongly named DataRow class.
 </summary>
-</member><member name="T:Sistema_Matrix.bancoDataSet.dadosEmitenteRow">
+</member><member name="T:Sistema_Matrix.bancoMatrixDataSet.dadosEmitenteRow">
 	<summary>
 Represents strongly named DataRow class.
 </summary>
-</member><member name="T:Sistema_Matrix.bancoDataSet.funcionariosRow">
+</member><member name="T:Sistema_Matrix.bancoMatrixDataSet.funcionariosRow">
 	<summary>
 Represents strongly named DataRow class.
 </summary>
-</member><member name="T:Sistema_Matrix.bancoDataSet.notaFiscalRow">
+</member><member name="T:Sistema_Matrix.bancoMatrixDataSet.notaFiscalRow">
 	<summary>
 Represents strongly named DataRow class.
 </summary>
-</member><member name="T:Sistema_Matrix.bancoDataSet.ordemServicoRow">
+</member><member name="T:Sistema_Matrix.bancoMatrixDataSet.ordemServicoRow">
 	<summary>
 Represents strongly named DataRow class.
 </summary>
-</member><member name="T:Sistema_Matrix.bancoDataSet.servicosRow">
+</member><member name="T:Sistema_Matrix.bancoMatrixDataSet.servicosRow">
 	<summary>
 Represents strongly named DataRow class.
 </summary>
-</member><member name="T:Sistema_Matrix.bancoDataSet.servicos_osRow">
+</member><member name="T:Sistema_Matrix.bancoMatrixDataSet.servicos_osRow">
 	<summary>
 Represents strongly named DataRow class.
 </summary>
-</member><member name="T:Sistema_Matrix.bancoDataSet.tiposPagamentoRow">
+</member><member name="T:Sistema_Matrix.bancoMatrixDataSet.tiposPagamentoRow">
 	<summary>
 Represents strongly named DataRow class.
 </summary>
-</member><member name="T:Sistema_Matrix.bancoDataSet.usuariosRow">
+</member><member name="T:Sistema_Matrix.bancoMatrixDataSet.usuariosRow">
 	<summary>
 Represents strongly named DataRow class.
 </summary>
-</member><member name="T:Sistema_Matrix.bancoDataSet.relOrdensServicoRow">
+</member><member name="T:Sistema_Matrix.bancoMatrixDataSet.relOrdensRow">
 	<summary>
 Represents strongly named DataRow class.
 </summary>
-</member><member name="T:Sistema_Matrix.bancoDataSet.clienteRowChangeEvent">
+</member><member name="T:Sistema_Matrix.bancoMatrixDataSet.relContasReceberRow">
+	<summary>
+Represents strongly named DataRow class.
+</summary>
+</member><member name="T:Sistema_Matrix.bancoMatrixDataSet.clienteRowChangeEvent">
 	<summary>
 Row event argument class
 </summary>
-</member><member name="T:Sistema_Matrix.bancoDataSet.cliPessoaFisicaRowChangeEvent">
+</member><member name="T:Sistema_Matrix.bancoMatrixDataSet.cliPessoaFisicaRowChangeEvent">
 	<summary>
 Row event argument class
 </summary>
-</member><member name="T:Sistema_Matrix.bancoDataSet.cliPessoaJuridicaRowChangeEvent">
+</member><member name="T:Sistema_Matrix.bancoMatrixDataSet.cliPessoaJuridicaRowChangeEvent">
 	<summary>
 Row event argument class
 </summary>
-</member><member name="T:Sistema_Matrix.bancoDataSet.contasReceberRowChangeEvent">
+</member><member name="T:Sistema_Matrix.bancoMatrixDataSet.contasReceberRowChangeEvent">
 	<summary>
 Row event argument class
 </summary>
-</member><member name="T:Sistema_Matrix.bancoDataSet.dadosEmitenteRowChangeEvent">
+</member><member name="T:Sistema_Matrix.bancoMatrixDataSet.dadosEmitenteRowChangeEvent">
 	<summary>
 Row event argument class
 </summary>
-</member><member name="T:Sistema_Matrix.bancoDataSet.funcionariosRowChangeEvent">
+</member><member name="T:Sistema_Matrix.bancoMatrixDataSet.funcionariosRowChangeEvent">
 	<summary>
 Row event argument class
 </summary>
-</member><member name="T:Sistema_Matrix.bancoDataSet.notaFiscalRowChangeEvent">
+</member><member name="T:Sistema_Matrix.bancoMatrixDataSet.notaFiscalRowChangeEvent">
 	<summary>
 Row event argument class
 </summary>
-</member><member name="T:Sistema_Matrix.bancoDataSet.ordemServicoRowChangeEvent">
+</member><member name="T:Sistema_Matrix.bancoMatrixDataSet.ordemServicoRowChangeEvent">
 	<summary>
 Row event argument class
 </summary>
-</member><member name="T:Sistema_Matrix.bancoDataSet.servicosRowChangeEvent">
+</member><member name="T:Sistema_Matrix.bancoMatrixDataSet.servicosRowChangeEvent">
 	<summary>
 Row event argument class
 </summary>
-</member><member name="T:Sistema_Matrix.bancoDataSet.servicos_osRowChangeEvent">
+</member><member name="T:Sistema_Matrix.bancoMatrixDataSet.servicos_osRowChangeEvent">
 	<summary>
 Row event argument class
 </summary>
-</member><member name="T:Sistema_Matrix.bancoDataSet.tiposPagamentoRowChangeEvent">
+</member><member name="T:Sistema_Matrix.bancoMatrixDataSet.tiposPagamentoRowChangeEvent">
 	<summary>
 Row event argument class
 </summary>
-</member><member name="T:Sistema_Matrix.bancoDataSet.usuariosRowChangeEvent">
+</member><member name="T:Sistema_Matrix.bancoMatrixDataSet.usuariosRowChangeEvent">
 	<summary>
 Row event argument class
 </summary>
-</member><member name="T:Sistema_Matrix.bancoDataSet.relOrdensServicoRowChangeEvent">
+</member><member name="T:Sistema_Matrix.bancoMatrixDataSet.relOrdensRowChangeEvent">
 	<summary>
 Row event argument class
 </summary>
-</member><member name="T:Sistema_Matrix.bancoDataSet">
+</member><member name="T:Sistema_Matrix.bancoMatrixDataSet.relContasReceberRowChangeEvent">
+	<summary>
+Row event argument class
+</summary>
+</member><member name="T:Sistema_Matrix.bancoMatrixDataSet">
 	<summary>
 Represents a strongly typed in-memory cache of data.
 </summary>
-</member><member name="T:Sistema_Matrix.bancoDataSetTableAdapters.clienteTableAdapter">
+</member><member name="T:Sistema_Matrix.bancoMatrixDataSetTableAdapters.clienteTableAdapter">
 	<summary>
 Represents the connection and commands used to retrieve and save data.
 </summary>
-</member><member name="T:Sistema_Matrix.bancoDataSetTableAdapters.cliPessoaFisicaTableAdapter">
+</member><member name="T:Sistema_Matrix.bancoMatrixDataSetTableAdapters.cliPessoaFisicaTableAdapter">
 	<summary>
 Represents the connection and commands used to retrieve and save data.
 </summary>
-</member><member name="T:Sistema_Matrix.bancoDataSetTableAdapters.cliPessoaJuridicaTableAdapter">
+</member><member name="T:Sistema_Matrix.bancoMatrixDataSetTableAdapters.cliPessoaJuridicaTableAdapter">
 	<summary>
 Represents the connection and commands used to retrieve and save data.
 </summary>
-</member><member name="T:Sistema_Matrix.bancoDataSetTableAdapters.contasReceberTableAdapter">
+</member><member name="T:Sistema_Matrix.bancoMatrixDataSetTableAdapters.contasReceberTableAdapter">
 	<summary>
 Represents the connection and commands used to retrieve and save data.
 </summary>
-</member><member name="T:Sistema_Matrix.bancoDataSetTableAdapters.dadosEmitenteTableAdapter">
+</member><member name="T:Sistema_Matrix.bancoMatrixDataSetTableAdapters.dadosEmitenteTableAdapter">
 	<summary>
 Represents the connection and commands used to retrieve and save data.
 </summary>
-</member><member name="T:Sistema_Matrix.bancoDataSetTableAdapters.funcionariosTableAdapter">
+</member><member name="T:Sistema_Matrix.bancoMatrixDataSetTableAdapters.funcionariosTableAdapter">
 	<summary>
 Represents the connection and commands used to retrieve and save data.
 </summary>
-</member><member name="T:Sistema_Matrix.bancoDataSetTableAdapters.notaFiscalTableAdapter">
+</member><member name="T:Sistema_Matrix.bancoMatrixDataSetTableAdapters.notaFiscalTableAdapter">
 	<summary>
 Represents the connection and commands used to retrieve and save data.
 </summary>
-</member><member name="T:Sistema_Matrix.bancoDataSetTableAdapters.ordemServicoTableAdapter">
+</member><member name="T:Sistema_Matrix.bancoMatrixDataSetTableAdapters.ordemServicoTableAdapter">
 	<summary>
 Represents the connection and commands used to retrieve and save data.
 </summary>
-</member><member name="T:Sistema_Matrix.bancoDataSetTableAdapters.servicosTableAdapter">
+</member><member name="T:Sistema_Matrix.bancoMatrixDataSetTableAdapters.servicosTableAdapter">
 	<summary>
 Represents the connection and commands used to retrieve and save data.
 </summary>
-</member><member name="T:Sistema_Matrix.bancoDataSetTableAdapters.servicos_osTableAdapter">
+</member><member name="T:Sistema_Matrix.bancoMatrixDataSetTableAdapters.servicos_osTableAdapter">
 	<summary>
 Represents the connection and commands used to retrieve and save data.
 </summary>
-</member><member name="T:Sistema_Matrix.bancoDataSetTableAdapters.tiposPagamentoTableAdapter">
+</member><member name="T:Sistema_Matrix.bancoMatrixDataSetTableAdapters.tiposPagamentoTableAdapter">
 	<summary>
 Represents the connection and commands used to retrieve and save data.
 </summary>
-</member><member name="T:Sistema_Matrix.bancoDataSetTableAdapters.usuariosTableAdapter">
+</member><member name="T:Sistema_Matrix.bancoMatrixDataSetTableAdapters.usuariosTableAdapter">
 	<summary>
 Represents the connection and commands used to retrieve and save data.
 </summary>
-</member><member name="T:Sistema_Matrix.bancoDataSetTableAdapters.relOrdensServicoTableAdapter">
+</member><member name="T:Sistema_Matrix.bancoMatrixDataSetTableAdapters.relOrdensTableAdapter">
 	<summary>
 Represents the connection and commands used to retrieve and save data.
 </summary>
-</member><member name="M:Sistema_Matrix.bancoDataSetTableAdapters.TableAdapterManager.UpdateUpdatedRows(Sistema_Matrix.bancoDataSet,System.Collections.Generic.List{System.Data.DataRow},System.Collections.Generic.List{System.Data.DataRow})">
+</member><member name="T:Sistema_Matrix.bancoMatrixDataSetTableAdapters.relContasReceberTableAdapter">
+	<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member><member name="M:Sistema_Matrix.bancoMatrixDataSetTableAdapters.TableAdapterManager.UpdateUpdatedRows(Sistema_Matrix.bancoMatrixDataSet,System.Collections.Generic.List{System.Data.DataRow},System.Collections.Generic.List{System.Data.DataRow})">
 	<summary>
 Update rows in top-down order.
 </summary>
-</member><member name="M:Sistema_Matrix.bancoDataSetTableAdapters.TableAdapterManager.UpdateInsertedRows(Sistema_Matrix.bancoDataSet,System.Collections.Generic.List{System.Data.DataRow})">
+</member><member name="M:Sistema_Matrix.bancoMatrixDataSetTableAdapters.TableAdapterManager.UpdateInsertedRows(Sistema_Matrix.bancoMatrixDataSet,System.Collections.Generic.List{System.Data.DataRow})">
 	<summary>
 Insert rows in top-down order.
 </summary>
-</member><member name="M:Sistema_Matrix.bancoDataSetTableAdapters.TableAdapterManager.UpdateDeletedRows(Sistema_Matrix.bancoDataSet,System.Collections.Generic.List{System.Data.DataRow})">
+</member><member name="M:Sistema_Matrix.bancoMatrixDataSetTableAdapters.TableAdapterManager.UpdateDeletedRows(Sistema_Matrix.bancoMatrixDataSet,System.Collections.Generic.List{System.Data.DataRow})">
 	<summary>
 Delete rows in bottom-up order.
 </summary>
-</member><member name="M:Sistema_Matrix.bancoDataSetTableAdapters.TableAdapterManager.GetRealUpdatedRows(System.Data.DataRow[],System.Collections.Generic.List{System.Data.DataRow})">
+</member><member name="M:Sistema_Matrix.bancoMatrixDataSetTableAdapters.TableAdapterManager.GetRealUpdatedRows(System.Data.DataRow[],System.Collections.Generic.List{System.Data.DataRow})">
 	<summary>
 Remove inserted rows that become updated rows after calling TableAdapter.Update(inserted rows) first
 </summary>
-</member><member name="M:Sistema_Matrix.bancoDataSetTableAdapters.TableAdapterManager.UpdateAll(Sistema_Matrix.bancoDataSet)">
+</member><member name="M:Sistema_Matrix.bancoMatrixDataSetTableAdapters.TableAdapterManager.UpdateAll(Sistema_Matrix.bancoMatrixDataSet)">
 	<summary>
 Update all changes to the dataset.
 </summary>
-</member><member name="T:Sistema_Matrix.bancoDataSetTableAdapters.TableAdapterManager.UpdateOrderOption">
+</member><member name="T:Sistema_Matrix.bancoMatrixDataSetTableAdapters.TableAdapterManager.UpdateOrderOption">
 	<summary>
 Update Order Option
 </summary>
-</member><member name="T:Sistema_Matrix.bancoDataSetTableAdapters.TableAdapterManager.SelfReferenceComparer">
+</member><member name="T:Sistema_Matrix.bancoMatrixDataSetTableAdapters.TableAdapterManager.SelfReferenceComparer">
 	<summary>
 Used to sort self-referenced table's rows
 </summary>
-</member><member name="T:Sistema_Matrix.bancoDataSetTableAdapters.TableAdapterManager">
+</member><member name="T:Sistema_Matrix.bancoMatrixDataSetTableAdapters.TableAdapterManager">
 	<summary>
 TableAdapterManager is used to coordinate TableAdapters in the dataset to enable Hierarchical Update scenarios
 </summary>
