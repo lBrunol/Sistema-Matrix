@@ -24,14 +24,6 @@ Public Class frmMenuPrincipal
     Private Sub menuCadastroFuncionario_Click(sender As Object, e As EventArgs)
         abreFormularios(frmGerenciamentoFuncionarios)
     End Sub
-
-    Private Sub menuSair_Click(sender As Object, e As EventArgs)
-
-        If (MsgBox("Deseja realmente encerrar o sistema?", vbQuestion + vbYesNo, "Confirme") = vbYes) Then
-            Me.Close()
-        End If
-    End Sub
-
     Private Sub botCadastro_Click(sender As Object, e As EventArgs) Handles botCadastro.Click
         abreFormularios(frmGerenciamentoClientes)
     End Sub
@@ -55,23 +47,18 @@ Public Class frmMenuPrincipal
     Private Sub menuSobre_Click(sender As Object, e As EventArgs)
         MsgBox("Em Construção", vbInformation, "Aviso")
     End Sub
-
-    Private Sub telaPrincipal_FormClosing(sender As Object, e As FormClosingEventArgs) Handles Me.FormClosing
-        frmLogin.Show()
-    End Sub
-
     Private Sub telaPrincipal_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         'Atribui o nome do usuário logado na label e verifica se o usuário que logou é administrador
         txtBoasVindas.Text = "Olá " & frmLogin.strUsuario
-        'If Login.varUsuarioAdm = True Then
-        ' menuAdministrador.Visible = False
-        'Else
-        'menuAdministrador.Visible = True
-        'End If
+        If frmLogin.varUsuarioAdm = True Then
+            menUsuarios.Visible = True
+        Else
+            menUsuarios.Visible = False
+        End If
     End Sub
 
     Private Sub botLogoff_Click(sender As Object, e As EventArgs) Handles botLogoff.Click
-        ActiveForm.Close()
+        Me.Hide()
         frmLogin.Show()
     End Sub
 
@@ -99,7 +86,7 @@ Public Class frmMenuPrincipal
         abreFormularios(frmCadastroEmitente)
     End Sub
 
-    Private Sub botConfirmaNotasFiscais_Click(sender As Object, e As EventArgs) Handles botConfirmaNotasFiscais.Click
+    Private Sub botConfirmaNotasFiscais_Click(sender As Object, e As EventArgs)
         abreFormularios(frmConfirmaNotaFiscal)
     End Sub
 
@@ -110,8 +97,24 @@ Public Class frmMenuPrincipal
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
         abreFormularios(relContasReceber)
     End Sub
+    Private Sub AlteraçãoToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles AlteraçãoToolStripMenuItem.Click
+        abreFormularios(frmGerenciamentoUsuarios)
+    End Sub
 
-    Private Sub FlowLayoutPanel1_Paint(sender As Object, e As PaintEventArgs) Handles FlowLayoutPanel1.Paint
+    Private Sub CriaçãoDeUsuáriosToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles CriaçãoDeUsuáriosToolStripMenuItem.Click
+        abreFormularios(frmCadastroUsuarios)
+    End Sub
 
+    Private Sub frmMenuPrincipal_FormClosed(sender As Object, e As FormClosedEventArgs) Handles MyBase.FormClosed
+        Application.Exit()
+    End Sub
+    Private Sub frmMenuPrincipal_Activated(sender As Object, e As EventArgs) Handles MyBase.Activated
+        'Atribui o nome do usuário logado na label e verifica se o usuário que logou é administrador
+        txtBoasVindas.Text = "Olá " & frmLogin.strUsuario
+        If frmLogin.varUsuarioAdm = True Then
+            menUsuarios.Visible = True
+        Else
+            menUsuarios.Visible = False
+        End If
     End Sub
 End Class

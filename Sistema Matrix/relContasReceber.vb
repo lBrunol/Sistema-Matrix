@@ -6,4 +6,8 @@
 
         Me.ReportViewer1.RefreshReport()
     End Sub
+
+    Private Sub relContasReceber_FormClosed(sender As Object, e As FormClosedEventArgs) Handles MyBase.FormClosed
+        modFuncoes.HabilitaBotaoLogOff()
+    End Sub
 End Class

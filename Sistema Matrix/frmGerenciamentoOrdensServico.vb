@@ -17,7 +17,7 @@ Public Class frmGerenciamentoOrdensServico
     Public varOK As Boolean = True
     Public codOrdemServicoAtual As Integer
     Private Sub Form6_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-
+        cboCliente.Focus()
         Dim i As Integer = 0
         Try
             'Carrega as combo box com os dados das tabelas cliente, funcionarios e serviços
@@ -77,7 +77,6 @@ Public Class frmGerenciamentoOrdensServico
         If varOK = True And cboCliente.SelectedIndex <> -1 Then
             cboCodCliente.SelectedIndex = cboCliente.SelectedIndex
         End If
-        cboFuncionario.Select()
     End Sub
 
     Private Sub botNovoServico_Click(sender As Object, e As EventArgs) Handles botNovoServico.Click
@@ -235,17 +234,16 @@ Public Class frmGerenciamentoOrdensServico
         If varOK = True And cboFuncionario.SelectedIndex <> -1 Then
             cboCodFuncionario.SelectedIndex = cboFuncionario.SelectedIndex
         End If
-        cboServico.Select()
     End Sub
 
     Private Sub cboServico_SelectedIndexChanged(sender As Object, e As EventArgs) Handles cboServico.SelectedIndexChanged
         If varOK = True And cboServico.SelectedIndex <> -1 Then
             cboCodServico.SelectedIndex = cboServico.SelectedIndex
             If txtQtde.Text <> "" Then
-                txtValorTotal.Text = FormatCurrency(calculaValorTotal())
+                txtValorTotal.Text = calculaValorTotal()
+                modFuncoes.formataValor(txtValorTotal)
             End If
         End If
-        txtQtde.Select()
     End Sub
 
     Private Sub cboCodServico_SelectedIndexChanged(sender As Object, e As EventArgs) Handles cboCodServico.SelectedIndexChanged
@@ -308,21 +306,25 @@ Public Class frmGerenciamentoOrdensServico
         If txtQtde.Text = "" Then
             txtQtde.Text = "1"
         End If
-        txtValorTotal.Text = FormatCurrency(calculaValorTotal())
-        dataFechamento = vbNullString
+
+        'dataFechamento = vbNullString
 
         ' If mtxDataFechamento.Text = "  /  /" Then
         dataFechamento = Replace(mtxDataFechamento.Text, "/", "")
         dataFechamento = Replace(dataFechamento, " ", "")
         'MsgBox(mtxDataFechamento.Text)
-        MsgBox(dataFechamento)
+        'MsgBox(dataFechamento)
         ' End If
         Try
             If cboCliente.Text = "" Or cboFuncionario.Text = "" Or cboServico.Text = "" Then
                 MsgBox("Por favor, preencha as ComboBox para prosseguir", vbExclamation, "Aviso")
             ElseIf MsgBox("Atenção, depois de confirmar está mensagem, não será mais possível alterar ou excluir a Ordem de Serviço" & vbCrLf & "Deseja prosseguir?", vbQuestion + vbYesNo, "Aviso") = vbYes Then
+                txtValorTotal.Text = calculaValorTotal()
+                modFuncoes.formataValor(txtValorTotal)
+                Dim varValor As Double
+                varValor = CDbl(txtValorTotal.Text)
                 'Inseri os dados da ordem de serviço    
-                strsql = "INSERT INTO ordemServico (ordCodigo , ordOcorrencia, ordDataAbertura, ordDataFechamento, cliCodigo, funMatricula) VALUES (" & valorCodOS & " ,'" & txtDescricaoOS.Text & "', '" & mtxDataAbertura.Text & "' , '" & vbNullString & "' , " & codCli & ", " & codFun & ")"
+                strsql = "INSERT INTO ordemServico (ordCodigo , ordOcorrencia, ordDataAbertura, ordDataFechamento, ordValorTotal, cliCodigo, funMatricula) VALUES (" & valorCodOS & " ,'" & txtDescricaoOS.Text & "', '" & mtxDataAbertura.Text & "' , '" & mtxDataFechamento.Text & "', " & varValor & ", " & codCli & ", " & codFun & ")"
                 objBanco.ExecutaQuery(strsql)
 
                 'Adiciona os dados de serviço na tabela servicos_os
@@ -361,14 +363,14 @@ Public Class frmGerenciamentoOrdensServico
         Try
             tabela = New DataTable()
 
-            strsql = "SELECT ordemServico.ordCodigo, cliente.cliNome, cliente.cliTipo, ordemServico.ordDataFechamento FROM cliente INNER JOIN ordemServico ON cliente.cliCodigo = ordemServico.cliCodigo"
+            strsql = "SELECT ordemServico.ordCodigo, cliente.cliNome, cliente.cliTipo, ordemServico.ordDataFechamento, ordemServico.ordDataAbertura FROM cliente INNER JOIN ordemServico ON cliente.cliCodigo = ordemServico.cliCodigo"
 
             tabela = objBanco.ExecutaDataTable(strsql)
 
             If tabela.Rows.Count > 0 Then
                 Dim i As Integer = 0
                 For i = 0 To tabela.Rows.Count - 1
-                    dtgOrdemServico.Rows.Add(tabela.Rows(i)("ordCodigo"), tabela.Rows(i)("cliNome"), tabela.Rows(i)("ordDataFechamento"), tabela.Rows(i)("cliTipo"))
+                    dtgOrdemServico.Rows.Add(tabela.Rows(i)("ordCodigo"), tabela.Rows(i)("cliNome"), FormatDateTime(tabela.Rows(i)("ordDataAbertura"), DateFormat.GeneralDate), FormatDateTime(tabela.Rows(i)("ordDataFechamento"), DateFormat.GeneralDate), tabela.Rows(i)("cliTipo"))
                 Next
             End If
 
@@ -395,7 +397,7 @@ Public Class frmGerenciamentoOrdensServico
 
             'Armazena na variável o código da linha que será utilizada na clausula where do select
             valorCodOS = dtgOrdemServico.CurrentRow.Cells(0).Value
-            tipCliente = dtgOrdemServico.CurrentRow.Cells(3).Value.ToString
+            tipCliente = dtgOrdemServico.CurrentRow.Cells(4).Value.ToString
 
             strsql = "SELECT ordCodigo FROM notaFiscal WHERE ordCodigo =" & valorCodOS
             leitor = objBanco.ExecutaDataRead(strsql)
@@ -617,7 +619,6 @@ Public Class frmGerenciamentoOrdensServico
         quantidadeOs = txtQtde.Text
         valorUnitario = txtValor.Text
         valorTotal = valorUnitario * quantidadeOs
-        valorTotal = valorTotal
         Return valorTotal
 
     End Function
@@ -626,6 +627,7 @@ Public Class frmGerenciamentoOrdensServico
         If txtQtde.Text = "" Then
             txtQtde.Text = "1"
         End If
-        txtValorTotal.Text = FormatCurrency(calculaValorTotal())
+        txtValorTotal.Text = calculaValorTotal()
+        modFuncoes.formataValor(txtValorTotal)
     End Sub
 End Class

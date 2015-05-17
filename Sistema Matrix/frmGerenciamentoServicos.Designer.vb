@@ -54,6 +54,7 @@ Partial Class frmGerenciamentoServicos
         Me.dtgConsultaServicos = New System.Windows.Forms.DataGridView()
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.lblTitulo = New System.Windows.Forms.Label()
+        Me.lblMensagem = New System.Windows.Forms.Label()
         Me.tabServico.SuspendLayout()
         Me.tabCadastroServicos.SuspendLayout()
         Me.tabConsultaServicos.SuspendLayout()
@@ -334,6 +335,7 @@ Partial Class frmGerenciamentoServicos
         'tabConsultaServicos
         '
         Me.tabConsultaServicos.AutoScroll = True
+        Me.tabConsultaServicos.Controls.Add(Me.lblMensagem)
         Me.tabConsultaServicos.Controls.Add(Me.dtgConsultaServicos)
         Me.tabConsultaServicos.Location = New System.Drawing.Point(4, 22)
         Me.tabConsultaServicos.Name = "tabConsultaServicos"
@@ -365,7 +367,7 @@ Partial Class frmGerenciamentoServicos
         Me.dtgConsultaServicos.Location = New System.Drawing.Point(6, 16)
         Me.dtgConsultaServicos.MultiSelect = False
         Me.dtgConsultaServicos.Name = "dtgConsultaServicos"
-        Me.dtgConsultaServicos.Size = New System.Drawing.Size(382, 316)
+        Me.dtgConsultaServicos.Size = New System.Drawing.Size(382, 297)
         Me.dtgConsultaServicos.TabIndex = 0
         '
         'PictureBox1
@@ -389,6 +391,15 @@ Partial Class frmGerenciamentoServicos
         Me.lblTitulo.TabIndex = 18
         Me.lblTitulo.Text = "Serviços"
         '
+        'lblMensagem
+        '
+        Me.lblMensagem.AutoSize = True
+        Me.lblMensagem.Location = New System.Drawing.Point(6, 321)
+        Me.lblMensagem.Name = "lblMensagem"
+        Me.lblMensagem.Size = New System.Drawing.Size(225, 13)
+        Me.lblMensagem.TabIndex = 13
+        Me.lblMensagem.Text = "Dê um duplo clique na linha que deseja alterar"
+        '
         'frmGerenciamentoServicos
         '
         Me.AcceptButton = Me.botCadastrar
@@ -407,6 +418,7 @@ Partial Class frmGerenciamentoServicos
         Me.tabCadastroServicos.ResumeLayout(False)
         Me.tabCadastroServicos.PerformLayout()
         Me.tabConsultaServicos.ResumeLayout(False)
+        Me.tabConsultaServicos.PerformLayout()
         CType(Me.dtgConsultaServicos, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
@@ -442,4 +454,5 @@ Partial Class frmGerenciamentoServicos
     Friend WithEvents lblAliquota As System.Windows.Forms.Label
     Friend WithEvents txtCodigo As System.Windows.Forms.TextBox
     Friend WithEvents lblCodigo As System.Windows.Forms.Label
+    Friend WithEvents lblMensagem As System.Windows.Forms.Label
 End Class

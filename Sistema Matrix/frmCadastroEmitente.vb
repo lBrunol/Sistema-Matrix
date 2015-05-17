@@ -151,13 +151,6 @@ Public Class frmCadastroEmitente
         Finally
             objBanco.DesconectarBanco()
         End Try
-
-
-
-
-
-
-
     End Sub
 
     Private Sub botExcluir_Click(sender As System.Object, e As System.EventArgs) Handles botExcluir.Click
@@ -182,5 +175,9 @@ Public Class frmCadastroEmitente
                 objBanco.DesconectarBanco()
             End Try
         End If
+    End Sub
+
+    Private Sub frmCadastroEmitente_FormClosing(sender As Object, e As FormClosingEventArgs) Handles MyBase.FormClosing
+        modFuncoes.HabilitaBotaoLogOff()
     End Sub
 End Class

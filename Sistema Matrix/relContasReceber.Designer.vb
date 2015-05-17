@@ -25,13 +25,23 @@ Partial Class relContasReceber
         Me.components = New System.ComponentModel.Container()
         Dim ReportDataSource1 As Microsoft.Reporting.WinForms.ReportDataSource = New Microsoft.Reporting.WinForms.ReportDataSource()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(relContasReceber))
-        Me.ReportViewer1 = New Microsoft.Reporting.WinForms.ReportViewer()
-        Me.bancoMatrixDataSet = New Sistema_Matrix.bancoMatrixDataSet()
         Me.relContasReceberBindingSource = New System.Windows.Forms.BindingSource(Me.components)
+        Me.bancoMatrixDataSet = New Sistema_Matrix.bancoMatrixDataSet()
+        Me.ReportViewer1 = New Microsoft.Reporting.WinForms.ReportViewer()
         Me.relContasReceberTableAdapter = New Sistema_Matrix.bancoMatrixDataSetTableAdapters.relContasReceberTableAdapter()
-        CType(Me.bancoMatrixDataSet, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.relContasReceberBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.bancoMatrixDataSet, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
+        '
+        'relContasReceberBindingSource
+        '
+        Me.relContasReceberBindingSource.DataMember = "relContasReceber"
+        Me.relContasReceberBindingSource.DataSource = Me.bancoMatrixDataSet
+        '
+        'bancoMatrixDataSet
+        '
+        Me.bancoMatrixDataSet.DataSetName = "bancoMatrixDataSet"
+        Me.bancoMatrixDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
         '
         'ReportViewer1
         '
@@ -44,16 +54,6 @@ Partial Class relContasReceber
         Me.ReportViewer1.Name = "ReportViewer1"
         Me.ReportViewer1.Size = New System.Drawing.Size(1008, 684)
         Me.ReportViewer1.TabIndex = 0
-        '
-        'bancoMatrixDataSet
-        '
-        Me.bancoMatrixDataSet.DataSetName = "bancoMatrixDataSet"
-        Me.bancoMatrixDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
-        '
-        'relContasReceberBindingSource
-        '
-        Me.relContasReceberBindingSource.DataMember = "relContasReceber"
-        Me.relContasReceberBindingSource.DataSource = Me.bancoMatrixDataSet
         '
         'relContasReceberTableAdapter
         '
@@ -69,8 +69,8 @@ Partial Class relContasReceber
         Me.Name = "relContasReceber"
         Me.Text = "Relatório de Contas a Receber"
         Me.WindowState = System.Windows.Forms.FormWindowState.Maximized
-        CType(Me.bancoMatrixDataSet, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.relContasReceberBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.bancoMatrixDataSet, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
     End Sub

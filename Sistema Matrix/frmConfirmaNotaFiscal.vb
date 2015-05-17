@@ -33,6 +33,8 @@ Public Class frmConfirmaNotaFiscal
         Next
     End Sub
     Private Sub Nota_Fiscal_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        'Fecha o form de ordens de serviço
+        frmGerenciamentoOrdensServico.Close()
         'codOrdemAtual = 8
         botFaturarNotaFiscal.Select()
         'Armazena o código do cliente
@@ -246,6 +248,7 @@ Public Class frmConfirmaNotaFiscal
             strSQL = "INSERT INTO contasReceber(ctrCodigo, ctrDataEmissao, ctrDataVencimento, ctrValorEmitido, ctrDataPagamento, ctrDesc, ctrJuros, ctrValorPago, notCodigo, tpaCodigo) VALUES(" & valorCodigoContasReceber & ",'" & DateTime.Today & "', '" & DateTime.Today & "', " & strValorTotal & " , '" & DateTime.Today & "',0, 0," & strValorTotal & "," & valorCodigo & ", 3)"
             objBanco.ExecutaQuery(strSQL)
             MsgBox("Nota faturada", vbInformation, "Aviso")
+            Me.Close()
             'Sub que fecha as conexões com banco e zera as variáveis usadas
             zeraVariaveisBanco()
         ElseIf rdbBoleto.Checked = True Then
@@ -288,6 +291,7 @@ Public Class frmConfirmaNotaFiscal
                     varDias = varDias + 30
                 Next
                 MsgBox("Nota faturada", vbInformation, "Aviso")
+                Me.Close()
                 'Sub que fecha as conexões com banco e zera as variáveis usadas
                 zeraVariaveisBanco()
             End If
@@ -330,21 +334,16 @@ Public Class frmConfirmaNotaFiscal
                     varDias = varDias + 30
                 Next
                 MsgBox("Nota faturada", vbInformation, "Aviso")
+                Me.Close()
                 'Sub que fecha as conexões com banco e zera as variáveis usadas
                 zeraVariaveisBanco()
             End If
         End If
     End Sub
-
     Private Sub geraCodigo()
         'Atribui o valor retornado pela função atribuiCodigo a textbox do Código
         valorCodigo = atribuiCodigo("notCodigo", "notaFiscal")
     End Sub
-
-    Private Sub gravaNota()
-
-    End Sub
-
     Private Sub cdbBoleto_SelectedIndexChanged(sender As Object, e As EventArgs) Handles cdbBoleto.SelectedIndexChanged
         Select Case cdbBoleto.SelectedIndex
             Case 0

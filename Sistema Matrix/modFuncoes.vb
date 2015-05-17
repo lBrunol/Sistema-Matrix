@@ -117,7 +117,7 @@ Module modFuncoes
         Return True
     End Function
     Sub filtra(ByVal nomeTextBox As TextBox, ByVal strSql As String, ByVal nomeDataset As DataGridView, ByVal campo1 As String, ByVal campo2 As String, ByVal campo3 As String, ByVal nomeTabela As String)
-        nomeDataset.Rows.Clear()
+        'nomeDataset.Rows.Clear()
         Dim objBanco As New clsConexaoBanco
         Dim tabela As DataTable
         tabela = New DataTable()
@@ -276,6 +276,19 @@ Module modFuncoes
 
         If (numFormsAbertos = 2) Then
             frmMenuPrincipal.botLogoff.Enabled = True
+        End If
+    End Sub
+    Public Sub formataValor(nomeTxt As TextBox)
+        If nomeTxt.Text <> "" Then
+            nomeTxt.Text = String.Format("{0:c}", Double.Parse(nomeTxt.Text))
+        End If
+    End Sub
+    Public Sub apenasNumeros(e As KeyPressEventArgs)
+        Dim KeyAscii As Short = CShort(Asc(e.KeyChar))
+
+        KeyAscii = CShort(SoNumeros(KeyAscii))
+        If KeyAscii = 0 Then
+            e.Handled = True
         End If
     End Sub
 End Module

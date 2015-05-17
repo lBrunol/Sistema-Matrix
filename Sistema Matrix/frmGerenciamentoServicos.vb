@@ -105,7 +105,7 @@ Public Class frmGerenciamentoServicos
             txtNome.Text = leitor.Item(1).ToString
             txtValor.Text = leitor.Item(2).ToString
             txtDescricao.Text = leitor.Item(3).ToString
-            txtValor.Text = String.Format("{0:c}", Double.Parse(txtValor.Text))
+            modFuncoes.formataValor(txtValor)
         Catch exc As SqlClient.SqlException
             MsgBox("Erro com banco de dados" & vbCrLf & Err.Description, vbCritical, "Erro com Banco de dados")
         Catch exc As Exception
@@ -235,19 +235,10 @@ Public Class frmGerenciamentoServicos
     End Sub
 
     Private Sub txtValor_Leave(sender As Object, e As EventArgs) Handles txtValor.Leave
-        Try
-            txtValor.Text = String.Format("{0:c}", Double.Parse(txtValor.Text))
-        Catch ex As Exception
-
-        End Try
+        modFuncoes.formataValor(txtValor)
     End Sub
     Private Sub txtValor_KeyPress(sender As Object, e As KeyPressEventArgs) Handles txtValor.KeyPress
-        Dim KeyAscii As Short = CShort(Asc(e.KeyChar))
-
-        KeyAscii = CShort(SoNumeros(KeyAscii))
-        If KeyAscii = 0 Then
-            e.Handled = True
-        End If
+        modFuncoes.apenasNumeros(e)
     End Sub
 
     Private Sub formConsultaUsuarios_FormClosed(sender As Object, e As FormClosedEventArgs) Handles MyBase.FormClosed

@@ -103,7 +103,8 @@ Partial Class frmGerenciamentoOrdensServico
         Me.dtgOrdemServico = New System.Windows.Forms.DataGridView()
         Me.colCodigo = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.colCliente = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.colStatus = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.colDataAbertura = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.colDataFechamento = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.colTipo = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.tabOrdemServico = New System.Windows.Forms.TabControl()
         Me.tabCadastraOrdem.SuspendLayout()
@@ -122,7 +123,6 @@ Partial Class frmGerenciamentoOrdensServico
         Me.tabCadastraOrdem.Controls.Add(Me.PictureBox1)
         Me.tabCadastraOrdem.Controls.Add(Me.lblVisualizarNota)
         Me.tabCadastraOrdem.Controls.Add(Me.lblFaturarNotaFiscal)
-        Me.tabCadastraOrdem.Controls.Add(Me.botFaturarNotaFiscal)
         Me.tabCadastraOrdem.Controls.Add(Me.txtValorTotal)
         Me.tabCadastraOrdem.Controls.Add(Me.Label6)
         Me.tabCadastraOrdem.Controls.Add(Me.lblDescricaoOS)
@@ -136,9 +136,7 @@ Partial Class frmGerenciamentoOrdensServico
         Me.tabCadastraOrdem.Controls.Add(Me.mtxDataAbertura)
         Me.tabCadastraOrdem.Controls.Add(Me.lblAlterar)
         Me.tabCadastraOrdem.Controls.Add(Me.lblDataAbertura)
-        Me.tabCadastraOrdem.Controls.Add(Me.lblExcluir)
         Me.tabCadastraOrdem.Controls.Add(Me.grpFuncionario)
-        Me.tabCadastraOrdem.Controls.Add(Me.botExcluir)
         Me.tabCadastraOrdem.Controls.Add(Me.grpCliente)
         Me.tabCadastraOrdem.Controls.Add(Me.botLimpar)
         Me.tabCadastraOrdem.Controls.Add(Me.txtCodigo)
@@ -147,6 +145,9 @@ Partial Class frmGerenciamentoOrdensServico
         Me.tabCadastraOrdem.Controls.Add(Me.lblLimpar)
         Me.tabCadastraOrdem.Controls.Add(Me.botAlterar)
         Me.tabCadastraOrdem.Controls.Add(Me.botVisualizarNota)
+        Me.tabCadastraOrdem.Controls.Add(Me.botFaturarNotaFiscal)
+        Me.tabCadastraOrdem.Controls.Add(Me.botExcluir)
+        Me.tabCadastraOrdem.Controls.Add(Me.lblExcluir)
         Me.tabCadastraOrdem.Location = New System.Drawing.Point(4, 26)
         Me.tabCadastraOrdem.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
         Me.tabCadastraOrdem.Name = "tabCadastraOrdem"
@@ -203,7 +204,7 @@ Partial Class frmGerenciamentoOrdensServico
         Me.botFaturarNotaFiscal.Location = New System.Drawing.Point(438, 4)
         Me.botFaturarNotaFiscal.Name = "botFaturarNotaFiscal"
         Me.botFaturarNotaFiscal.Size = New System.Drawing.Size(40, 40)
-        Me.botFaturarNotaFiscal.TabIndex = 94
+        Me.botFaturarNotaFiscal.TabIndex = 7
         Me.botFaturarNotaFiscal.UseVisualStyleBackColor = True
         Me.botFaturarNotaFiscal.Visible = False
         '
@@ -246,8 +247,7 @@ Partial Class frmGerenciamentoOrdensServico
         Me.txtDescricaoOS.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
         Me.txtDescricaoOS.Name = "txtDescricaoOS"
         Me.txtDescricaoOS.Size = New System.Drawing.Size(352, 117)
-        Me.txtDescricaoOS.TabIndex = 90
-        Me.txtDescricaoOS.TabStop = False
+        Me.txtDescricaoOS.TabIndex = 4
         Me.txtDescricaoOS.Text = ""
         '
         'lblInserir
@@ -399,7 +399,7 @@ Partial Class frmGerenciamentoOrdensServico
         Me.mtxDataFechamento.Mask = "00/00/0000"
         Me.mtxDataFechamento.Name = "mtxDataFechamento"
         Me.mtxDataFechamento.Size = New System.Drawing.Size(88, 23)
-        Me.mtxDataFechamento.TabIndex = 4
+        Me.mtxDataFechamento.TabIndex = 5
         '
         'lblCadastrar
         '
@@ -950,6 +950,7 @@ Partial Class frmGerenciamentoOrdensServico
         Me.botLimpar.Name = "botLimpar"
         Me.botLimpar.Size = New System.Drawing.Size(40, 40)
         Me.botLimpar.TabIndex = 81
+        Me.botLimpar.TabStop = False
         Me.botLimpar.UseVisualStyleBackColor = True
         '
         'txtCodigo
@@ -980,7 +981,7 @@ Partial Class frmGerenciamentoOrdensServico
         Me.botCadastrar.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
         Me.botCadastrar.Name = "botCadastrar"
         Me.botCadastrar.Size = New System.Drawing.Size(40, 40)
-        Me.botCadastrar.TabIndex = 80
+        Me.botCadastrar.TabIndex = 6
         Me.botCadastrar.UseVisualStyleBackColor = True
         '
         'lblLimpar
@@ -1009,7 +1010,7 @@ Partial Class frmGerenciamentoOrdensServico
         Me.botVisualizarNota.Location = New System.Drawing.Point(439, 5)
         Me.botVisualizarNota.Name = "botVisualizarNota"
         Me.botVisualizarNota.Size = New System.Drawing.Size(40, 40)
-        Me.botVisualizarNota.TabIndex = 96
+        Me.botVisualizarNota.TabIndex = 7
         Me.botVisualizarNota.UseVisualStyleBackColor = True
         Me.botVisualizarNota.Visible = False
         '
@@ -1032,7 +1033,7 @@ Partial Class frmGerenciamentoOrdensServico
         Me.dtgOrdemServico.AllowUserToOrderColumns = True
         Me.dtgOrdemServico.BackgroundColor = System.Drawing.SystemColors.Control
         Me.dtgOrdemServico.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.dtgOrdemServico.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.colCodigo, Me.colCliente, Me.colStatus, Me.colTipo})
+        Me.dtgOrdemServico.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.colCodigo, Me.colCliente, Me.colDataAbertura, Me.colDataFechamento, Me.colTipo})
         Me.dtgOrdemServico.Location = New System.Drawing.Point(6, 27)
         Me.dtgOrdemServico.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
         Me.dtgOrdemServico.Name = "dtgOrdemServico"
@@ -1056,13 +1057,21 @@ Partial Class frmGerenciamentoOrdensServico
         Me.colCliente.ReadOnly = True
         Me.colCliente.Width = 250
         '
-        'colStatus
+        'colDataAbertura
         '
-        Me.colStatus.HeaderText = "Status"
-        Me.colStatus.MinimumWidth = 70
-        Me.colStatus.Name = "colStatus"
-        Me.colStatus.ReadOnly = True
-        Me.colStatus.Width = 150
+        Me.colDataAbertura.HeaderText = "Data de Abertura"
+        Me.colDataAbertura.MinimumWidth = 70
+        Me.colDataAbertura.Name = "colDataAbertura"
+        Me.colDataAbertura.ReadOnly = True
+        Me.colDataAbertura.Width = 150
+        '
+        'colDataFechamento
+        '
+        Me.colDataFechamento.HeaderText = "Data de Fechamento"
+        Me.colDataFechamento.MinimumWidth = 70
+        Me.colDataFechamento.Name = "colDataFechamento"
+        Me.colDataFechamento.ReadOnly = True
+        Me.colDataFechamento.Width = 200
         '
         'colTipo
         '
@@ -1082,6 +1091,7 @@ Partial Class frmGerenciamentoOrdensServico
         Me.tabOrdemServico.SelectedIndex = 0
         Me.tabOrdemServico.Size = New System.Drawing.Size(852, 862)
         Me.tabOrdemServico.TabIndex = 1
+        Me.tabOrdemServico.TabStop = False
         '
         'frmGerenciamentoOrdensServico
         '
@@ -1187,10 +1197,6 @@ Partial Class frmGerenciamentoOrdensServico
     Friend WithEvents lblDescricaoOS As System.Windows.Forms.Label
     Friend WithEvents txtDescricaoOS As System.Windows.Forms.RichTextBox
     Friend WithEvents dtgOrdemServico As System.Windows.Forms.DataGridView
-    Friend WithEvents colCodigo As System.Windows.Forms.DataGridViewTextBoxColumn
-    Friend WithEvents colCliente As System.Windows.Forms.DataGridViewTextBoxColumn
-    Friend WithEvents colStatus As System.Windows.Forms.DataGridViewTextBoxColumn
-    Friend WithEvents colTipo As System.Windows.Forms.DataGridViewTextBoxColumn
     Friend WithEvents txtValorTotal As System.Windows.Forms.TextBox
     Friend WithEvents Label6 As System.Windows.Forms.Label
     Friend WithEvents lblSelecioneServico As System.Windows.Forms.Label
@@ -1201,4 +1207,9 @@ Partial Class frmGerenciamentoOrdensServico
     Friend WithEvents botVisualizarNota As System.Windows.Forms.Button
     Friend WithEvents PictureBox1 As System.Windows.Forms.PictureBox
     Friend WithEvents lblTitulo As System.Windows.Forms.Label
+    Friend WithEvents colCodigo As System.Windows.Forms.DataGridViewTextBoxColumn
+    Friend WithEvents colCliente As System.Windows.Forms.DataGridViewTextBoxColumn
+    Friend WithEvents colDataAbertura As System.Windows.Forms.DataGridViewTextBoxColumn
+    Friend WithEvents colDataFechamento As System.Windows.Forms.DataGridViewTextBoxColumn
+    Friend WithEvents colTipo As System.Windows.Forms.DataGridViewTextBoxColumn
 End Class

@@ -16,7 +16,7 @@ Public Class frmGerenciamentoFuncionarios
         If valRetornado = 0 Then
             Try
                 'String que armazena o comando SQL
-                strsql = "INSERT INTO funcionarios( funMatricula, funNome, funCargo, funAdmissao) VALUES (" & valorMatricula & " , '" & txtNome.Text & "', '" & txtCargo.Text & "' , '" & mtxDataAdmissao.Text & "')"
+                strsql = "INSERT INTO funcionarios( funMatricula, funNome, funEndereco,funBairro,funCidade, funCargo, funTelefone, funAdmissao, funSalario) VALUES (" & valorMatricula & " , '" & txtNome.Text & "', '" & txtEndereco.Text & "', '" & txtBairro.Text & "', '" & txtCidade.Text & "', '" & txtCargo.Text & "' ,'" & txtTelefone.Text & "', '" & mtxDataAdmissao.Text & "', '" & txtSalario.Text & "')"
                 'Chama o método para executar o comando
                 objBanco.ExecutaQuery(strsql)
                 MsgBox("Dados inseridos com Sucesso", vbInformation, "Aviso")
@@ -86,8 +86,14 @@ Public Class frmGerenciamentoFuncionarios
 
             txtMatricula.Text = leitor.Item(0).ToString
             txtNome.Text = leitor.Item(1).ToString
-            txtCargo.Text = leitor.Item(2).ToString
-            mtxDataAdmissao.Text = leitor.Item(3).ToString
+            txtEndereco.Text = leitor.Item(2).ToString
+            txtBairro.Text = leitor.Item(3).ToString
+            txtCidade.Text = leitor.Item(4).ToString
+            txtCargo.Text = leitor.Item(5).ToString
+            txtTelefone.Text = leitor.Item(6).ToString
+            mtxDataAdmissao.Text = leitor.Item(7).ToString
+            txtSalario.Text = leitor.Item(8).ToString
+            modFuncoes.formataValor(txtSalario)
         Catch exc As SqlClient.SqlException
             MsgBox("Erro com banco de dados" & vbCrLf & Err.Number & Err.Description, vbCritical, "Erro com Banco de dados")
         Catch exc As Exception
@@ -130,7 +136,7 @@ Public Class frmGerenciamentoFuncionarios
         valRetornado = modFuncoes.verificaVazio(Me)
         Try
             If valRetornado = 0 Then
-                strsql = "UPDATE Funcionarios SET funNome ='" & txtNome.Text & "', funCargo = '" & txtCargo.Text & "', funAdmissao = '" & mtxDataAdmissao.Text & "' WHERE funMatricula = " & valorMatricula
+                strsql = "UPDATE Funcionarios SET funNome ='" & txtNome.Text & "', funEndereco ='" & txtEndereco.Text & "', funBairro = '" & txtBairro.Text & "', funCidade ='" & txtCidade.Text & "', funCargo = '" & txtCargo.Text & "', funTelefone ='" & txtTelefone.Text & "', funAdmissao = '" & mtxDataAdmissao.Text & "', funSalario = '" & txtSalario.Text & "' WHERE funMatricula = " & valorMatricula
                 objBanco.ExecutaQuery(strsql)
                 MsgBox("Dados Alterados com Sucesso", vbInformation, "Aviso")
                 modFuncoes.Limpar(Me)
@@ -180,19 +186,19 @@ Public Class frmGerenciamentoFuncionarios
     End Sub
 
     Private Sub tabConsultaFuncionarios_Enter(sender As Object, e As EventArgs) Handles tabConsultaFuncionarios.Enter
-        dtgFuncionarios.Rows.Clear()
         Try
-            tabela = New DataTable()
-
-            strsql = "SELECT * FROM funcionarios"
-            tabela = objBanco.ExecutaDataTable(strsql)
-
-            If tabela.Rows.Count > 0 Then
-                Dim i As Integer = 0
-                For i = 0 To tabela.Rows.Count - 1
-                    dtgFuncionarios.Rows.Add(tabela.Rows(i)("funMatricula"), tabela.Rows(i)("funNome"), tabela.Rows(i)("funCargo"))
-                Next
-            End If
+            objBanco.carregaDataGrid(dtgFuncionarios, "SELECT funMatricula as Matrícula, funNome as Nome, funCargo as Cargo FROM funcionarios")
+            'tabela = New DataTable()
+            '
+            'strsql = "SELECT * FROM funcionarios"
+            'tabela = objBanco.ExecutaDataTable(strsql)
+            '
+            'If tabela.Rows.Count > 0 Then
+            '    Dim i As Integer = 0
+            '    For i = 0 To tabela.Rows.Count - 1
+            '        dtgFuncionarios.Rows.Add(tabela.Rows(i)("funMatricula"), tabela.Rows(i)("funNome"), tabela.Rows(i)'("funCargo"))
+            '    Next
+            'End If
         Catch exc As SqlClient.SqlException
             MsgBox("Erro com banco de dados" & vbCrLf & Err.Number & Err.Description, vbCritical, "Erro com Banco de dados")
         Catch exc As Exception
@@ -200,9 +206,9 @@ Public Class frmGerenciamentoFuncionarios
         Finally
             'Fecha a conexão
             objBanco.DesconectarBanco()
-            strsql = String.Empty
+            'strsql = String.Empty
             'Testa se a variável leitor foi alterada, se sim a conexão com banco de dados será fechada
-            tabela = Nothing
+            'tabela = Nothing
         End Try
     End Sub
     Sub modoInserir()
@@ -221,28 +227,11 @@ Public Class frmGerenciamentoFuncionarios
     Private Sub Funcionarios_FormClosed(sender As Object, e As FormClosedEventArgs) Handles MyBase.FormClosed
         modFuncoes.HabilitaBotaoLogOff()
     End Sub
-
-    Private Sub Label2_Click(sender As Object, e As EventArgs) Handles Label2.Click
-
+    Private Sub txtSalario_Leave(sender As Object, e As EventArgs) Handles txtSalario.Leave
+        modFuncoes.formataValor(txtSalario)
     End Sub
 
-    Private Sub Label3_Click(sender As Object, e As EventArgs) Handles Label3.Click
-
-    End Sub
-
-    Private Sub Label4_Click(sender As Object, e As EventArgs) Handles Label4.Click
-
-    End Sub
-
-    Private Sub Label5_Click(sender As Object, e As EventArgs) Handles Label5.Click
-
-    End Sub
-
-    Private Sub Label6_Click(sender As Object, e As EventArgs) Handles Label6.Click
-
-    End Sub
-
-    Private Sub tabCadastroFuncionarios_Click(sender As Object, e As EventArgs) Handles tabCadastroFuncionarios.Click
-
+    Private Sub txtSalario_KeyPress(sender As Object, e As KeyPressEventArgs) Handles txtSalario.KeyPress
+        modFuncoes.apenasNumeros(e)
     End Sub
 End Class

@@ -65,9 +65,6 @@ Partial Class frmGerenciamentoFuncionarios
         Me.txtConMatricula = New System.Windows.Forms.TextBox()
         Me.lblMensagem = New System.Windows.Forms.Label()
         Me.dtgFuncionarios = New System.Windows.Forms.DataGridView()
-        Me.colMatricula = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.colNome = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.colCargo = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.tabFuncionarios.SuspendLayout()
         Me.tabCadastroFuncionarios.SuspendLayout()
         Me.tabConsultaFuncionarios.SuspendLayout()
@@ -253,10 +250,10 @@ Partial Class frmGerenciamentoFuncionarios
         Me.tabCadastroFuncionarios.Controls.Add(Me.lblExcluir)
         Me.tabCadastroFuncionarios.Controls.Add(Me.lblCargo)
         Me.tabCadastroFuncionarios.Controls.Add(Me.lblDataAdmissao)
-        Me.tabCadastroFuncionarios.Controls.Add(Me.botAlterar)
         Me.tabCadastroFuncionarios.Controls.Add(Me.botExcluir)
         Me.tabCadastroFuncionarios.Controls.Add(Me.botCadastrar)
         Me.tabCadastroFuncionarios.Controls.Add(Me.botLimpar)
+        Me.tabCadastroFuncionarios.Controls.Add(Me.botAlterar)
         Me.tabCadastroFuncionarios.Location = New System.Drawing.Point(4, 22)
         Me.tabCadastroFuncionarios.Name = "tabCadastroFuncionarios"
         Me.tabCadastroFuncionarios.Padding = New System.Windows.Forms.Padding(3)
@@ -363,9 +360,11 @@ Partial Class frmGerenciamentoFuncionarios
         'mtxDataAdmissao
         '
         Me.mtxDataAdmissao.Location = New System.Drawing.Point(339, 394)
+        Me.mtxDataAdmissao.Mask = "00/00/0000"
         Me.mtxDataAdmissao.Name = "mtxDataAdmissao"
         Me.mtxDataAdmissao.Size = New System.Drawing.Size(132, 20)
         Me.mtxDataAdmissao.TabIndex = 4
+        Me.mtxDataAdmissao.ValidatingType = GetType(Date)
         '
         'lblCampoObrigatorio
         '
@@ -493,36 +492,11 @@ Partial Class frmGerenciamentoFuncionarios
         Me.dtgFuncionarios.AllowUserToOrderColumns = True
         Me.dtgFuncionarios.BackgroundColor = System.Drawing.SystemColors.Control
         Me.dtgFuncionarios.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.dtgFuncionarios.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.colMatricula, Me.colNome, Me.colCargo})
         Me.dtgFuncionarios.Location = New System.Drawing.Point(3, 87)
         Me.dtgFuncionarios.Name = "dtgFuncionarios"
         Me.dtgFuncionarios.ReadOnly = True
         Me.dtgFuncionarios.Size = New System.Drawing.Size(384, 270)
         Me.dtgFuncionarios.TabIndex = 0
-        '
-        'colMatricula
-        '
-        Me.colMatricula.HeaderText = "Matrícula"
-        Me.colMatricula.MinimumWidth = 60
-        Me.colMatricula.Name = "colMatricula"
-        Me.colMatricula.ReadOnly = True
-        Me.colMatricula.Width = 60
-        '
-        'colNome
-        '
-        Me.colNome.HeaderText = "Nome"
-        Me.colNome.MinimumWidth = 100
-        Me.colNome.Name = "colNome"
-        Me.colNome.ReadOnly = True
-        Me.colNome.Width = 150
-        '
-        'colCargo
-        '
-        Me.colCargo.HeaderText = "Cargo"
-        Me.colCargo.MinimumWidth = 100
-        Me.colCargo.Name = "colCargo"
-        Me.colCargo.ReadOnly = True
-        Me.colCargo.Width = 170
         '
         'frmGerenciamentoFuncionarios
         '
@@ -571,9 +545,6 @@ Partial Class frmGerenciamentoFuncionarios
     Friend WithEvents txtConCargo As System.Windows.Forms.TextBox
     Friend WithEvents txtConNome As System.Windows.Forms.TextBox
     Friend WithEvents txtConMatricula As System.Windows.Forms.TextBox
-    Friend WithEvents colMatricula As System.Windows.Forms.DataGridViewTextBoxColumn
-    Friend WithEvents colNome As System.Windows.Forms.DataGridViewTextBoxColumn
-    Friend WithEvents colCargo As System.Windows.Forms.DataGridViewTextBoxColumn
     Friend WithEvents mtxDataAdmissao As System.Windows.Forms.MaskedTextBox
     Friend WithEvents botHoje As System.Windows.Forms.Button
     Friend WithEvents lblMatricula As System.Windows.Forms.Label
