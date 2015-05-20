@@ -630,4 +630,8 @@ Public Class frmGerenciamentoClientes
     Private Sub Clientes_FormClosed(sender As Object, e As FormClosedEventArgs) Handles MyBase.FormClosed
         modFuncoes.HabilitaBotaoLogOff()
     End Sub
+
+    Private Sub mtxCelular_MaskInputRejected(ByVal sender As System.Object, ByVal e As System.Windows.Forms.MaskInputRejectedEventArgs) Handles mtxCelular.MaskInputRejected
+
+    End Sub
 End Class
