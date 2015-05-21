@@ -174,14 +174,14 @@ Partial Class frmGerenciamentoClientes
         Me.tabCadastroClientes.Padding = New System.Windows.Forms.Padding(3)
         Me.tabCadastroClientes.Size = New System.Drawing.Size(697, 528)
         Me.tabCadastroClientes.TabIndex = 1
-        Me.tabCadastroClientes.Text = "Dados Cadastrais"
+        Me.tabCadastroClientes.Text = "6"
         Me.tabCadastroClientes.UseVisualStyleBackColor = True
         '
         'lblCodCliente
         '
         Me.lblCodCliente.AutoSize = True
         Me.lblCodCliente.Font = New System.Drawing.Font("Century Gothic", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblCodCliente.Location = New System.Drawing.Point(559, 17)
+        Me.lblCodCliente.Location = New System.Drawing.Point(7, 18)
         Me.lblCodCliente.Name = "lblCodCliente"
         Me.lblCodCliente.Size = New System.Drawing.Size(58, 17)
         Me.lblCodCliente.TabIndex = 64
@@ -190,7 +190,7 @@ Partial Class frmGerenciamentoClientes
         '
         'txtCodigoCliente
         '
-        Me.txtCodigoCliente.Location = New System.Drawing.Point(563, 41)
+        Me.txtCodigoCliente.Location = New System.Drawing.Point(10, 37)
         Me.txtCodigoCliente.Name = "txtCodigoCliente"
         Me.txtCodigoCliente.Size = New System.Drawing.Size(100, 20)
         Me.txtCodigoCliente.TabIndex = 63
@@ -199,9 +199,9 @@ Partial Class frmGerenciamentoClientes
         '
         'txtIM
         '
-        Me.txtIM.Location = New System.Drawing.Point(195, 202)
+        Me.txtIM.Location = New System.Drawing.Point(195, 199)
         Me.txtIM.Name = "txtIM"
-        Me.txtIM.Size = New System.Drawing.Size(132, 20)
+        Me.txtIM.Size = New System.Drawing.Size(143, 20)
         Me.txtIM.TabIndex = 10
         Me.txtIM.Visible = False
         '
@@ -209,7 +209,7 @@ Partial Class frmGerenciamentoClientes
         '
         Me.lblIM.AutoSize = True
         Me.lblIM.Font = New System.Drawing.Font("Century Gothic", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblIM.Location = New System.Drawing.Point(191, 179)
+        Me.lblIM.Location = New System.Drawing.Point(191, 176)
         Me.lblIM.Name = "lblIM"
         Me.lblIM.Size = New System.Drawing.Size(47, 20)
         Me.lblIM.TabIndex = 62
@@ -230,7 +230,7 @@ Partial Class frmGerenciamentoClientes
         'lblInserir
         '
         Me.lblInserir.AutoSize = True
-        Me.lblInserir.Location = New System.Drawing.Point(6, 60)
+        Me.lblInserir.Location = New System.Drawing.Point(118, 60)
         Me.lblInserir.Name = "lblInserir"
         Me.lblInserir.Size = New System.Drawing.Size(75, 13)
         Me.lblInserir.TabIndex = 59
@@ -263,7 +263,7 @@ Partial Class frmGerenciamentoClientes
         'lblLimpar
         '
         Me.lblLimpar.AutoSize = True
-        Me.lblLimpar.Location = New System.Drawing.Point(293, 60)
+        Me.lblLimpar.Location = New System.Drawing.Point(558, 60)
         Me.lblLimpar.Name = "lblLimpar"
         Me.lblLimpar.Size = New System.Drawing.Size(38, 13)
         Me.lblLimpar.TabIndex = 46
@@ -272,7 +272,7 @@ Partial Class frmGerenciamentoClientes
         'lblCadastrar
         '
         Me.lblCadastrar.AutoSize = True
-        Me.lblCadastrar.Location = New System.Drawing.Point(109, 60)
+        Me.lblCadastrar.Location = New System.Drawing.Point(621, 60)
         Me.lblCadastrar.Name = "lblCadastrar"
         Me.lblCadastrar.Size = New System.Drawing.Size(52, 13)
         Me.lblCadastrar.TabIndex = 45
@@ -289,7 +289,7 @@ Partial Class frmGerenciamentoClientes
         '
         'txtRazaoSocial
         '
-        Me.txtRazaoSocial.Location = New System.Drawing.Point(366, 110)
+        Me.txtRazaoSocial.Location = New System.Drawing.Point(366, 130)
         Me.txtRazaoSocial.Name = "txtRazaoSocial"
         Me.txtRazaoSocial.Size = New System.Drawing.Size(297, 20)
         Me.txtRazaoSocial.TabIndex = 2
@@ -300,7 +300,7 @@ Partial Class frmGerenciamentoClientes
         '
         Me.lblRazaoSocial.AutoSize = True
         Me.lblRazaoSocial.Font = New System.Drawing.Font("Century Gothic", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblRazaoSocial.Location = New System.Drawing.Point(364, 87)
+        Me.lblRazaoSocial.Location = New System.Drawing.Point(362, 107)
         Me.lblRazaoSocial.Name = "lblRazaoSocial"
         Me.lblRazaoSocial.Size = New System.Drawing.Size(111, 20)
         Me.lblRazaoSocial.TabIndex = 42
@@ -374,7 +374,7 @@ Partial Class frmGerenciamentoClientes
         '
         'txtNome
         '
-        Me.txtNome.Location = New System.Drawing.Point(10, 110)
+        Me.txtNome.Location = New System.Drawing.Point(6, 130)
         Me.txtNome.Name = "txtNome"
         Me.txtNome.Size = New System.Drawing.Size(349, 20)
         Me.txtNome.TabIndex = 1
@@ -383,7 +383,7 @@ Partial Class frmGerenciamentoClientes
         '
         Me.lblNome.AutoSize = True
         Me.lblNome.Font = New System.Drawing.Font("Century Gothic", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblNome.Location = New System.Drawing.Point(4, 87)
+        Me.lblNome.Location = New System.Drawing.Point(2, 107)
         Me.lblNome.Name = "lblNome"
         Me.lblNome.Size = New System.Drawing.Size(63, 20)
         Me.lblNome.TabIndex = 28
@@ -409,7 +409,7 @@ Partial Class frmGerenciamentoClientes
         'botModoNovo
         '
         Me.botModoNovo.Image = Global.Sistema_Matrix.My.Resources.Resources.adicionar
-        Me.botModoNovo.Location = New System.Drawing.Point(21, 17)
+        Me.botModoNovo.Location = New System.Drawing.Point(135, 17)
         Me.botModoNovo.Name = "botModoNovo"
         Me.botModoNovo.Size = New System.Drawing.Size(40, 40)
         Me.botModoNovo.TabIndex = 26
@@ -459,7 +459,7 @@ Partial Class frmGerenciamentoClientes
         '
         Me.grpTipoCliente.Controls.Add(Me.rdbJuridica)
         Me.grpTipoCliente.Controls.Add(Me.rdbFisica)
-        Me.grpTipoCliente.Location = New System.Drawing.Point(10, 136)
+        Me.grpTipoCliente.Location = New System.Drawing.Point(10, 156)
         Me.grpTipoCliente.Name = "grpTipoCliente"
         Me.grpTipoCliente.Size = New System.Drawing.Size(179, 63)
         Me.grpTipoCliente.TabIndex = 0
@@ -552,7 +552,7 @@ Partial Class frmGerenciamentoClientes
         '
         Me.lblCNPJ.AutoSize = True
         Me.lblCNPJ.Font = New System.Drawing.Font("Century Gothic", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblCNPJ.Location = New System.Drawing.Point(496, 133)
+        Me.lblCNPJ.Location = New System.Drawing.Point(496, 176)
         Me.lblCNPJ.Name = "lblCNPJ"
         Me.lblCNPJ.Size = New System.Drawing.Size(58, 20)
         Me.lblCNPJ.TabIndex = 38
@@ -563,7 +563,7 @@ Partial Class frmGerenciamentoClientes
         '
         Me.lblIE.AutoSize = True
         Me.lblIE.Font = New System.Drawing.Font("Century Gothic", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblIE.Location = New System.Drawing.Point(348, 179)
+        Me.lblIE.Location = New System.Drawing.Point(348, 176)
         Me.lblIE.Name = "lblIE"
         Me.lblIE.Size = New System.Drawing.Size(34, 20)
         Me.lblIE.TabIndex = 39
@@ -573,7 +573,7 @@ Partial Class frmGerenciamentoClientes
         'lblAlterar
         '
         Me.lblAlterar.AutoSize = True
-        Me.lblAlterar.Location = New System.Drawing.Point(192, 60)
+        Me.lblAlterar.Location = New System.Drawing.Point(199, 60)
         Me.lblAlterar.Name = "lblAlterar"
         Me.lblAlterar.Size = New System.Drawing.Size(79, 13)
         Me.lblAlterar.TabIndex = 60
@@ -583,7 +583,7 @@ Partial Class frmGerenciamentoClientes
         'lblExcluir
         '
         Me.lblExcluir.AutoSize = True
-        Me.lblExcluir.Location = New System.Drawing.Point(349, 60)
+        Me.lblExcluir.Location = New System.Drawing.Point(284, 61)
         Me.lblExcluir.Name = "lblExcluir"
         Me.lblExcluir.Size = New System.Drawing.Size(80, 13)
         Me.lblExcluir.TabIndex = 58
@@ -592,7 +592,7 @@ Partial Class frmGerenciamentoClientes
         '
         'mtxIE
         '
-        Me.mtxIE.Location = New System.Drawing.Point(352, 156)
+        Me.mtxIE.Location = New System.Drawing.Point(352, 199)
         Me.mtxIE.Name = "mtxIE"
         Me.mtxIE.Size = New System.Drawing.Size(129, 20)
         Me.mtxIE.TabIndex = 9
@@ -602,7 +602,7 @@ Partial Class frmGerenciamentoClientes
         'botAlterar
         '
         Me.botAlterar.Image = Global.Sistema_Matrix.My.Resources.Resources.alterar
-        Me.botAlterar.Location = New System.Drawing.Point(211, 17)
+        Me.botAlterar.Location = New System.Drawing.Point(215, 17)
         Me.botAlterar.Name = "botAlterar"
         Me.botAlterar.Size = New System.Drawing.Size(40, 40)
         Me.botAlterar.TabIndex = 24
@@ -612,7 +612,7 @@ Partial Class frmGerenciamentoClientes
         'botExcluir
         '
         Me.botExcluir.Image = Global.Sistema_Matrix.My.Resources.Resources.excluir
-        Me.botExcluir.Location = New System.Drawing.Point(368, 17)
+        Me.botExcluir.Location = New System.Drawing.Point(298, 18)
         Me.botExcluir.Name = "botExcluir"
         Me.botExcluir.Size = New System.Drawing.Size(40, 40)
         Me.botExcluir.TabIndex = 25
@@ -622,7 +622,7 @@ Partial Class frmGerenciamentoClientes
         'botLimpar
         '
         Me.botLimpar.Image = Global.Sistema_Matrix.My.Resources.Resources.limpar
-        Me.botLimpar.Location = New System.Drawing.Point(291, 17)
+        Me.botLimpar.Location = New System.Drawing.Point(556, 17)
         Me.botLimpar.Name = "botLimpar"
         Me.botLimpar.Size = New System.Drawing.Size(40, 40)
         Me.botLimpar.TabIndex = 23
@@ -632,7 +632,7 @@ Partial Class frmGerenciamentoClientes
         '
         Me.botCadastrar.Image = Global.Sistema_Matrix.My.Resources.Resources.salvar
         Me.botCadastrar.ImageAlign = System.Drawing.ContentAlignment.TopLeft
-        Me.botCadastrar.Location = New System.Drawing.Point(121, 17)
+        Me.botCadastrar.Location = New System.Drawing.Point(624, 17)
         Me.botCadastrar.Name = "botCadastrar"
         Me.botCadastrar.Size = New System.Drawing.Size(40, 40)
         Me.botCadastrar.TabIndex = 22
@@ -640,7 +640,7 @@ Partial Class frmGerenciamentoClientes
         '
         'mtxCPF
         '
-        Me.mtxCPF.Location = New System.Drawing.Point(195, 156)
+        Me.mtxCPF.Location = New System.Drawing.Point(195, 199)
         Me.mtxCPF.Name = "mtxCPF"
         Me.mtxCPF.Size = New System.Drawing.Size(143, 20)
         Me.mtxCPF.TabIndex = 5
@@ -649,7 +649,7 @@ Partial Class frmGerenciamentoClientes
         '
         Me.lblCPF.AutoSize = True
         Me.lblCPF.Font = New System.Drawing.Font("Century Gothic", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblCPF.Location = New System.Drawing.Point(361, 133)
+        Me.lblCPF.Location = New System.Drawing.Point(348, 176)
         Me.lblCPF.Name = "lblCPF"
         Me.lblCPF.Size = New System.Drawing.Size(47, 20)
         Me.lblCPF.TabIndex = 9
@@ -657,7 +657,7 @@ Partial Class frmGerenciamentoClientes
         '
         'mtxCNPJ
         '
-        Me.mtxCNPJ.Location = New System.Drawing.Point(500, 156)
+        Me.mtxCNPJ.Location = New System.Drawing.Point(500, 199)
         Me.mtxCNPJ.Name = "mtxCNPJ"
         Me.mtxCNPJ.Size = New System.Drawing.Size(164, 20)
         Me.mtxCNPJ.TabIndex = 6
@@ -665,7 +665,7 @@ Partial Class frmGerenciamentoClientes
         '
         'mtxRG
         '
-        Me.mtxRG.Location = New System.Drawing.Point(349, 202)
+        Me.mtxRG.Location = New System.Drawing.Point(352, 199)
         Me.mtxRG.Name = "mtxRG"
         Me.mtxRG.Size = New System.Drawing.Size(132, 20)
         Me.mtxRG.TabIndex = 8
@@ -674,7 +674,7 @@ Partial Class frmGerenciamentoClientes
         '
         Me.lblRG.AutoSize = True
         Me.lblRG.Font = New System.Drawing.Font("Century Gothic", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblRG.Location = New System.Drawing.Point(191, 133)
+        Me.lblRG.Location = New System.Drawing.Point(191, 176)
         Me.lblRG.Name = "lblRG"
         Me.lblRG.Size = New System.Drawing.Size(41, 20)
         Me.lblRG.TabIndex = 10

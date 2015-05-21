@@ -634,4 +634,16 @@ Public Class frmGerenciamentoClientes
     Private Sub mtxCelular_MaskInputRejected(ByVal sender As System.Object, ByVal e As System.Windows.Forms.MaskInputRejectedEventArgs) Handles mtxCelular.MaskInputRejected
 
     End Sub
+
+    Private Sub txtCodigoCliente_TextChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles txtCodigoCliente.TextChanged
+
+    End Sub
+
+    Private Sub txtIM_TextChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles txtIM.TextChanged
+
+    End Sub
+
+    Private Sub mtxCPF_MaskInputRejected(ByVal sender As System.Object, ByVal e As System.Windows.Forms.MaskInputRejectedEventArgs) Handles mtxCPF.MaskInputRejected
+
+    End Sub
 End Class
