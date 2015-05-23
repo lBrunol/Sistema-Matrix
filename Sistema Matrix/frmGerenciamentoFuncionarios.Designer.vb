@@ -65,60 +65,65 @@ Partial Class frmGerenciamentoFuncionarios
         Me.txtConMatricula = New System.Windows.Forms.TextBox()
         Me.lblMensagem = New System.Windows.Forms.Label()
         Me.dtgFuncionarios = New System.Windows.Forms.DataGridView()
+        Me.lblTitulo = New System.Windows.Forms.Label()
+        Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.tabFuncionarios.SuspendLayout()
         Me.tabCadastroFuncionarios.SuspendLayout()
         Me.tabConsultaFuncionarios.SuspendLayout()
         CType(Me.dtgFuncionarios, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'lblNome
         '
         Me.lblNome.AutoSize = True
-        Me.lblNome.Font = New System.Drawing.Font("Century Gothic", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblNome.Location = New System.Drawing.Point(8, 133)
+        Me.lblNome.Font = New System.Drawing.Font("Century Gothic", 9.75!)
+        Me.lblNome.Location = New System.Drawing.Point(8, 198)
         Me.lblNome.Name = "lblNome"
-        Me.lblNome.Size = New System.Drawing.Size(63, 20)
+        Me.lblNome.Size = New System.Drawing.Size(58, 17)
         Me.lblNome.TabIndex = 23
         Me.lblNome.Text = "Nome *"
         '
         'txtNome
         '
-        Me.txtNome.Location = New System.Drawing.Point(12, 156)
+        Me.txtNome.Font = New System.Drawing.Font("Century Gothic", 9.75!)
+        Me.txtNome.Location = New System.Drawing.Point(12, 218)
         Me.txtNome.Name = "txtNome"
-        Me.txtNome.Size = New System.Drawing.Size(360, 20)
+        Me.txtNome.Size = New System.Drawing.Size(360, 23)
         Me.txtNome.TabIndex = 2
         '
         'lblCargo
         '
         Me.lblCargo.AutoSize = True
-        Me.lblCargo.Font = New System.Drawing.Font("Century Gothic", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblCargo.Location = New System.Drawing.Point(7, 303)
+        Me.lblCargo.Font = New System.Drawing.Font("Century Gothic", 9.75!)
+        Me.lblCargo.Location = New System.Drawing.Point(7, 347)
         Me.lblCargo.Name = "lblCargo"
-        Me.lblCargo.Size = New System.Drawing.Size(66, 20)
+        Me.lblCargo.Size = New System.Drawing.Size(60, 17)
         Me.lblCargo.TabIndex = 40
         Me.lblCargo.Text = "Cargo *"
         '
         'txtCargo
         '
-        Me.txtCargo.Location = New System.Drawing.Point(12, 326)
+        Me.txtCargo.Font = New System.Drawing.Font("Century Gothic", 9.75!)
+        Me.txtCargo.Location = New System.Drawing.Point(12, 367)
         Me.txtCargo.Name = "txtCargo"
-        Me.txtCargo.Size = New System.Drawing.Size(132, 20)
+        Me.txtCargo.Size = New System.Drawing.Size(132, 23)
         Me.txtCargo.TabIndex = 3
         '
         'lblDataAdmissao
         '
         Me.lblDataAdmissao.AutoSize = True
-        Me.lblDataAdmissao.Font = New System.Drawing.Font("Century Gothic", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblDataAdmissao.Location = New System.Drawing.Point(8, 362)
+        Me.lblDataAdmissao.Font = New System.Drawing.Font("Century Gothic", 9.75!)
+        Me.lblDataAdmissao.Location = New System.Drawing.Point(8, 397)
         Me.lblDataAdmissao.Name = "lblDataAdmissao"
-        Me.lblDataAdmissao.Size = New System.Drawing.Size(152, 20)
+        Me.lblDataAdmissao.Size = New System.Drawing.Size(138, 17)
         Me.lblDataAdmissao.TabIndex = 42
         Me.lblDataAdmissao.Text = "Data de Admissão *"
         '
         'lblInserir
         '
         Me.lblInserir.AutoSize = True
-        Me.lblInserir.Location = New System.Drawing.Point(9, 53)
+        Me.lblInserir.Location = New System.Drawing.Point(417, 53)
         Me.lblInserir.Name = "lblInserir"
         Me.lblInserir.Size = New System.Drawing.Size(75, 13)
         Me.lblInserir.TabIndex = 69
@@ -146,7 +151,7 @@ Partial Class frmGerenciamentoFuncionarios
         'botModoNovo
         '
         Me.botModoNovo.Image = Global.Sistema_Matrix.My.Resources.Resources.adicionar
-        Me.botModoNovo.Location = New System.Drawing.Point(23, 10)
+        Me.botModoNovo.Location = New System.Drawing.Point(443, 10)
         Me.botModoNovo.Name = "botModoNovo"
         Me.botModoNovo.Size = New System.Drawing.Size(40, 40)
         Me.botModoNovo.TabIndex = 10
@@ -156,7 +161,7 @@ Partial Class frmGerenciamentoFuncionarios
         'lblAlterar
         '
         Me.lblAlterar.AutoSize = True
-        Me.lblAlterar.Location = New System.Drawing.Point(90, 53)
+        Me.lblAlterar.Location = New System.Drawing.Point(498, 53)
         Me.lblAlterar.Name = "lblAlterar"
         Me.lblAlterar.Size = New System.Drawing.Size(79, 13)
         Me.lblAlterar.TabIndex = 70
@@ -176,7 +181,7 @@ Partial Class frmGerenciamentoFuncionarios
         'botAlterar
         '
         Me.botAlterar.Image = Global.Sistema_Matrix.My.Resources.Resources.alterar
-        Me.botAlterar.Location = New System.Drawing.Point(111, 10)
+        Me.botAlterar.Location = New System.Drawing.Point(519, 10)
         Me.botAlterar.Name = "botAlterar"
         Me.botAlterar.Size = New System.Drawing.Size(40, 40)
         Me.botAlterar.TabIndex = 8
@@ -206,7 +211,7 @@ Partial Class frmGerenciamentoFuncionarios
         '
         Me.botCadastrar.Image = Global.Sistema_Matrix.My.Resources.Resources.salvar
         Me.botCadastrar.ImageAlign = System.Drawing.ContentAlignment.TopLeft
-        Me.botCadastrar.Location = New System.Drawing.Point(517, 10)
+        Me.botCadastrar.Location = New System.Drawing.Point(519, 10)
         Me.botCadastrar.Name = "botCadastrar"
         Me.botCadastrar.Size = New System.Drawing.Size(40, 40)
         Me.botCadastrar.TabIndex = 5
@@ -224,6 +229,8 @@ Partial Class frmGerenciamentoFuncionarios
         '
         'tabCadastroFuncionarios
         '
+        Me.tabCadastroFuncionarios.Controls.Add(Me.lblTitulo)
+        Me.tabCadastroFuncionarios.Controls.Add(Me.PictureBox1)
         Me.tabCadastroFuncionarios.Controls.Add(Me.txtSalario)
         Me.tabCadastroFuncionarios.Controls.Add(Me.Label6)
         Me.tabCadastroFuncionarios.Controls.Add(Me.txtTelefone)
@@ -264,92 +271,98 @@ Partial Class frmGerenciamentoFuncionarios
         '
         'txtSalario
         '
-        Me.txtSalario.Location = New System.Drawing.Point(193, 326)
+        Me.txtSalario.Font = New System.Drawing.Font("Century Gothic", 9.75!)
+        Me.txtSalario.Location = New System.Drawing.Point(193, 367)
         Me.txtSalario.Name = "txtSalario"
-        Me.txtSalario.Size = New System.Drawing.Size(133, 20)
+        Me.txtSalario.Size = New System.Drawing.Size(133, 23)
         Me.txtSalario.TabIndex = 83
         '
         'Label6
         '
         Me.Label6.AutoSize = True
-        Me.Label6.Font = New System.Drawing.Font("Century Gothic", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label6.Location = New System.Drawing.Point(189, 303)
+        Me.Label6.Font = New System.Drawing.Font("Century Gothic", 9.75!)
+        Me.Label6.Location = New System.Drawing.Point(189, 347)
         Me.Label6.Name = "Label6"
-        Me.Label6.Size = New System.Drawing.Size(57, 20)
+        Me.Label6.Size = New System.Drawing.Size(51, 17)
         Me.Label6.TabIndex = 82
         Me.Label6.Text = "Salário"
         '
         'txtTelefone
         '
-        Me.txtTelefone.Location = New System.Drawing.Point(300, 267)
+        Me.txtTelefone.Font = New System.Drawing.Font("Century Gothic", 9.75!)
+        Me.txtTelefone.Location = New System.Drawing.Point(300, 319)
         Me.txtTelefone.Name = "txtTelefone"
-        Me.txtTelefone.Size = New System.Drawing.Size(133, 20)
+        Me.txtTelefone.Size = New System.Drawing.Size(133, 23)
         Me.txtTelefone.TabIndex = 81
         '
         'Label5
         '
         Me.Label5.AutoSize = True
-        Me.Label5.Font = New System.Drawing.Font("Century Gothic", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label5.Location = New System.Drawing.Point(296, 244)
+        Me.Label5.Font = New System.Drawing.Font("Century Gothic", 9.75!)
+        Me.Label5.Location = New System.Drawing.Point(296, 299)
         Me.Label5.Name = "Label5"
-        Me.Label5.Size = New System.Drawing.Size(71, 20)
+        Me.Label5.Size = New System.Drawing.Size(61, 17)
         Me.Label5.TabIndex = 80
         Me.Label5.Text = "Telefone"
         '
         'txtCidade
         '
-        Me.txtCidade.Location = New System.Drawing.Point(300, 207)
+        Me.txtCidade.Font = New System.Drawing.Font("Century Gothic", 9.75!)
+        Me.txtCidade.Location = New System.Drawing.Point(300, 270)
         Me.txtCidade.Name = "txtCidade"
-        Me.txtCidade.Size = New System.Drawing.Size(187, 20)
+        Me.txtCidade.Size = New System.Drawing.Size(187, 23)
         Me.txtCidade.TabIndex = 79
         '
         'Label4
         '
         Me.Label4.AutoSize = True
-        Me.Label4.Font = New System.Drawing.Font("Century Gothic", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label4.Location = New System.Drawing.Point(296, 184)
+        Me.Label4.Font = New System.Drawing.Font("Century Gothic", 9.75!)
+        Me.Label4.Location = New System.Drawing.Point(296, 250)
         Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(64, 20)
+        Me.Label4.Size = New System.Drawing.Size(57, 17)
         Me.Label4.TabIndex = 78
         Me.Label4.Text = "Cidade"
         '
         'txtBairro
         '
-        Me.txtBairro.Location = New System.Drawing.Point(12, 267)
+        Me.txtBairro.Font = New System.Drawing.Font("Century Gothic", 9.75!)
+        Me.txtBairro.Location = New System.Drawing.Point(12, 319)
         Me.txtBairro.Name = "txtBairro"
-        Me.txtBairro.Size = New System.Drawing.Size(227, 20)
+        Me.txtBairro.Size = New System.Drawing.Size(227, 23)
         Me.txtBairro.TabIndex = 77
         '
         'Label3
         '
         Me.Label3.AutoSize = True
-        Me.Label3.Font = New System.Drawing.Font("Century Gothic", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label3.Location = New System.Drawing.Point(8, 244)
+        Me.Label3.Font = New System.Drawing.Font("Century Gothic", 9.75!)
+        Me.Label3.Location = New System.Drawing.Point(8, 299)
         Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(51, 20)
+        Me.Label3.Size = New System.Drawing.Size(44, 17)
         Me.Label3.TabIndex = 76
         Me.Label3.Text = "Bairro"
         '
         'Label2
         '
         Me.Label2.AutoSize = True
-        Me.Label2.Font = New System.Drawing.Font("Century Gothic", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label2.Location = New System.Drawing.Point(8, 184)
+        Me.Label2.Font = New System.Drawing.Font("Century Gothic", 9.75!)
+        Me.Label2.Location = New System.Drawing.Point(8, 250)
         Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(91, 20)
+        Me.Label2.Size = New System.Drawing.Size(79, 17)
         Me.Label2.TabIndex = 75
         Me.Label2.Text = "Endereço *"
         '
         'txtEndereco
         '
-        Me.txtEndereco.Location = New System.Drawing.Point(12, 207)
+        Me.txtEndereco.Font = New System.Drawing.Font("Century Gothic", 9.75!)
+        Me.txtEndereco.Location = New System.Drawing.Point(12, 270)
         Me.txtEndereco.Name = "txtEndereco"
-        Me.txtEndereco.Size = New System.Drawing.Size(256, 20)
+        Me.txtEndereco.Size = New System.Drawing.Size(256, 23)
         Me.txtEndereco.TabIndex = 74
         '
         'botHoje
         '
-        Me.botHoje.Location = New System.Drawing.Point(86, 382)
+        Me.botHoje.Font = New System.Drawing.Font("Century Gothic", 9.75!)
+        Me.botHoje.Location = New System.Drawing.Point(86, 417)
         Me.botHoje.Name = "botHoje"
         Me.botHoje.Size = New System.Drawing.Size(47, 23)
         Me.botHoje.TabIndex = 73
@@ -359,10 +372,11 @@ Partial Class frmGerenciamentoFuncionarios
         '
         'mtxDataAdmissao
         '
-        Me.mtxDataAdmissao.Location = New System.Drawing.Point(12, 385)
+        Me.mtxDataAdmissao.Font = New System.Drawing.Font("Century Gothic", 9.75!)
+        Me.mtxDataAdmissao.Location = New System.Drawing.Point(12, 420)
         Me.mtxDataAdmissao.Mask = "00/00/0000"
         Me.mtxDataAdmissao.Name = "mtxDataAdmissao"
-        Me.mtxDataAdmissao.Size = New System.Drawing.Size(68, 20)
+        Me.mtxDataAdmissao.Size = New System.Drawing.Size(68, 23)
         Me.mtxDataAdmissao.TabIndex = 4
         Me.mtxDataAdmissao.ValidatingType = GetType(Date)
         '
@@ -380,19 +394,20 @@ Partial Class frmGerenciamentoFuncionarios
         'lblMatricula
         '
         Me.lblMatricula.AutoSize = True
-        Me.lblMatricula.Font = New System.Drawing.Font("Century Gothic", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblMatricula.Location = New System.Drawing.Point(8, 82)
+        Me.lblMatricula.Font = New System.Drawing.Font("Century Gothic", 9.75!)
+        Me.lblMatricula.Location = New System.Drawing.Point(10, 150)
         Me.lblMatricula.Name = "lblMatricula"
-        Me.lblMatricula.Size = New System.Drawing.Size(89, 20)
+        Me.lblMatricula.Size = New System.Drawing.Size(78, 17)
         Me.lblMatricula.TabIndex = 1
         Me.lblMatricula.Text = "Matrícula *"
         '
         'txtMatricula
         '
         Me.txtMatricula.Enabled = False
-        Me.txtMatricula.Location = New System.Drawing.Point(12, 105)
+        Me.txtMatricula.Font = New System.Drawing.Font("Century Gothic", 9.75!)
+        Me.txtMatricula.Location = New System.Drawing.Point(12, 170)
         Me.txtMatricula.Name = "txtMatricula"
-        Me.txtMatricula.Size = New System.Drawing.Size(94, 20)
+        Me.txtMatricula.Size = New System.Drawing.Size(94, 23)
         Me.txtMatricula.TabIndex = 1
         Me.txtMatricula.Tag = "Não"
         '
@@ -498,6 +513,28 @@ Partial Class frmGerenciamentoFuncionarios
         Me.dtgFuncionarios.Size = New System.Drawing.Size(384, 270)
         Me.dtgFuncionarios.TabIndex = 0
         '
+        'lblTitulo
+        '
+        Me.lblTitulo.AutoSize = True
+        Me.lblTitulo.Font = New System.Drawing.Font("Century Gothic", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblTitulo.Location = New System.Drawing.Point(9, 14)
+        Me.lblTitulo.Name = "lblTitulo"
+        Me.lblTitulo.Size = New System.Drawing.Size(106, 21)
+        Me.lblTitulo.TabIndex = 103
+        Me.lblTitulo.Text = "Funcionários"
+        '
+        'PictureBox1
+        '
+        Me.PictureBox1.BackgroundImage = CType(resources.GetObject("PictureBox1.BackgroundImage"), System.Drawing.Image)
+        Me.PictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
+        Me.PictureBox1.InitialImage = CType(resources.GetObject("PictureBox1.InitialImage"), System.Drawing.Image)
+        Me.PictureBox1.Location = New System.Drawing.Point(13, 42)
+        Me.PictureBox1.Name = "PictureBox1"
+        Me.PictureBox1.Size = New System.Drawing.Size(90, 90)
+        Me.PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize
+        Me.PictureBox1.TabIndex = 102
+        Me.PictureBox1.TabStop = False
+        '
         'frmGerenciamentoFuncionarios
         '
         Me.AcceptButton = Me.botCadastrar
@@ -515,6 +552,7 @@ Partial Class frmGerenciamentoFuncionarios
         Me.tabConsultaFuncionarios.ResumeLayout(False)
         Me.tabConsultaFuncionarios.PerformLayout()
         CType(Me.dtgFuncionarios, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
     End Sub
@@ -560,4 +598,6 @@ Partial Class frmGerenciamentoFuncionarios
     Friend WithEvents Label6 As System.Windows.Forms.Label
     Friend WithEvents txtTelefone As System.Windows.Forms.TextBox
     Friend WithEvents txtSalario As System.Windows.Forms.TextBox
+    Friend WithEvents lblTitulo As System.Windows.Forms.Label
+    Friend WithEvents PictureBox1 As System.Windows.Forms.PictureBox
 End Class
