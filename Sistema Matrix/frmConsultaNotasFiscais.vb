@@ -35,12 +35,12 @@ Public Class frmConsultaNotasFiscais
         If chkEntreDatas.Checked = True Then
 
             strsql = "SELECT notaFiscal.notCodigo, notaFiscal.notHora, notaFiscal.notValor, notaFiscal.notData, notaFiscal.notCodVer, notaFiscal.notOutrasInformacoes, notaFiscal.ordCodigo, notaFiscal.demCodigo, ordemServiço.cliCodigo, cliente.cliNome FROM notaFiscal INNER JOIN ordemServiço ON notaFiscal.ordCodigo = ordemServiço.ordCodigo INNER JOIN cliente ON ordemServiço.cliCodigo = cliente.cliCodigo WHERE notaFiscal.notData BETWEEN '" & mskDataInicial.Text & "%' AND '" & mskDataFinal.Text & "%'  ORDER BY notaFiscal.notData, cliente.cliNome"
-            filtraNF(txtCnpjCpfTomador, strsql, dtgNotaFiscal, "notCodigo", "notHora", "notValor", "notData", "notCodVer", "notOutrasInformacoes", "ordCodigo", "demCodigo", "cliCodigo", "cliNome", "notaFiscal")
+            filtraNFMSK(mskDataInicial, strsql, dtgNotaFiscal, "notCodigo", "notHora", "notValor", "notData", "notCodVer", "notOutrasInformacoes", "ordCodigo", "demCodigo", "cliCodigo", "cliNome", "notaFiscal")
 
         Else
 
             strsql = "SELECT notaFiscal.notCodigo, notaFiscal.notHora, notaFiscal.notValor, notaFiscal.notData, notaFiscal.notCodVer, notaFiscal.notOutrasInformacoes, notaFiscal.ordCodigo, notaFiscal.demCodigo, ordemServiço.cliCodigo, cliente.cliNome FROM notaFiscal INNER JOIN ordemServiço ON notaFiscal.ordCodigo = ordemServiço.ordCodigo INNER JOIN cliente ON ordemServiço.cliCodigo = cliente.cliCodigo WHERE notaFiscal.notData>='" & mskDataInicial.Text & "%' ORDER BY notaFiscal.notData, cliente.cliNome"
-            filtraNF(txtCnpjCpfTomador, strsql, dtgNotaFiscal, "notCodigo", "notHora", "notValor", "notData", "notCodVer", "notOutrasInformacoes", "ordCodigo", "demCodigo", "cliCodigo", "cliNome", "notaFiscal")
+            filtraNFMSK(mskDataInicial, strsql, dtgNotaFiscal, "notCodigo", "notHora", "notValor", "notData", "notCodVer", "notOutrasInformacoes", "ordCodigo", "demCodigo", "cliCodigo", "cliNome", "notaFiscal")
 
         End If
     End Sub
@@ -49,12 +49,12 @@ Public Class frmConsultaNotasFiscais
         If chkEntreDatas.Checked = True Then
 
             strsql = "SELECT notaFiscal.notCodigo, notaFiscal.notHora, notaFiscal.notValor, notaFiscal.notData, notaFiscal.notCodVer, notaFiscal.notOutrasInformacoes, notaFiscal.ordCodigo, notaFiscal.demCodigo, ordemServiço.cliCodigo, cliente.cliNome FROM notaFiscal INNER JOIN ordemServiço ON notaFiscal.ordCodigo = ordemServiço.ordCodigo INNER JOIN cliente ON ordemServiço.cliCodigo = cliente.cliCodigo WHERE notaFiscal.notData BETWEEN '" & mskDataInicial.Text & "%' AND '" & mskDataFinal.Text & "%'  ORDER BY notaFiscal.notData, cliente.cliNome"
-            filtraNF(txtCnpjCpfTomador, strsql, dtgNotaFiscal, "notCodigo", "notHora", "notValor", "notData", "notCodVer", "notOutrasInformacoes", "ordCodigo", "demCodigo", "cliCodigo", "cliNome", "notaFiscal")
+            filtraNFMSK(mskDataFinal, strsql, dtgNotaFiscal, "notCodigo", "notHora", "notValor", "notData", "notCodVer", "notOutrasInformacoes", "ordCodigo", "demCodigo", "cliCodigo", "cliNome", "notaFiscal")
 
         Else
 
             strsql = "SELECT notaFiscal.notCodigo, notaFiscal.notHora, notaFiscal.notValor, notaFiscal.notData, notaFiscal.notCodVer, notaFiscal.notOutrasInformacoes, notaFiscal.ordCodigo, notaFiscal.demCodigo, ordemServiço.cliCodigo, cliente.cliNome FROM notaFiscal INNER JOIN ordemServiço ON notaFiscal.ordCodigo = ordemServiço.ordCodigo INNER JOIN cliente ON ordemServiço.cliCodigo = cliente.cliCodigo WHERE notaFiscal.notData<='" & mskDataFinal.Text & "%' ORDER BY notaFiscal.notData, cliente.cliNome"
-            filtraNF(txtCnpjCpfTomador, strsql, dtgNotaFiscal, "notCodigo", "notHora", "notValor", "notData", "notCodVer", "notOutrasInformacoes", "ordCodigo", "demCodigo", "cliCodigo", "cliNome", "notaFiscal")
+            filtraNFMSK(mskDataFinal, strsql, dtgNotaFiscal, "notCodigo", "notHora", "notValor", "notData", "notCodVer", "notOutrasInformacoes", "ordCodigo", "demCodigo", "cliCodigo", "cliNome", "notaFiscal")
 
         End If
     End Sub

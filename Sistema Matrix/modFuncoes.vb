@@ -191,6 +191,44 @@ Module modFuncoes
     End Sub
 
 
+    Sub filtraNFMSK(ByVal nomeTextBox As MaskedTextBox, ByVal strSql As String, ByVal nomeDataset As DataGridView, ByVal campo1 As String, ByVal campo2 As String, ByVal campo3 As String, ByVal campo4 As String, ByVal campo5 As String, ByVal campo6 As String, ByVal campo7 As String, ByVal campo8 As String, ByVal campo9 As String, ByVal campo10 As String, ByVal nomeTabela As String)
+        nomeDataset.Rows.Clear()
+        Dim objBanco As New clsConexaoBanco
+        Dim tabela As DataTable
+        tabela = New DataTable()
+        Try
+            If nomeTextBox.Text <> "" Then
+                tabela = objBanco.ExecutaDataTable(strSql)
+                If tabela.Rows.Count > 0 Then
+                    Dim i As Integer = 0
+                    For i = 0 To tabela.Rows.Count - 1
+                        nomeDataset.Rows.Add(tabela.Rows(i)(campo1), tabela.Rows(i)(campo2), tabela.Rows(i)(campo3), tabela.Rows(i)(campo4), tabela.Rows(i)(campo5), tabela.Rows(i)(campo6), tabela.Rows(i)(campo7), tabela.Rows(i)(campo8), tabela.Rows(i)(campo9), tabela.Rows(i)(campo10))
+                    Next
+                End If
+            Else
+                strSql = "SELECT * FROM " & nomeTabela & ""
+                tabela = objBanco.ExecutaDataTable(strSql)
+                If tabela.Rows.Count > 0 Then
+                    Dim i As Integer = 0
+                    For i = 0 To tabela.Rows.Count - 1
+                        nomeDataset.Rows.Add(tabela.Rows(i)(campo1), tabela.Rows(i)(campo2), tabela.Rows(i)(campo3), tabela.Rows(i)(campo4), tabela.Rows(i)(campo5), tabela.Rows(i)(campo6), tabela.Rows(i)(campo7), tabela.Rows(i)(campo8), tabela.Rows(i)(campo9), tabela.Rows(i)(campo10))
+                    Next
+                End If
+            End If
+        Catch exc As SqlClient.SqlException
+            MsgBox("Erro com banco de dados" & vbCrLf & Err.Description, vbCritical, "Erro com Banco de dados")
+        Catch exc As Exception
+            MsgBox("Erro" & vbCrLf & Err.Number & vbCrLf & Err.Description, vbCritical, "Erro")
+        Finally
+            'Fecha a conexão
+            objBanco.DesconectarBanco()
+            strSql = String.Empty
+        End Try
+
+        nomeDataset.Refresh()
+    End Sub
+
+
     Function SoNumeros(ByVal Keyascii As Short) As Short
         If InStr("1234567890", Chr(Keyascii)) = 0 Then
             SoNumeros = 0
