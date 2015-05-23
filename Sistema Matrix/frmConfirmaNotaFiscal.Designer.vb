@@ -558,6 +558,8 @@ Partial Class frmConfirmaNotaFiscal
         '
         'cdbParcelas
         '
+        Me.cdbParcelas.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend
+        Me.cdbParcelas.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems
         Me.cdbParcelas.FormattingEnabled = True
         Me.cdbParcelas.Items.AddRange(New Object() {"1", "2", "3", "6"})
         Me.cdbParcelas.Location = New System.Drawing.Point(533, 151)

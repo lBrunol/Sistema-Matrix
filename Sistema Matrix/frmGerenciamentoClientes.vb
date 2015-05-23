@@ -203,34 +203,9 @@ Public Class frmGerenciamentoClientes
         txtConCpf.Visible = True
         'Limpa as textbox
         modFuncoes.Limpar(Me)
-        'Limpa as linhas do datagrid
-        dtgConsultaClientes.Rows.Clear()
 
         Try
-            'Adiciona o cabeçalho das colunas
-            dtgConsultaClientes.ColumnCount = 3
-            dtgConsultaClientes.Columns(0).Name = "Código"
-            dtgConsultaClientes.Columns(1).Name = "Nome"
-            dtgConsultaClientes.Columns(2).Name = "CPF"
-
-            'Seta a largura das colunas
-            dtgConsultaClientes.Columns(0).Width = "50"
-            dtgConsultaClientes.Columns(1).Width = "210"
-            dtgConsultaClientes.Columns(2).Width = "210"
-
-            tabela = New DataTable()
-
-            strsql = "SELECT cliente.cliCodigo, cliente.cliNome, cliPessoaFisica.cliCPF FROM cliente INNER JOIN cliPessoaFisica ON cliente.cliCodigo = cliPessoaFisica.cliCodigo ORDER BY cliente.cliCodigo"
-
-            tabela = objBanco.ExecutaDataTable(strsql)
-
-            If tabela.Rows.Count > 0 Then
-                Dim i As Integer = 0
-                For i = 0 To tabela.Rows.Count - 1
-                    dtgConsultaClientes.Rows.Add(tabela.Rows(i)("cliCodigo"), tabela.Rows(i)("cliNome"), tabela.Rows(i)("cliCPF"))
-                Next
-            End If
-
+            objBanco.carregaDataGrid(dtgConsultaClientes, "SELECT cliente.cliCodigo as Código, cliente.cliNome as Nome, cliPessoaFisica.cliCPF as CPF FROM cliente INNER JOIN cliPessoaFisica ON cliente.cliCodigo = cliPessoaFisica.cliCodigo ORDER BY cliente.cliCodigo")
             'Tratamento dos erros
         Catch exc As SqlClient.SqlException
             MsgBox("Erro com banco de dados" & vbCrLf & Err.Description, vbCritical, "Erro com Banco de dados")
@@ -238,14 +213,7 @@ Public Class frmGerenciamentoClientes
             MsgBox("Erro" & vbCrLf & Err.Number & vbCrLf & Err.Description, vbCritical, "Erro")
         Finally
             objBanco.DesconectarBanco()
-            dtgConsultaClientes.Refresh()
             'Testa se a variável leitor foi alterada, se sim a conexão com banco de dados será fechada
-            If leitor IsNot Nothing Then
-                leitor.Close()
-                leitor = Nothing
-            End If
-            strsql = String.Empty
-            tabela.Dispose()
         End Try
     End Sub
 
@@ -257,34 +225,8 @@ Public Class frmGerenciamentoClientes
         lblConCPF.Visible = False
         txtConCpf.Visible = False
         modFuncoes.Limpar(Me)
-        dtgConsultaClientes.Rows.Clear()
         Try
-
-            'Adiciona o cabeçalho das colunas
-            dtgConsultaClientes.ColumnCount = 3
-            dtgConsultaClientes.Columns(0).Name = "Código"
-            dtgConsultaClientes.Columns(1).Name = "Nome"
-            dtgConsultaClientes.Columns(2).Name = "CNPJ"
-
-            'Seta a largura das colunas
-            dtgConsultaClientes.Columns(0).Width = "50"
-            dtgConsultaClientes.Columns(1).Width = "210"
-            dtgConsultaClientes.Columns(2).Width = "210"
-
-            tabela = New DataTable()
-
-            'Seleciona os dados da tabela clientes e da tabela pessoa jurídica
-            strsql = "SELECT cliente.cliCodigo, cliente.cliNome, cliPessoaJuridica.cliCNPJ FROM cliente INNER JOIN cliPessoaJuridica ON cliente.cliCodigo = cliPessoaJuridica.cliCodigo ORDER BY cliente.cliCodigo"
-
-            tabela = objBanco.ExecutaDataTable(strsql)
-
-            If tabela.Rows.Count > 0 Then 'verifica se tabela possui registros
-                Dim i As Integer = 0
-                For i = 0 To tabela.Rows.Count - 1  ' leitura de todos registros da tabela
-                    dtgConsultaClientes.Rows.Add(tabela.Rows(i)("cliCodigo"), tabela.Rows(i)("cliNome"), tabela.Rows(i)("cliCNPJ"))
-                Next
-            End If
-
+            objBanco.carregaDataGrid(dtgConsultaClientes, "SELECT cliente.cliCodigo as Código, cliente.cliNome as Nome, cliPessoaJuridica.cliCNPJ as CNPJ FROM cliente INNER JOIN cliPessoaJuridica ON cliente.cliCodigo = cliPessoaJuridica.cliCodigo ORDER BY cliente.cliCodigo")
             'Tratamento dos erros
         Catch exc As SqlClient.SqlException
             MsgBox("Erro com banco de dados" & vbCrLf & Err.Description, vbCritical, "Erro com Banco de dados")
@@ -292,14 +234,6 @@ Public Class frmGerenciamentoClientes
             MsgBox("Erro" & vbCrLf & Err.Number & vbCrLf & Err.Description, vbCritical, "Erro")
         Finally
             objBanco.DesconectarBanco()
-            dtgConsultaClientes.Refresh()
-            'Testa se a variável leitor foi alterada, se sim a conexão com banco de dados será fechada
-            If leitor IsNot Nothing Then
-                leitor.Close()
-                leitor = Nothing
-            End If
-            strsql = String.Empty
-            tabela.Dispose()
         End Try
     End Sub
     Private Sub txtConCodigo_TextChanged(sender As Object, e As EventArgs) Handles txtConCodigo.TextChanged
@@ -420,63 +354,18 @@ Public Class frmGerenciamentoClientes
     End Sub
 
     Private Sub botModoNovo_Click(sender As Object, e As EventArgs) Handles botModoNovo.Click
-        botCadastrar.Visible = True
-        lblCadastrar.Visible = True
-        botLimpar.Visible = True
-        lblLimpar.Visible = True
-        botAlterar.Visible = False
-        lblAlterar.Visible = False
-        botExcluir.Visible = False
-        lblExcluir.Visible = False
-        botModoNovo.Visible = False
-        lblInserir.Visible = False
-        rdbFisica.Checked = True
-        rdbFisica.Enabled = True
-        rdbJuridica.Enabled = True
-        Limpar(Me)
+        modoInserir()
         valorCodCliente = atribuiCodigo("cliCodigo", "cliente")
         txtCodigoCliente.Text = valorCodCliente
     End Sub
 
     Private Sub tabConsultaClientes_Enter(sender As Object, e As EventArgs) Handles tabConsultaClientes.Enter
-        dtgConsultaClientes.Rows.Clear()
-        Try
-            rdbConFisica.Checked = True
-
-
-            tabela = New DataTable()
-
-            strsql = "SELECT cliente.cliCodigo, cliente.cliNome, cliPessoaFisica.cliCPF FROM cliente INNER JOIN cliPessoaFisica ON cliente.cliCodigo = cliPessoaFisica.cliCodigo ORDER BY cliente.cliCodigo"
-
-            tabela = objBanco.ExecutaDataTable(strsql)
-
-            If tabela.Rows.Count > 0 Then
-                Dim i As Integer = 0
-                For i = 0 To tabela.Rows.Count - 1
-                    dtgConsultaClientes.Rows.Add(tabela.Rows(i)("cliCodigo"), tabela.Rows(i)("cliNome"), tabela.Rows(i)("cliCPF"))
-                Next
-            End If
-
-        Catch exc As SqlClient.SqlException
-            MsgBox("Erro com banco de dados" & vbCrLf & Err.Description, vbCritical, "Erro com Banco de dados")
-        Catch exc As Exception
-            MsgBox("Erro" & vbCrLf & Err.Number & vbCrLf & Err.Description, vbCritical, "Erro")
-        Finally
-            objBanco.DesconectarBanco()
-            dtgConsultaClientes.Refresh()
-            'Testa se a variável leitor foi alterada, se sim a conexão com banco de dados será fechada
-            If leitor IsNot Nothing Then
-                leitor.Close()
-                leitor = Nothing
-            End If
-            strsql = String.Empty
-            tabela.Dispose()
-        End Try
+        rdbConFisica.Checked = True
+        objBanco.carregaDataGrid(dtgConsultaClientes, "SELECT cliente.cliCodigo as Código, cliente.cliNome as Nome, cliPessoaFisica.cliCPF as CPF FROM cliente INNER JOIN cliPessoaFisica ON cliente.cliCodigo = cliPessoaFisica.cliCodigo ORDER BY cliente.cliCodigo")
     End Sub
 
     Private Sub botExcluir_Click(sender As Object, e As EventArgs) Handles botExcluir.Click
         If MsgBox("Deseja excluir realmente o registro", vbQuestion + vbYesNo, "Confirme") = vbYes Then
-
             Try
                 'Variável que armazena o comando SQL
                 strsql = "DELETE FROM cliente WHERE cliente.cliCodigo = " & valorCodCliente
@@ -592,58 +481,34 @@ Public Class frmGerenciamentoClientes
     End Sub
 
     Private Sub txtConCodigo_KeyPress(sender As Object, e As KeyPressEventArgs) Handles txtConCodigo.KeyPress
-        Dim KeyAscii As Short = CShort(Asc(e.KeyChar))
-
-        KeyAscii = CShort(SoNumeros(KeyAscii))
-        If KeyAscii = 0 Then
-            e.Handled = True
-        End If
+        modFuncoes.apenasNumeros(e)
     End Sub
 
     Private Sub txtConCNPJ_KeyPress(sender As Object, e As KeyPressEventArgs) Handles txtConCNPJ.KeyPress
-        Dim KeyAscii As Short = CShort(Asc(e.KeyChar))
-
-        KeyAscii = CShort(SoNumeros(KeyAscii))
-        If KeyAscii = 0 Then
-            e.Handled = True
-        End If
+        modFuncoes.apenasNumeros(e)
     End Sub
 
     Private Sub txtConCpf_KeyPress(sender As Object, e As KeyPressEventArgs) Handles txtConCpf.KeyPress
-        Dim KeyAscii As Short = CShort(Asc(e.KeyChar))
-
-        KeyAscii = CShort(SoNumeros(KeyAscii))
-        If KeyAscii = 0 Then
-            e.Handled = True
-        End If
+        modFuncoes.apenasNumeros(e)
     End Sub
 
     Private Sub txtIM_KeyPress(sender As Object, e As KeyPressEventArgs) Handles txtIM.KeyPress
-        Dim KeyAscii As Short = CShort(Asc(e.KeyChar))
-
-        KeyAscii = CShort(SoNumeros(KeyAscii))
-        If KeyAscii = 0 Then
-            e.Handled = True
-        End If
+        modFuncoes.apenasNumeros(e)
     End Sub
 
     Private Sub Clientes_FormClosed(sender As Object, e As FormClosedEventArgs) Handles MyBase.FormClosed
         modFuncoes.HabilitaBotaoLogOff()
     End Sub
 
-    Private Sub mtxCelular_MaskInputRejected(ByVal sender As System.Object, ByVal e As System.Windows.Forms.MaskInputRejectedEventArgs) Handles mtxCelular.MaskInputRejected
-
+    Private Sub mtxTelefone_KeyPress(sender As Object, e As KeyPressEventArgs) Handles mtxTelefone.KeyPress
+        modFuncoes.apenasNumeros(e)
     End Sub
 
-    Private Sub txtCodigoCliente_TextChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles txtCodigoCliente.TextChanged
-
+    Private Sub mtxCelular_KeyPress(sender As Object, e As KeyPressEventArgs) Handles mtxCelular.KeyPress
+        modFuncoes.apenasNumeros(e)
     End Sub
 
-    Private Sub txtIM_TextChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles txtIM.TextChanged
-
-    End Sub
-
-    Private Sub mtxCPF_MaskInputRejected(ByVal sender As System.Object, ByVal e As System.Windows.Forms.MaskInputRejectedEventArgs) Handles mtxCPF.MaskInputRejected
-
+    Private Sub mtxCEP_KeyPress(sender As Object, e As KeyPressEventArgs) Handles mtxCEP.KeyPress
+        modFuncoes.apenasNumeros(e)
     End Sub
 End Class

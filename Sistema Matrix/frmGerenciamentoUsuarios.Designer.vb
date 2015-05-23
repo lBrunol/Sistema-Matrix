@@ -81,44 +81,47 @@ Partial Class frmGerenciamentoUsuarios
         'chkAdministrador
         '
         Me.chkAdministrador.AutoSize = True
+        Me.chkAdministrador.Font = New System.Drawing.Font("Century Gothic", 9.75!)
         Me.chkAdministrador.Location = New System.Drawing.Point(163, 176)
         Me.chkAdministrador.Name = "chkAdministrador"
-        Me.chkAdministrador.Size = New System.Drawing.Size(89, 17)
+        Me.chkAdministrador.Size = New System.Drawing.Size(117, 21)
         Me.chkAdministrador.TabIndex = 67
         Me.chkAdministrador.Text = "Administrador"
         Me.chkAdministrador.UseVisualStyleBackColor = True
         '
         'txtSenha
         '
+        Me.txtSenha.Font = New System.Drawing.Font("Century Gothic", 9.75!)
         Me.txtSenha.Location = New System.Drawing.Point(8, 176)
         Me.txtSenha.Name = "txtSenha"
-        Me.txtSenha.Size = New System.Drawing.Size(131, 20)
+        Me.txtSenha.Size = New System.Drawing.Size(131, 23)
         Me.txtSenha.TabIndex = 2
         '
         'txtNome
         '
+        Me.txtNome.Font = New System.Drawing.Font("Century Gothic", 9.75!)
         Me.txtNome.Location = New System.Drawing.Point(6, 122)
         Me.txtNome.Name = "txtNome"
-        Me.txtNome.Size = New System.Drawing.Size(353, 20)
+        Me.txtNome.Size = New System.Drawing.Size(353, 23)
         Me.txtNome.TabIndex = 1
         '
         'lblNome
         '
         Me.lblNome.AutoSize = True
-        Me.lblNome.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblNome.Location = New System.Drawing.Point(4, 99)
+        Me.lblNome.Font = New System.Drawing.Font("Century Gothic", 9.75!)
+        Me.lblNome.Location = New System.Drawing.Point(4, 103)
         Me.lblNome.Name = "lblNome"
-        Me.lblNome.Size = New System.Drawing.Size(51, 20)
+        Me.lblNome.Size = New System.Drawing.Size(48, 17)
         Me.lblNome.TabIndex = 28
         Me.lblNome.Text = "Nome"
         '
         'lblSenha
         '
         Me.lblSenha.AutoSize = True
-        Me.lblSenha.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblSenha.Location = New System.Drawing.Point(6, 153)
+        Me.lblSenha.Font = New System.Drawing.Font("Century Gothic", 9.75!)
+        Me.lblSenha.Location = New System.Drawing.Point(6, 157)
         Me.lblSenha.Name = "lblSenha"
-        Me.lblSenha.Size = New System.Drawing.Size(56, 20)
+        Me.lblSenha.Size = New System.Drawing.Size(47, 17)
         Me.lblSenha.TabIndex = 39
         Me.lblSenha.Text = "Senha"
         '
@@ -126,7 +129,7 @@ Partial Class frmGerenciamentoUsuarios
         '
         Me.lblAlterar.AutoSize = True
         Me.lblAlterar.Enabled = False
-        Me.lblAlterar.Location = New System.Drawing.Point(7, 64)
+        Me.lblAlterar.Location = New System.Drawing.Point(305, 64)
         Me.lblAlterar.Name = "lblAlterar"
         Me.lblAlterar.Size = New System.Drawing.Size(79, 13)
         Me.lblAlterar.TabIndex = 60
@@ -136,7 +139,7 @@ Partial Class frmGerenciamentoUsuarios
         '
         Me.lblExcluir.AutoSize = True
         Me.lblExcluir.Enabled = False
-        Me.lblExcluir.Location = New System.Drawing.Point(95, 64)
+        Me.lblExcluir.Location = New System.Drawing.Point(393, 64)
         Me.lblExcluir.Name = "lblExcluir"
         Me.lblExcluir.Size = New System.Drawing.Size(80, 13)
         Me.lblExcluir.TabIndex = 58
@@ -146,7 +149,7 @@ Partial Class frmGerenciamentoUsuarios
         '
         Me.botAlterar.Enabled = False
         Me.botAlterar.Image = Global.Sistema_Matrix.My.Resources.Resources.alterar
-        Me.botAlterar.Location = New System.Drawing.Point(21, 21)
+        Me.botAlterar.Location = New System.Drawing.Point(319, 21)
         Me.botAlterar.Name = "botAlterar"
         Me.botAlterar.Size = New System.Drawing.Size(40, 40)
         Me.botAlterar.TabIndex = 6
@@ -156,7 +159,7 @@ Partial Class frmGerenciamentoUsuarios
         '
         Me.botExcluir.Enabled = False
         Me.botExcluir.Image = Global.Sistema_Matrix.My.Resources.Resources.excluir
-        Me.botExcluir.Location = New System.Drawing.Point(112, 21)
+        Me.botExcluir.Location = New System.Drawing.Point(410, 21)
         Me.botExcluir.Name = "botExcluir"
         Me.botExcluir.Size = New System.Drawing.Size(40, 40)
         Me.botExcluir.TabIndex = 7
@@ -192,7 +195,7 @@ Partial Class frmGerenciamentoUsuarios
         Me.dtgConsultaUsuarios.AllowUserToOrderColumns = True
         DataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
         Me.dtgConsultaUsuarios.AlternatingRowsDefaultCellStyle = DataGridViewCellStyle1
-        Me.dtgConsultaUsuarios.BackgroundColor = System.Drawing.SystemColors.Control
+        Me.dtgConsultaUsuarios.BackgroundColor = System.Drawing.Color.Azure
         Me.dtgConsultaUsuarios.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
         Me.dtgConsultaUsuarios.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.dtgConsultaUsuarios.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.colCodigo, Me.colUsuario, Me.colSenha})

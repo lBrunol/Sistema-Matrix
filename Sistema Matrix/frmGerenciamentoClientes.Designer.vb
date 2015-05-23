@@ -22,11 +22,13 @@ Partial Class frmGerenciamentoClientes
     'Não o modifique usando o editor de códigos.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(frmGerenciamentoClientes))
         Dim DataGridViewCellStyle1 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Dim DataGridViewCellStyle2 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(frmGerenciamentoClientes))
         Me.tabClientes = New System.Windows.Forms.TabControl()
         Me.tabCadastroClientes = New System.Windows.Forms.TabPage()
+        Me.lblTitulo = New System.Windows.Forms.Label()
+        Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.lblCodCliente = New System.Windows.Forms.Label()
         Me.txtCodigoCliente = New System.Windows.Forms.TextBox()
         Me.txtIM = New System.Windows.Forms.TextBox()
@@ -96,15 +98,13 @@ Partial Class frmGerenciamentoClientes
         Me.lblConCNPJ = New System.Windows.Forms.Label()
         Me.txtConCpf = New System.Windows.Forms.TextBox()
         Me.txtConCNPJ = New System.Windows.Forms.TextBox()
-        Me.lblTitulo = New System.Windows.Forms.Label()
-        Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.tabClientes.SuspendLayout()
         Me.tabCadastroClientes.SuspendLayout()
+        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.grpTipoCliente.SuspendLayout()
         Me.tabConsultaClientes.SuspendLayout()
         Me.GroupBox1.SuspendLayout()
         CType(Me.dtgConsultaClientes, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'tabClientes
@@ -181,6 +181,28 @@ Partial Class frmGerenciamentoClientes
         Me.tabCadastroClientes.TabIndex = 1
         Me.tabCadastroClientes.Text = "Cadastro"
         Me.tabCadastroClientes.UseVisualStyleBackColor = True
+        '
+        'lblTitulo
+        '
+        Me.lblTitulo.AutoSize = True
+        Me.lblTitulo.Font = New System.Drawing.Font("Century Gothic", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblTitulo.Location = New System.Drawing.Point(5, 19)
+        Me.lblTitulo.Name = "lblTitulo"
+        Me.lblTitulo.Size = New System.Drawing.Size(72, 21)
+        Me.lblTitulo.TabIndex = 101
+        Me.lblTitulo.Text = "Clientes"
+        '
+        'PictureBox1
+        '
+        Me.PictureBox1.BackgroundImage = CType(resources.GetObject("PictureBox1.BackgroundImage"), System.Drawing.Image)
+        Me.PictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
+        Me.PictureBox1.InitialImage = CType(resources.GetObject("PictureBox1.InitialImage"), System.Drawing.Image)
+        Me.PictureBox1.Location = New System.Drawing.Point(9, 51)
+        Me.PictureBox1.Name = "PictureBox1"
+        Me.PictureBox1.Size = New System.Drawing.Size(90, 90)
+        Me.PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize
+        Me.PictureBox1.TabIndex = 100
+        Me.PictureBox1.TabStop = False
         '
         'lblCodCliente
         '
@@ -723,7 +745,7 @@ Partial Class frmGerenciamentoClientes
         Me.tabConsultaClientes.Location = New System.Drawing.Point(4, 22)
         Me.tabConsultaClientes.Name = "tabConsultaClientes"
         Me.tabConsultaClientes.Padding = New System.Windows.Forms.Padding(3)
-        Me.tabConsultaClientes.Size = New System.Drawing.Size(697, 528)
+        Me.tabConsultaClientes.Size = New System.Drawing.Size(697, 539)
         Me.tabConsultaClientes.TabIndex = 2
         Me.tabConsultaClientes.Text = "Consulta"
         Me.tabConsultaClientes.UseVisualStyleBackColor = True
@@ -741,7 +763,7 @@ Partial Class frmGerenciamentoClientes
         '
         Me.GroupBox1.Controls.Add(Me.rdbConJuridica)
         Me.GroupBox1.Controls.Add(Me.rdbConFisica)
-        Me.GroupBox1.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.GroupBox1.Font = New System.Drawing.Font("Century Gothic", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.GroupBox1.Location = New System.Drawing.Point(533, 45)
         Me.GroupBox1.Name = "GroupBox1"
         Me.GroupBox1.Size = New System.Drawing.Size(137, 40)
@@ -752,10 +774,10 @@ Partial Class frmGerenciamentoClientes
         'rdbConJuridica
         '
         Me.rdbConJuridica.AutoSize = True
-        Me.rdbConJuridica.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.rdbConJuridica.Font = New System.Drawing.Font("Century Gothic", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.rdbConJuridica.Location = New System.Drawing.Point(70, 16)
         Me.rdbConJuridica.Name = "rdbConJuridica"
-        Me.rdbConJuridica.Size = New System.Drawing.Size(63, 17)
+        Me.rdbConJuridica.Size = New System.Drawing.Size(68, 20)
         Me.rdbConJuridica.TabIndex = 1
         Me.rdbConJuridica.Tag = "Não"
         Me.rdbConJuridica.Text = "Jurídica"
@@ -765,10 +787,10 @@ Partial Class frmGerenciamentoClientes
         '
         Me.rdbConFisica.AutoSize = True
         Me.rdbConFisica.Checked = True
-        Me.rdbConFisica.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.rdbConFisica.Font = New System.Drawing.Font("Century Gothic", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.rdbConFisica.Location = New System.Drawing.Point(6, 16)
         Me.rdbConFisica.Name = "rdbConFisica"
-        Me.rdbConFisica.Size = New System.Drawing.Size(54, 17)
+        Me.rdbConFisica.Size = New System.Drawing.Size(54, 20)
         Me.rdbConFisica.TabIndex = 0
         Me.rdbConFisica.TabStop = True
         Me.rdbConFisica.Tag = "Não"
@@ -778,20 +800,20 @@ Partial Class frmGerenciamentoClientes
         'lblConCPF
         '
         Me.lblConCPF.AutoSize = True
-        Me.lblConCPF.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblConCPF.Location = New System.Drawing.Point(331, 40)
+        Me.lblConCPF.Font = New System.Drawing.Font("Century Gothic", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblConCPF.Location = New System.Drawing.Point(331, 42)
         Me.lblConCPF.Name = "lblConCPF"
-        Me.lblConCPF.Size = New System.Drawing.Size(34, 17)
+        Me.lblConCPF.Size = New System.Drawing.Size(29, 16)
         Me.lblConCPF.TabIndex = 6
         Me.lblConCPF.Text = "CPF"
         '
         'lblConNome
         '
         Me.lblConNome.AutoSize = True
-        Me.lblConNome.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblConNome.Location = New System.Drawing.Point(103, 40)
+        Me.lblConNome.Font = New System.Drawing.Font("Century Gothic", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblConNome.Location = New System.Drawing.Point(103, 42)
         Me.lblConNome.Name = "lblConNome"
-        Me.lblConNome.Size = New System.Drawing.Size(45, 17)
+        Me.lblConNome.Size = New System.Drawing.Size(40, 16)
         Me.lblConNome.TabIndex = 5
         Me.lblConNome.Text = "Nome"
         '
@@ -806,10 +828,10 @@ Partial Class frmGerenciamentoClientes
         'lblCodigo
         '
         Me.lblCodigo.AutoSize = True
-        Me.lblCodigo.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblCodigo.Location = New System.Drawing.Point(45, 41)
+        Me.lblCodigo.Font = New System.Drawing.Font("Century Gothic", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblCodigo.Location = New System.Drawing.Point(45, 42)
         Me.lblCodigo.Name = "lblCodigo"
-        Me.lblCodigo.Size = New System.Drawing.Size(52, 17)
+        Me.lblCodigo.Size = New System.Drawing.Size(48, 16)
         Me.lblCodigo.TabIndex = 3
         Me.lblCodigo.Text = "Código"
         '
@@ -824,10 +846,10 @@ Partial Class frmGerenciamentoClientes
         'Label1
         '
         Me.Label1.AutoSize = True
-        Me.Label1.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label1.Location = New System.Drawing.Point(3, 7)
+        Me.Label1.Font = New System.Drawing.Font("Century Gothic", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label1.Location = New System.Drawing.Point(5, 10)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(155, 20)
+        Me.Label1.Size = New System.Drawing.Size(171, 21)
         Me.Label1.TabIndex = 1
         Me.Label1.Text = "Consulta de Clientes"
         '
@@ -837,7 +859,7 @@ Partial Class frmGerenciamentoClientes
         Me.dtgConsultaClientes.AllowUserToDeleteRows = False
         DataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
         Me.dtgConsultaClientes.AlternatingRowsDefaultCellStyle = DataGridViewCellStyle1
-        Me.dtgConsultaClientes.BackgroundColor = System.Drawing.SystemColors.Control
+        Me.dtgConsultaClientes.BackgroundColor = System.Drawing.Color.Azure
         Me.dtgConsultaClientes.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
         Me.dtgConsultaClientes.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.dtgConsultaClientes.Cursor = System.Windows.Forms.Cursors.Hand
@@ -859,10 +881,10 @@ Partial Class frmGerenciamentoClientes
         'lblConCNPJ
         '
         Me.lblConCNPJ.AutoSize = True
-        Me.lblConCNPJ.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblConCNPJ.Location = New System.Drawing.Point(331, 40)
+        Me.lblConCNPJ.Font = New System.Drawing.Font("Century Gothic", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblConCNPJ.Location = New System.Drawing.Point(331, 42)
         Me.lblConCNPJ.Name = "lblConCNPJ"
-        Me.lblConCNPJ.Size = New System.Drawing.Size(43, 17)
+        Me.lblConCNPJ.Size = New System.Drawing.Size(37, 16)
         Me.lblConCNPJ.TabIndex = 9
         Me.lblConCNPJ.Text = "CNPJ"
         Me.lblConCNPJ.Visible = False
@@ -884,33 +906,12 @@ Partial Class frmGerenciamentoClientes
         Me.txtConCNPJ.Tag = "Não"
         Me.txtConCNPJ.Visible = False
         '
-        'lblTitulo
-        '
-        Me.lblTitulo.AutoSize = True
-        Me.lblTitulo.Font = New System.Drawing.Font("Century Gothic", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblTitulo.Location = New System.Drawing.Point(5, 19)
-        Me.lblTitulo.Name = "lblTitulo"
-        Me.lblTitulo.Size = New System.Drawing.Size(72, 21)
-        Me.lblTitulo.TabIndex = 101
-        Me.lblTitulo.Text = "Clientes"
-        '
-        'PictureBox1
-        '
-        Me.PictureBox1.BackgroundImage = CType(resources.GetObject("PictureBox1.BackgroundImage"), System.Drawing.Image)
-        Me.PictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
-        Me.PictureBox1.InitialImage = CType(resources.GetObject("PictureBox1.InitialImage"), System.Drawing.Image)
-        Me.PictureBox1.Location = New System.Drawing.Point(9, 51)
-        Me.PictureBox1.Name = "PictureBox1"
-        Me.PictureBox1.Size = New System.Drawing.Size(90, 90)
-        Me.PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize
-        Me.PictureBox1.TabIndex = 100
-        Me.PictureBox1.TabStop = False
-        '
         'frmGerenciamentoClientes
         '
         Me.AcceptButton = Me.botCadastrar
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
+        Me.BackColor = System.Drawing.SystemColors.Window
         Me.ClientSize = New System.Drawing.Size(729, 589)
         Me.Controls.Add(Me.tabClientes)
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
@@ -922,6 +923,7 @@ Partial Class frmGerenciamentoClientes
         Me.tabClientes.ResumeLayout(False)
         Me.tabCadastroClientes.ResumeLayout(False)
         Me.tabCadastroClientes.PerformLayout()
+        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.grpTipoCliente.ResumeLayout(False)
         Me.grpTipoCliente.PerformLayout()
         Me.tabConsultaClientes.ResumeLayout(False)
@@ -929,7 +931,6 @@ Partial Class frmGerenciamentoClientes
         Me.GroupBox1.ResumeLayout(False)
         Me.GroupBox1.PerformLayout()
         CType(Me.dtgConsultaClientes, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
     End Sub

@@ -188,27 +188,12 @@ Public Class frmGerenciamentoFuncionarios
     Private Sub tabConsultaFuncionarios_Enter(sender As Object, e As EventArgs) Handles tabConsultaFuncionarios.Enter
         Try
             objBanco.carregaDataGrid(dtgFuncionarios, "SELECT funMatricula as Matrícula, funNome as Nome, funCargo as Cargo FROM funcionarios")
-            'tabela = New DataTable()
-            '
-            'strsql = "SELECT * FROM funcionarios"
-            'tabela = objBanco.ExecutaDataTable(strsql)
-            '
-            'If tabela.Rows.Count > 0 Then
-            '    Dim i As Integer = 0
-            '    For i = 0 To tabela.Rows.Count - 1
-            '        dtgFuncionarios.Rows.Add(tabela.Rows(i)("funMatricula"), tabela.Rows(i)("funNome"), tabela.Rows(i)'("funCargo"))
-            '    Next
-            'End If
         Catch exc As SqlClient.SqlException
             MsgBox("Erro com banco de dados" & vbCrLf & Err.Number & Err.Description, vbCritical, "Erro com Banco de dados")
         Catch exc As Exception
             MsgBox("Erro" & vbCrLf & Err.Number & vbCrLf & Err.Description, vbCritical, "Erro")
         Finally
-            'Fecha a conexão
             objBanco.DesconectarBanco()
-            'strsql = String.Empty
-            'Testa se a variável leitor foi alterada, se sim a conexão com banco de dados será fechada
-            'tabela = Nothing
         End Try
     End Sub
     Sub modoInserir()

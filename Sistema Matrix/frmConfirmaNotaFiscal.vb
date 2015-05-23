@@ -371,4 +371,16 @@ Public Class frmConfirmaNotaFiscal
                 MsgBox("Ocorreu um erro, por favor, contate o administrador do sistema", vbCritical, "Erro")
         End Select
     End Sub
+
+    Private Sub txtNumCartao_KeyPress(sender As Object, e As KeyPressEventArgs) Handles txtNumCartao.KeyPress
+        modFuncoes.apenasNumeros(e)
+    End Sub
+
+    Private Sub txtSSN_KeyPress(sender As Object, e As KeyPressEventArgs) Handles txtSSN.KeyPress
+        modFuncoes.apenasNumeros(e)
+    End Sub
+
+    Private Sub cdbParcelas_KeyPress(sender As Object, e As KeyPressEventArgs) Handles cdbParcelas.KeyPress
+        modFuncoes.apenasNumeros(e)
+    End Sub
 End Class

@@ -41,14 +41,14 @@ Partial Class frmCadastroUsuarios
         'txtUsuario
         '
         Me.txtUsuario.CharacterCasing = System.Windows.Forms.CharacterCasing.Lower
-        Me.txtUsuario.Location = New System.Drawing.Point(222, 9)
+        Me.txtUsuario.Location = New System.Drawing.Point(230, 9)
         Me.txtUsuario.Name = "txtUsuario"
         Me.txtUsuario.Size = New System.Drawing.Size(100, 20)
         Me.txtUsuario.TabIndex = 1
         '
         'txtSenha
         '
-        Me.txtSenha.Location = New System.Drawing.Point(222, 39)
+        Me.txtSenha.Location = New System.Drawing.Point(230, 39)
         Me.txtSenha.Name = "txtSenha"
         Me.txtSenha.PasswordChar = Global.Microsoft.VisualBasic.ChrW(42)
         Me.txtSenha.Size = New System.Drawing.Size(100, 20)
@@ -56,7 +56,7 @@ Partial Class frmCadastroUsuarios
         '
         'txtConfirmaSenha
         '
-        Me.txtConfirmaSenha.Location = New System.Drawing.Point(222, 69)
+        Me.txtConfirmaSenha.Location = New System.Drawing.Point(230, 69)
         Me.txtConfirmaSenha.Name = "txtConfirmaSenha"
         Me.txtConfirmaSenha.PasswordChar = Global.Microsoft.VisualBasic.ChrW(42)
         Me.txtConfirmaSenha.Size = New System.Drawing.Size(100, 20)
@@ -65,36 +65,40 @@ Partial Class frmCadastroUsuarios
         'lblUsuario
         '
         Me.lblUsuario.AutoSize = True
+        Me.lblUsuario.Font = New System.Drawing.Font("Century Gothic", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lblUsuario.Location = New System.Drawing.Point(125, 9)
         Me.lblUsuario.Name = "lblUsuario"
-        Me.lblUsuario.Size = New System.Drawing.Size(43, 13)
+        Me.lblUsuario.Size = New System.Drawing.Size(47, 16)
         Me.lblUsuario.TabIndex = 3
         Me.lblUsuario.Text = "Usuário"
         '
         'lblSenha
         '
         Me.lblSenha.AutoSize = True
+        Me.lblSenha.Font = New System.Drawing.Font("Century Gothic", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lblSenha.Location = New System.Drawing.Point(125, 39)
         Me.lblSenha.Name = "lblSenha"
-        Me.lblSenha.Size = New System.Drawing.Size(38, 13)
+        Me.lblSenha.Size = New System.Drawing.Size(43, 16)
         Me.lblSenha.TabIndex = 4
         Me.lblSenha.Text = "Senha"
         '
         'lblConfirmaSenha
         '
         Me.lblConfirmaSenha.AutoSize = True
+        Me.lblConfirmaSenha.Font = New System.Drawing.Font("Century Gothic", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lblConfirmaSenha.Location = New System.Drawing.Point(125, 72)
         Me.lblConfirmaSenha.Name = "lblConfirmaSenha"
-        Me.lblConfirmaSenha.Size = New System.Drawing.Size(91, 13)
+        Me.lblConfirmaSenha.Size = New System.Drawing.Size(105, 16)
         Me.lblConfirmaSenha.TabIndex = 5
         Me.lblConfirmaSenha.Text = "Confirme a Senha"
         '
         'Label1
         '
         Me.Label1.AutoSize = True
-        Me.Label1.Location = New System.Drawing.Point(239, 145)
+        Me.Label1.Font = New System.Drawing.Font("Century Gothic", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label1.Location = New System.Drawing.Point(230, 145)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(91, 13)
+        Me.Label1.Size = New System.Drawing.Size(105, 16)
         Me.Label1.TabIndex = 8
         Me.Label1.Text = "Cadastrar Usuário"
         '
@@ -120,9 +124,10 @@ Partial Class frmCadastroUsuarios
         'chkAdministrador
         '
         Me.chkAdministrador.AutoSize = True
+        Me.chkAdministrador.Font = New System.Drawing.Font("Century Gothic", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.chkAdministrador.Location = New System.Drawing.Point(128, 102)
         Me.chkAdministrador.Name = "chkAdministrador"
-        Me.chkAdministrador.Size = New System.Drawing.Size(89, 17)
+        Me.chkAdministrador.Size = New System.Drawing.Size(100, 20)
         Me.chkAdministrador.TabIndex = 4
         Me.chkAdministrador.Text = "Administrador"
         Me.chkAdministrador.UseVisualStyleBackColor = True
@@ -151,6 +156,7 @@ Partial Class frmCadastroUsuarios
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
+        Me.BackColor = System.Drawing.SystemColors.Window
         Me.ClientSize = New System.Drawing.Size(339, 169)
         Me.Controls.Add(Me.lblCodUsuario)
         Me.Controls.Add(Me.txtCodigoUsuario)
