@@ -153,7 +153,7 @@ Module modFuncoes
         nomeDataset.Refresh()
     End Sub
 
-    Sub filtraNF(ByVal nomeTextBox As TextBox, ByVal strSql As String, ByVal nomeDataset As DataGridView, ByVal campo1 As String, ByVal campo2 As String, ByVal campo3 As String, ByVal campo4 As String, ByVal campo5 As String, ByVal campo6 As String, ByVal campo7 As String, ByVal campo8 As String, ByVal campo9 As String, ByVal campo10 As String, ByVal nomeTabela As String)
+    Sub filtraNF(ByVal nomeTextBox As TextBox, ByVal strSql As String, ByVal nomeDataset As DataGridView, ByVal campo1 As String, ByVal campo2 As String, ByVal campo3 As String, ByVal campo4 As String, ByVal campo5 As String, ByVal campo6 As String, ByVal campo7 As String, ByVal campo8 As String, ByVal campo9 As String, ByVal campo10 As String, ByVal strSql2 As String)
         nomeDataset.Rows.Clear()
         Dim objBanco As New clsConexaoBanco
         Dim tabela As DataTable
@@ -168,8 +168,7 @@ Module modFuncoes
                     Next
                 End If
             Else
-                strSql = "SELECT * FROM " & nomeTabela & ""
-                tabela = objBanco.ExecutaDataTable(strSql)
+                tabela = objBanco.ExecutaDataTable(strSql2)
                 If tabela.Rows.Count > 0 Then
                     Dim i As Integer = 0
                     For i = 0 To tabela.Rows.Count - 1
@@ -191,7 +190,7 @@ Module modFuncoes
     End Sub
 
 
-    Sub filtraNFMSK(ByVal nomeTextBox As MaskedTextBox, ByVal strSql As String, ByVal nomeDataset As DataGridView, ByVal campo1 As String, ByVal campo2 As String, ByVal campo3 As String, ByVal campo4 As String, ByVal campo5 As String, ByVal campo6 As String, ByVal campo7 As String, ByVal campo8 As String, ByVal campo9 As String, ByVal campo10 As String, ByVal nomeTabela As String)
+    Sub filtraNFMSK(ByVal nomeTextBox As MaskedTextBox, ByVal strSql As String, ByVal nomeDataset As DataGridView, ByVal campo1 As String, ByVal campo2 As String, ByVal campo3 As String, ByVal campo4 As String, ByVal campo5 As String, ByVal campo6 As String, ByVal campo7 As String, ByVal campo8 As String, ByVal campo9 As String, ByVal campo10 As String, ByVal strSql2 As String)
         nomeDataset.Rows.Clear()
         Dim objBanco As New clsConexaoBanco
         Dim tabela As DataTable
@@ -206,8 +205,7 @@ Module modFuncoes
                     Next
                 End If
             Else
-                strSql = "SELECT * FROM " & nomeTabela & ""
-                tabela = objBanco.ExecutaDataTable(strSql)
+                tabela = objBanco.ExecutaDataTable(strSql2)
                 If tabela.Rows.Count > 0 Then
                     Dim i As Integer = 0
                     For i = 0 To tabela.Rows.Count - 1
