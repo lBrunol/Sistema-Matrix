@@ -117,4 +117,8 @@ Public Class frmMenuPrincipal
             menUsuarios.Visible = False
         End If
     End Sub
+
+    Private Sub Button2_Click(sender As Object, e As EventArgs) Handles Button2.Click
+        abreFormularios(frmBackupeRestauracao)
+    End Sub
 End Class

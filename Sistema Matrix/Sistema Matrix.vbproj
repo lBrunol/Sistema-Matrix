@@ -29,7 +29,7 @@
     <BootstrapperEnabled>true</BootstrapperEnabled>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
-    <PlatformTarget>AnyCPU</PlatformTarget>
+    <PlatformTarget>x86</PlatformTarget>
     <DebugSymbols>true</DebugSymbols>
     <DebugType>full</DebugType>
     <DefineDebug>true</DefineDebug>
@@ -99,12 +99,6 @@
     <Import Include="System.Xml.Linq" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Backup e Restauracao.Designer.vb">
-      <DependentUpon>Backup e Restauracao.vb</DependentUpon>
-    </Compile>
-    <Compile Include="Backup e Restauracao.vb">
-      <SubType>Form</SubType>
-    </Compile>
     <Compile Include="bancoMatrixDataSet.Designer.vb">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -117,6 +111,12 @@
       <DependentUpon>Form1.vb</DependentUpon>
     </Compile>
     <Compile Include="Form1.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmBackupeRestauracao.Designer.vb">
+      <DependentUpon>frmBackupeRestauracao.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmBackupeRestauracao.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="frmGerenciamentoUsuarios.Designer.vb">
@@ -229,11 +229,11 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Backup e Restauracao.resx">
-      <DependentUpon>Backup e Restauracao.vb</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmBackupeRestauracao.resx">
+      <DependentUpon>frmBackupeRestauracao.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmGerenciamentoUsuarios.resx">
       <DependentUpon>frmGerenciamentoUsuarios.vb</DependentUpon>
