@@ -1,0 +1,32 @@
+C:\Users\SL Artesanatos\Documents\Projeto Matrix\trunk\Sistema Matrix\bin\Debug\Sistema Matrix.exe.config
+C:\Users\SL Artesanatos\Documents\Projeto Matrix\trunk\Sistema Matrix\obj\Debug\Interop.Microsoft.Vbe.Interop.Forms.dll
+C:\Users\SL Artesanatos\Documents\Projeto Matrix\trunk\Sistema Matrix\obj\Debug\Sistema Matrix.vbproj.ResolveComReference.cache
+C:\Users\SL Artesanatos\Documents\Projeto Matrix\trunk\Sistema Matrix\obj\Debug\Sistema Matrix.xml
+C:\Users\SL Artesanatos\Documents\Projeto Matrix\trunk\Sistema Matrix\obj\Debug\Sistema Matrix.vbprojResolveAssemblyReference.cache
+C:\Users\SL Artesanatos\Documents\Projeto Matrix\trunk\Sistema Matrix\obj\Debug\Sistema_Matrix.txtBancoDeDados.resources
+C:\Users\SL Artesanatos\Documents\Projeto Matrix\trunk\Sistema Matrix\obj\Debug\Sistema_Matrix.frmGerenciamentoUsuarios.resources
+C:\Users\SL Artesanatos\Documents\Projeto Matrix\trunk\Sistema Matrix\obj\Debug\Sistema_Matrix.frmCadastroEmitente.resources
+C:\Users\SL Artesanatos\Documents\Projeto Matrix\trunk\Sistema Matrix\obj\Debug\Sistema_Matrix.relContasReceber.resources
+C:\Users\SL Artesanatos\Documents\Projeto Matrix\trunk\Sistema Matrix\obj\Debug\Sistema_Matrix.relOrdensServico.resources
+C:\Users\SL Artesanatos\Documents\Projeto Matrix\trunk\Sistema Matrix\obj\Debug\Sistema_Matrix.frmConsultaNotasFiscais.resources
+C:\Users\SL Artesanatos\Documents\Projeto Matrix\trunk\Sistema Matrix\obj\Debug\Sistema_Matrix.frmConsultaContasReceber.resources
+C:\Users\SL Artesanatos\Documents\Projeto Matrix\trunk\Sistema Matrix\obj\Debug\Sistema_Matrix.frmConfirmaNotaFiscal.resources
+C:\Users\SL Artesanatos\Documents\Projeto Matrix\trunk\Sistema Matrix\obj\Debug\Sistema_Matrix.frmGerenciamentoServicos.resources
+C:\Users\SL Artesanatos\Documents\Projeto Matrix\trunk\Sistema Matrix\obj\Debug\Sistema_Matrix.frmGerenciamentoClientes.resources
+C:\Users\SL Artesanatos\Documents\Projeto Matrix\trunk\Sistema Matrix\obj\Debug\Sistema_Matrix.frmGerenciamentoOrdensServico.resources
+C:\Users\SL Artesanatos\Documents\Projeto Matrix\trunk\Sistema Matrix\obj\Debug\Sistema_Matrix.frmGerenciamentoFuncionarios.resources
+C:\Users\SL Artesanatos\Documents\Projeto Matrix\trunk\Sistema Matrix\obj\Debug\Sistema_Matrix.frmLogin.resources
+C:\Users\SL Artesanatos\Documents\Projeto Matrix\trunk\Sistema Matrix\obj\Debug\Sistema_Matrix.Resources.resources
+C:\Users\SL Artesanatos\Documents\Projeto Matrix\trunk\Sistema Matrix\obj\Debug\Sistema_Matrix.frmMenuPrincipal.resources
+C:\Users\SL Artesanatos\Documents\Projeto Matrix\trunk\Sistema Matrix\obj\Debug\Sistema_Matrix.frmTiposPagamento.resources
+C:\Users\SL Artesanatos\Documents\Projeto Matrix\trunk\Sistema Matrix\obj\Debug\Sistema_Matrix.frmCadastroUsuarios.resources
+C:\Users\SL Artesanatos\Documents\Projeto Matrix\trunk\Sistema Matrix\obj\Debug\Sistema Matrix.vbproj.GenerateResource.Cache
+C:\Users\SL Artesanatos\Documents\Projeto Matrix\trunk\Sistema Matrix\obj\Debug\RdlCompile.cache
+C:\Users\SL Artesanatos\Documents\Projeto Matrix\trunk\Sistema Matrix\obj\Debug\RdlCompile.compiled
+C:\Users\SL Artesanatos\Documents\Projeto Matrix\trunk\Sistema Matrix\bin\Debug\Sistema Matrix.exe
+C:\Users\SL Artesanatos\Documents\Projeto Matrix\trunk\Sistema Matrix\bin\Debug\Sistema Matrix.pdb
+C:\Users\SL Artesanatos\Documents\Projeto Matrix\trunk\Sistema Matrix\bin\Debug\Sistema Matrix.xml
+C:\Users\SL Artesanatos\Documents\Projeto Matrix\trunk\Sistema Matrix\bin\Debug\Interop.Microsoft.Vbe.Interop.Forms.dll
+C:\Users\SL Artesanatos\Documents\Projeto Matrix\trunk\Sistema Matrix\obj\Debug\Sistema Matrix.exe
+C:\Users\SL Artesanatos\Documents\Projeto Matrix\trunk\Sistema Matrix\obj\Debug\Sistema Matrix.pdb
+C:\Users\SL Artesanatos\Documents\Projeto Matrix\trunk\Sistema Matrix\obj\Debug\Sistema_Matrix.Form1.resources
