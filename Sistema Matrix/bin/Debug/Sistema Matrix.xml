@@ -6,72 +6,7 @@ SistemaMatrix
 </name>
 </assembly>
 <members>
-<member name="P:Sistema_Matrix.My.Resources.Resources.ResourceManager">
-	<summary>
-  Retorna a instância de ResourceManager armazenada em cache usada por essa classe.
-</summary>
-</member><member name="P:Sistema_Matrix.My.Resources.Resources.Culture">
-	<summary>
-  Substitui a propriedade CurrentUICulture do thread atual para todas as
-  pesquisas de recursos que usam essa classe de recurso de tipo de alta segurança.
-</summary>
-</member><member name="P:Sistema_Matrix.My.Resources.Resources.adiciona_usuario">
-	<summary>
-  Consulta um recurso localizado do tipo System.Drawing.Bitmap.
-</summary>
-</member><member name="P:Sistema_Matrix.My.Resources.Resources.adicionar">
-	<summary>
-  Consulta um recurso localizado do tipo System.Drawing.Bitmap.
-</summary>
-</member><member name="P:Sistema_Matrix.My.Resources.Resources.alterar">
-	<summary>
-  Consulta um recurso localizado do tipo System.Drawing.Bitmap.
-</summary>
-</member><member name="P:Sistema_Matrix.My.Resources.Resources.alterar_selecionado">
-	<summary>
-  Consulta um recurso localizado do tipo System.Drawing.Bitmap.
-</summary>
-</member><member name="P:Sistema_Matrix.My.Resources.Resources.botao_ajuda">
-	<summary>
-  Consulta um recurso localizado do tipo System.Drawing.Bitmap.
-</summary>
-</member><member name="P:Sistema_Matrix.My.Resources.Resources.entrar">
-	<summary>
-  Consulta um recurso localizado do tipo System.Drawing.Bitmap.
-</summary>
-</member><member name="P:Sistema_Matrix.My.Resources.Resources.excluir">
-	<summary>
-  Consulta um recurso localizado do tipo System.Drawing.Bitmap.
-</summary>
-</member><member name="P:Sistema_Matrix.My.Resources.Resources.limpar">
-	<summary>
-  Consulta um recurso localizado do tipo System.Drawing.Bitmap.
-</summary>
-</member><member name="P:Sistema_Matrix.My.Resources.Resources.logoff">
-	<summary>
-  Consulta um recurso localizado do tipo System.Drawing.Bitmap.
-</summary>
-</member><member name="P:Sistema_Matrix.My.Resources.Resources.nota_fiscal_eletronica">
-	<summary>
-  Consulta um recurso localizado do tipo System.Drawing.Bitmap.
-</summary>
-</member><member name="P:Sistema_Matrix.My.Resources.Resources.os">
-	<summary>
-  Consulta um recurso localizado do tipo System.Drawing.Bitmap.
-</summary>
-</member><member name="P:Sistema_Matrix.My.Resources.Resources.salvar">
-	<summary>
-  Consulta um recurso localizado do tipo System.Drawing.Bitmap.
-</summary>
-</member><member name="P:Sistema_Matrix.My.Resources.Resources.servicos">
-	<summary>
-  Consulta um recurso localizado do tipo System.Drawing.Bitmap.
-</summary>
-</member><member name="T:Sistema_Matrix.My.Resources.Resources">
-	<summary>
-  Uma classe de recurso de tipo de alta segurança, para pesquisar cadeias de caracteres localizadas etc.
-</summary>
-</member><member name="T:Sistema_Matrix.bancoMatrixDataSet.clienteDataTable">
+<member name="T:Sistema_Matrix.bancoMatrixDataSet.clienteDataTable">
 	<summary>
 Represents the strongly named DataTable class.
 </summary>
@@ -346,6 +281,71 @@ Used to sort self-referenced table's rows
 </member><member name="T:Sistema_Matrix.bancoMatrixDataSetTableAdapters.TableAdapterManager">
 	<summary>
 TableAdapterManager is used to coordinate TableAdapters in the dataset to enable Hierarchical Update scenarios
+</summary>
+</member><member name="P:Sistema_Matrix.My.Resources.Resources.ResourceManager">
+	<summary>
+  Retorna a instância de ResourceManager armazenada em cache usada por essa classe.
+</summary>
+</member><member name="P:Sistema_Matrix.My.Resources.Resources.Culture">
+	<summary>
+  Substitui a propriedade CurrentUICulture do thread atual para todas as
+  pesquisas de recursos que usam essa classe de recurso de tipo de alta segurança.
+</summary>
+</member><member name="P:Sistema_Matrix.My.Resources.Resources.adiciona_usuario">
+	<summary>
+  Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+</summary>
+</member><member name="P:Sistema_Matrix.My.Resources.Resources.adicionar">
+	<summary>
+  Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+</summary>
+</member><member name="P:Sistema_Matrix.My.Resources.Resources.alterar">
+	<summary>
+  Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+</summary>
+</member><member name="P:Sistema_Matrix.My.Resources.Resources.alterar_selecionado">
+	<summary>
+  Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+</summary>
+</member><member name="P:Sistema_Matrix.My.Resources.Resources.botao_ajuda">
+	<summary>
+  Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+</summary>
+</member><member name="P:Sistema_Matrix.My.Resources.Resources.entrar">
+	<summary>
+  Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+</summary>
+</member><member name="P:Sistema_Matrix.My.Resources.Resources.excluir">
+	<summary>
+  Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+</summary>
+</member><member name="P:Sistema_Matrix.My.Resources.Resources.limpar">
+	<summary>
+  Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+</summary>
+</member><member name="P:Sistema_Matrix.My.Resources.Resources.logoff">
+	<summary>
+  Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+</summary>
+</member><member name="P:Sistema_Matrix.My.Resources.Resources.nota_fiscal_eletronica">
+	<summary>
+  Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+</summary>
+</member><member name="P:Sistema_Matrix.My.Resources.Resources.os">
+	<summary>
+  Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+</summary>
+</member><member name="P:Sistema_Matrix.My.Resources.Resources.salvar">
+	<summary>
+  Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+</summary>
+</member><member name="P:Sistema_Matrix.My.Resources.Resources.servicos">
+	<summary>
+  Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+</summary>
+</member><member name="T:Sistema_Matrix.My.Resources.Resources">
+	<summary>
+  Uma classe de recurso de tipo de alta segurança, para pesquisar cadeias de caracteres localizadas etc.
 </summary>
 </member>
 </members>
