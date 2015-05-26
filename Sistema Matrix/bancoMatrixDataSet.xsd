@@ -887,7 +887,7 @@
           </TableAdapter>
           <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="relOrdensTableAdapter" GeneratorDataComponentClassName="relOrdensTableAdapter" Name="relOrdens" UserDataComponentName="relOrdensTableAdapter">
             <MainSource>
-              <DbSource ConnectionRef="conexaoBanco (MySettings)" DbObjectName="" DbObjectType="Unknown" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+              <DbSource ConnectionRef="conexaoBanco (MySettings)" DbObjectType="Unknown" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
                 <SelectCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="true">
                     <CommandText>SELECT        ordemServico.ordCodigo, ordemServico.ordOcorrencia, ordemServico.ordDataAbertura, ordemServico.ordDataFechamento, ordemServico.ordValorTotal, 
@@ -945,6 +945,50 @@ FROM            ((((tiposPagamento INNER JOIN
             </Mappings>
             <Sources />
           </TableAdapter>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="relNFTableAdapter" GeneratorDataComponentClassName="relNFTableAdapter" Name="relNF" UserDataComponentName="relNFTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="conexaoBanco (MySettings)" DbObjectType="Unknown" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT        cliente.cliNome, cliente.cliEndereco, cliente.cliBairro, cliente.cliCEP, cliente.cliCidade, cliente.cliUF, cliente.cliEmail, cliente.cliTelefone, 
+                         cliente.cliNumEndereco, dadosEmitente.demNomeFantasia, dadosEmitente.demInscricaoEstadual, dadosEmitente.demInscricaoMunicipal, 
+                         dadosEmitente.demCEP, dadosEmitente.demTelefone, dadosEmitente.demEndereco, notaFiscal.notHora, notaFiscal.notValor, notaFiscal.notData, 
+                         notaFiscal.notCodVer, notaFiscal.notCodigo, ordemServico.ordOcorrencia, ordemServico.ordValorTotal
+FROM            (((notaFiscal INNER JOIN
+                         dadosEmitente ON notaFiscal.demCodigo = dadosEmitente.demCodigo) INNER JOIN
+                         ordemServico ON notaFiscal.ordCodigo = ordemServico.ordCodigo) INNER JOIN
+                         cliente ON ordemServico.cliCodigo = cliente.cliCodigo)</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="cliNome" DataSetColumn="cliNome" />
+              <Mapping SourceColumn="cliEndereco" DataSetColumn="cliEndereco" />
+              <Mapping SourceColumn="cliBairro" DataSetColumn="cliBairro" />
+              <Mapping SourceColumn="cliCEP" DataSetColumn="cliCEP" />
+              <Mapping SourceColumn="cliCidade" DataSetColumn="cliCidade" />
+              <Mapping SourceColumn="cliUF" DataSetColumn="cliUF" />
+              <Mapping SourceColumn="cliEmail" DataSetColumn="cliEmail" />
+              <Mapping SourceColumn="cliTelefone" DataSetColumn="cliTelefone" />
+              <Mapping SourceColumn="cliNumEndereco" DataSetColumn="cliNumEndereco" />
+              <Mapping SourceColumn="demNomeFantasia" DataSetColumn="demNomeFantasia" />
+              <Mapping SourceColumn="demInscricaoEstadual" DataSetColumn="demInscricaoEstadual" />
+              <Mapping SourceColumn="demInscricaoMunicipal" DataSetColumn="demInscricaoMunicipal" />
+              <Mapping SourceColumn="demCEP" DataSetColumn="demCEP" />
+              <Mapping SourceColumn="demTelefone" DataSetColumn="demTelefone" />
+              <Mapping SourceColumn="demEndereco" DataSetColumn="demEndereco" />
+              <Mapping SourceColumn="notHora" DataSetColumn="notHora" />
+              <Mapping SourceColumn="notValor" DataSetColumn="notValor" />
+              <Mapping SourceColumn="notData" DataSetColumn="notData" />
+              <Mapping SourceColumn="notCodVer" DataSetColumn="notCodVer" />
+              <Mapping SourceColumn="notCodigo" DataSetColumn="notCodigo" />
+              <Mapping SourceColumn="ordOcorrencia" DataSetColumn="ordOcorrencia" />
+              <Mapping SourceColumn="ordValorTotal" DataSetColumn="ordValorTotal" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
         </Tables>
         <Sources />
       </DataSource>
@@ -953,7 +997,7 @@ FROM            ((((tiposPagamento INNER JOIN
   <xs:element name="bancoMatrixDataSet" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="True" msprop:Generator_DataSetName="bancoMatrixDataSet" msprop:Generator_UserDSName="bancoMatrixDataSet">
     <xs:complexType>
       <xs:choice minOccurs="0" maxOccurs="unbounded">
-        <xs:element name="cliente" msprop:Generator_TableClassName="clienteDataTable" msprop:Generator_TableVarName="tablecliente" msprop:Generator_RowChangedName="clienteRowChanged" msprop:Generator_TablePropName="cliente" msprop:Generator_RowDeletingName="clienteRowDeleting" msprop:Generator_RowChangingName="clienteRowChanging" msprop:Generator_RowEvHandlerName="clienteRowChangeEventHandler" msprop:Generator_RowDeletedName="clienteRowDeleted" msprop:Generator_RowClassName="clienteRow" msprop:Generator_UserTableName="cliente" msprop:Generator_RowEvArgName="clienteRowChangeEvent">
+        <xs:element name="cliente" msprop:Generator_TableClassName="clienteDataTable" msprop:Generator_TableVarName="tablecliente" msprop:Generator_TablePropName="cliente" msprop:Generator_RowDeletingName="clienteRowDeleting" msprop:Generator_RowChangingName="clienteRowChanging" msprop:Generator_RowEvHandlerName="clienteRowChangeEventHandler" msprop:Generator_RowDeletedName="clienteRowDeleted" msprop:Generator_UserTableName="cliente" msprop:Generator_RowChangedName="clienteRowChanged" msprop:Generator_RowEvArgName="clienteRowChangeEvent" msprop:Generator_RowClassName="clienteRow">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="cliCodigo" msprop:Generator_ColumnVarNameInTable="columncliCodigo" msprop:Generator_ColumnPropNameInRow="cliCodigo" msprop:Generator_ColumnPropNameInTable="cliCodigoColumn" msprop:Generator_UserColumnName="cliCodigo" type="xs:int" />
@@ -1059,7 +1103,7 @@ FROM            ((((tiposPagamento INNER JOIN
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="cliPessoaFisica" msprop:Generator_TableClassName="cliPessoaFisicaDataTable" msprop:Generator_TableVarName="tablecliPessoaFisica" msprop:Generator_RowChangedName="cliPessoaFisicaRowChanged" msprop:Generator_TablePropName="cliPessoaFisica" msprop:Generator_RowDeletingName="cliPessoaFisicaRowDeleting" msprop:Generator_RowChangingName="cliPessoaFisicaRowChanging" msprop:Generator_RowEvHandlerName="cliPessoaFisicaRowChangeEventHandler" msprop:Generator_RowDeletedName="cliPessoaFisicaRowDeleted" msprop:Generator_RowClassName="cliPessoaFisicaRow" msprop:Generator_UserTableName="cliPessoaFisica" msprop:Generator_RowEvArgName="cliPessoaFisicaRowChangeEvent">
+        <xs:element name="cliPessoaFisica" msprop:Generator_TableClassName="cliPessoaFisicaDataTable" msprop:Generator_TableVarName="tablecliPessoaFisica" msprop:Generator_TablePropName="cliPessoaFisica" msprop:Generator_RowDeletingName="cliPessoaFisicaRowDeleting" msprop:Generator_RowChangingName="cliPessoaFisicaRowChanging" msprop:Generator_RowEvHandlerName="cliPessoaFisicaRowChangeEventHandler" msprop:Generator_RowDeletedName="cliPessoaFisicaRowDeleted" msprop:Generator_UserTableName="cliPessoaFisica" msprop:Generator_RowChangedName="cliPessoaFisicaRowChanged" msprop:Generator_RowEvArgName="cliPessoaFisicaRowChangeEvent" msprop:Generator_RowClassName="cliPessoaFisicaRow">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="cliRG" msprop:Generator_ColumnVarNameInTable="columncliRG" msprop:Generator_ColumnPropNameInRow="cliRG" msprop:Generator_ColumnPropNameInTable="cliRGColumn" msprop:Generator_UserColumnName="cliRG" minOccurs="0">
@@ -1080,7 +1124,7 @@ FROM            ((((tiposPagamento INNER JOIN
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="cliPessoaJuridica" msprop:Generator_TableClassName="cliPessoaJuridicaDataTable" msprop:Generator_TableVarName="tablecliPessoaJuridica" msprop:Generator_RowChangedName="cliPessoaJuridicaRowChanged" msprop:Generator_TablePropName="cliPessoaJuridica" msprop:Generator_RowDeletingName="cliPessoaJuridicaRowDeleting" msprop:Generator_RowChangingName="cliPessoaJuridicaRowChanging" msprop:Generator_RowEvHandlerName="cliPessoaJuridicaRowChangeEventHandler" msprop:Generator_RowDeletedName="cliPessoaJuridicaRowDeleted" msprop:Generator_RowClassName="cliPessoaJuridicaRow" msprop:Generator_UserTableName="cliPessoaJuridica" msprop:Generator_RowEvArgName="cliPessoaJuridicaRowChangeEvent">
+        <xs:element name="cliPessoaJuridica" msprop:Generator_TableClassName="cliPessoaJuridicaDataTable" msprop:Generator_TableVarName="tablecliPessoaJuridica" msprop:Generator_TablePropName="cliPessoaJuridica" msprop:Generator_RowDeletingName="cliPessoaJuridicaRowDeleting" msprop:Generator_RowChangingName="cliPessoaJuridicaRowChanging" msprop:Generator_RowEvHandlerName="cliPessoaJuridicaRowChangeEventHandler" msprop:Generator_RowDeletedName="cliPessoaJuridicaRowDeleted" msprop:Generator_UserTableName="cliPessoaJuridica" msprop:Generator_RowChangedName="cliPessoaJuridicaRowChanged" msprop:Generator_RowEvArgName="cliPessoaJuridicaRowChangeEvent" msprop:Generator_RowClassName="cliPessoaJuridicaRow">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="cliCNPJ" msprop:Generator_ColumnVarNameInTable="columncliCNPJ" msprop:Generator_ColumnPropNameInRow="cliCNPJ" msprop:Generator_ColumnPropNameInTable="cliCNPJColumn" msprop:Generator_UserColumnName="cliCNPJ" minOccurs="0">
@@ -1115,7 +1159,7 @@ FROM            ((((tiposPagamento INNER JOIN
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="contasReceber" msprop:Generator_TableClassName="contasReceberDataTable" msprop:Generator_TableVarName="tablecontasReceber" msprop:Generator_RowChangedName="contasReceberRowChanged" msprop:Generator_TablePropName="contasReceber" msprop:Generator_RowDeletingName="contasReceberRowDeleting" msprop:Generator_RowChangingName="contasReceberRowChanging" msprop:Generator_RowEvHandlerName="contasReceberRowChangeEventHandler" msprop:Generator_RowDeletedName="contasReceberRowDeleted" msprop:Generator_RowClassName="contasReceberRow" msprop:Generator_UserTableName="contasReceber" msprop:Generator_RowEvArgName="contasReceberRowChangeEvent">
+        <xs:element name="contasReceber" msprop:Generator_TableClassName="contasReceberDataTable" msprop:Generator_TableVarName="tablecontasReceber" msprop:Generator_TablePropName="contasReceber" msprop:Generator_RowDeletingName="contasReceberRowDeleting" msprop:Generator_RowChangingName="contasReceberRowChanging" msprop:Generator_RowEvHandlerName="contasReceberRowChangeEventHandler" msprop:Generator_RowDeletedName="contasReceberRowDeleted" msprop:Generator_UserTableName="contasReceber" msprop:Generator_RowChangedName="contasReceberRowChanged" msprop:Generator_RowEvArgName="contasReceberRowChangeEvent" msprop:Generator_RowClassName="contasReceberRow">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="ctrCodigo" msprop:Generator_ColumnVarNameInTable="columnctrCodigo" msprop:Generator_ColumnPropNameInRow="ctrCodigo" msprop:Generator_ColumnPropNameInTable="ctrCodigoColumn" msprop:Generator_UserColumnName="ctrCodigo" type="xs:int" />
@@ -1137,7 +1181,7 @@ FROM            ((((tiposPagamento INNER JOIN
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="dadosEmitente" msprop:Generator_TableClassName="dadosEmitenteDataTable" msprop:Generator_TableVarName="tabledadosEmitente" msprop:Generator_RowChangedName="dadosEmitenteRowChanged" msprop:Generator_TablePropName="dadosEmitente" msprop:Generator_RowDeletingName="dadosEmitenteRowDeleting" msprop:Generator_RowChangingName="dadosEmitenteRowChanging" msprop:Generator_RowEvHandlerName="dadosEmitenteRowChangeEventHandler" msprop:Generator_RowDeletedName="dadosEmitenteRowDeleted" msprop:Generator_RowClassName="dadosEmitenteRow" msprop:Generator_UserTableName="dadosEmitente" msprop:Generator_RowEvArgName="dadosEmitenteRowChangeEvent">
+        <xs:element name="dadosEmitente" msprop:Generator_TableClassName="dadosEmitenteDataTable" msprop:Generator_TableVarName="tabledadosEmitente" msprop:Generator_TablePropName="dadosEmitente" msprop:Generator_RowDeletingName="dadosEmitenteRowDeleting" msprop:Generator_RowChangingName="dadosEmitenteRowChanging" msprop:Generator_RowEvHandlerName="dadosEmitenteRowChangeEventHandler" msprop:Generator_RowDeletedName="dadosEmitenteRowDeleted" msprop:Generator_UserTableName="dadosEmitente" msprop:Generator_RowChangedName="dadosEmitenteRowChanged" msprop:Generator_RowEvArgName="dadosEmitenteRowChangeEvent" msprop:Generator_RowClassName="dadosEmitenteRow">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="demCodigo" msprop:Generator_ColumnVarNameInTable="columndemCodigo" msprop:Generator_ColumnPropNameInRow="demCodigo" msprop:Generator_ColumnPropNameInTable="demCodigoColumn" msprop:Generator_UserColumnName="demCodigo" type="xs:int" />
@@ -1193,7 +1237,7 @@ FROM            ((((tiposPagamento INNER JOIN
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="funcionarios" msprop:Generator_TableClassName="funcionariosDataTable" msprop:Generator_TableVarName="tablefuncionarios" msprop:Generator_RowChangedName="funcionariosRowChanged" msprop:Generator_TablePropName="funcionarios" msprop:Generator_RowDeletingName="funcionariosRowDeleting" msprop:Generator_RowChangingName="funcionariosRowChanging" msprop:Generator_RowEvHandlerName="funcionariosRowChangeEventHandler" msprop:Generator_RowDeletedName="funcionariosRowDeleted" msprop:Generator_RowClassName="funcionariosRow" msprop:Generator_UserTableName="funcionarios" msprop:Generator_RowEvArgName="funcionariosRowChangeEvent">
+        <xs:element name="funcionarios" msprop:Generator_TableClassName="funcionariosDataTable" msprop:Generator_TableVarName="tablefuncionarios" msprop:Generator_TablePropName="funcionarios" msprop:Generator_RowDeletingName="funcionariosRowDeleting" msprop:Generator_RowChangingName="funcionariosRowChanging" msprop:Generator_RowEvHandlerName="funcionariosRowChangeEventHandler" msprop:Generator_RowDeletedName="funcionariosRowDeleted" msprop:Generator_UserTableName="funcionarios" msprop:Generator_RowChangedName="funcionariosRowChanged" msprop:Generator_RowEvArgName="funcionariosRowChangeEvent" msprop:Generator_RowClassName="funcionariosRow">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="funMatricula" msprop:Generator_ColumnVarNameInTable="columnfunMatricula" msprop:Generator_ColumnPropNameInRow="funMatricula" msprop:Generator_ColumnPropNameInTable="funMatriculaColumn" msprop:Generator_UserColumnName="funMatricula" type="xs:int" />
@@ -1244,7 +1288,7 @@ FROM            ((((tiposPagamento INNER JOIN
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="notaFiscal" msprop:Generator_TableClassName="notaFiscalDataTable" msprop:Generator_TableVarName="tablenotaFiscal" msprop:Generator_RowChangedName="notaFiscalRowChanged" msprop:Generator_TablePropName="notaFiscal" msprop:Generator_RowDeletingName="notaFiscalRowDeleting" msprop:Generator_RowChangingName="notaFiscalRowChanging" msprop:Generator_RowEvHandlerName="notaFiscalRowChangeEventHandler" msprop:Generator_RowDeletedName="notaFiscalRowDeleted" msprop:Generator_RowClassName="notaFiscalRow" msprop:Generator_UserTableName="notaFiscal" msprop:Generator_RowEvArgName="notaFiscalRowChangeEvent">
+        <xs:element name="notaFiscal" msprop:Generator_TableClassName="notaFiscalDataTable" msprop:Generator_TableVarName="tablenotaFiscal" msprop:Generator_TablePropName="notaFiscal" msprop:Generator_RowDeletingName="notaFiscalRowDeleting" msprop:Generator_RowChangingName="notaFiscalRowChanging" msprop:Generator_RowEvHandlerName="notaFiscalRowChangeEventHandler" msprop:Generator_RowDeletedName="notaFiscalRowDeleted" msprop:Generator_UserTableName="notaFiscal" msprop:Generator_RowChangedName="notaFiscalRowChanged" msprop:Generator_RowEvArgName="notaFiscalRowChangeEvent" msprop:Generator_RowClassName="notaFiscalRow">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="notCodigo" msprop:Generator_ColumnVarNameInTable="columnnotCodigo" msprop:Generator_ColumnPropNameInRow="notCodigo" msprop:Generator_ColumnPropNameInTable="notCodigoColumn" msprop:Generator_UserColumnName="notCodigo" type="xs:int" />
@@ -1264,7 +1308,7 @@ FROM            ((((tiposPagamento INNER JOIN
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="ordemServico" msprop:Generator_TableClassName="ordemServicoDataTable" msprop:Generator_TableVarName="tableordemServico" msprop:Generator_RowChangedName="ordemServicoRowChanged" msprop:Generator_TablePropName="ordemServico" msprop:Generator_RowDeletingName="ordemServicoRowDeleting" msprop:Generator_RowChangingName="ordemServicoRowChanging" msprop:Generator_RowEvHandlerName="ordemServicoRowChangeEventHandler" msprop:Generator_RowDeletedName="ordemServicoRowDeleted" msprop:Generator_RowClassName="ordemServicoRow" msprop:Generator_UserTableName="ordemServico" msprop:Generator_RowEvArgName="ordemServicoRowChangeEvent">
+        <xs:element name="ordemServico" msprop:Generator_TableClassName="ordemServicoDataTable" msprop:Generator_TableVarName="tableordemServico" msprop:Generator_TablePropName="ordemServico" msprop:Generator_RowDeletingName="ordemServicoRowDeleting" msprop:Generator_RowChangingName="ordemServicoRowChanging" msprop:Generator_RowEvHandlerName="ordemServicoRowChangeEventHandler" msprop:Generator_RowDeletedName="ordemServicoRowDeleted" msprop:Generator_UserTableName="ordemServico" msprop:Generator_RowChangedName="ordemServicoRowChanged" msprop:Generator_RowEvArgName="ordemServicoRowChangeEvent" msprop:Generator_RowClassName="ordemServicoRow">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="ordCodigo" msprop:Generator_ColumnVarNameInTable="columnordCodigo" msprop:Generator_ColumnPropNameInRow="ordCodigo" msprop:Generator_ColumnPropNameInTable="ordCodigoColumn" msprop:Generator_UserColumnName="ordCodigo" type="xs:int" />
@@ -1283,7 +1327,7 @@ FROM            ((((tiposPagamento INNER JOIN
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="servicos" msprop:Generator_TableClassName="servicosDataTable" msprop:Generator_TableVarName="tableservicos" msprop:Generator_RowChangedName="servicosRowChanged" msprop:Generator_TablePropName="servicos" msprop:Generator_RowDeletingName="servicosRowDeleting" msprop:Generator_RowChangingName="servicosRowChanging" msprop:Generator_RowEvHandlerName="servicosRowChangeEventHandler" msprop:Generator_RowDeletedName="servicosRowDeleted" msprop:Generator_RowClassName="servicosRow" msprop:Generator_UserTableName="servicos" msprop:Generator_RowEvArgName="servicosRowChangeEvent">
+        <xs:element name="servicos" msprop:Generator_TableClassName="servicosDataTable" msprop:Generator_TableVarName="tableservicos" msprop:Generator_TablePropName="servicos" msprop:Generator_RowDeletingName="servicosRowDeleting" msprop:Generator_RowChangingName="servicosRowChanging" msprop:Generator_RowEvHandlerName="servicosRowChangeEventHandler" msprop:Generator_RowDeletedName="servicosRowDeleted" msprop:Generator_UserTableName="servicos" msprop:Generator_RowChangedName="servicosRowChanged" msprop:Generator_RowEvArgName="servicosRowChangeEvent" msprop:Generator_RowClassName="servicosRow">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="svcCodigo" msprop:Generator_ColumnVarNameInTable="columnsvcCodigo" msprop:Generator_ColumnPropNameInRow="svcCodigo" msprop:Generator_ColumnPropNameInTable="svcCodigoColumn" msprop:Generator_UserColumnName="svcCodigo" type="xs:int" />
@@ -1307,7 +1351,7 @@ FROM            ((((tiposPagamento INNER JOIN
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="servicos_os" msprop:Generator_TableClassName="servicos_osDataTable" msprop:Generator_TableVarName="tableservicos_os" msprop:Generator_RowChangedName="servicos_osRowChanged" msprop:Generator_TablePropName="servicos_os" msprop:Generator_RowDeletingName="servicos_osRowDeleting" msprop:Generator_RowChangingName="servicos_osRowChanging" msprop:Generator_RowEvHandlerName="servicos_osRowChangeEventHandler" msprop:Generator_RowDeletedName="servicos_osRowDeleted" msprop:Generator_RowClassName="servicos_osRow" msprop:Generator_UserTableName="servicos_os" msprop:Generator_RowEvArgName="servicos_osRowChangeEvent">
+        <xs:element name="servicos_os" msprop:Generator_TableClassName="servicos_osDataTable" msprop:Generator_TableVarName="tableservicos_os" msprop:Generator_TablePropName="servicos_os" msprop:Generator_RowDeletingName="servicos_osRowDeleting" msprop:Generator_RowChangingName="servicos_osRowChanging" msprop:Generator_RowEvHandlerName="servicos_osRowChangeEventHandler" msprop:Generator_RowDeletedName="servicos_osRowDeleted" msprop:Generator_UserTableName="servicos_os" msprop:Generator_RowChangedName="servicos_osRowChanged" msprop:Generator_RowEvArgName="servicos_osRowChangeEvent" msprop:Generator_RowClassName="servicos_osRow">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="seoData" msprop:Generator_ColumnVarNameInTable="columnseoData" msprop:Generator_ColumnPropNameInRow="seoData" msprop:Generator_ColumnPropNameInTable="seoDataColumn" msprop:Generator_UserColumnName="seoData" type="xs:dateTime" minOccurs="0" />
@@ -1317,7 +1361,7 @@ FROM            ((((tiposPagamento INNER JOIN
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="tiposPagamento" msprop:Generator_TableClassName="tiposPagamentoDataTable" msprop:Generator_TableVarName="tabletiposPagamento" msprop:Generator_RowChangedName="tiposPagamentoRowChanged" msprop:Generator_TablePropName="tiposPagamento" msprop:Generator_RowDeletingName="tiposPagamentoRowDeleting" msprop:Generator_RowChangingName="tiposPagamentoRowChanging" msprop:Generator_RowEvHandlerName="tiposPagamentoRowChangeEventHandler" msprop:Generator_RowDeletedName="tiposPagamentoRowDeleted" msprop:Generator_RowClassName="tiposPagamentoRow" msprop:Generator_UserTableName="tiposPagamento" msprop:Generator_RowEvArgName="tiposPagamentoRowChangeEvent">
+        <xs:element name="tiposPagamento" msprop:Generator_TableClassName="tiposPagamentoDataTable" msprop:Generator_TableVarName="tabletiposPagamento" msprop:Generator_TablePropName="tiposPagamento" msprop:Generator_RowDeletingName="tiposPagamentoRowDeleting" msprop:Generator_RowChangingName="tiposPagamentoRowChanging" msprop:Generator_RowEvHandlerName="tiposPagamentoRowChangeEventHandler" msprop:Generator_RowDeletedName="tiposPagamentoRowDeleted" msprop:Generator_UserTableName="tiposPagamento" msprop:Generator_RowChangedName="tiposPagamentoRowChanged" msprop:Generator_RowEvArgName="tiposPagamentoRowChangeEvent" msprop:Generator_RowClassName="tiposPagamentoRow">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="tpaCodigo" msprop:Generator_ColumnVarNameInTable="columntpaCodigo" msprop:Generator_ColumnPropNameInRow="tpaCodigo" msprop:Generator_ColumnPropNameInTable="tpaCodigoColumn" msprop:Generator_UserColumnName="tpaCodigo" type="xs:int" />
@@ -1331,7 +1375,7 @@ FROM            ((((tiposPagamento INNER JOIN
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="usuarios" msprop:Generator_TableClassName="usuariosDataTable" msprop:Generator_TableVarName="tableusuarios" msprop:Generator_RowChangedName="usuariosRowChanged" msprop:Generator_TablePropName="usuarios" msprop:Generator_RowDeletingName="usuariosRowDeleting" msprop:Generator_RowChangingName="usuariosRowChanging" msprop:Generator_RowEvHandlerName="usuariosRowChangeEventHandler" msprop:Generator_RowDeletedName="usuariosRowDeleted" msprop:Generator_RowClassName="usuariosRow" msprop:Generator_UserTableName="usuarios" msprop:Generator_RowEvArgName="usuariosRowChangeEvent">
+        <xs:element name="usuarios" msprop:Generator_TableClassName="usuariosDataTable" msprop:Generator_TableVarName="tableusuarios" msprop:Generator_TablePropName="usuarios" msprop:Generator_RowDeletingName="usuariosRowDeleting" msprop:Generator_RowChangingName="usuariosRowChanging" msprop:Generator_RowEvHandlerName="usuariosRowChangeEventHandler" msprop:Generator_RowDeletedName="usuariosRowDeleted" msprop:Generator_UserTableName="usuarios" msprop:Generator_RowChangedName="usuariosRowChanged" msprop:Generator_RowEvArgName="usuariosRowChangeEvent" msprop:Generator_RowClassName="usuariosRow">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="usrCodigo" msprop:Generator_ColumnVarNameInTable="columnusrCodigo" msprop:Generator_ColumnPropNameInRow="usrCodigo" msprop:Generator_ColumnPropNameInTable="usrCodigoColumn" msprop:Generator_UserColumnName="usrCodigo" type="xs:int" />
@@ -1353,7 +1397,7 @@ FROM            ((((tiposPagamento INNER JOIN
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="relOrdens" msprop:Generator_TableClassName="relOrdensDataTable" msprop:Generator_TableVarName="tablerelOrdens" msprop:Generator_TablePropName="relOrdens" msprop:Generator_RowDeletingName="relOrdensRowDeleting" msprop:Generator_RowChangingName="relOrdensRowChanging" msprop:Generator_RowEvHandlerName="relOrdensRowChangeEventHandler" msprop:Generator_RowDeletedName="relOrdensRowDeleted" msprop:Generator_UserTableName="relOrdens" msprop:Generator_RowChangedName="relOrdensRowChanged" msprop:Generator_RowEvArgName="relOrdensRowChangeEvent" msprop:Generator_RowClassName="relOrdensRow">
+        <xs:element name="relOrdens" msprop:Generator_TableClassName="relOrdensDataTable" msprop:Generator_TableVarName="tablerelOrdens" msprop:Generator_RowChangedName="relOrdensRowChanged" msprop:Generator_TablePropName="relOrdens" msprop:Generator_RowDeletingName="relOrdensRowDeleting" msprop:Generator_RowChangingName="relOrdensRowChanging" msprop:Generator_RowEvHandlerName="relOrdensRowChangeEventHandler" msprop:Generator_RowDeletedName="relOrdensRowDeleted" msprop:Generator_RowClassName="relOrdensRow" msprop:Generator_UserTableName="relOrdens" msprop:Generator_RowEvArgName="relOrdensRowChangeEvent">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="ordCodigo" msprop:Generator_ColumnVarNameInTable="columnordCodigo" msprop:Generator_ColumnPropNameInRow="ordCodigo" msprop:Generator_ColumnPropNameInTable="ordCodigoColumn" msprop:Generator_UserColumnName="ordCodigo" type="xs:int" minOccurs="0" />
@@ -1384,7 +1428,7 @@ FROM            ((((tiposPagamento INNER JOIN
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="relContasReceber" msprop:Generator_TableClassName="relContasReceberDataTable" msprop:Generator_TableVarName="tablerelContasReceber" msprop:Generator_TablePropName="relContasReceber" msprop:Generator_RowDeletingName="relContasReceberRowDeleting" msprop:Generator_RowChangingName="relContasReceberRowChanging" msprop:Generator_RowEvHandlerName="relContasReceberRowChangeEventHandler" msprop:Generator_RowDeletedName="relContasReceberRowDeleted" msprop:Generator_UserTableName="relContasReceber" msprop:Generator_RowChangedName="relContasReceberRowChanged" msprop:Generator_RowEvArgName="relContasReceberRowChangeEvent" msprop:Generator_RowClassName="relContasReceberRow">
+        <xs:element name="relContasReceber" msprop:Generator_TableClassName="relContasReceberDataTable" msprop:Generator_TableVarName="tablerelContasReceber" msprop:Generator_RowChangedName="relContasReceberRowChanged" msprop:Generator_TablePropName="relContasReceber" msprop:Generator_RowDeletingName="relContasReceberRowDeleting" msprop:Generator_RowChangingName="relContasReceberRowChanging" msprop:Generator_RowEvHandlerName="relContasReceberRowChangeEventHandler" msprop:Generator_RowDeletedName="relContasReceberRowDeleted" msprop:Generator_RowClassName="relContasReceberRow" msprop:Generator_UserTableName="relContasReceber" msprop:Generator_RowEvArgName="relContasReceberRowChangeEvent">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="ctrCodigo" msprop:Generator_ColumnVarNameInTable="columnctrCodigo" msprop:Generator_ColumnPropNameInRow="ctrCodigo" msprop:Generator_ColumnPropNameInTable="ctrCodigoColumn" msprop:Generator_UserColumnName="ctrCodigo" type="xs:int" minOccurs="0" />
@@ -1423,6 +1467,130 @@ FROM            ((((tiposPagamento INNER JOIN
                 </xs:simpleType>
               </xs:element>
               <xs:element name="notCodigo" msprop:Generator_ColumnVarNameInTable="columnnotCodigo" msprop:Generator_ColumnPropNameInRow="notCodigo" msprop:Generator_ColumnPropNameInTable="notCodigoColumn" msprop:Generator_UserColumnName="notCodigo" type="xs:int" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="relNF" msprop:Generator_TableClassName="relNFDataTable" msprop:Generator_TableVarName="tablerelNF" msprop:Generator_TablePropName="relNF" msprop:Generator_RowDeletingName="relNFRowDeleting" msprop:Generator_RowChangingName="relNFRowChanging" msprop:Generator_RowEvHandlerName="relNFRowChangeEventHandler" msprop:Generator_RowDeletedName="relNFRowDeleted" msprop:Generator_UserTableName="relNF" msprop:Generator_RowChangedName="relNFRowChanged" msprop:Generator_RowEvArgName="relNFRowChangeEvent" msprop:Generator_RowClassName="relNFRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="cliNome" msprop:Generator_ColumnVarNameInTable="columncliNome" msprop:Generator_ColumnPropNameInRow="cliNome" msprop:Generator_ColumnPropNameInTable="cliNomeColumn" msprop:Generator_UserColumnName="cliNome" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="255" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="cliEndereco" msprop:Generator_ColumnVarNameInTable="columncliEndereco" msprop:Generator_ColumnPropNameInRow="cliEndereco" msprop:Generator_ColumnPropNameInTable="cliEnderecoColumn" msprop:Generator_UserColumnName="cliEndereco" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="255" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="cliBairro" msprop:Generator_ColumnVarNameInTable="columncliBairro" msprop:Generator_ColumnPropNameInRow="cliBairro" msprop:Generator_ColumnPropNameInTable="cliBairroColumn" msprop:Generator_UserColumnName="cliBairro" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="255" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="cliCEP" msprop:Generator_ColumnVarNameInTable="columncliCEP" msprop:Generator_ColumnPropNameInRow="cliCEP" msprop:Generator_ColumnPropNameInTable="cliCEPColumn" msprop:Generator_UserColumnName="cliCEP" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="255" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="cliCidade" msprop:Generator_ColumnVarNameInTable="columncliCidade" msprop:Generator_ColumnPropNameInRow="cliCidade" msprop:Generator_ColumnPropNameInTable="cliCidadeColumn" msprop:Generator_UserColumnName="cliCidade" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="255" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="cliUF" msprop:Generator_ColumnVarNameInTable="columncliUF" msprop:Generator_ColumnPropNameInRow="cliUF" msprop:Generator_ColumnPropNameInTable="cliUFColumn" msprop:Generator_UserColumnName="cliUF" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="255" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="cliEmail" msprop:Generator_ColumnVarNameInTable="columncliEmail" msprop:Generator_ColumnPropNameInRow="cliEmail" msprop:Generator_ColumnPropNameInTable="cliEmailColumn" msprop:Generator_UserColumnName="cliEmail" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="255" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="cliTelefone" msprop:Generator_ColumnVarNameInTable="columncliTelefone" msprop:Generator_ColumnPropNameInRow="cliTelefone" msprop:Generator_ColumnPropNameInTable="cliTelefoneColumn" msprop:Generator_UserColumnName="cliTelefone" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="255" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="cliNumEndereco" msprop:Generator_ColumnVarNameInTable="columncliNumEndereco" msprop:Generator_ColumnPropNameInRow="cliNumEndereco" msprop:Generator_ColumnPropNameInTable="cliNumEnderecoColumn" msprop:Generator_UserColumnName="cliNumEndereco" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="255" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="demNomeFantasia" msprop:Generator_ColumnVarNameInTable="columndemNomeFantasia" msprop:Generator_ColumnPropNameInRow="demNomeFantasia" msprop:Generator_ColumnPropNameInTable="demNomeFantasiaColumn" msprop:Generator_UserColumnName="demNomeFantasia" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="255" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="demInscricaoEstadual" msprop:Generator_ColumnVarNameInTable="columndemInscricaoEstadual" msprop:Generator_ColumnPropNameInRow="demInscricaoEstadual" msprop:Generator_ColumnPropNameInTable="demInscricaoEstadualColumn" msprop:Generator_UserColumnName="demInscricaoEstadual" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="255" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="demInscricaoMunicipal" msprop:Generator_ColumnVarNameInTable="columndemInscricaoMunicipal" msprop:Generator_ColumnPropNameInRow="demInscricaoMunicipal" msprop:Generator_ColumnPropNameInTable="demInscricaoMunicipalColumn" msprop:Generator_UserColumnName="demInscricaoMunicipal" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="255" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="demCEP" msprop:Generator_ColumnVarNameInTable="columndemCEP" msprop:Generator_ColumnPropNameInRow="demCEP" msprop:Generator_ColumnPropNameInTable="demCEPColumn" msprop:Generator_UserColumnName="demCEP" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="255" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="demTelefone" msprop:Generator_ColumnVarNameInTable="columndemTelefone" msprop:Generator_ColumnPropNameInRow="demTelefone" msprop:Generator_ColumnPropNameInTable="demTelefoneColumn" msprop:Generator_UserColumnName="demTelefone" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="255" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="demEndereco" msprop:Generator_ColumnVarNameInTable="columndemEndereco" msprop:Generator_ColumnPropNameInRow="demEndereco" msprop:Generator_ColumnPropNameInTable="demEnderecoColumn" msprop:Generator_UserColumnName="demEndereco" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="255" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="notHora" msprop:Generator_ColumnVarNameInTable="columnnotHora" msprop:Generator_ColumnPropNameInRow="notHora" msprop:Generator_ColumnPropNameInTable="notHoraColumn" msprop:Generator_UserColumnName="notHora" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="notValor" msprop:Generator_ColumnVarNameInTable="columnnotValor" msprop:Generator_ColumnPropNameInRow="notValor" msprop:Generator_ColumnPropNameInTable="notValorColumn" msprop:Generator_UserColumnName="notValor" type="xs:int" minOccurs="0" />
+              <xs:element name="notData" msprop:Generator_ColumnVarNameInTable="columnnotData" msprop:Generator_ColumnPropNameInRow="notData" msprop:Generator_ColumnPropNameInTable="notDataColumn" msprop:Generator_UserColumnName="notData" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="notCodVer" msprop:Generator_ColumnVarNameInTable="columnnotCodVer" msprop:Generator_ColumnPropNameInRow="notCodVer" msprop:Generator_ColumnPropNameInTable="notCodVerColumn" msprop:Generator_UserColumnName="notCodVer" type="xs:int" minOccurs="0" />
+              <xs:element name="notCodigo" msprop:Generator_ColumnVarNameInTable="columnnotCodigo" msprop:Generator_ColumnPropNameInRow="notCodigo" msprop:Generator_ColumnPropNameInTable="notCodigoColumn" msprop:Generator_UserColumnName="notCodigo" type="xs:int" minOccurs="0" />
+              <xs:element name="ordOcorrencia" msprop:Generator_ColumnVarNameInTable="columnordOcorrencia" msprop:Generator_ColumnPropNameInRow="ordOcorrencia" msprop:Generator_ColumnPropNameInTable="ordOcorrenciaColumn" msprop:Generator_UserColumnName="ordOcorrencia" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="536870910" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="ordValorTotal" msprop:Generator_ColumnVarNameInTable="columnordValorTotal" msprop:Generator_ColumnPropNameInRow="ordValorTotal" msprop:Generator_ColumnPropNameInTable="ordValorTotalColumn" msprop:Generator_UserColumnName="ordValorTotal" type="xs:decimal" minOccurs="0" />
             </xs:sequence>
           </xs:complexType>
         </xs:element>
@@ -1467,16 +1635,16 @@ FROM            ((((tiposPagamento INNER JOIN
   </xs:element>
   <xs:annotation>
     <xs:appinfo>
-      <msdata:Relationship name="clientecliPessoaFisica" msdata:parent="cliente" msdata:child="cliPessoaFisica" msdata:parentkey="cliCodigo" msdata:childkey="cliCodigo" msprop:Generator_UserChildTable="cliPessoaFisica" msprop:Generator_ChildPropName="GetcliPessoaFisicaRows" msprop:Generator_UserRelationName="clientecliPessoaFisica" msprop:Generator_RelationVarName="relationclientecliPessoaFisica" msprop:Generator_UserParentTable="cliente" msprop:Generator_ParentPropName="clienteRow" />
-      <msdata:Relationship name="clientecliPessoaJuridica" msdata:parent="cliente" msdata:child="cliPessoaJuridica" msdata:parentkey="cliCodigo" msdata:childkey="cliCodigo" msprop:Generator_UserChildTable="cliPessoaJuridica" msprop:Generator_ChildPropName="GetcliPessoaJuridicaRows" msprop:Generator_UserRelationName="clientecliPessoaJuridica" msprop:Generator_RelationVarName="relationclientecliPessoaJuridica" msprop:Generator_UserParentTable="cliente" msprop:Generator_ParentPropName="clienteRow" />
-      <msdata:Relationship name="notaFiscalcontasReceber" msdata:parent="notaFiscal" msdata:child="contasReceber" msdata:parentkey="notCodigo" msdata:childkey="notCodigo" msprop:Generator_UserChildTable="contasReceber" msprop:Generator_ChildPropName="GetcontasReceberRows" msprop:Generator_UserRelationName="notaFiscalcontasReceber" msprop:Generator_ParentPropName="notaFiscalRow" msprop:Generator_RelationVarName="relationnotaFiscalcontasReceber" msprop:Generator_UserParentTable="notaFiscal" />
-      <msdata:Relationship name="tiposPagamentocontasReceber" msdata:parent="tiposPagamento" msdata:child="contasReceber" msdata:parentkey="tpaCodigo" msdata:childkey="tpaCodigo" msprop:Generator_UserChildTable="contasReceber" msprop:Generator_ChildPropName="GetcontasReceberRows" msprop:Generator_UserRelationName="tiposPagamentocontasReceber" msprop:Generator_ParentPropName="tiposPagamentoRow" msprop:Generator_RelationVarName="relationtiposPagamentocontasReceber" msprop:Generator_UserParentTable="tiposPagamento" />
-      <msdata:Relationship name="dadosEmitentenotaFiscal" msdata:parent="dadosEmitente" msdata:child="notaFiscal" msdata:parentkey="demCodigo" msdata:childkey="demCodigo" msprop:Generator_UserChildTable="notaFiscal" msprop:Generator_ChildPropName="GetnotaFiscalRows" msprop:Generator_UserRelationName="dadosEmitentenotaFiscal" msprop:Generator_RelationVarName="relationdadosEmitentenotaFiscal" msprop:Generator_UserParentTable="dadosEmitente" msprop:Generator_ParentPropName="dadosEmitenteRow" />
-      <msdata:Relationship name="ordemServiconotaFiscal" msdata:parent="ordemServico" msdata:child="notaFiscal" msdata:parentkey="ordCodigo" msdata:childkey="ordCodigo" msprop:Generator_UserChildTable="notaFiscal" msprop:Generator_ChildPropName="GetnotaFiscalRows" msprop:Generator_UserRelationName="ordemServiconotaFiscal" msprop:Generator_ParentPropName="ordemServicoRow" msprop:Generator_RelationVarName="relationordemServiconotaFiscal" msprop:Generator_UserParentTable="ordemServico" />
-      <msdata:Relationship name="clienteordemServico" msdata:parent="cliente" msdata:child="ordemServico" msdata:parentkey="cliCodigo" msdata:childkey="cliCodigo" msprop:Generator_UserChildTable="ordemServico" msprop:Generator_ChildPropName="GetordemServicoRows" msprop:Generator_UserRelationName="clienteordemServico" msprop:Generator_RelationVarName="relationclienteordemServico" msprop:Generator_UserParentTable="cliente" msprop:Generator_ParentPropName="clienteRow" />
-      <msdata:Relationship name="funcionariosordemServico" msdata:parent="funcionarios" msdata:child="ordemServico" msdata:parentkey="funMatricula" msdata:childkey="funMatricula" msprop:Generator_UserChildTable="ordemServico" msprop:Generator_ChildPropName="GetordemServicoRows" msprop:Generator_UserRelationName="funcionariosordemServico" msprop:Generator_RelationVarName="relationfuncionariosordemServico" msprop:Generator_UserParentTable="funcionarios" msprop:Generator_ParentPropName="funcionariosRow" />
-      <msdata:Relationship name="ordemServicoservicos_os" msdata:parent="ordemServico" msdata:child="servicos_os" msdata:parentkey="ordCodigo" msdata:childkey="ordCodigo" msprop:Generator_UserChildTable="servicos_os" msprop:Generator_ChildPropName="Getservicos_osRows" msprop:Generator_UserRelationName="ordemServicoservicos_os" msprop:Generator_RelationVarName="relationordemServicoservicos_os" msprop:Generator_UserParentTable="ordemServico" msprop:Generator_ParentPropName="ordemServicoRow" />
-      <msdata:Relationship name="servicosservicos_os" msdata:parent="servicos" msdata:child="servicos_os" msdata:parentkey="svcCodigo" msdata:childkey="svcCodigo" msprop:Generator_UserChildTable="servicos_os" msprop:Generator_ChildPropName="Getservicos_osRows" msprop:Generator_UserRelationName="servicosservicos_os" msprop:Generator_RelationVarName="relationservicosservicos_os" msprop:Generator_UserParentTable="servicos" msprop:Generator_ParentPropName="servicosRow" />
+      <msdata:Relationship name="clientecliPessoaFisica" msdata:parent="cliente" msdata:child="cliPessoaFisica" msdata:parentkey="cliCodigo" msdata:childkey="cliCodigo" msprop:Generator_UserChildTable="cliPessoaFisica" msprop:Generator_ChildPropName="GetcliPessoaFisicaRows" msprop:Generator_UserRelationName="clientecliPessoaFisica" msprop:Generator_ParentPropName="clienteRow" msprop:Generator_RelationVarName="relationclientecliPessoaFisica" msprop:Generator_UserParentTable="cliente" />
+      <msdata:Relationship name="clientecliPessoaJuridica" msdata:parent="cliente" msdata:child="cliPessoaJuridica" msdata:parentkey="cliCodigo" msdata:childkey="cliCodigo" msprop:Generator_UserChildTable="cliPessoaJuridica" msprop:Generator_ChildPropName="GetcliPessoaJuridicaRows" msprop:Generator_UserRelationName="clientecliPessoaJuridica" msprop:Generator_ParentPropName="clienteRow" msprop:Generator_RelationVarName="relationclientecliPessoaJuridica" msprop:Generator_UserParentTable="cliente" />
+      <msdata:Relationship name="notaFiscalcontasReceber" msdata:parent="notaFiscal" msdata:child="contasReceber" msdata:parentkey="notCodigo" msdata:childkey="notCodigo" msprop:Generator_UserChildTable="contasReceber" msprop:Generator_ChildPropName="GetcontasReceberRows" msprop:Generator_UserRelationName="notaFiscalcontasReceber" msprop:Generator_RelationVarName="relationnotaFiscalcontasReceber" msprop:Generator_UserParentTable="notaFiscal" msprop:Generator_ParentPropName="notaFiscalRow" />
+      <msdata:Relationship name="tiposPagamentocontasReceber" msdata:parent="tiposPagamento" msdata:child="contasReceber" msdata:parentkey="tpaCodigo" msdata:childkey="tpaCodigo" msprop:Generator_UserChildTable="contasReceber" msprop:Generator_ChildPropName="GetcontasReceberRows" msprop:Generator_UserRelationName="tiposPagamentocontasReceber" msprop:Generator_RelationVarName="relationtiposPagamentocontasReceber" msprop:Generator_UserParentTable="tiposPagamento" msprop:Generator_ParentPropName="tiposPagamentoRow" />
+      <msdata:Relationship name="dadosEmitentenotaFiscal" msdata:parent="dadosEmitente" msdata:child="notaFiscal" msdata:parentkey="demCodigo" msdata:childkey="demCodigo" msprop:Generator_UserChildTable="notaFiscal" msprop:Generator_ChildPropName="GetnotaFiscalRows" msprop:Generator_UserRelationName="dadosEmitentenotaFiscal" msprop:Generator_ParentPropName="dadosEmitenteRow" msprop:Generator_RelationVarName="relationdadosEmitentenotaFiscal" msprop:Generator_UserParentTable="dadosEmitente" />
+      <msdata:Relationship name="ordemServiconotaFiscal" msdata:parent="ordemServico" msdata:child="notaFiscal" msdata:parentkey="ordCodigo" msdata:childkey="ordCodigo" msprop:Generator_UserChildTable="notaFiscal" msprop:Generator_ChildPropName="GetnotaFiscalRows" msprop:Generator_UserRelationName="ordemServiconotaFiscal" msprop:Generator_RelationVarName="relationordemServiconotaFiscal" msprop:Generator_UserParentTable="ordemServico" msprop:Generator_ParentPropName="ordemServicoRow" />
+      <msdata:Relationship name="clienteordemServico" msdata:parent="cliente" msdata:child="ordemServico" msdata:parentkey="cliCodigo" msdata:childkey="cliCodigo" msprop:Generator_UserChildTable="ordemServico" msprop:Generator_ChildPropName="GetordemServicoRows" msprop:Generator_UserRelationName="clienteordemServico" msprop:Generator_ParentPropName="clienteRow" msprop:Generator_RelationVarName="relationclienteordemServico" msprop:Generator_UserParentTable="cliente" />
+      <msdata:Relationship name="funcionariosordemServico" msdata:parent="funcionarios" msdata:child="ordemServico" msdata:parentkey="funMatricula" msdata:childkey="funMatricula" msprop:Generator_UserChildTable="ordemServico" msprop:Generator_ChildPropName="GetordemServicoRows" msprop:Generator_UserRelationName="funcionariosordemServico" msprop:Generator_ParentPropName="funcionariosRow" msprop:Generator_RelationVarName="relationfuncionariosordemServico" msprop:Generator_UserParentTable="funcionarios" />
+      <msdata:Relationship name="ordemServicoservicos_os" msdata:parent="ordemServico" msdata:child="servicos_os" msdata:parentkey="ordCodigo" msdata:childkey="ordCodigo" msprop:Generator_UserChildTable="servicos_os" msprop:Generator_ChildPropName="Getservicos_osRows" msprop:Generator_UserRelationName="ordemServicoservicos_os" msprop:Generator_ParentPropName="ordemServicoRow" msprop:Generator_RelationVarName="relationordemServicoservicos_os" msprop:Generator_UserParentTable="ordemServico" />
+      <msdata:Relationship name="servicosservicos_os" msdata:parent="servicos" msdata:child="servicos_os" msdata:parentkey="svcCodigo" msdata:childkey="svcCodigo" msprop:Generator_UserChildTable="servicos_os" msprop:Generator_ChildPropName="Getservicos_osRows" msprop:Generator_UserRelationName="servicosservicos_os" msprop:Generator_ParentPropName="servicosRow" msprop:Generator_RelationVarName="relationservicosservicos_os" msprop:Generator_UserParentTable="servicos" />
     </xs:appinfo>
   </xs:annotation>
 </xs:schema>
