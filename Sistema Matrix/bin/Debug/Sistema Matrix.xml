@@ -62,7 +62,7 @@ Represents the strongly named DataTable class.
 	<summary>
 Represents the strongly named DataTable class.
 </summary>
-</member><member name="T:Sistema_Matrix.bancoMatrixDataSet.qryTesteDataTable">
+</member><member name="T:Sistema_Matrix.bancoMatrixDataSet.relNFDataTable">
 	<summary>
 Represents the strongly named DataTable class.
 </summary>
@@ -122,7 +122,7 @@ Represents strongly named DataRow class.
 	<summary>
 Represents strongly named DataRow class.
 </summary>
-</member><member name="T:Sistema_Matrix.bancoMatrixDataSet.qryTesteRow">
+</member><member name="T:Sistema_Matrix.bancoMatrixDataSet.relNFRow">
 	<summary>
 Represents strongly named DataRow class.
 </summary>
@@ -182,7 +182,7 @@ Row event argument class
 	<summary>
 Row event argument class
 </summary>
-</member><member name="T:Sistema_Matrix.bancoMatrixDataSet.qryTesteRowChangeEvent">
+</member><member name="T:Sistema_Matrix.bancoMatrixDataSet.relNFRowChangeEvent">
 	<summary>
 Row event argument class
 </summary>
@@ -246,7 +246,7 @@ Represents the connection and commands used to retrieve and save data.
 	<summary>
 Represents the connection and commands used to retrieve and save data.
 </summary>
-</member><member name="T:Sistema_Matrix.bancoMatrixDataSetTableAdapters.qryTesteTableAdapter">
+</member><member name="T:Sistema_Matrix.bancoMatrixDataSetTableAdapters.relNFTableAdapter">
 	<summary>
 Represents the connection and commands used to retrieve and save data.
 </summary>

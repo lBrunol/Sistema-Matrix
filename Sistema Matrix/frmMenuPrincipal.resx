@@ -484,7 +484,7 @@
   <data name="botFuncionario.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAADIAAAAyCAYAAAAeP4ixAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAO
-        wAAADsABataJCQAAFNFJREFUaEPtmQdYVVe2x0EsCCggorFEY4mixhIbRekgTYooKApGUUAFpHeQjjRB
+        vwAADr8BOAVTJAAAFNFJREFUaEPtmQdYVVe2x0EsCCggorFEY4mixhIbRekgTYooKApGUUAFpHeQjjRB
         eu8CIoooSlWaIggarAj2SNRYMu+9b0oyudz7f2sfwOg8w2QmM++975tZ37fc55577t7rt1fZ64jQv+Vf
         UISH9P9WhIWFhUYNigjp6PeUff6ogcKj6FfCwmPYpfDPDCJ0OVpYRHgMfc9G9tTgk/TUP01ochHS0exy
         8M7HhZ5hxogMfXwnBClEX7BL2gl2g937y8feTT2KZmHrcWtyoOwzuzuEyj36t/DSbz4wTJxEU1NTTlVV
@@ -1660,43 +1660,6 @@
         +1vd/9qoJ1xAOXK7JEEVurEX2CBRw4GdmsI13AEF1uEOOScByvpE0PAANDwgEx6kRh+4PmG80B0VCnZm
         KLzam3i9HzH3S+0rjlHLMTGP0zx+s19+YPeX03/A3be6zx0PWMfB7VJEfP8HFocRf4M8wm4AAAAASUVO
         RK5CYII=
-</value>
-  </data>
-  <data name="Button2.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
-        /9j/4AAQSkZJRgABAQEAYABgAAD/2wBDAAIBAQIBAQICAgICAgICAwUDAwMDAwYEBAMFBwYHBwcGBwcI
-        CQsJCAgKCAcHCg0KCgsMDAwMBwkODw0MDgsMDAz/2wBDAQICAgMDAwYDAwYMCAcIDAwMDAwMDAwMDAwM
-        DAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAz/wAARCABAAD8DASIAAhEBAxEB/8QA
-        HwAAAQUBAQEBAQEAAAAAAAAAAAECAwQFBgcICQoL/8QAtRAAAgEDAwIEAwUFBAQAAAF9AQIDAAQRBRIh
-        MUEGE1FhByJxFDKBkaEII0KxwRVS0fAkM2JyggkKFhcYGRolJicoKSo0NTY3ODk6Q0RFRkdISUpTVFVW
-        V1hZWmNkZWZnaGlqc3R1dnd4eXqDhIWGh4iJipKTlJWWl5iZmqKjpKWmp6ipqrKztLW2t7i5usLDxMXG
-        x8jJytLT1NXW19jZ2uHi4+Tl5ufo6erx8vP09fb3+Pn6/8QAHwEAAwEBAQEBAQEBAQAAAAAAAAECAwQF
-        BgcICQoL/8QAtREAAgECBAQDBAcFBAQAAQJ3AAECAxEEBSExBhJBUQdhcRMiMoEIFEKRobHBCSMzUvAV
-        YnLRChYkNOEl8RcYGRomJygpKjU2Nzg5OkNERUZHSElKU1RVVldYWVpjZGVmZ2hpanN0dXZ3eHl6goOE
-        hYaHiImKkpOUlZaXmJmaoqOkpaanqKmqsrO0tba3uLm6wsPExcbHyMnK0tPU1dbX2Nna4uPk5ebn6Onq
-        8vP09fb3+Pn6/9oADAMBAAIRAxEAPwD9/K4b4h/HDTvBFy9sGWS4Q7WHX5sZwB7ZGSSAPc8V3NfMHxY+
-        FV/46+JOvS6VdxRXa3RHkzkiOTgdGH3T+GKcbX1A6bUP2lru6Y+XtjHu/wDhis9vj7qLNn7Uv6/414z4
-        08C+Nfh+/wDxM9Av0j6iaHE8TD1DIT+tcfN8RJbZ9siyxkdQ6lT+tbqMWZ3PpqD9oPUIWH+kKw+pH9a3
-        NE/agETqt2o292+8B+XI/X6V8jw/Ed7h9qb3PoOa1zf6tHok2oPAYreEZJdwC30HWk4x6jTPvXwh4vtP
-        Gel/arVsgHa65ztOAevcEEEGtWvlX/glv8Q9Q+Ivh/4gT3zDZZ63FbW0S/dhjFshx9SSST719VVgWFeL
-        ap4h0bw98Z9StZNVtlmuZhIRK2wK5AymTxkcfnjqDXtNfKfxl+B118RPibr9xpN3DBe/ayGhuCRFN8o6
-        MM7T+GKat1A9d+Ox3aDEy8qYeGHQ8etfFnxZO6+lzz1611finwP8RPhdH5V5p2tW9t2a3m863Ye2wkfm
-        BXAaxrjXsh+3Quz9/NUg1XILmMjwSf8ATv8AgRr1nXUM3w0uo1G53ACr3Y89K80029toZMWtsm8/3Rk1
-        dbxldR/LstPk+X54Ax/Enmvz/j/j/C8KUqNXFUpVPauSXLbTltvf1POx+YxwqTavc+oP+CZnwePwr+Eu
-        uXFxfQ3OoeIdWa8uLeI5WxAjREQn+JioDEjj5sdjX0lXzJ/wTs8RXOsN4ril8sRRG2dUjQIu4+YCcDjO
-        APyFfTde1wnxJRz7KqWa0IOEanNo91yycenodODxKxFFVUrXCvF9S1/R9B+MupW7anbrJczByJGCbJMD
-        KZPHHH547V7RXyv8Yvgrd/EP4ma/PpV3Db3n2ohobjIim4HRhnafwxX0it1Ok9Z+Ox3+H4nX5kMXDDkH
-        8a+LPiyd17Lnnk113irwR8RPhchivNM1mC27PbTedAw9RsJAH4CvP9Z177bIft8EjP381SD+PFVyeYrm
-        P4GGdRH+9j9az7/VSt/OPSRh+pqPxdObe3F3pm+38gZlSEn7v978O9ca3iTexJkySckk9a/mHxyxNTG4
-        mjl06Lj7K8lLdTUlHVejTTv1PiuJca3UjRcbW1v3ufbv/BMK7+1XPjP/AGRZ/wDtavrWvys/ZuXxh8QP
-        iVa+GvB2sanpNzq7A3c9pcPCsMCfelk2kZCAnAPUsAOtfqL4Z0T/AIRrw7Y6eLi7vPsUCQefdSmWabaA
-        NzseSxxkn1NfeeDOMqPI44B0nGNFyXO9pOUnKyW+iauerw5iXUw3Jy6R699bl6vOdS8ETaJ47vNRWSOW
-        2vpBKfmAaJsAEEenHWu/1OwXVLCW3dnRZlKFkbawB9DXj3iP9ifRPEMzSHXvE0TMcnF6zfzr9fPoTa+O
-        wLaBEy5K+Vww6dK+LPiyf9Nl+pr6hi/YJtbIkWvjXxVbxn+Bbg7fyzisrUf+CdVtqshM/i/Vps/34lJo
-        A+RvBShr0hgGBJBBGQQa4D43fDK8+G/iGGS2jkk0nViTZlVLFX7w/wC8CRj1BHvX3nYf8E1NHtGOfEmq
-        DP8AcRVP51eT/gnF4dlaP7Vr2t3QhkWaIOw/duvRh6EetfL8VcMUM6wypT0nF3jK17d16NfjZ9Dyc3yq
-        GOo8jdpLZ/mO/wCCd37LN1+z58N7nUdfW2/4SjxEyzTonLWEAA2W5b1ByzY43HHO0GvoqvOPhx+zRpXw
-        21SO7ttV166ki6LcXjMh+q969HHFe1lmXUMBhYYTDK0Yq3/Bfm92d2Fw1PD0o0aeyP/Z
 </value>
   </data>
   <metadata name="$this.TrayHeight" type="System.Int32, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">

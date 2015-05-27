@@ -153,28 +153,27 @@ Module modFuncoes
         nomeDataset.Refresh()
     End Sub
 
-    Sub filtraNF(ByVal nomeTextBox As TextBox, ByVal strSql As String, ByVal nomeDataset As DataGridView, ByVal campo1 As String, ByVal campo2 As String, ByVal campo3 As String, ByVal campo4 As String, ByVal campo5 As String, ByVal campo6 As String, ByVal campo7 As String, ByVal campo8 As String, ByVal campo9 As String, ByVal campo10 As String, ByVal strSql2 As String)
-        nomeDataset.Rows.Clear()
+    Sub filtraNF(ByVal nomeTextBox As TextBox, ByVal strSql As String, nomeDataset As DataGridView, ByVal strSql2 As String)
         Dim objBanco As New clsConexaoBanco
-        Dim tabela As DataTable
-        tabela = New DataTable()
         Try
             If nomeTextBox.Text <> "" Then
-                tabela = objBanco.ExecutaDataTable(strSql)
-                If tabela.Rows.Count > 0 Then
-                    Dim i As Integer = 0
-                    For i = 0 To tabela.Rows.Count - 1
-                        nomeDataset.Rows.Add(tabela.Rows(i)(campo1), tabela.Rows(i)(campo2), tabela.Rows(i)(campo3), tabela.Rows(i)(campo4), tabela.Rows(i)(campo5), tabela.Rows(i)(campo6), tabela.Rows(i)(campo7), tabela.Rows(i)(campo8), tabela.Rows(i)(campo9), tabela.Rows(i)(campo10))
-                    Next
-                End If
+                '    tabela = objBanco.ExecutaDataTable(strSql)
+                '    If tabela.Rows.Count > 0 Then
+                '        Dim i As Integer = 0
+                '        For i = 0 To tabela.Rows.Count - 1
+                '            nomeDataset.Rows.Add(tabela.Rows(i)(campo1), tabela.Rows(i)(campo2), tabela.Rows(i)(campo3), 'tabela.Rows(i)(campo4), tabela.Rows(i)(campo5), tabela.Rows(i)(campo6), tabela.Rows(i)(campo7), 'tabela.Rows(i)(campo8), tabela.Rows(i)(campo9), tabela.Rows(i)(campo10))
+                '        Next
+                '    End If
+                objBanco.carregaDataGrid(nomeDataset, strSql)
             Else
-                tabela = objBanco.ExecutaDataTable(strSql2)
-                If tabela.Rows.Count > 0 Then
-                    Dim i As Integer = 0
-                    For i = 0 To tabela.Rows.Count - 1
-                        nomeDataset.Rows.Add(tabela.Rows(i)(campo1), tabela.Rows(i)(campo2), tabela.Rows(i)(campo3), tabela.Rows(i)(campo4), tabela.Rows(i)(campo5), tabela.Rows(i)(campo6), tabela.Rows(i)(campo7), tabela.Rows(i)(campo8), tabela.Rows(i)(campo9), tabela.Rows(i)(campo10))
-                    Next
-                End If
+                'tabela = objBanco.ExecutaDataTable(strSql2)
+                'If tabela.Rows.Count > 0 Then
+                '    Dim i As Integer = 0
+                '    For i = 0 To tabela.Rows.Count - 1
+                '        nomeDataset.Rows.Add(tabela.Rows(i)(campo1), tabela.Rows(i)(campo2), tabela.Rows(i)(campo3), 'tabela.Rows(i)(campo4), tabela.Rows(i)(campo5), tabela.Rows(i)(campo6), tabela.Rows(i)(campo7), 'tabela.Rows(i)(campo8), tabela.Rows(i)(campo9), tabela.Rows(i)(campo10))
+                '    Next
+                'End If
+                objBanco.carregaDataGrid(nomeDataset, strSql2)
             End If
         Catch exc As SqlClient.SqlException
             MsgBox("Erro com banco de dados" & vbCrLf & Err.Description, vbCritical, "Erro com Banco de dados")
@@ -185,33 +184,32 @@ Module modFuncoes
             objBanco.DesconectarBanco()
             strSql = String.Empty
         End Try
-
-        nomeDataset.Refresh()
     End Sub
 
 
-    Sub filtraNFMSK(ByVal nomeTextBox As MaskedTextBox, ByVal strSql As String, ByVal nomeDataset As DataGridView, ByVal campo1 As String, ByVal campo2 As String, ByVal campo3 As String, ByVal campo4 As String, ByVal campo5 As String, ByVal campo6 As String, ByVal campo7 As String, ByVal campo8 As String, ByVal campo9 As String, ByVal campo10 As String, ByVal strSql2 As String)
+    Sub filtraNFMSK(ByVal nomeTextBox As MaskedTextBox, ByVal strSql As String, ByVal nomeDataset As DataGridView, ByVal strSql2 As String)
         nomeDataset.Rows.Clear()
         Dim objBanco As New clsConexaoBanco
         Dim tabela As DataTable
         tabela = New DataTable()
         Try
             If nomeTextBox.Text <> "" Then
-                tabela = objBanco.ExecutaDataTable(strSql)
-                If tabela.Rows.Count > 0 Then
-                    Dim i As Integer = 0
-                    For i = 0 To tabela.Rows.Count - 1
-                        nomeDataset.Rows.Add(tabela.Rows(i)(campo1), tabela.Rows(i)(campo2), tabela.Rows(i)(campo3), tabela.Rows(i)(campo4), tabela.Rows(i)(campo5), tabela.Rows(i)(campo6), tabela.Rows(i)(campo7), tabela.Rows(i)(campo8), tabela.Rows(i)(campo9), tabela.Rows(i)(campo10))
-                    Next
-                End If
+                'tabela = objBanco.ExecutaDataTable(strSql)
+                'If tabela.Rows.Count > 0 Then
+                '    Dim i As Integer = 0
+                '    For i = 0 To tabela.Rows.Count - 1
+                '        nomeDataset.Rows.Add(tabela.Rows(i)(campo1), tabela.Rows(i)(campo2), tabela.Rows(i)(campo3), 'tabela.Rows(i)(campo4), tabela.Rows(i)(campo5), tabela.Rows(i)(campo6), tabela.Rows(i)(campo7), 'tabela.Rows(i)(campo8), tabela.Rows(i)(campo9), tabela.Rows(i)(campo10))
+                '    Next
+                'End If
+                objBanco.carregaDataGrid(nomeDataset, strSql)
             Else
-                tabela = objBanco.ExecutaDataTable(strSql2)
-                If tabela.Rows.Count > 0 Then
-                    Dim i As Integer = 0
-                    For i = 0 To tabela.Rows.Count - 1
-                        nomeDataset.Rows.Add(tabela.Rows(i)(campo1), tabela.Rows(i)(campo2), tabela.Rows(i)(campo3), tabela.Rows(i)(campo4), tabela.Rows(i)(campo5), tabela.Rows(i)(campo6), tabela.Rows(i)(campo7), tabela.Rows(i)(campo8), tabela.Rows(i)(campo9), tabela.Rows(i)(campo10))
-                    Next
-                End If
+                'tabela = objBanco.ExecutaDataTable(strSql2)
+                'If tabela.Rows.Count > 0 Then
+                '    Dim i As Integer = 0
+                '    For i = 0 To tabela.Rows.Count - 1
+                '        nomeDataset.Rows.Add(tabela.Rows(i)(campo1), tabela.Rows(i)(campo2), tabela.Rows(i)(campo3), 'tabela.Rows(i)(campo4), tabela.Rows(i)(campo5), tabela.Rows(i)(campo6), tabela.Rows(i)(campo7), 'tabela.Rows(i)(campo8), tabela.Rows(i)(campo9), tabela.Rows(i)(campo10))
+                '    Next
+                'End If
             End If
         Catch exc As SqlClient.SqlException
             MsgBox("Erro com banco de dados" & vbCrLf & Err.Description, vbCritical, "Erro com Banco de dados")
@@ -223,7 +221,7 @@ Module modFuncoes
             strSql = String.Empty
         End Try
 
-        nomeDataset.Refresh()
+        'nomeDataset.Refresh()
     End Sub
 
 

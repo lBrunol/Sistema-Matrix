@@ -1,32 +1,326 @@
-C:\Users\SL Artesanatos\Documents\Projeto Matrix\trunk\Sistema Matrix\bin\Debug\Sistema Matrix.exe.config
-C:\Users\SL Artesanatos\Documents\Projeto Matrix\trunk\Sistema Matrix\obj\Debug\Interop.Microsoft.Vbe.Interop.Forms.dll
-C:\Users\SL Artesanatos\Documents\Projeto Matrix\trunk\Sistema Matrix\obj\Debug\Sistema Matrix.vbproj.ResolveComReference.cache
-C:\Users\SL Artesanatos\Documents\Projeto Matrix\trunk\Sistema Matrix\obj\Debug\Sistema Matrix.xml
-C:\Users\SL Artesanatos\Documents\Projeto Matrix\trunk\Sistema Matrix\obj\Debug\Sistema Matrix.vbprojResolveAssemblyReference.cache
-C:\Users\SL Artesanatos\Documents\Projeto Matrix\trunk\Sistema Matrix\obj\Debug\Sistema_Matrix.txtBancoDeDados.resources
-C:\Users\SL Artesanatos\Documents\Projeto Matrix\trunk\Sistema Matrix\obj\Debug\Sistema_Matrix.frmGerenciamentoUsuarios.resources
-C:\Users\SL Artesanatos\Documents\Projeto Matrix\trunk\Sistema Matrix\obj\Debug\Sistema_Matrix.frmCadastroEmitente.resources
-C:\Users\SL Artesanatos\Documents\Projeto Matrix\trunk\Sistema Matrix\obj\Debug\Sistema_Matrix.relContasReceber.resources
-C:\Users\SL Artesanatos\Documents\Projeto Matrix\trunk\Sistema Matrix\obj\Debug\Sistema_Matrix.relOrdensServico.resources
-C:\Users\SL Artesanatos\Documents\Projeto Matrix\trunk\Sistema Matrix\obj\Debug\Sistema_Matrix.frmConsultaNotasFiscais.resources
-C:\Users\SL Artesanatos\Documents\Projeto Matrix\trunk\Sistema Matrix\obj\Debug\Sistema_Matrix.frmConsultaContasReceber.resources
-C:\Users\SL Artesanatos\Documents\Projeto Matrix\trunk\Sistema Matrix\obj\Debug\Sistema_Matrix.frmConfirmaNotaFiscal.resources
-C:\Users\SL Artesanatos\Documents\Projeto Matrix\trunk\Sistema Matrix\obj\Debug\Sistema_Matrix.frmGerenciamentoServicos.resources
-C:\Users\SL Artesanatos\Documents\Projeto Matrix\trunk\Sistema Matrix\obj\Debug\Sistema_Matrix.frmGerenciamentoClientes.resources
-C:\Users\SL Artesanatos\Documents\Projeto Matrix\trunk\Sistema Matrix\obj\Debug\Sistema_Matrix.frmGerenciamentoOrdensServico.resources
-C:\Users\SL Artesanatos\Documents\Projeto Matrix\trunk\Sistema Matrix\obj\Debug\Sistema_Matrix.frmGerenciamentoFuncionarios.resources
-C:\Users\SL Artesanatos\Documents\Projeto Matrix\trunk\Sistema Matrix\obj\Debug\Sistema_Matrix.frmLogin.resources
-C:\Users\SL Artesanatos\Documents\Projeto Matrix\trunk\Sistema Matrix\obj\Debug\Sistema_Matrix.Resources.resources
-C:\Users\SL Artesanatos\Documents\Projeto Matrix\trunk\Sistema Matrix\obj\Debug\Sistema_Matrix.frmMenuPrincipal.resources
-C:\Users\SL Artesanatos\Documents\Projeto Matrix\trunk\Sistema Matrix\obj\Debug\Sistema_Matrix.frmTiposPagamento.resources
-C:\Users\SL Artesanatos\Documents\Projeto Matrix\trunk\Sistema Matrix\obj\Debug\Sistema_Matrix.frmCadastroUsuarios.resources
-C:\Users\SL Artesanatos\Documents\Projeto Matrix\trunk\Sistema Matrix\obj\Debug\Sistema Matrix.vbproj.GenerateResource.Cache
-C:\Users\SL Artesanatos\Documents\Projeto Matrix\trunk\Sistema Matrix\obj\Debug\RdlCompile.cache
-C:\Users\SL Artesanatos\Documents\Projeto Matrix\trunk\Sistema Matrix\obj\Debug\RdlCompile.compiled
-C:\Users\SL Artesanatos\Documents\Projeto Matrix\trunk\Sistema Matrix\bin\Debug\Sistema Matrix.exe
-C:\Users\SL Artesanatos\Documents\Projeto Matrix\trunk\Sistema Matrix\bin\Debug\Sistema Matrix.pdb
-C:\Users\SL Artesanatos\Documents\Projeto Matrix\trunk\Sistema Matrix\bin\Debug\Sistema Matrix.xml
-C:\Users\SL Artesanatos\Documents\Projeto Matrix\trunk\Sistema Matrix\bin\Debug\Interop.Microsoft.Vbe.Interop.Forms.dll
-C:\Users\SL Artesanatos\Documents\Projeto Matrix\trunk\Sistema Matrix\obj\Debug\Sistema Matrix.exe
-C:\Users\SL Artesanatos\Documents\Projeto Matrix\trunk\Sistema Matrix\obj\Debug\Sistema Matrix.pdb
-C:\Users\SL Artesanatos\Documents\Projeto Matrix\trunk\Sistema Matrix\obj\Debug\Sistema_Matrix.Form1.resources
+c:\users\fabiano\documents\visual studio 2013\Projects\Sistema Matrix\Sistema Matrix\bin\Debug\Sistema Matrix.exe
+c:\users\fabiano\documents\visual studio 2013\Projects\Sistema Matrix\Sistema Matrix\bin\Debug\Sistema Matrix.pdb
+c:\users\fabiano\documents\visual studio 2013\Projects\Sistema Matrix\Sistema Matrix\bin\Debug\Sistema Matrix.xml
+c:\users\fabiano\documents\visual studio 2013\Projects\Sistema Matrix\Sistema Matrix\obj\Debug\Sistema_Matrix.Form1.resources
+c:\users\fabiano\documents\visual studio 2013\Projects\Sistema Matrix\Sistema Matrix\obj\Debug\Sistema_Matrix.Resources.resources
+c:\users\fabiano\documents\visual studio 2013\Projects\Sistema Matrix\Sistema Matrix\obj\Debug\Sistema Matrix.vbproj.GenerateResource.Cache
+c:\users\fabiano\documents\visual studio 2013\Projects\Sistema Matrix\Sistema Matrix\obj\Debug\Sistema Matrix.exe
+c:\users\fabiano\documents\visual studio 2013\Projects\Sistema Matrix\Sistema Matrix\obj\Debug\Sistema Matrix.xml
+c:\users\fabiano\documents\visual studio 2013\Projects\Sistema Matrix\Sistema Matrix\obj\Debug\Sistema Matrix.pdb
+c:\users\fabiano\documents\visual studio 2013\Projects\Sistema Matrix\Sistema Matrix\obj\Debug\Sistema_Matrix.Form2.resources
+C:\Users\Fabiano\Documents\Visual Studio 2013\Projects\Sistema Matrix\Sistema Matrix\obj\Debug\Sistema_Matrix.Form3.resources
+C:\Users\CASA\Documents\ANÁLISE E DESENVOLVIMENTO DE SISTEMAS\2° SEMESTRE\PROJETO\Sistema Matrix\Sistema Matrix\Sistema Matrix\obj\Debug\Sistema Matrix.exe
+C:\Users\CASA\Documents\ANÁLISE E DESENVOLVIMENTO DE SISTEMAS\2° SEMESTRE\PROJETO\Sistema Matrix\Sistema Matrix\Sistema Matrix\obj\Debug\Sistema Matrix.xml
+C:\Users\CASA\Documents\ANÁLISE E DESENVOLVIMENTO DE SISTEMAS\2° SEMESTRE\PROJETO\Sistema Matrix\Sistema Matrix\Sistema Matrix\obj\Debug\Sistema Matrix.pdb
+C:\Users\CASA\Documents\ANÁLISE E DESENVOLVIMENTO DE SISTEMAS\2° SEMESTRE\PROJETO\Sistema Matrix\Sistema Matrix\Sistema Matrix\bin\Debug\Sistema Matrix.exe
+C:\Users\CASA\Documents\ANÁLISE E DESENVOLVIMENTO DE SISTEMAS\2° SEMESTRE\PROJETO\Sistema Matrix\Sistema Matrix\Sistema Matrix\bin\Debug\Sistema Matrix.pdb
+C:\Users\CASA\Documents\ANÁLISE E DESENVOLVIMENTO DE SISTEMAS\2° SEMESTRE\PROJETO\Sistema Matrix\Sistema Matrix\Sistema Matrix\bin\Debug\Sistema Matrix.xml
+C:\Users\CASA\Documents\ANÁLISE E DESENVOLVIMENTO DE SISTEMAS\2° SEMESTRE\PROJETO\Sistema Matrix\Sistema Matrix\Sistema Matrix\obj\Debug\Sistema_Matrix.Form3.resources
+C:\Users\CASA\Documents\ANÁLISE E DESENVOLVIMENTO DE SISTEMAS\2° SEMESTRE\PROJETO\Sistema Matrix\Sistema Matrix\Sistema Matrix\obj\Debug\Sistema_Matrix.Form6.resources
+C:\Users\CASA\Documents\ANÁLISE E DESENVOLVIMENTO DE SISTEMAS\2° SEMESTRE\PROJETO\Sistema Matrix\Sistema Matrix\Sistema Matrix\obj\Debug\Sistema_Matrix.Form4.resources
+C:\Users\CASA\Documents\ANÁLISE E DESENVOLVIMENTO DE SISTEMAS\2° SEMESTRE\PROJETO\Sistema Matrix\Sistema Matrix\Sistema Matrix\obj\Debug\Sistema_Matrix.Form5.resources
+C:\Users\CASA\Documents\ANÁLISE E DESENVOLVIMENTO DE SISTEMAS\2° SEMESTRE\PROJETO\Sistema Matrix\Sistema Matrix\Sistema Matrix\obj\Debug\Sistema_Matrix.Form1.resources
+C:\Users\CASA\Documents\ANÁLISE E DESENVOLVIMENTO DE SISTEMAS\2° SEMESTRE\PROJETO\Sistema Matrix\Sistema Matrix\Sistema Matrix\obj\Debug\Sistema_Matrix.Resources.resources
+C:\Users\CASA\Documents\ANÁLISE E DESENVOLVIMENTO DE SISTEMAS\2° SEMESTRE\PROJETO\Sistema Matrix\Sistema Matrix\Sistema Matrix\obj\Debug\Sistema_Matrix.Form2.resources
+C:\Users\CASA\Documents\ANÁLISE E DESENVOLVIMENTO DE SISTEMAS\2° SEMESTRE\PROJETO\Sistema Matrix\Sistema Matrix\Sistema Matrix\obj\Debug\Sistema Matrix.vbproj.GenerateResource.Cache
+C:\Users\CASA\Documents\ANÁLISE E DESENVOLVIMENTO DE SISTEMAS\2° SEMESTRE\PROJETO\Projetos\Sistema Matrix\Sistema Matrix\Sistema Matrix\obj\Debug\Sistema Matrix.exe
+C:\Users\CASA\Documents\ANÁLISE E DESENVOLVIMENTO DE SISTEMAS\2° SEMESTRE\PROJETO\Projetos\Sistema Matrix\Sistema Matrix\Sistema Matrix\obj\Debug\Sistema Matrix.xml
+C:\Users\CASA\Documents\ANÁLISE E DESENVOLVIMENTO DE SISTEMAS\2° SEMESTRE\PROJETO\Projetos\Sistema Matrix\Sistema Matrix\Sistema Matrix\obj\Debug\Sistema Matrix.pdb
+C:\Users\CASA\Documents\ANÁLISE E DESENVOLVIMENTO DE SISTEMAS\2° SEMESTRE\PROJETO\Projetos\Sistema Matrix\Sistema Matrix\Sistema Matrix\bin\Debug\Sistema Matrix.exe
+C:\Users\CASA\Documents\ANÁLISE E DESENVOLVIMENTO DE SISTEMAS\2° SEMESTRE\PROJETO\Projetos\Sistema Matrix\Sistema Matrix\Sistema Matrix\bin\Debug\Sistema Matrix.pdb
+C:\Users\CASA\Documents\ANÁLISE E DESENVOLVIMENTO DE SISTEMAS\2° SEMESTRE\PROJETO\Projetos\Sistema Matrix\Sistema Matrix\Sistema Matrix\bin\Debug\Sistema Matrix.xml
+C:\Users\CASA\Documents\ANÁLISE E DESENVOLVIMENTO DE SISTEMAS\2° SEMESTRE\PROJETO\Projetos\Sistema Matrix\Sistema Matrix\Sistema Matrix\obj\Debug\Sistema_Matrix.Form6.resources
+C:\Users\CASA\Documents\ANÁLISE E DESENVOLVIMENTO DE SISTEMAS\2° SEMESTRE\PROJETO\Projetos\Sistema Matrix\Sistema Matrix\Sistema Matrix\obj\Debug\Sistema_Matrix.Resources.resources
+C:\Users\CASA\Documents\ANÁLISE E DESENVOLVIMENTO DE SISTEMAS\2° SEMESTRE\PROJETO\Projetos\Sistema Matrix\Sistema Matrix\Sistema Matrix\obj\Debug\Sistema Matrix.vbproj.GenerateResource.Cache
+C:\Users\CASA\Documents\ANÁLISE E DESENVOLVIMENTO DE SISTEMAS\2° SEMESTRE\PROJETO\Projetos\Sistema Matrix\Sistema Matrix\Sistema Matrix\obj\Debug\Sistema_Matrix.Login.resources
+C:\Users\CASA\Documents\ANÁLISE E DESENVOLVIMENTO DE SISTEMAS\2° SEMESTRE\PROJETO\Projetos\Sistema Matrix\Sistema Matrix\Sistema Matrix\obj\Debug\Sistema_Matrix.telaPrincipal.resources
+C:\Users\CASA\Documents\ANÁLISE E DESENVOLVIMENTO DE SISTEMAS\2° SEMESTRE\PROJETO\Projetos\Sistema Matrix\Sistema Matrix\Sistema Matrix\obj\Debug\Sistema_Matrix.Clientes.resources
+C:\Users\CASA\Documents\ANÁLISE E DESENVOLVIMENTO DE SISTEMAS\2° SEMESTRE\PROJETO\Projetos\Sistema Matrix\Sistema Matrix\Sistema Matrix\obj\Debug\Sistema_Matrix.Fornecedores.resources
+C:\Users\CASA\Documents\ANÁLISE E DESENVOLVIMENTO DE SISTEMAS\2° SEMESTRE\PROJETO\Projetos\Sistema Matrix\Sistema Matrix\Sistema Matrix\obj\Debug\Sistema_Matrix.Funcionarios.resources
+C:\Users\ADM\Documents\Sistema Matrix\Sistema Matrix\Sistema Matrix\obj\Debug\Sistema Matrix.exe
+C:\Users\ADM\Documents\Sistema Matrix\Sistema Matrix\Sistema Matrix\obj\Debug\Sistema Matrix.xml
+C:\Users\ADM\Documents\Sistema Matrix\Sistema Matrix\Sistema Matrix\obj\Debug\Sistema Matrix.pdb
+C:\Users\ADM\Documents\Sistema Matrix\Sistema Matrix\Sistema Matrix\bin\Debug\Sistema Matrix.exe
+C:\Users\ADM\Documents\Sistema Matrix\Sistema Matrix\Sistema Matrix\bin\Debug\Sistema Matrix.pdb
+C:\Users\ADM\Documents\Sistema Matrix\Sistema Matrix\Sistema Matrix\bin\Debug\Sistema Matrix.xml
+C:\Users\ADM\Documents\Sistema Matrix\Sistema Matrix\Sistema Matrix\obj\Debug\Sistema_Matrix.Clientes.resources
+C:\Users\ADM\Documents\Sistema Matrix\Sistema Matrix\Sistema Matrix\obj\Debug\Sistema_Matrix.Form6.resources
+C:\Users\ADM\Documents\Sistema Matrix\Sistema Matrix\Sistema Matrix\obj\Debug\Sistema_Matrix.Fornecedores.resources
+C:\Users\ADM\Documents\Sistema Matrix\Sistema Matrix\Sistema Matrix\obj\Debug\Sistema_Matrix.Funcionarios.resources
+C:\Users\ADM\Documents\Sistema Matrix\Sistema Matrix\Sistema Matrix\obj\Debug\Sistema_Matrix.Login.resources
+C:\Users\ADM\Documents\Sistema Matrix\Sistema Matrix\Sistema Matrix\obj\Debug\Sistema_Matrix.Resources.resources
+C:\Users\ADM\Documents\Sistema Matrix\Sistema Matrix\Sistema Matrix\obj\Debug\Sistema_Matrix.telaPrincipal.resources
+C:\Users\ADM\Documents\Sistema Matrix\Sistema Matrix\Sistema Matrix\obj\Debug\Sistema Matrix.vbproj.GenerateResource.Cache
+C:\Users\CASA\Documents\ANÁLISE E DESENVOLVIMENTO DE SISTEMAS\2° SEMESTRE\PROJETO\Projetos\Sistema Matrix\Sistema Matrix\Sistema Matrix\obj\Debug\Sistema_Matrix.Usuario.resources
+C:\Users\CASA\Documents\ANÁLISE E DESENVOLVIMENTO DE SISTEMAS\2° SEMESTRE\PROJETO\Projetos\Sistema Matrix - Backup\Sistema Matrix\Sistema Matrix\obj\Debug\Sistema Matrix.exe
+C:\Users\CASA\Documents\ANÁLISE E DESENVOLVIMENTO DE SISTEMAS\2° SEMESTRE\PROJETO\Projetos\Sistema Matrix - Backup\Sistema Matrix\Sistema Matrix\obj\Debug\Sistema Matrix.xml
+C:\Users\CASA\Documents\ANÁLISE E DESENVOLVIMENTO DE SISTEMAS\2° SEMESTRE\PROJETO\Projetos\Sistema Matrix - Backup\Sistema Matrix\Sistema Matrix\obj\Debug\Sistema Matrix.pdb
+C:\Users\CASA\Documents\ANÁLISE E DESENVOLVIMENTO DE SISTEMAS\2° SEMESTRE\PROJETO\Projetos\Sistema Matrix - Backup\Sistema Matrix\Sistema Matrix\obj\Debug\Sistema_Matrix.Clientes.resources
+C:\Users\CASA\Documents\ANÁLISE E DESENVOLVIMENTO DE SISTEMAS\2° SEMESTRE\PROJETO\Projetos\Sistema Matrix - Backup\Sistema Matrix\Sistema Matrix\obj\Debug\Sistema_Matrix.Form6.resources
+C:\Users\CASA\Documents\ANÁLISE E DESENVOLVIMENTO DE SISTEMAS\2° SEMESTRE\PROJETO\Projetos\Sistema Matrix - Backup\Sistema Matrix\Sistema Matrix\obj\Debug\Sistema_Matrix.Funcionarios.resources
+C:\Users\CASA\Documents\ANÁLISE E DESENVOLVIMENTO DE SISTEMAS\2° SEMESTRE\PROJETO\Projetos\Sistema Matrix - Backup\Sistema Matrix\Sistema Matrix\obj\Debug\Sistema_Matrix.Login.resources
+C:\Users\CASA\Documents\ANÁLISE E DESENVOLVIMENTO DE SISTEMAS\2° SEMESTRE\PROJETO\Projetos\Sistema Matrix - Backup\Sistema Matrix\Sistema Matrix\obj\Debug\Sistema_Matrix.Resources.resources
+C:\Users\CASA\Documents\ANÁLISE E DESENVOLVIMENTO DE SISTEMAS\2° SEMESTRE\PROJETO\Projetos\Sistema Matrix - Backup\Sistema Matrix\Sistema Matrix\obj\Debug\Sistema_Matrix.telaPrincipal.resources
+C:\Users\CASA\Documents\ANÁLISE E DESENVOLVIMENTO DE SISTEMAS\2° SEMESTRE\PROJETO\Projetos\Sistema Matrix - Backup\Sistema Matrix\Sistema Matrix\obj\Debug\Sistema_Matrix.Usuario.resources
+C:\Users\CASA\Documents\ANÁLISE E DESENVOLVIMENTO DE SISTEMAS\2° SEMESTRE\PROJETO\Projetos\Sistema Matrix - Backup\Sistema Matrix\Sistema Matrix\obj\Debug\Sistema Matrix.vbproj.GenerateResource.Cache
+C:\Users\CASA\Documents\ANÁLISE E DESENVOLVIMENTO DE SISTEMAS\2° SEMESTRE\PROJETO\Projetos\Sistema Matrix - Backup\Sistema Matrix\Sistema Matrix\bin\Debug\Sistema Matrix.exe
+C:\Users\CASA\Documents\ANÁLISE E DESENVOLVIMENTO DE SISTEMAS\2° SEMESTRE\PROJETO\Projetos\Sistema Matrix - Backup\Sistema Matrix\Sistema Matrix\bin\Debug\Sistema Matrix.pdb
+C:\Users\CASA\Documents\ANÁLISE E DESENVOLVIMENTO DE SISTEMAS\2° SEMESTRE\PROJETO\Projetos\Sistema Matrix - Backup\Sistema Matrix\Sistema Matrix\bin\Debug\Sistema Matrix.xml
+C:\Users\CASA\Documents\ANÁLISE E DESENVOLVIMENTO DE SISTEMAS\2° SEMESTRE\PROJETO\Projetos\Sistema Matrix\Sistema Matrix\Sistema Matrix\obj\Debug\Sistema_Matrix.formServicos.resources
+C:\Users\CASA\Documents\ANÁLISE E DESENVOLVIMENTO DE SISTEMAS\2° SEMESTRE\PROJETO\Projetos\Sistema Matrix\Sistema Matrix\Sistema Matrix\bin\Debug\mulcolcombo.dll
+C:\Users\CASA\Documents\ANÁLISE E DESENVOLVIMENTO DE SISTEMAS\2° SEMESTRE\PROJETO\Projetos\Sistema Matrix\Sistema Matrix\Sistema Matrix\bin\Debug\Interop.Microsoft.Vbe.Interop.Forms.dll
+C:\Users\CASA\Documents\ANÁLISE E DESENVOLVIMENTO DE SISTEMAS\2° SEMESTRE\PROJETO\Projetos\Sistema Matrix\Sistema Matrix\Sistema Matrix\obj\Debug\Sistema Matrix.vbprojResolveAssemblyReference.cache
+C:\Users\CASA\Documents\ANÁLISE E DESENVOLVIMENTO DE SISTEMAS\2° SEMESTRE\PROJETO\Projetos\Sistema Matrix\Sistema Matrix\Sistema Matrix\obj\Debug\Interop.Microsoft.Vbe.Interop.Forms.dll
+C:\Users\CASA\Documents\ANÁLISE E DESENVOLVIMENTO DE SISTEMAS\2° SEMESTRE\PROJETO\Projetos\Sistema Matrix\Sistema Matrix\Sistema Matrix\obj\Debug\Sistema Matrix.vbproj.ResolveComReference.cache
+C:\Users\CASA\Documents\ANÁLISE E DESENVOLVIMENTO DE SISTEMAS\2° SEMESTRE\PROJETO\Projetos\Sistema Matrix - Backup\Sistema Matrix\Sistema Matrix\obj\Debug\Interop.Microsoft.Vbe.Interop.Forms.dll
+C:\Users\CASA\Documents\ANÁLISE E DESENVOLVIMENTO DE SISTEMAS\2° SEMESTRE\PROJETO\Projetos\Sistema Matrix - Backup\Sistema Matrix\Sistema Matrix\obj\Debug\Sistema Matrix.vbproj.ResolveComReference.cache
+C:\Users\CASA\Documents\ANÁLISE E DESENVOLVIMENTO DE SISTEMAS\2° SEMESTRE\PROJETO\Projetos\Sistema Matrix - Backup\Sistema Matrix\Sistema Matrix\bin\Debug\mulcolcombo.dll
+C:\Users\CASA\Documents\ANÁLISE E DESENVOLVIMENTO DE SISTEMAS\2° SEMESTRE\PROJETO\Projetos\Sistema Matrix - Backup\Sistema Matrix\Sistema Matrix\bin\Debug\Interop.Microsoft.Vbe.Interop.Forms.dll
+C:\Users\CASA\Documents\ANÁLISE E DESENVOLVIMENTO DE SISTEMAS\2° SEMESTRE\PROJETO\Projetos\Sistema Matrix - Backup\Sistema Matrix\Sistema Matrix\obj\Debug\Sistema Matrix.vbprojResolveAssemblyReference.cache
+C:\Users\CASA\Documents\ANÁLISE E DESENVOLVIMENTO DE SISTEMAS\2° SEMESTRE\PROJETO\Projetos\Sistema Matrix - Backup\Sistema Matrix\Sistema Matrix\obj\Debug\Sistema_Matrix.formConsultaUsuarios.resources
+C:\Users\CASA\Documents\ANÁLISE E DESENVOLVIMENTO DE SISTEMAS\2° SEMESTRE\PROJETO\Projetos\Sistema Matrix - Backup\Sistema Matrix\Sistema Matrix\obj\Debug\Sistema_Matrix.ConsultaUsuarios.resources
+E:\ANÁLISE E DESENVOLVIMENTO DE SISTEMAS\2° SEMESTRE\PROJETO\Projetos\Sistema Matrix - Backup\Sistema Matrix\Sistema Matrix\obj\Debug\Interop.Microsoft.Vbe.Interop.Forms.dll
+E:\ANÁLISE E DESENVOLVIMENTO DE SISTEMAS\2° SEMESTRE\PROJETO\Projetos\Sistema Matrix - Backup\Sistema Matrix\Sistema Matrix\obj\Debug\Sistema Matrix.vbproj.ResolveComReference.cache
+E:\ANÁLISE E DESENVOLVIMENTO DE SISTEMAS\2° SEMESTRE\PROJETO\Projetos\Sistema Matrix - Backup\Sistema Matrix\Sistema Matrix\obj\Debug\Sistema Matrix.exe
+E:\ANÁLISE E DESENVOLVIMENTO DE SISTEMAS\2° SEMESTRE\PROJETO\Projetos\Sistema Matrix - Backup\Sistema Matrix\Sistema Matrix\obj\Debug\Sistema Matrix.xml
+E:\ANÁLISE E DESENVOLVIMENTO DE SISTEMAS\2° SEMESTRE\PROJETO\Projetos\Sistema Matrix - Backup\Sistema Matrix\Sistema Matrix\obj\Debug\Sistema Matrix.pdb
+E:\ANÁLISE E DESENVOLVIMENTO DE SISTEMAS\2° SEMESTRE\PROJETO\Projetos\Sistema Matrix - Backup\Sistema Matrix\Sistema Matrix\bin\Debug\Sistema Matrix.exe
+E:\ANÁLISE E DESENVOLVIMENTO DE SISTEMAS\2° SEMESTRE\PROJETO\Projetos\Sistema Matrix - Backup\Sistema Matrix\Sistema Matrix\bin\Debug\Sistema Matrix.pdb
+E:\ANÁLISE E DESENVOLVIMENTO DE SISTEMAS\2° SEMESTRE\PROJETO\Projetos\Sistema Matrix - Backup\Sistema Matrix\Sistema Matrix\bin\Debug\Sistema Matrix.xml
+E:\ANÁLISE E DESENVOLVIMENTO DE SISTEMAS\2° SEMESTRE\PROJETO\Projetos\Sistema Matrix - Backup\Sistema Matrix\Sistema Matrix\bin\Debug\Interop.Microsoft.Vbe.Interop.Forms.dll
+E:\ANÁLISE E DESENVOLVIMENTO DE SISTEMAS\2° SEMESTRE\PROJETO\Projetos\Sistema Matrix - Backup\Sistema Matrix\Sistema Matrix\obj\Debug\Sistema Matrix.vbprojResolveAssemblyReference.cache
+E:\ANÁLISE E DESENVOLVIMENTO DE SISTEMAS\2° SEMESTRE\PROJETO\Projetos\Sistema Matrix - Backup\Sistema Matrix\Sistema Matrix\obj\Debug\Sistema_Matrix.ConsultaUsuarios.resources
+E:\ANÁLISE E DESENVOLVIMENTO DE SISTEMAS\2° SEMESTRE\PROJETO\Projetos\Sistema Matrix - Backup\Sistema Matrix\Sistema Matrix\obj\Debug\Sistema_Matrix.formConsultaUsuarios.resources
+E:\ANÁLISE E DESENVOLVIMENTO DE SISTEMAS\2° SEMESTRE\PROJETO\Projetos\Sistema Matrix - Backup\Sistema Matrix\Sistema Matrix\obj\Debug\Sistema_Matrix.Clientes.resources
+E:\ANÁLISE E DESENVOLVIMENTO DE SISTEMAS\2° SEMESTRE\PROJETO\Projetos\Sistema Matrix - Backup\Sistema Matrix\Sistema Matrix\obj\Debug\Sistema_Matrix.Form6.resources
+E:\ANÁLISE E DESENVOLVIMENTO DE SISTEMAS\2° SEMESTRE\PROJETO\Projetos\Sistema Matrix - Backup\Sistema Matrix\Sistema Matrix\obj\Debug\Sistema_Matrix.Funcionarios.resources
+E:\ANÁLISE E DESENVOLVIMENTO DE SISTEMAS\2° SEMESTRE\PROJETO\Projetos\Sistema Matrix - Backup\Sistema Matrix\Sistema Matrix\obj\Debug\Sistema_Matrix.Login.resources
+E:\ANÁLISE E DESENVOLVIMENTO DE SISTEMAS\2° SEMESTRE\PROJETO\Projetos\Sistema Matrix - Backup\Sistema Matrix\Sistema Matrix\obj\Debug\Sistema_Matrix.Resources.resources
+E:\ANÁLISE E DESENVOLVIMENTO DE SISTEMAS\2° SEMESTRE\PROJETO\Projetos\Sistema Matrix - Backup\Sistema Matrix\Sistema Matrix\obj\Debug\Sistema_Matrix.telaPrincipal.resources
+E:\ANÁLISE E DESENVOLVIMENTO DE SISTEMAS\2° SEMESTRE\PROJETO\Projetos\Sistema Matrix - Backup\Sistema Matrix\Sistema Matrix\obj\Debug\Sistema_Matrix.Usuario.resources
+E:\ANÁLISE E DESENVOLVIMENTO DE SISTEMAS\2° SEMESTRE\PROJETO\Projetos\Sistema Matrix - Backup\Sistema Matrix\Sistema Matrix\obj\Debug\Sistema Matrix.vbproj.GenerateResource.Cache
+F:\ANÁLISE E DESENVOLVIMENTO DE SISTEMAS\2° SEMESTRE\PROJETO\Entrega\Sistema Matrix\Código Fonte\Sistema Matrix\obj\Debug\Interop.Microsoft.Vbe.Interop.Forms.dll
+F:\ANÁLISE E DESENVOLVIMENTO DE SISTEMAS\2° SEMESTRE\PROJETO\Entrega\Sistema Matrix\Código Fonte\Sistema Matrix\obj\Debug\Sistema Matrix.vbproj.ResolveComReference.cache
+F:\ANÁLISE E DESENVOLVIMENTO DE SISTEMAS\2° SEMESTRE\PROJETO\Entrega\Sistema Matrix\Código Fonte\Sistema Matrix\obj\Debug\Sistema Matrix.xml
+F:\ANÁLISE E DESENVOLVIMENTO DE SISTEMAS\2° SEMESTRE\PROJETO\Entrega\Sistema Matrix\Código Fonte\Sistema Matrix\obj\Debug\Sistema Matrix.pdb
+F:\ANÁLISE E DESENVOLVIMENTO DE SISTEMAS\2° SEMESTRE\PROJETO\Entrega\Sistema Matrix\Código Fonte\Sistema Matrix\bin\Debug\Sistema Matrix.exe
+F:\ANÁLISE E DESENVOLVIMENTO DE SISTEMAS\2° SEMESTRE\PROJETO\Entrega\Sistema Matrix\Código Fonte\Sistema Matrix\bin\Debug\Sistema Matrix.pdb
+F:\ANÁLISE E DESENVOLVIMENTO DE SISTEMAS\2° SEMESTRE\PROJETO\Entrega\Sistema Matrix\Código Fonte\Sistema Matrix\bin\Debug\Sistema Matrix.xml
+F:\ANÁLISE E DESENVOLVIMENTO DE SISTEMAS\2° SEMESTRE\PROJETO\Entrega\Sistema Matrix\Código Fonte\Sistema Matrix\bin\Debug\Interop.Microsoft.Vbe.Interop.Forms.dll
+F:\ANÁLISE E DESENVOLVIMENTO DE SISTEMAS\2° SEMESTRE\PROJETO\Entrega\Sistema Matrix\Código Fonte\Sistema Matrix\obj\Debug\Sistema Matrix.vbprojResolveAssemblyReference.cache
+F:\ANÁLISE E DESENVOLVIMENTO DE SISTEMAS\2° SEMESTRE\PROJETO\Entrega\Sistema Matrix\Código Fonte\Sistema Matrix\obj\Debug\Sistema_Matrix.ConsultaUsuarios.resources
+F:\ANÁLISE E DESENVOLVIMENTO DE SISTEMAS\2° SEMESTRE\PROJETO\Entrega\Sistema Matrix\Código Fonte\Sistema Matrix\obj\Debug\Sistema_Matrix.formConsultaUsuarios.resources
+F:\ANÁLISE E DESENVOLVIMENTO DE SISTEMAS\2° SEMESTRE\PROJETO\Entrega\Sistema Matrix\Código Fonte\Sistema Matrix\obj\Debug\Sistema_Matrix.Clientes.resources
+F:\ANÁLISE E DESENVOLVIMENTO DE SISTEMAS\2° SEMESTRE\PROJETO\Entrega\Sistema Matrix\Código Fonte\Sistema Matrix\obj\Debug\Sistema_Matrix.Form6.resources
+F:\ANÁLISE E DESENVOLVIMENTO DE SISTEMAS\2° SEMESTRE\PROJETO\Entrega\Sistema Matrix\Código Fonte\Sistema Matrix\obj\Debug\Sistema_Matrix.Funcionarios.resources
+F:\ANÁLISE E DESENVOLVIMENTO DE SISTEMAS\2° SEMESTRE\PROJETO\Entrega\Sistema Matrix\Código Fonte\Sistema Matrix\obj\Debug\Sistema_Matrix.Login.resources
+F:\ANÁLISE E DESENVOLVIMENTO DE SISTEMAS\2° SEMESTRE\PROJETO\Entrega\Sistema Matrix\Código Fonte\Sistema Matrix\obj\Debug\Sistema_Matrix.Resources.resources
+F:\ANÁLISE E DESENVOLVIMENTO DE SISTEMAS\2° SEMESTRE\PROJETO\Entrega\Sistema Matrix\Código Fonte\Sistema Matrix\obj\Debug\Sistema_Matrix.telaPrincipal.resources
+F:\ANÁLISE E DESENVOLVIMENTO DE SISTEMAS\2° SEMESTRE\PROJETO\Entrega\Sistema Matrix\Código Fonte\Sistema Matrix\obj\Debug\Sistema_Matrix.Usuario.resources
+F:\ANÁLISE E DESENVOLVIMENTO DE SISTEMAS\2° SEMESTRE\PROJETO\Entrega\Sistema Matrix\Código Fonte\Sistema Matrix\obj\Debug\Sistema Matrix.vbproj.GenerateResource.Cache
+F:\ANÁLISE E DESENVOLVIMENTO DE SISTEMAS\2° SEMESTRE\PROJETO\Entrega\Sistema Matrix\Código Fonte\Sistema Matrix\obj\Debug\Sistema Matrix.exe
+L:\ANÁLISE E DESENVOLVIMENTO DE SISTEMAS\2° SEMESTRE\PROJETO\Entrega\Sistema Matrix\Código Fonte\Sistema Matrix\obj\Debug\Interop.Microsoft.Vbe.Interop.Forms.dll
+L:\ANÁLISE E DESENVOLVIMENTO DE SISTEMAS\2° SEMESTRE\PROJETO\Entrega\Sistema Matrix\Código Fonte\Sistema Matrix\obj\Debug\Sistema Matrix.vbproj.ResolveComReference.cache
+L:\ANÁLISE E DESENVOLVIMENTO DE SISTEMAS\2° SEMESTRE\PROJETO\Entrega\Sistema Matrix\Código Fonte\Sistema Matrix\obj\Debug\Sistema Matrix.exe
+L:\ANÁLISE E DESENVOLVIMENTO DE SISTEMAS\2° SEMESTRE\PROJETO\Entrega\Sistema Matrix\Código Fonte\Sistema Matrix\obj\Debug\Sistema Matrix.xml
+L:\ANÁLISE E DESENVOLVIMENTO DE SISTEMAS\2° SEMESTRE\PROJETO\Entrega\Sistema Matrix\Código Fonte\Sistema Matrix\obj\Debug\Sistema Matrix.pdb
+L:\ANÁLISE E DESENVOLVIMENTO DE SISTEMAS\2° SEMESTRE\PROJETO\Entrega\Sistema Matrix\Código Fonte\Sistema Matrix\bin\Debug\Sistema Matrix.exe
+L:\ANÁLISE E DESENVOLVIMENTO DE SISTEMAS\2° SEMESTRE\PROJETO\Entrega\Sistema Matrix\Código Fonte\Sistema Matrix\bin\Debug\Sistema Matrix.pdb
+L:\ANÁLISE E DESENVOLVIMENTO DE SISTEMAS\2° SEMESTRE\PROJETO\Entrega\Sistema Matrix\Código Fonte\Sistema Matrix\bin\Debug\Sistema Matrix.xml
+L:\ANÁLISE E DESENVOLVIMENTO DE SISTEMAS\2° SEMESTRE\PROJETO\Entrega\Sistema Matrix\Código Fonte\Sistema Matrix\bin\Debug\Interop.Microsoft.Vbe.Interop.Forms.dll
+L:\ANÁLISE E DESENVOLVIMENTO DE SISTEMAS\2° SEMESTRE\PROJETO\Entrega\Sistema Matrix\Código Fonte\Sistema Matrix\obj\Debug\Sistema Matrix.vbprojResolveAssemblyReference.cache
+L:\ANÁLISE E DESENVOLVIMENTO DE SISTEMAS\2° SEMESTRE\PROJETO\Entrega\Sistema Matrix\Código Fonte\Sistema Matrix\obj\Debug\Sistema_Matrix.ConsultaUsuarios.resources
+L:\ANÁLISE E DESENVOLVIMENTO DE SISTEMAS\2° SEMESTRE\PROJETO\Entrega\Sistema Matrix\Código Fonte\Sistema Matrix\obj\Debug\Sistema_Matrix.formConsultaUsuarios.resources
+L:\ANÁLISE E DESENVOLVIMENTO DE SISTEMAS\2° SEMESTRE\PROJETO\Entrega\Sistema Matrix\Código Fonte\Sistema Matrix\obj\Debug\Sistema_Matrix.Clientes.resources
+L:\ANÁLISE E DESENVOLVIMENTO DE SISTEMAS\2° SEMESTRE\PROJETO\Entrega\Sistema Matrix\Código Fonte\Sistema Matrix\obj\Debug\Sistema_Matrix.Form6.resources
+L:\ANÁLISE E DESENVOLVIMENTO DE SISTEMAS\2° SEMESTRE\PROJETO\Entrega\Sistema Matrix\Código Fonte\Sistema Matrix\obj\Debug\Sistema_Matrix.Funcionarios.resources
+L:\ANÁLISE E DESENVOLVIMENTO DE SISTEMAS\2° SEMESTRE\PROJETO\Entrega\Sistema Matrix\Código Fonte\Sistema Matrix\obj\Debug\Sistema_Matrix.Login.resources
+L:\ANÁLISE E DESENVOLVIMENTO DE SISTEMAS\2° SEMESTRE\PROJETO\Entrega\Sistema Matrix\Código Fonte\Sistema Matrix\obj\Debug\Sistema_Matrix.Resources.resources
+L:\ANÁLISE E DESENVOLVIMENTO DE SISTEMAS\2° SEMESTRE\PROJETO\Entrega\Sistema Matrix\Código Fonte\Sistema Matrix\obj\Debug\Sistema_Matrix.telaPrincipal.resources
+L:\ANÁLISE E DESENVOLVIMENTO DE SISTEMAS\2° SEMESTRE\PROJETO\Entrega\Sistema Matrix\Código Fonte\Sistema Matrix\obj\Debug\Sistema_Matrix.Usuario.resources
+L:\ANÁLISE E DESENVOLVIMENTO DE SISTEMAS\2° SEMESTRE\PROJETO\Entrega\Sistema Matrix\Código Fonte\Sistema Matrix\obj\Debug\Sistema Matrix.vbproj.GenerateResource.Cache
+D:\Bruno\Faculdade\ANÁLISE E DESENVOLVIMENTO DE SISTEMAS\2° SEMESTRE\PROJETO\Entrega\Sistema Matrix\Código Fonte\Sistema Matrix\obj\Debug\Sistema Matrix.vbproj.ResolveComReference.cache
+D:\Bruno\Faculdade\ANÁLISE E DESENVOLVIMENTO DE SISTEMAS\2° SEMESTRE\PROJETO\Entrega\Sistema Matrix\Código Fonte\Sistema Matrix\obj\Debug\Sistema Matrix.exe
+D:\Bruno\Faculdade\ANÁLISE E DESENVOLVIMENTO DE SISTEMAS\2° SEMESTRE\PROJETO\Entrega\Sistema Matrix\Código Fonte\Sistema Matrix\obj\Debug\Sistema Matrix.xml
+D:\Bruno\Faculdade\ANÁLISE E DESENVOLVIMENTO DE SISTEMAS\2° SEMESTRE\PROJETO\Entrega\Sistema Matrix\Código Fonte\Sistema Matrix\obj\Debug\Sistema Matrix.pdb
+D:\Bruno\Faculdade\ANÁLISE E DESENVOLVIMENTO DE SISTEMAS\2° SEMESTRE\PROJETO\Entrega\Sistema Matrix\Código Fonte\Sistema Matrix\bin\Debug\Sistema Matrix.exe
+D:\Bruno\Faculdade\ANÁLISE E DESENVOLVIMENTO DE SISTEMAS\2° SEMESTRE\PROJETO\Entrega\Sistema Matrix\Código Fonte\Sistema Matrix\bin\Debug\Sistema Matrix.pdb
+D:\Bruno\Faculdade\ANÁLISE E DESENVOLVIMENTO DE SISTEMAS\2° SEMESTRE\PROJETO\Entrega\Sistema Matrix\Código Fonte\Sistema Matrix\bin\Debug\Sistema Matrix.xml
+D:\Bruno\Faculdade\ANÁLISE E DESENVOLVIMENTO DE SISTEMAS\2° SEMESTRE\PROJETO\Entrega\Sistema Matrix\Código Fonte\Sistema Matrix\bin\Debug\Interop.Microsoft.Vbe.Interop.Forms.dll
+D:\Bruno\Faculdade\ANÁLISE E DESENVOLVIMENTO DE SISTEMAS\2° SEMESTRE\PROJETO\Entrega\Sistema Matrix\Código Fonte\Sistema Matrix\obj\Debug\Sistema Matrix.vbprojResolveAssemblyReference.cache
+D:\Bruno\Faculdade\ANÁLISE E DESENVOLVIMENTO DE SISTEMAS\2° SEMESTRE\PROJETO\Entrega\Sistema Matrix\Código Fonte\Sistema Matrix\obj\Debug\Interop.Microsoft.Vbe.Interop.Forms.dll
+D:\Bruno\Faculdade\ANÁLISE E DESENVOLVIMENTO DE SISTEMAS\2° SEMESTRE\PROJETO\Entrega\Sistema Matrix\Código Fonte\Sistema Matrix\obj\Debug\Sistema_Matrix.ConsultaUsuarios.resources
+D:\Bruno\Faculdade\ANÁLISE E DESENVOLVIMENTO DE SISTEMAS\2° SEMESTRE\PROJETO\Entrega\Sistema Matrix\Código Fonte\Sistema Matrix\obj\Debug\Sistema_Matrix.formConsultaUsuarios.resources
+D:\Bruno\Faculdade\ANÁLISE E DESENVOLVIMENTO DE SISTEMAS\2° SEMESTRE\PROJETO\Entrega\Sistema Matrix\Código Fonte\Sistema Matrix\obj\Debug\Sistema_Matrix.Clientes.resources
+D:\Bruno\Faculdade\ANÁLISE E DESENVOLVIMENTO DE SISTEMAS\2° SEMESTRE\PROJETO\Entrega\Sistema Matrix\Código Fonte\Sistema Matrix\obj\Debug\Sistema_Matrix.Form6.resources
+D:\Bruno\Faculdade\ANÁLISE E DESENVOLVIMENTO DE SISTEMAS\2° SEMESTRE\PROJETO\Entrega\Sistema Matrix\Código Fonte\Sistema Matrix\obj\Debug\Sistema_Matrix.Funcionarios.resources
+D:\Bruno\Faculdade\ANÁLISE E DESENVOLVIMENTO DE SISTEMAS\2° SEMESTRE\PROJETO\Entrega\Sistema Matrix\Código Fonte\Sistema Matrix\obj\Debug\Sistema_Matrix.Login.resources
+D:\Bruno\Faculdade\ANÁLISE E DESENVOLVIMENTO DE SISTEMAS\2° SEMESTRE\PROJETO\Entrega\Sistema Matrix\Código Fonte\Sistema Matrix\obj\Debug\Sistema_Matrix.Resources.resources
+D:\Bruno\Faculdade\ANÁLISE E DESENVOLVIMENTO DE SISTEMAS\2° SEMESTRE\PROJETO\Entrega\Sistema Matrix\Código Fonte\Sistema Matrix\obj\Debug\Sistema_Matrix.telaPrincipal.resources
+D:\Bruno\Faculdade\ANÁLISE E DESENVOLVIMENTO DE SISTEMAS\2° SEMESTRE\PROJETO\Entrega\Sistema Matrix\Código Fonte\Sistema Matrix\obj\Debug\Sistema_Matrix.Usuario.resources
+D:\Bruno\Faculdade\ANÁLISE E DESENVOLVIMENTO DE SISTEMAS\2° SEMESTRE\PROJETO\Entrega\Sistema Matrix\Código Fonte\Sistema Matrix\obj\Debug\Sistema Matrix.vbproj.GenerateResource.Cache
+D:\Bruno\Faculdade\ANÁLISE E DESENVOLVIMENTO DE SISTEMAS\3° SEMESTRE\PROJETO\Programa\Sistema Matrix\obj\Debug\Interop.Microsoft.Vbe.Interop.Forms.dll
+D:\Bruno\Faculdade\ANÁLISE E DESENVOLVIMENTO DE SISTEMAS\3° SEMESTRE\PROJETO\Programa\Sistema Matrix\obj\Debug\Sistema Matrix.vbproj.ResolveComReference.cache
+D:\Bruno\Faculdade\ANÁLISE E DESENVOLVIMENTO DE SISTEMAS\3° SEMESTRE\PROJETO\Programa\Sistema Matrix\obj\Debug\Sistema Matrix.exe
+D:\Bruno\Faculdade\ANÁLISE E DESENVOLVIMENTO DE SISTEMAS\3° SEMESTRE\PROJETO\Programa\Sistema Matrix\obj\Debug\Sistema Matrix.xml
+D:\Bruno\Faculdade\ANÁLISE E DESENVOLVIMENTO DE SISTEMAS\3° SEMESTRE\PROJETO\Programa\Sistema Matrix\obj\Debug\Sistema Matrix.pdb
+D:\Bruno\Faculdade\ANÁLISE E DESENVOLVIMENTO DE SISTEMAS\3° SEMESTRE\PROJETO\Programa\Sistema Matrix\bin\Debug\Sistema Matrix.exe
+D:\Bruno\Faculdade\ANÁLISE E DESENVOLVIMENTO DE SISTEMAS\3° SEMESTRE\PROJETO\Programa\Sistema Matrix\bin\Debug\Sistema Matrix.pdb
+D:\Bruno\Faculdade\ANÁLISE E DESENVOLVIMENTO DE SISTEMAS\3° SEMESTRE\PROJETO\Programa\Sistema Matrix\bin\Debug\Sistema Matrix.xml
+D:\Bruno\Faculdade\ANÁLISE E DESENVOLVIMENTO DE SISTEMAS\3° SEMESTRE\PROJETO\Programa\Sistema Matrix\bin\Debug\Interop.Microsoft.Vbe.Interop.Forms.dll
+D:\Bruno\Faculdade\ANÁLISE E DESENVOLVIMENTO DE SISTEMAS\3° SEMESTRE\PROJETO\Programa\Sistema Matrix\obj\Debug\Sistema Matrix.vbprojResolveAssemblyReference.cache
+D:\Bruno\Faculdade\ANÁLISE E DESENVOLVIMENTO DE SISTEMAS\3° SEMESTRE\PROJETO\Programa\Sistema Matrix\obj\Debug\Sistema_Matrix.ConsultaUsuarios.resources
+D:\Bruno\Faculdade\ANÁLISE E DESENVOLVIMENTO DE SISTEMAS\3° SEMESTRE\PROJETO\Programa\Sistema Matrix\obj\Debug\Sistema_Matrix.formConsultaUsuarios.resources
+D:\Bruno\Faculdade\ANÁLISE E DESENVOLVIMENTO DE SISTEMAS\3° SEMESTRE\PROJETO\Programa\Sistema Matrix\obj\Debug\Sistema_Matrix.Clientes.resources
+D:\Bruno\Faculdade\ANÁLISE E DESENVOLVIMENTO DE SISTEMAS\3° SEMESTRE\PROJETO\Programa\Sistema Matrix\obj\Debug\Sistema_Matrix.Form6.resources
+D:\Bruno\Faculdade\ANÁLISE E DESENVOLVIMENTO DE SISTEMAS\3° SEMESTRE\PROJETO\Programa\Sistema Matrix\obj\Debug\Sistema_Matrix.Funcionarios.resources
+D:\Bruno\Faculdade\ANÁLISE E DESENVOLVIMENTO DE SISTEMAS\3° SEMESTRE\PROJETO\Programa\Sistema Matrix\obj\Debug\Sistema_Matrix.Login.resources
+D:\Bruno\Faculdade\ANÁLISE E DESENVOLVIMENTO DE SISTEMAS\3° SEMESTRE\PROJETO\Programa\Sistema Matrix\obj\Debug\Sistema_Matrix.Resources.resources
+D:\Bruno\Faculdade\ANÁLISE E DESENVOLVIMENTO DE SISTEMAS\3° SEMESTRE\PROJETO\Programa\Sistema Matrix\obj\Debug\Sistema_Matrix.telaPrincipal.resources
+D:\Bruno\Faculdade\ANÁLISE E DESENVOLVIMENTO DE SISTEMAS\3° SEMESTRE\PROJETO\Programa\Sistema Matrix\obj\Debug\Sistema_Matrix.Usuario.resources
+D:\Bruno\Faculdade\ANÁLISE E DESENVOLVIMENTO DE SISTEMAS\3° SEMESTRE\PROJETO\Programa\Sistema Matrix\obj\Debug\Sistema Matrix.vbproj.GenerateResource.Cache
+D:\Bruno\Faculdade\ANÁLISE E DESENVOLVIMENTO DE SISTEMAS\3° SEMESTRE\PROJETO\Programa\Sistema Matrix\obj\Debug\Sistema_Matrix.ContasReceber.resources
+D:\Bruno\Faculdade\ANÁLISE E DESENVOLVIMENTO DE SISTEMAS\3° SEMESTRE\PROJETO\Programa\Sistema Matrix\obj\Debug\Sistema_Matrix.NotasFiscais.resources
+D:\Bruno\Faculdade\ANÁLISE E DESENVOLVIMENTO DE SISTEMAS\3° SEMESTRE\PROJETO\Programa\Sistema Matrix\obj\Debug\Sistema_Matrix.confirmaNotaFiscal.resources
+D:\Bruno\Faculdade\ANÁLISE E DESENVOLVIMENTO DE SISTEMAS\3° SEMESTRE\PROJETO\Programa\Sistema Matrix\obj\Debug\Sistema_Matrix.DadosEmitente.resources
+C:\Users\CASA\Documents\GitHub\Sistema-Matrix\Sistema Matrix\obj\Debug\Interop.Microsoft.Vbe.Interop.Forms.dll
+C:\Users\CASA\Documents\GitHub\Sistema-Matrix\Sistema Matrix\obj\Debug\Sistema Matrix.vbproj.ResolveComReference.cache
+C:\Users\CASA\Documents\GitHub\Sistema-Matrix\Sistema Matrix\obj\Debug\Sistema Matrix.exe
+C:\Users\CASA\Documents\GitHub\Sistema-Matrix\Sistema Matrix\obj\Debug\Sistema Matrix.xml
+C:\Users\CASA\Documents\GitHub\Sistema-Matrix\Sistema Matrix\obj\Debug\Sistema Matrix.pdb
+C:\Users\CASA\Documents\GitHub\Sistema-Matrix\Sistema Matrix\bin\Debug\Sistema Matrix.exe
+C:\Users\CASA\Documents\GitHub\Sistema-Matrix\Sistema Matrix\bin\Debug\Sistema Matrix.pdb
+C:\Users\CASA\Documents\GitHub\Sistema-Matrix\Sistema Matrix\bin\Debug\Sistema Matrix.xml
+C:\Users\CASA\Documents\GitHub\Sistema-Matrix\Sistema Matrix\bin\Debug\Interop.Microsoft.Vbe.Interop.Forms.dll
+C:\Users\CASA\Documents\GitHub\Sistema-Matrix\Sistema Matrix\obj\Debug\Sistema Matrix.vbprojResolveAssemblyReference.cache
+C:\Users\CASA\Documents\GitHub\Sistema-Matrix\Sistema Matrix\obj\Debug\Sistema_Matrix.ConsultaUsuarios.resources
+C:\Users\CASA\Documents\GitHub\Sistema-Matrix\Sistema Matrix\obj\Debug\Sistema_Matrix.DadosEmitente.resources
+C:\Users\CASA\Documents\GitHub\Sistema-Matrix\Sistema Matrix\obj\Debug\Sistema_Matrix.NotasFiscais.resources
+C:\Users\CASA\Documents\GitHub\Sistema-Matrix\Sistema Matrix\obj\Debug\Sistema_Matrix.ContasReceber.resources
+C:\Users\CASA\Documents\GitHub\Sistema-Matrix\Sistema Matrix\obj\Debug\Sistema_Matrix.confirmaNotaFiscal.resources
+C:\Users\CASA\Documents\GitHub\Sistema-Matrix\Sistema Matrix\obj\Debug\Sistema_Matrix.formConsultaUsuarios.resources
+C:\Users\CASA\Documents\GitHub\Sistema-Matrix\Sistema Matrix\obj\Debug\Sistema_Matrix.Clientes.resources
+C:\Users\CASA\Documents\GitHub\Sistema-Matrix\Sistema Matrix\obj\Debug\Sistema_Matrix.Form6.resources
+C:\Users\CASA\Documents\GitHub\Sistema-Matrix\Sistema Matrix\obj\Debug\Sistema_Matrix.Funcionarios.resources
+C:\Users\CASA\Documents\GitHub\Sistema-Matrix\Sistema Matrix\obj\Debug\Sistema_Matrix.Login.resources
+C:\Users\CASA\Documents\GitHub\Sistema-Matrix\Sistema Matrix\obj\Debug\Sistema_Matrix.Resources.resources
+C:\Users\CASA\Documents\GitHub\Sistema-Matrix\Sistema Matrix\obj\Debug\Sistema_Matrix.telaPrincipal.resources
+C:\Users\CASA\Documents\GitHub\Sistema-Matrix\Sistema Matrix\obj\Debug\Sistema_Matrix.Usuario.resources
+C:\Users\CASA\Documents\GitHub\Sistema-Matrix\Sistema Matrix\obj\Debug\Sistema Matrix.vbproj.GenerateResource.Cache
+C:\Users\CASA\Documents\GitHub\Sistema-Matrix\Sistema Matrix\bin\Debug\Interop.ORAOLEDBLib.dll
+C:\Users\CASA\Documents\GitHub\Sistema-Matrix\Sistema Matrix\obj\Debug\Interop.ORAOLEDBLib.dll
+C:\Users\CASA\Documents\GitHub\Sistema-Matrix\Sistema Matrix\obj\Debug\RdlCompile.cache
+C:\Users\CASA\Documents\GitHub\Sistema-Matrix\Sistema Matrix\obj\Debug\RdlCompile.compiled
+C:\Users\CASA\Documents\GitHub\Sistema-Matrix\Sistema Matrix\bin\Debug\Sistema Matrix.exe.config
+C:\Users\Fabiano\Documents\GitHub\Sistema-Matrix\Sistema Matrix\bin\Debug\Sistema Matrix.exe.config
+C:\Users\Fabiano\Documents\GitHub\Sistema-Matrix\Sistema Matrix\obj\Debug\Interop.Microsoft.Vbe.Interop.Forms.dll
+C:\Users\Fabiano\Documents\GitHub\Sistema-Matrix\Sistema Matrix\obj\Debug\Interop.ORAOLEDBLib.dll
+C:\Users\Fabiano\Documents\GitHub\Sistema-Matrix\Sistema Matrix\obj\Debug\Sistema Matrix.vbproj.ResolveComReference.cache
+C:\Users\Fabiano\Documents\GitHub\Sistema-Matrix\Sistema Matrix\obj\Debug\Sistema Matrix.exe
+C:\Users\Fabiano\Documents\GitHub\Sistema-Matrix\Sistema Matrix\obj\Debug\Sistema Matrix.xml
+C:\Users\Fabiano\Documents\GitHub\Sistema-Matrix\Sistema Matrix\obj\Debug\Sistema Matrix.pdb
+C:\Users\Fabiano\Documents\GitHub\Sistema-Matrix\Sistema Matrix\bin\Debug\Sistema Matrix.exe
+C:\Users\Fabiano\Documents\GitHub\Sistema-Matrix\Sistema Matrix\bin\Debug\Sistema Matrix.pdb
+C:\Users\Fabiano\Documents\GitHub\Sistema-Matrix\Sistema Matrix\bin\Debug\Sistema Matrix.xml
+C:\Users\Fabiano\Documents\GitHub\Sistema-Matrix\Sistema Matrix\bin\Debug\Interop.Microsoft.Vbe.Interop.Forms.dll
+C:\Users\Fabiano\Documents\GitHub\Sistema-Matrix\Sistema Matrix\bin\Debug\Interop.ORAOLEDBLib.dll
+C:\Users\Fabiano\Documents\GitHub\Sistema-Matrix\Sistema Matrix\obj\Debug\Sistema Matrix.vbprojResolveAssemblyReference.cache
+C:\Users\Fabiano\Documents\GitHub\Sistema-Matrix\Sistema Matrix\obj\Debug\Sistema_Matrix.ConsultaUsuarios.resources
+C:\Users\Fabiano\Documents\GitHub\Sistema-Matrix\Sistema Matrix\obj\Debug\Sistema_Matrix.DadosEmitente.resources
+C:\Users\Fabiano\Documents\GitHub\Sistema-Matrix\Sistema Matrix\obj\Debug\Sistema_Matrix.NotasFiscais.resources
+C:\Users\Fabiano\Documents\GitHub\Sistema-Matrix\Sistema Matrix\obj\Debug\Sistema_Matrix.ContasReceber.resources
+C:\Users\Fabiano\Documents\GitHub\Sistema-Matrix\Sistema Matrix\obj\Debug\Sistema_Matrix.confirmaNotaFiscal.resources
+C:\Users\Fabiano\Documents\GitHub\Sistema-Matrix\Sistema Matrix\obj\Debug\Sistema_Matrix.relatorioContasReceber.resources
+C:\Users\Fabiano\Documents\GitHub\Sistema-Matrix\Sistema Matrix\obj\Debug\Sistema_Matrix.RelatorioOrdemServico.resources
+C:\Users\Fabiano\Documents\GitHub\Sistema-Matrix\Sistema Matrix\obj\Debug\Sistema_Matrix.formConsultaUsuarios.resources
+C:\Users\Fabiano\Documents\GitHub\Sistema-Matrix\Sistema Matrix\obj\Debug\Sistema_Matrix.Clientes.resources
+C:\Users\Fabiano\Documents\GitHub\Sistema-Matrix\Sistema Matrix\obj\Debug\Sistema_Matrix.Form6.resources
+C:\Users\Fabiano\Documents\GitHub\Sistema-Matrix\Sistema Matrix\obj\Debug\Sistema_Matrix.Funcionarios.resources
+C:\Users\Fabiano\Documents\GitHub\Sistema-Matrix\Sistema Matrix\obj\Debug\Sistema_Matrix.Login.resources
+C:\Users\Fabiano\Documents\GitHub\Sistema-Matrix\Sistema Matrix\obj\Debug\Sistema_Matrix.Resources.resources
+C:\Users\Fabiano\Documents\GitHub\Sistema-Matrix\Sistema Matrix\obj\Debug\Sistema_Matrix.telaPrincipal.resources
+C:\Users\Fabiano\Documents\GitHub\Sistema-Matrix\Sistema Matrix\obj\Debug\Sistema_Matrix.Usuario.resources
+C:\Users\Fabiano\Documents\GitHub\Sistema-Matrix\Sistema Matrix\obj\Debug\Sistema Matrix.vbproj.GenerateResource.Cache
+C:\Users\Fabiano\Documents\GitHub\Sistema-Matrix\Sistema Matrix\obj\Debug\RdlCompile.cache
+C:\Users\Fabiano\Documents\GitHub\Sistema-Matrix\Sistema Matrix\obj\Debug\RdlCompile.compiled
+C:\Users\Fabiano\Documents\GitHub\Sistema-Matrix\Sistema Matrix\obj\Debug\Sistema_Matrix.txtBancoDeDados.resources
+C:\Users\CASA\Documents\GitHub\Sistema-Matrix\Sistema Matrix\obj\Debug\Sistema_Matrix.txtBancoDeDados.resources
+C:\Users\CASA\Documents\GitHub\Sistema-Matrix\Sistema Matrix\obj\Debug\Sistema_Matrix.tiposPagamento.resources
+C:\Users\Familia\Documents\GitHub\Sistema-Matrix nv\trunk\Sistema Matrix\bin\Debug\Sistema Matrix.exe.config
+C:\Users\Familia\Documents\GitHub\Sistema-Matrix nv\trunk\Sistema Matrix\obj\Debug\Interop.Microsoft.Vbe.Interop.Forms.dll
+C:\Users\Familia\Documents\GitHub\Sistema-Matrix nv\trunk\Sistema Matrix\obj\Debug\Interop.ORAOLEDBLib.dll
+C:\Users\Familia\Documents\GitHub\Sistema-Matrix nv\trunk\Sistema Matrix\obj\Debug\Sistema Matrix.vbproj.ResolveComReference.cache
+C:\Users\Familia\Documents\GitHub\Sistema-Matrix nv\trunk\Sistema Matrix\obj\Debug\Sistema Matrix.exe
+C:\Users\Familia\Documents\GitHub\Sistema-Matrix nv\trunk\Sistema Matrix\obj\Debug\Sistema Matrix.xml
+C:\Users\Familia\Documents\GitHub\Sistema-Matrix nv\trunk\Sistema Matrix\obj\Debug\Sistema Matrix.pdb
+C:\Users\Familia\Documents\GitHub\Sistema-Matrix nv\trunk\Sistema Matrix\bin\Debug\Sistema Matrix.exe
+C:\Users\Familia\Documents\GitHub\Sistema-Matrix nv\trunk\Sistema Matrix\bin\Debug\Sistema Matrix.pdb
+C:\Users\Familia\Documents\GitHub\Sistema-Matrix nv\trunk\Sistema Matrix\bin\Debug\Sistema Matrix.xml
+C:\Users\Familia\Documents\GitHub\Sistema-Matrix nv\trunk\Sistema Matrix\bin\Debug\Interop.Microsoft.Vbe.Interop.Forms.dll
+C:\Users\Familia\Documents\GitHub\Sistema-Matrix nv\trunk\Sistema Matrix\bin\Debug\Interop.ORAOLEDBLib.dll
+C:\Users\Familia\Documents\GitHub\Sistema-Matrix nv\trunk\Sistema Matrix\obj\Debug\Sistema Matrix.vbprojResolveAssemblyReference.cache
+C:\Users\Familia\Documents\GitHub\Sistema-Matrix nv\trunk\Sistema Matrix\obj\Debug\Sistema_Matrix.txtBancoDeDados.resources
+C:\Users\Familia\Documents\GitHub\Sistema-Matrix nv\trunk\Sistema Matrix\obj\Debug\Sistema_Matrix.ConsultaUsuarios.resources
+C:\Users\Familia\Documents\GitHub\Sistema-Matrix nv\trunk\Sistema Matrix\obj\Debug\Sistema_Matrix.DadosEmitente.resources
+C:\Users\Familia\Documents\GitHub\Sistema-Matrix nv\trunk\Sistema Matrix\obj\Debug\Sistema_Matrix.NotasFiscais.resources
+C:\Users\Familia\Documents\GitHub\Sistema-Matrix nv\trunk\Sistema Matrix\obj\Debug\Sistema_Matrix.ContasReceber.resources
+C:\Users\Familia\Documents\GitHub\Sistema-Matrix nv\trunk\Sistema Matrix\obj\Debug\Sistema_Matrix.confirmaNotaFiscal.resources
+C:\Users\Familia\Documents\GitHub\Sistema-Matrix nv\trunk\Sistema Matrix\obj\Debug\Sistema_Matrix.formConsultaUsuarios.resources
+C:\Users\Familia\Documents\GitHub\Sistema-Matrix nv\trunk\Sistema Matrix\obj\Debug\Sistema_Matrix.Clientes.resources
+C:\Users\Familia\Documents\GitHub\Sistema-Matrix nv\trunk\Sistema Matrix\obj\Debug\Sistema_Matrix.Form6.resources
+C:\Users\Familia\Documents\GitHub\Sistema-Matrix nv\trunk\Sistema Matrix\obj\Debug\Sistema_Matrix.Funcionarios.resources
+C:\Users\Familia\Documents\GitHub\Sistema-Matrix nv\trunk\Sistema Matrix\obj\Debug\Sistema_Matrix.Login.resources
+C:\Users\Familia\Documents\GitHub\Sistema-Matrix nv\trunk\Sistema Matrix\obj\Debug\Sistema_Matrix.Resources.resources
+C:\Users\Familia\Documents\GitHub\Sistema-Matrix nv\trunk\Sistema Matrix\obj\Debug\Sistema_Matrix.telaPrincipal.resources
+C:\Users\Familia\Documents\GitHub\Sistema-Matrix nv\trunk\Sistema Matrix\obj\Debug\Sistema_Matrix.tiposPagamento.resources
+C:\Users\Familia\Documents\GitHub\Sistema-Matrix nv\trunk\Sistema Matrix\obj\Debug\Sistema_Matrix.Usuario.resources
+C:\Users\Familia\Documents\GitHub\Sistema-Matrix nv\trunk\Sistema Matrix\obj\Debug\Sistema Matrix.vbproj.GenerateResource.Cache
+C:\Users\Familia\Documents\GitHub\Sistema-Matrix nv\trunk\Sistema Matrix\obj\Debug\RdlCompile.cache
+C:\Users\Familia\Documents\GitHub\Sistema-Matrix nv\trunk\Sistema Matrix\obj\Debug\RdlCompile.compiled
+C:\Users\i7\Documents\Projeto\Matrix\trunk\Sistema Matrix\bin\Debug\Sistema Matrix.exe.config
+C:\Users\i7\Documents\Projeto\Matrix\trunk\Sistema Matrix\obj\Debug\Interop.ORAOLEDBLib.dll
+C:\Users\i7\Documents\Projeto\Matrix\trunk\Sistema Matrix\obj\Debug\Sistema Matrix.vbproj.ResolveComReference.cache
+C:\Users\i7\Documents\Projeto\Matrix\trunk\Sistema Matrix\obj\Debug\Sistema Matrix.exe
+C:\Users\i7\Documents\Projeto\Matrix\trunk\Sistema Matrix\obj\Debug\Sistema Matrix.xml
+C:\Users\i7\Documents\Projeto\Matrix\trunk\Sistema Matrix\obj\Debug\Sistema Matrix.pdb
+C:\Users\CASA\Documents\Projetos SVN\Sistema Matrix\trunk\Sistema Matrix\bin\Debug\Sistema Matrix.exe.config
+C:\Users\CASA\Documents\Projetos SVN\Sistema Matrix\trunk\Sistema Matrix\obj\Debug\Interop.Microsoft.Vbe.Interop.Forms.dll
+C:\Users\CASA\Documents\Projetos SVN\Sistema Matrix\trunk\Sistema Matrix\obj\Debug\Sistema Matrix.vbproj.ResolveComReference.cache
+C:\Users\CASA\Documents\Projetos SVN\Sistema Matrix\trunk\Sistema Matrix\obj\Debug\Sistema Matrix.exe
+C:\Users\CASA\Documents\Projetos SVN\Sistema Matrix\trunk\Sistema Matrix\obj\Debug\Sistema Matrix.xml
+C:\Users\CASA\Documents\Projetos SVN\Sistema Matrix\trunk\Sistema Matrix\obj\Debug\Sistema Matrix.pdb
+C:\Users\CASA\Documents\Projetos SVN\Sistema Matrix\trunk\Sistema Matrix\obj\Debug\Sistema Matrix.vbprojResolveAssemblyReference.cache
+C:\Users\CASA\Documents\Projetos SVN\Sistema Matrix\trunk\Sistema Matrix\obj\Debug\Sistema Matrix.vbproj.GenerateResource.Cache
+C:\Users\CASA\Documents\Projetos SVN\Sistema Matrix\trunk\Sistema Matrix\obj\Debug\Sistema_Matrix.Resources.resources
+C:\Users\CASA\Documents\Projetos SVN\Sistema Matrix\trunk\Sistema Matrix\obj\Debug\RdlCompile.cache
+C:\Users\CASA\Documents\Projetos SVN\Sistema Matrix\trunk\Sistema Matrix\obj\Debug\RdlCompile.compiled
+C:\Users\CASA\Documents\Projetos SVN\Sistema Matrix\trunk\Sistema Matrix\bin\Debug\Sistema Matrix.exe
+C:\Users\CASA\Documents\Projetos SVN\Sistema Matrix\trunk\Sistema Matrix\bin\Debug\Sistema Matrix.pdb
+C:\Users\CASA\Documents\Projetos SVN\Sistema Matrix\trunk\Sistema Matrix\bin\Debug\Sistema Matrix.xml
+C:\Users\CASA\Documents\Projetos SVN\Sistema Matrix\trunk\Sistema Matrix\bin\Debug\Interop.Microsoft.Vbe.Interop.Forms.dll
+C:\Users\CASA\Documents\Projetos SVN\Sistema Matrix\trunk\Sistema Matrix\obj\Debug\Sistema_Matrix.frmGerenciamentoUsuarios.resources
+C:\Users\CASA\Documents\Projetos SVN\Sistema Matrix\trunk\Sistema Matrix\obj\Debug\Sistema_Matrix.frmCadastroEmitente.resources
+C:\Users\CASA\Documents\Projetos SVN\Sistema Matrix\trunk\Sistema Matrix\obj\Debug\Sistema_Matrix.relContasReceber.resources
+C:\Users\CASA\Documents\Projetos SVN\Sistema Matrix\trunk\Sistema Matrix\obj\Debug\Sistema_Matrix.relOrdensServico.resources
+C:\Users\CASA\Documents\Projetos SVN\Sistema Matrix\trunk\Sistema Matrix\obj\Debug\Sistema_Matrix.frmConsultaNotasFiscais.resources
+C:\Users\CASA\Documents\Projetos SVN\Sistema Matrix\trunk\Sistema Matrix\obj\Debug\Sistema_Matrix.frmConsultaContasReceber.resources
+C:\Users\CASA\Documents\Projetos SVN\Sistema Matrix\trunk\Sistema Matrix\obj\Debug\Sistema_Matrix.frmConfirmaNotaFiscal.resources
+C:\Users\CASA\Documents\Projetos SVN\Sistema Matrix\trunk\Sistema Matrix\obj\Debug\Sistema_Matrix.frmGerenciamentoServicos.resources
+C:\Users\CASA\Documents\Projetos SVN\Sistema Matrix\trunk\Sistema Matrix\obj\Debug\Sistema_Matrix.frmGerenciamentoClientes.resources
+C:\Users\CASA\Documents\Projetos SVN\Sistema Matrix\trunk\Sistema Matrix\obj\Debug\Sistema_Matrix.frmGerenciamentoOrdensServico.resources
+C:\Users\CASA\Documents\Projetos SVN\Sistema Matrix\trunk\Sistema Matrix\obj\Debug\Sistema_Matrix.frmGerenciamentoFuncionarios.resources
+C:\Users\CASA\Documents\Projetos SVN\Sistema Matrix\trunk\Sistema Matrix\obj\Debug\Sistema_Matrix.frmLogin.resources
+C:\Users\CASA\Documents\Projetos SVN\Sistema Matrix\trunk\Sistema Matrix\obj\Debug\Sistema_Matrix.frmMenuPrincipal.resources
+C:\Users\CASA\Documents\Projetos SVN\Sistema Matrix\trunk\Sistema Matrix\obj\Debug\Sistema_Matrix.frmTiposPagamento.resources
+C:\Users\CASA\Documents\Projetos SVN\Sistema Matrix\trunk\Sistema Matrix\obj\Debug\Sistema_Matrix.frmCadastroUsuarios.resources
+C:\Users\CASA\Documents\Projetos SVN\Sistema Matrix\trunk\Sistema Matrix\bin\Debug\Microsoft.ReportViewer.Common.dll
+C:\Users\CASA\Documents\Projetos SVN\Sistema Matrix\trunk\Sistema Matrix\bin\Debug\Microsoft.ReportViewer.WinForms.dll
+C:\Users\CASA\Documents\Projetos SVN\Sistema Matrix\trunk\Sistema Matrix\obj\Debug\Sistema_Matrix.Form1.resources
+C:\Users\CASA\Documents\Projetos SVN\Sistema Matrix\trunk\Sistema Matrix\obj\Debug\Sistema_Matrix.frmBackupeRestauracao.resources
+C:\Users\CASA\Documents\Projetos SVN\Sistema Matrix\trunk\Sistema Matrix\bin\Debug\Sistema Matrix.exe.manifest
+C:\Users\CASA\Documents\Projetos SVN\Sistema Matrix\trunk\Sistema Matrix\bin\Debug\Sistema Matrix.application
+C:\Users\CASA\Documents\Projetos SVN\Sistema Matrix\trunk\Sistema Matrix\bin\Debug\Microsoft.ReportViewer.ProcessingObjectModel.DLL
+C:\Users\CASA\Documents\Projetos SVN\Sistema Matrix\trunk\Sistema Matrix\bin\Debug\Microsoft.SqlServer.Types.dll
+C:\Users\CASA\Documents\Projetos SVN\Sistema Matrix\trunk\Sistema Matrix\bin\Debug\System.Data.dll
+C:\Users\CASA\Documents\Projetos SVN\Sistema Matrix\trunk\Sistema Matrix\obj\Debug\Sistema Matrix.exe.manifest
+C:\Users\CASA\Documents\Projetos SVN\Sistema Matrix\trunk\Sistema Matrix\obj\Debug\Sistema Matrix.application

@@ -133,7 +133,6 @@ Partial Class frmMenuPrincipal
         'botBackupeRestauracao
         '
         Me.botBackupeRestauracao.BackColor = System.Drawing.Color.DarkSlateGray
-        Me.botBackupeRestauracao.BackgroundImage = CType(resources.GetObject("botBackupeRestauracao.BackgroundImage"), System.Drawing.Image)
         Me.botBackupeRestauracao.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center
         Me.botBackupeRestauracao.FlatAppearance.BorderSize = 0
         Me.botBackupeRestauracao.FlatStyle = System.Windows.Forms.FlatStyle.Flat
