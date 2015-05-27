@@ -1,6 +1,6 @@
 ﻿Public Class frmAjuda
 
-    Private Sub frmAjuda_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+    Private Sub Label4_Click(sender As Object, e As EventArgs) Handles Label4.Click
 
     End Sub
 End Class
