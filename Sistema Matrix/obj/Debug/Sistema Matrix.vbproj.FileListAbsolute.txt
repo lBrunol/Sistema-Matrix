@@ -324,3 +324,40 @@ C:\Users\CASA\Documents\Projetos SVN\Sistema Matrix\trunk\Sistema Matrix\bin\Deb
 C:\Users\CASA\Documents\Projetos SVN\Sistema Matrix\trunk\Sistema Matrix\bin\Debug\System.Data.dll
 C:\Users\CASA\Documents\Projetos SVN\Sistema Matrix\trunk\Sistema Matrix\obj\Debug\Sistema Matrix.exe.manifest
 C:\Users\CASA\Documents\Projetos SVN\Sistema Matrix\trunk\Sistema Matrix\obj\Debug\Sistema Matrix.application
+C:\Users\i7\Documents\Projeto UNI9\trunk\Sistema Matrix\bin\Debug\Sistema Matrix.exe.config
+C:\Users\i7\Documents\Projeto UNI9\trunk\Sistema Matrix\obj\Debug\Sistema Matrix.vbproj.ResolveComReference.cache
+C:\Users\i7\Documents\Projeto UNI9\trunk\Sistema Matrix\obj\Debug\Sistema Matrix.exe
+C:\Users\i7\Documents\Projeto UNI9\trunk\Sistema Matrix\obj\Debug\Sistema Matrix.xml
+C:\Users\i7\Documents\Projeto UNI9\trunk\Sistema Matrix\obj\Debug\Sistema Matrix.pdb
+C:\Users\i7\Documents\Projeto UNI9\trunk\Sistema Matrix\obj\Debug\Sistema Matrix.vbprojResolveAssemblyReference.cache
+C:\Users\i7\Documents\Projeto UNI9\trunk\Sistema Matrix\obj\Debug\Sistema_Matrix.Form1.resources
+C:\Users\i7\Documents\Projeto UNI9\trunk\Sistema Matrix\obj\Debug\Sistema_Matrix.frmBackupeRestauracao.resources
+C:\Users\i7\Documents\Projeto UNI9\trunk\Sistema Matrix\obj\Debug\Sistema_Matrix.frmGerenciamentoUsuarios.resources
+C:\Users\i7\Documents\Projeto UNI9\trunk\Sistema Matrix\obj\Debug\Sistema_Matrix.frmCadastroEmitente.resources
+C:\Users\i7\Documents\Projeto UNI9\trunk\Sistema Matrix\obj\Debug\Sistema_Matrix.relContasReceber.resources
+C:\Users\i7\Documents\Projeto UNI9\trunk\Sistema Matrix\obj\Debug\Sistema_Matrix.relOrdensServico.resources
+C:\Users\i7\Documents\Projeto UNI9\trunk\Sistema Matrix\obj\Debug\Sistema_Matrix.frmConsultaNotasFiscais.resources
+C:\Users\i7\Documents\Projeto UNI9\trunk\Sistema Matrix\obj\Debug\Sistema_Matrix.frmConsultaContasReceber.resources
+C:\Users\i7\Documents\Projeto UNI9\trunk\Sistema Matrix\obj\Debug\Sistema_Matrix.frmConfirmaNotaFiscal.resources
+C:\Users\i7\Documents\Projeto UNI9\trunk\Sistema Matrix\obj\Debug\Sistema_Matrix.frmGerenciamentoServicos.resources
+C:\Users\i7\Documents\Projeto UNI9\trunk\Sistema Matrix\obj\Debug\Sistema_Matrix.frmGerenciamentoClientes.resources
+C:\Users\i7\Documents\Projeto UNI9\trunk\Sistema Matrix\obj\Debug\Sistema_Matrix.frmGerenciamentoOrdensServico.resources
+C:\Users\i7\Documents\Projeto UNI9\trunk\Sistema Matrix\obj\Debug\Sistema_Matrix.frmGerenciamentoFuncionarios.resources
+C:\Users\i7\Documents\Projeto UNI9\trunk\Sistema Matrix\obj\Debug\Sistema_Matrix.frmLogin.resources
+C:\Users\i7\Documents\Projeto UNI9\trunk\Sistema Matrix\obj\Debug\Sistema_Matrix.Resources.resources
+C:\Users\i7\Documents\Projeto UNI9\trunk\Sistema Matrix\obj\Debug\Sistema_Matrix.frmMenuPrincipal.resources
+C:\Users\i7\Documents\Projeto UNI9\trunk\Sistema Matrix\obj\Debug\Sistema_Matrix.frmTiposPagamento.resources
+C:\Users\i7\Documents\Projeto UNI9\trunk\Sistema Matrix\obj\Debug\Sistema_Matrix.frmCadastroUsuarios.resources
+C:\Users\i7\Documents\Projeto UNI9\trunk\Sistema Matrix\obj\Debug\Sistema Matrix.vbproj.GenerateResource.Cache
+C:\Users\i7\Documents\Projeto UNI9\trunk\Sistema Matrix\obj\Debug\RdlCompile.cache
+C:\Users\i7\Documents\Projeto UNI9\trunk\Sistema Matrix\obj\Debug\RdlCompile.compiled
+C:\Users\i7\Documents\Projeto UNI9\trunk\Sistema Matrix\bin\Debug\Sistema Matrix.exe.manifest
+C:\Users\i7\Documents\Projeto UNI9\trunk\Sistema Matrix\bin\Debug\Sistema Matrix.application
+C:\Users\i7\Documents\Projeto UNI9\trunk\Sistema Matrix\bin\Debug\Sistema Matrix.exe
+C:\Users\i7\Documents\Projeto UNI9\trunk\Sistema Matrix\bin\Debug\Sistema Matrix.pdb
+C:\Users\i7\Documents\Projeto UNI9\trunk\Sistema Matrix\bin\Debug\Sistema Matrix.xml
+C:\Users\i7\Documents\Projeto UNI9\trunk\Sistema Matrix\bin\Debug\Microsoft.ReportViewer.ProcessingObjectModel.dll
+C:\Users\i7\Documents\Projeto UNI9\trunk\Sistema Matrix\bin\Debug\Microsoft.SqlServer.Types.dll
+C:\Users\i7\Documents\Projeto UNI9\trunk\Sistema Matrix\bin\Debug\System.Data.dll
+C:\Users\i7\Documents\Projeto UNI9\trunk\Sistema Matrix\obj\Debug\Sistema Matrix.exe.manifest
+C:\Users\i7\Documents\Projeto UNI9\trunk\Sistema Matrix\obj\Debug\Sistema Matrix.application
