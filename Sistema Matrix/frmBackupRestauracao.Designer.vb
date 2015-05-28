@@ -54,7 +54,7 @@ Partial Class frmBackupRestauracao
         Me.GroupBox2.Controls.Add(Me.txtArquivoBackupRestaurar)
         Me.GroupBox2.Controls.Add(Me.btnRestaurar)
         Me.GroupBox2.Controls.Add(Me.txtDestinoRestaurar)
-        Me.GroupBox2.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.GroupBox2.Font = New System.Drawing.Font("Century Gothic", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.GroupBox2.Location = New System.Drawing.Point(23, 236)
         Me.GroupBox2.Name = "GroupBox2"
         Me.GroupBox2.Size = New System.Drawing.Size(544, 202)
@@ -68,7 +68,7 @@ Partial Class frmBackupRestauracao
         Me.btnDestinoRestaurar.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btnDestinoRestaurar.Image = CType(resources.GetObject("btnDestinoRestaurar.Image"), System.Drawing.Image)
         Me.btnDestinoRestaurar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.btnDestinoRestaurar.Location = New System.Drawing.Point(436, 109)
+        Me.btnDestinoRestaurar.Location = New System.Drawing.Point(451, 108)
         Me.btnDestinoRestaurar.Name = "btnDestinoRestaurar"
         Me.btnDestinoRestaurar.Size = New System.Drawing.Size(87, 23)
         Me.btnDestinoRestaurar.TabIndex = 6
@@ -82,7 +82,7 @@ Partial Class frmBackupRestauracao
         Me.btnArquivoBackupRestaurar.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btnArquivoBackupRestaurar.Image = CType(resources.GetObject("btnArquivoBackupRestaurar.Image"), System.Drawing.Image)
         Me.btnArquivoBackupRestaurar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.btnArquivoBackupRestaurar.Location = New System.Drawing.Point(436, 50)
+        Me.btnArquivoBackupRestaurar.Location = New System.Drawing.Point(451, 50)
         Me.btnArquivoBackupRestaurar.Name = "btnArquivoBackupRestaurar"
         Me.btnArquivoBackupRestaurar.Size = New System.Drawing.Size(87, 23)
         Me.btnArquivoBackupRestaurar.TabIndex = 5
@@ -95,7 +95,7 @@ Partial Class frmBackupRestauracao
         Me.Label5.AutoSize = True
         Me.Label5.Location = New System.Drawing.Point(20, 82)
         Me.Label5.Name = "Label5"
-        Me.Label5.Size = New System.Drawing.Size(54, 16)
+        Me.Label5.Size = New System.Drawing.Size(56, 17)
         Me.Label5.TabIndex = 4
         Me.Label5.Text = "Destino"
         '
@@ -104,17 +104,17 @@ Partial Class frmBackupRestauracao
         Me.Label6.AutoSize = True
         Me.Label6.Location = New System.Drawing.Point(20, 26)
         Me.Label6.Name = "Label6"
-        Me.Label6.Size = New System.Drawing.Size(103, 16)
+        Me.Label6.Size = New System.Drawing.Size(110, 17)
         Me.Label6.TabIndex = 3
         Me.Label6.Text = "Arquivo Backup"
         '
         'txtArquivoBackupRestaurar
         '
         Me.txtArquivoBackupRestaurar.BackColor = System.Drawing.Color.FromArgb(CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer))
-        Me.txtArquivoBackupRestaurar.Location = New System.Drawing.Point(135, 22)
+        Me.txtArquivoBackupRestaurar.Location = New System.Drawing.Point(146, 23)
         Me.txtArquivoBackupRestaurar.Name = "txtArquivoBackupRestaurar"
         Me.txtArquivoBackupRestaurar.ReadOnly = True
-        Me.txtArquivoBackupRestaurar.Size = New System.Drawing.Size(392, 22)
+        Me.txtArquivoBackupRestaurar.Size = New System.Drawing.Size(392, 23)
         Me.txtArquivoBackupRestaurar.TabIndex = 1
         '
         'btnRestaurar
@@ -133,10 +133,10 @@ Partial Class frmBackupRestauracao
         'txtDestinoRestaurar
         '
         Me.txtDestinoRestaurar.BackColor = System.Drawing.Color.FromArgb(CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer))
-        Me.txtDestinoRestaurar.Location = New System.Drawing.Point(134, 79)
+        Me.txtDestinoRestaurar.Location = New System.Drawing.Point(146, 79)
         Me.txtDestinoRestaurar.Name = "txtDestinoRestaurar"
         Me.txtDestinoRestaurar.ReadOnly = True
-        Me.txtDestinoRestaurar.Size = New System.Drawing.Size(392, 22)
+        Me.txtDestinoRestaurar.Size = New System.Drawing.Size(392, 23)
         Me.txtDestinoRestaurar.TabIndex = 2
         '
         'GroupBox1
@@ -150,7 +150,7 @@ Partial Class frmBackupRestauracao
         Me.GroupBox1.Controls.Add(Me.txtBancoDeDados)
         Me.GroupBox1.Controls.Add(Me.btnBackup)
         Me.GroupBox1.Controls.Add(Me.txtDestino)
-        Me.GroupBox1.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.GroupBox1.Font = New System.Drawing.Font("Century Gothic", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.GroupBox1.Location = New System.Drawing.Point(23, 19)
         Me.GroupBox1.Name = "GroupBox1"
         Me.GroupBox1.Size = New System.Drawing.Size(544, 207)
@@ -163,15 +163,15 @@ Partial Class frmBackupRestauracao
         Me.Label3.AutoSize = True
         Me.Label3.Location = New System.Drawing.Point(21, 106)
         Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(113, 16)
+        Me.Label3.Size = New System.Drawing.Size(122, 17)
         Me.Label3.TabIndex = 8
         Me.Label3.Text = "Nome do Backup"
         '
         'txtNomeBackup
         '
-        Me.txtNomeBackup.Location = New System.Drawing.Point(135, 102)
+        Me.txtNomeBackup.Location = New System.Drawing.Point(146, 102)
         Me.txtNomeBackup.Name = "txtNomeBackup"
-        Me.txtNomeBackup.Size = New System.Drawing.Size(286, 22)
+        Me.txtNomeBackup.Size = New System.Drawing.Size(286, 23)
         Me.txtNomeBackup.TabIndex = 7
         '
         'btnDestino
@@ -180,7 +180,7 @@ Partial Class frmBackupRestauracao
         Me.btnDestino.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btnDestino.Image = CType(resources.GetObject("btnDestino.Image"), System.Drawing.Image)
         Me.btnDestino.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.btnDestino.Location = New System.Drawing.Point(436, 102)
+        Me.btnDestino.Location = New System.Drawing.Point(451, 103)
         Me.btnDestino.Name = "btnDestino"
         Me.btnDestino.Size = New System.Drawing.Size(87, 23)
         Me.btnDestino.TabIndex = 6
@@ -194,7 +194,7 @@ Partial Class frmBackupRestauracao
         Me.btnBancodeDados.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btnBancodeDados.Image = CType(resources.GetObject("btnBancodeDados.Image"), System.Drawing.Image)
         Me.btnBancodeDados.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.btnBancodeDados.Location = New System.Drawing.Point(436, 47)
+        Me.btnBancodeDados.Location = New System.Drawing.Point(451, 48)
         Me.btnBancodeDados.Name = "btnBancodeDados"
         Me.btnBancodeDados.Size = New System.Drawing.Size(87, 23)
         Me.btnBancodeDados.TabIndex = 5
@@ -207,7 +207,7 @@ Partial Class frmBackupRestauracao
         Me.Label2.AutoSize = True
         Me.Label2.Location = New System.Drawing.Point(20, 74)
         Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(54, 16)
+        Me.Label2.Size = New System.Drawing.Size(56, 17)
         Me.Label2.TabIndex = 4
         Me.Label2.Text = "Destino"
         '
@@ -216,17 +216,17 @@ Partial Class frmBackupRestauracao
         Me.Label1.AutoSize = True
         Me.Label1.Location = New System.Drawing.Point(20, 22)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(110, 16)
+        Me.Label1.Size = New System.Drawing.Size(116, 17)
         Me.Label1.TabIndex = 3
         Me.Label1.Text = "Banco de Dados"
         '
         'txtBancoDeDados
         '
         Me.txtBancoDeDados.BackColor = System.Drawing.Color.FromArgb(CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer))
-        Me.txtBancoDeDados.Location = New System.Drawing.Point(135, 19)
+        Me.txtBancoDeDados.Location = New System.Drawing.Point(146, 19)
         Me.txtBancoDeDados.Name = "txtBancoDeDados"
         Me.txtBancoDeDados.ReadOnly = True
-        Me.txtBancoDeDados.Size = New System.Drawing.Size(392, 22)
+        Me.txtBancoDeDados.Size = New System.Drawing.Size(392, 23)
         Me.txtBancoDeDados.TabIndex = 1
         '
         'btnBackup
@@ -245,23 +245,24 @@ Partial Class frmBackupRestauracao
         'txtDestino
         '
         Me.txtDestino.BackColor = System.Drawing.Color.FromArgb(CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer))
-        Me.txtDestino.Location = New System.Drawing.Point(135, 74)
+        Me.txtDestino.Location = New System.Drawing.Point(146, 73)
         Me.txtDestino.Name = "txtDestino"
         Me.txtDestino.ReadOnly = True
-        Me.txtDestino.Size = New System.Drawing.Size(392, 22)
+        Me.txtDestino.Size = New System.Drawing.Size(392, 23)
         Me.txtDestino.TabIndex = 2
         '
         'frmBackupRestauracao
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.BackColor = System.Drawing.Color.Silver
+        Me.BackColor = System.Drawing.Color.White
         Me.ClientSize = New System.Drawing.Size(579, 450)
         Me.Controls.Add(Me.GroupBox2)
         Me.Controls.Add(Me.GroupBox1)
+        Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.Name = "frmBackupRestauracao"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
-        Me.Text = "Backup e Restauração - Microsoft Access"
+        Me.Text = "Backup e Restauração"
         Me.GroupBox2.ResumeLayout(False)
         Me.GroupBox2.PerformLayout()
         Me.GroupBox1.ResumeLayout(False)
