@@ -1,5 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
-<Report xmlns="http://schemas.microsoft.com/sqlserver/reporting/2008/01/reportdefinition" xmlns:rd="http://schemas.microsoft.com/SQLServer/reporting/reportdesigner">
+<Report xmlns:rd="http://schemas.microsoft.com/SQLServer/reporting/reportdesigner" xmlns="http://schemas.microsoft.com/sqlserver/reporting/2008/01/reportdefinition">
+  <DataSources>
+    <DataSource Name="bancoMatrixDataSet">
+      <ConnectionProperties>
+        <DataProvider>System.Data.DataSet</DataProvider>
+        <ConnectString>/* Local Connection */</ConnectString>
+      </ConnectionProperties>
+      <rd:DataSourceID>cf0c45fb-3c08-42be-98d2-a17f95a074b5</rd:DataSourceID>
+    </DataSource>
+  </DataSources>
   <Body>
     <ReportItems>
       <Image Name="Image1">
@@ -21,7 +30,7 @@
           <Paragraph>
             <TextRuns>
               <TextRun>
-                <Value>=Fields!demNomeFantasia.Value</Value>
+                <Value />
                 <Style />
               </TextRun>
             </TextRuns>
@@ -51,7 +60,7 @@
           <Paragraph>
             <TextRuns>
               <TextRun>
-                <Value>=Fields!demInscricaoMunicipal.Value</Value>
+                <Value />
                 <Style />
               </TextRun>
             </TextRuns>
@@ -81,7 +90,7 @@
           <Paragraph>
             <TextRuns>
               <TextRun>
-                <Value>=Fields!demEndereco.Value</Value>
+                <Value />
                 <Style />
               </TextRun>
             </TextRuns>
@@ -111,7 +120,7 @@
           <Paragraph>
             <TextRuns>
               <TextRun>
-                <Value>=Fields!cliNome.Value</Value>
+                <Value />
                 <Style />
               </TextRun>
             </TextRuns>
@@ -149,122 +158,6 @@
     <ColumnSpacing>0.13cm</ColumnSpacing>
     <Style />
   </Page>
-  <AutoRefresh>0</AutoRefresh>
-  <DataSources>
-    <DataSource Name="bancoMatrixDataSet">
-      <ConnectionProperties>
-        <DataProvider>System.Data.DataSet</DataProvider>
-        <ConnectString>/* Local Connection */</ConnectString>
-      </ConnectionProperties>
-      <rd:DataSourceID>cf0c45fb-3c08-42be-98d2-a17f95a074b5</rd:DataSourceID>
-    </DataSource>
-  </DataSources>
-  <DataSets>
-    <DataSet Name="DataSet2">
-      <Query>
-        <DataSourceName>bancoMatrixDataSet</DataSourceName>
-        <CommandText>/* Local Query */</CommandText>
-      </Query>
-      <Fields>
-        <Field Name="cliNome">
-          <DataField>cliNome</DataField>
-          <rd:TypeName>System.String</rd:TypeName>
-        </Field>
-        <Field Name="cliEndereco">
-          <DataField>cliEndereco</DataField>
-          <rd:TypeName>System.String</rd:TypeName>
-        </Field>
-        <Field Name="cliBairro">
-          <DataField>cliBairro</DataField>
-          <rd:TypeName>System.String</rd:TypeName>
-        </Field>
-        <Field Name="cliCEP">
-          <DataField>cliCEP</DataField>
-          <rd:TypeName>System.String</rd:TypeName>
-        </Field>
-        <Field Name="cliCidade">
-          <DataField>cliCidade</DataField>
-          <rd:TypeName>System.String</rd:TypeName>
-        </Field>
-        <Field Name="cliUF">
-          <DataField>cliUF</DataField>
-          <rd:TypeName>System.String</rd:TypeName>
-        </Field>
-        <Field Name="cliEmail">
-          <DataField>cliEmail</DataField>
-          <rd:TypeName>System.String</rd:TypeName>
-        </Field>
-        <Field Name="cliTelefone">
-          <DataField>cliTelefone</DataField>
-          <rd:TypeName>System.String</rd:TypeName>
-        </Field>
-        <Field Name="cliNumEndereco">
-          <DataField>cliNumEndereco</DataField>
-          <rd:TypeName>System.String</rd:TypeName>
-        </Field>
-        <Field Name="demNomeFantasia">
-          <DataField>demNomeFantasia</DataField>
-          <rd:TypeName>System.String</rd:TypeName>
-        </Field>
-        <Field Name="demInscricaoEstadual">
-          <DataField>demInscricaoEstadual</DataField>
-          <rd:TypeName>System.String</rd:TypeName>
-        </Field>
-        <Field Name="demInscricaoMunicipal">
-          <DataField>demInscricaoMunicipal</DataField>
-          <rd:TypeName>System.String</rd:TypeName>
-        </Field>
-        <Field Name="demCEP">
-          <DataField>demCEP</DataField>
-          <rd:TypeName>System.String</rd:TypeName>
-        </Field>
-        <Field Name="demTelefone">
-          <DataField>demTelefone</DataField>
-          <rd:TypeName>System.String</rd:TypeName>
-        </Field>
-        <Field Name="demEndereco">
-          <DataField>demEndereco</DataField>
-          <rd:TypeName>System.String</rd:TypeName>
-        </Field>
-        <Field Name="notHora">
-          <DataField>notHora</DataField>
-          <rd:TypeName>System.DateTime</rd:TypeName>
-        </Field>
-        <Field Name="notValor">
-          <DataField>notValor</DataField>
-          <rd:TypeName>System.Int32</rd:TypeName>
-        </Field>
-        <Field Name="notData">
-          <DataField>notData</DataField>
-          <rd:TypeName>System.DateTime</rd:TypeName>
-        </Field>
-        <Field Name="notCodVer">
-          <DataField>notCodVer</DataField>
-          <rd:TypeName>System.Int32</rd:TypeName>
-        </Field>
-        <Field Name="notCodigo">
-          <DataField>notCodigo</DataField>
-          <rd:TypeName>System.Int32</rd:TypeName>
-        </Field>
-        <Field Name="ordOcorrencia">
-          <DataField>ordOcorrencia</DataField>
-          <rd:TypeName>System.String</rd:TypeName>
-        </Field>
-        <Field Name="ordValorTotal">
-          <DataField>ordValorTotal</DataField>
-          <rd:TypeName>System.Decimal</rd:TypeName>
-        </Field>
-      </Fields>
-      <rd:DataSetInfo>
-        <rd:DataSetName>bancoMatrixDataSet</rd:DataSetName>
-        <rd:SchemaPath>C:\Users\SL Artesanatos\Documents\Projeto Matrix\trunk\Sistema Matrix\bancoMatrixDataSet.xsd</rd:SchemaPath>
-        <rd:TableName>relNF</rd:TableName>
-        <rd:TableAdapterFillMethod>Fill</rd:TableAdapterFillMethod>
-        <rd:TableAdapterGetDataMethod>GetData</rd:TableAdapterGetDataMethod>
-        <rd:TableAdapterName>relNFTableAdapter</rd:TableAdapterName>
-      </rd:DataSetInfo>
-    </DataSet>
-  </DataSets>
   <EmbeddedImages>
     <EmbeddedImage Name="NFSe_layout_novo">
       <MIMEType>image/jpeg</MIMEType>
@@ -541,6 +434,6 @@ UAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAfkD/wbi/8AKUz/
 8Fkv+jsP2f8A/wAFFt/8z1H/AAxt/wAFkv8Ao7D9n/8A8FFt/wDM9QB+v1FfkD/wxt/wWS/6Ow/Z/wD/AAUW3/zPUf8ADG3/AAWS/wCjsP2f/wDwUW3/AMz1AH6/UV+QP/DG3/BZL/o7D9n/AP8ABRbf/M9R/wAMbf8ABZL/AKOw/Z//APBRbf8AzPUAfr9RX5A/8Mbf8Fkv+jsP2f8A/wAFFt/8z1H/AAxt/wAFkv8Ao7D9n/8A8FFt/wDM9QB+v1FfkD/wxt/wWS/6Ow/Z/wD/AAUW3/zPUf8ADG3/AAWS/wCjsP2f/wDwUW3/AMz1AH6/UV+QP/DG3/BZL/o7D9n/AP8ABRbf/M9R/wAMbf8ABZL/AKOw/Z//APBRbf8AzPUAfr9RX5A/8Mbf8Fkv+jsP2f8A/wAFFt/8z1H/AAxt/wAFkv8Ao7D9n/8A8FFt/wDM9QB+v1FfkD/wxt/wWS/6Ow/Z/wD/AAUW3/zPUf8ADG3/AAWS/wCjsP2f/wDwUW3/AMz1AH6/UV+QP/DG3/BZL/o7D9n/AP8ABRbf/M9R/wAMbf8ABZL/AKOw/Z//APBRbf8AzPUAfr9RX5A/8Mbf8Fkv+jsP2f8A/wAFFt/8z1H/AAxt/wAFkv8Ao7D9n/8A8FFt/wDM9QB+v1FfkD/wxt/wWS/6Ow/Z/wD/AAUW3/zPUf8ADG3/AAWS/wCjsP2f/wDwUW3/AMz1AH6/UV+QP/DG3/BZL/o7D9n/AP8ABRbf/M9R/wAMbf8ABZL/AKOw/Z//APBRbf8AzPUAfr9RX5A/8Mbf8Fkv+jsP2f8A/wAFFt/8z1H/AAxt/wAFkv8Ao7D9n/8A8FFt/wDM9QAf8G4v/KUz/gpx/wBlVT/07+JKK9c/4IPf8Eq/jf8A8E8vip+0V40+OXizwD4w8TfHTVdO1uW98MTzv5t5HNqc15LNHJaW0cfmSXysqxKVHzjCAKCUAf/Z</ImageData>
     </EmbeddedImage>
   </EmbeddedImages>
-  <rd:ReportUnitType>Cm</rd:ReportUnitType>
   <rd:ReportID>53bf6ac7-48eb-43f3-a9a6-d443d84189aa</rd:ReportID>
+  <rd:ReportUnitType>Cm</rd:ReportUnitType>
 </Report>

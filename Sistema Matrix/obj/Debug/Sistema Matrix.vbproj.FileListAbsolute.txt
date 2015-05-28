@@ -403,3 +403,11 @@ C:\Users\Fabiano\Documents\GitHub\Matrix\trunk\Sistema Matrix\obj\Debug\RdlCompi
 C:\Users\Fabiano\Documents\GitHub\Matrix\trunk\Sistema Matrix\obj\Debug\Sistema Matrix.exe.manifest
 C:\Users\Fabiano\Documents\GitHub\Matrix\trunk\Sistema Matrix\obj\Debug\Sistema Matrix.application
 C:\Users\Fabiano\Documents\GitHub\Matrix\trunk\Sistema Matrix\obj\Debug\Sistema_Matrix.frmBackupRestauracao.resources
+C:\Users\SL Artesanatos\Documents\Projeto Matrix\trunk\Sistema Matrix\bin\Debug\Sistema Matrix.exe.config
+C:\Users\SL Artesanatos\Documents\Projeto Matrix\trunk\Sistema Matrix\obj\Debug\Interop.Microsoft.Vbe.Interop.Forms.dll
+C:\Users\SL Artesanatos\Documents\Projeto Matrix\trunk\Sistema Matrix\obj\Debug\Sistema Matrix.vbproj.ResolveComReference.cache
+C:\Users\SL Artesanatos\Documents\Projeto Matrix\trunk\Sistema Matrix\obj\Debug\Sistema Matrix.exe
+C:\Users\SL Artesanatos\Documents\Projeto Matrix\trunk\Sistema Matrix\obj\Debug\Sistema Matrix.xml
+C:\Users\SL Artesanatos\Documents\Projeto Matrix\trunk\Sistema Matrix\obj\Debug\Sistema Matrix.pdb
+C:\Users\SL Artesanatos\Documents\Projeto Matrix\trunk\Sistema Matrix\obj\Debug\Sistema Matrix.vbprojResolveAssemblyReference.cache
+C:\Users\SL Artesanatos\Documents\Projeto Matrix\trunk\Sistema Matrix\obj\Debug\Sistema Matrix.vbproj.GenerateResource.Cache
