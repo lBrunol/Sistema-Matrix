@@ -328,7 +328,9 @@
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
-    <None Include="app.config" />
+    <None Include="app.config">
+      <SubType>Designer</SubType>
+    </None>
     <None Include="bancoMatrixDataSet.xsc">
       <DependentUpon>bancoMatrixDataSet.xsd</DependentUpon>
     </None>
@@ -458,12 +460,12 @@
     <Content Include="bin\Debug\dados\banco.accdb" />
     <Content Include="favicon.ico" />
     <Content Include="logo.ico" />
+    <None Include="Resources\Logo.bmp" />
+    <None Include="Resources\Logo1.bmp" />
     <Content Include="SqlServerTypes\x64\SqlServerSpatial110.dll" />
     <Content Include="SqlServerTypes\x86\SqlServerSpatial110.dll" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Resources\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

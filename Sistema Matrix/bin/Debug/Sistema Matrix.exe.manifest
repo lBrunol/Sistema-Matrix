@@ -143,14 +143,14 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Sistema Matrix.exe" size="2550784">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Sistema Matrix.exe" size="3118080">
       <assemblyIdentity name="Sistema Matrix" version="1.0.0.0" language="neutral" processorArchitecture="x86" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
-        <dsig:DigestValue>ZdVrc/rANq6PoLs9IPjFYXvmj2s=</dsig:DigestValue>
+        <dsig:DigestValue>2h9cmb1ro6GzV5WdJVG0Jjo0xCg=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
