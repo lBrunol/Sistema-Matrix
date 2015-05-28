@@ -139,10 +139,16 @@
     <Compile Include="Form1.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmBackupeRestauracao.Designer.vb">
-      <DependentUpon>frmBackupeRestauracao.vb</DependentUpon>
+    <Compile Include="frmAjuda.Designer.vb">
+      <DependentUpon>frmAjuda.vb</DependentUpon>
     </Compile>
-    <Compile Include="frmBackupeRestauracao.vb">
+    <Compile Include="frmAjuda.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmBackupRestauracao.Designer.vb">
+      <DependentUpon>frmBackupRestauracao.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmBackupRestauracao.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="frmGerenciamentoUsuarios.Designer.vb">
@@ -258,8 +264,11 @@
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmBackupeRestauracao.resx">
-      <DependentUpon>frmBackupeRestauracao.vb</DependentUpon>
+    <EmbeddedResource Include="frmAjuda.resx">
+      <DependentUpon>frmAjuda.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmBackupRestauracao.resx">
+      <DependentUpon>frmBackupRestauracao.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmGerenciamentoUsuarios.resx">
       <DependentUpon>frmGerenciamentoUsuarios.vb</DependentUpon>
@@ -331,6 +340,8 @@
     <None Include="bancoMatrixDataSet.xss">
       <DependentUpon>bancoMatrixDataSet.xsd</DependentUpon>
     </None>
+    <None Include="ClassDiagram1.cd" />
+    <None Include="ClassDiagram2.cd" />
     <None Include="My Project\app.manifest" />
     <None Include="My Project\Application.myapp">
       <Generator>MyApplicationCodeGenerator</Generator>

@@ -118,6 +118,10 @@ Public Class frmMenuPrincipal
         End If
     End Sub
     Private Sub botBackupeRestauracao_Click(sender As Object, e As EventArgs) Handles botBackupeRestauracao.Click
-        abreFormularios(frmBackupeRestauracao)
+        'abreFormularios(frmBackupeRestauracao)
+    End Sub
+
+    Private Sub botAjuda_Click(sender As Object, e As EventArgs) Handles botAjuda.Click
+        abreFormularios(frmAjuda)
     End Sub
 End Class
