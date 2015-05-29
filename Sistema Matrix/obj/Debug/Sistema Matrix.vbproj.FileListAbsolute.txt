@@ -315,8 +315,6 @@ C:\Users\CASA\Documents\Projetos SVN\Sistema Matrix\trunk\Sistema Matrix\obj\Deb
 C:\Users\CASA\Documents\Projetos SVN\Sistema Matrix\trunk\Sistema Matrix\obj\Debug\Sistema_Matrix.frmCadastroUsuarios.resources
 C:\Users\CASA\Documents\Projetos SVN\Sistema Matrix\trunk\Sistema Matrix\bin\Debug\Microsoft.ReportViewer.Common.dll
 C:\Users\CASA\Documents\Projetos SVN\Sistema Matrix\trunk\Sistema Matrix\bin\Debug\Microsoft.ReportViewer.WinForms.dll
-C:\Users\CASA\Documents\Projetos SVN\Sistema Matrix\trunk\Sistema Matrix\obj\Debug\Sistema_Matrix.Form1.resources
-C:\Users\CASA\Documents\Projetos SVN\Sistema Matrix\trunk\Sistema Matrix\obj\Debug\Sistema_Matrix.frmBackupeRestauracao.resources
 C:\Users\CASA\Documents\Projetos SVN\Sistema Matrix\trunk\Sistema Matrix\bin\Debug\Sistema Matrix.exe.manifest
 C:\Users\CASA\Documents\Projetos SVN\Sistema Matrix\trunk\Sistema Matrix\bin\Debug\Sistema Matrix.application
 C:\Users\CASA\Documents\Projetos SVN\Sistema Matrix\trunk\Sistema Matrix\bin\Debug\Microsoft.ReportViewer.ProcessingObjectModel.DLL
@@ -428,3 +426,6 @@ C:\Users\SL Artesanatos\Documents\Projeto Matrix\trunk\Sistema Matrix\obj\Debug\
 C:\Users\SL Artesanatos\Documents\Projeto Matrix\trunk\Sistema Matrix\obj\Debug\Sistema_Matrix.frmMenuPrincipal.resources
 C:\Users\SL Artesanatos\Documents\Projeto Matrix\trunk\Sistema Matrix\obj\Debug\Sistema_Matrix.frmTiposPagamento.resources
 C:\Users\SL Artesanatos\Documents\Projeto Matrix\trunk\Sistema Matrix\obj\Debug\Sistema_Matrix.frmCadastroUsuarios.resources
+C:\Users\CASA\Documents\Projetos SVN\Sistema Matrix\trunk\Sistema Matrix\obj\Debug\Sistema_Matrix.relNF.resources
+C:\Users\CASA\Documents\Projetos SVN\Sistema Matrix\trunk\Sistema Matrix\obj\Debug\Sistema_Matrix.frmAjuda.resources
+C:\Users\CASA\Documents\Projetos SVN\Sistema Matrix\trunk\Sistema Matrix\obj\Debug\Sistema_Matrix.frmBackupRestauracao.resources
