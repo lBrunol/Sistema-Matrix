@@ -33,9 +33,10 @@ Partial Class frmConsultaNotasFiscais
         Me.lblFaturarNotaFiscal = New System.Windows.Forms.Label()
         Me.botFaturarNotaFiscal = New System.Windows.Forms.Button()
         Me.chkEntreDatas = New System.Windows.Forms.CheckBox()
-        Me.mskDataInicial = New System.Windows.Forms.MaskedTextBox()
-        Me.mskDataFinal = New System.Windows.Forms.MaskedTextBox()
+        Me.dtpDataInicial = New System.Windows.Forms.DateTimePicker()
+        Me.dtpDataFinal = New System.Windows.Forms.DateTimePicker()
         Me.notCodigo = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.notHora = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.notValor = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.notData = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.notCodVer = New System.Windows.Forms.DataGridViewTextBoxColumn()
@@ -64,7 +65,7 @@ Partial Class frmConsultaNotasFiscais
         Me.PictureBox1.BackgroundImage = CType(resources.GetObject("PictureBox1.BackgroundImage"), System.Drawing.Image)
         Me.PictureBox1.InitialImage = Global.Sistema_Matrix.My.Resources.Resources.nota_fiscal_eletronica
         Me.PictureBox1.Location = New System.Drawing.Point(21, 69)
-        Me.PictureBox1.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.PictureBox1.Margin = New System.Windows.Forms.Padding(4)
         Me.PictureBox1.Name = "PictureBox1"
         Me.PictureBox1.Size = New System.Drawing.Size(90, 90)
         Me.PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize
@@ -76,9 +77,9 @@ Partial Class frmConsultaNotasFiscais
         Me.dtgNotaFiscal.BackgroundColor = System.Drawing.Color.Azure
         Me.dtgNotaFiscal.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
         Me.dtgNotaFiscal.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.dtgNotaFiscal.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.notCodigo, Me.notValor, Me.notData, Me.notCodVer, Me.notOutrasInformacoes, Me.ordCodigo, Me.demCodigo, Me.cliCodigo, Me.cliNome})
+        Me.dtgNotaFiscal.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.notCodigo, Me.notHora, Me.notValor, Me.notData, Me.notCodVer, Me.notOutrasInformacoes, Me.ordCodigo, Me.demCodigo, Me.cliCodigo, Me.cliNome})
         Me.dtgNotaFiscal.Location = New System.Drawing.Point(21, 199)
-        Me.dtgNotaFiscal.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.dtgNotaFiscal.Margin = New System.Windows.Forms.Padding(4)
         Me.dtgNotaFiscal.Name = "dtgNotaFiscal"
         Me.dtgNotaFiscal.Size = New System.Drawing.Size(1168, 630)
         Me.dtgNotaFiscal.TabIndex = 12
@@ -98,7 +99,7 @@ Partial Class frmConsultaNotasFiscais
         '
         Me.txtCnpjCpfTomador.Font = New System.Drawing.Font("Century Gothic", 9.75!)
         Me.txtCnpjCpfTomador.Location = New System.Drawing.Point(192, 151)
-        Me.txtCnpjCpfTomador.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.txtCnpjCpfTomador.Margin = New System.Windows.Forms.Padding(4)
         Me.txtCnpjCpfTomador.Multiline = True
         Me.txtCnpjCpfTomador.Name = "txtCnpjCpfTomador"
         Me.txtCnpjCpfTomador.Size = New System.Drawing.Size(199, 27)
@@ -119,7 +120,7 @@ Partial Class frmConsultaNotasFiscais
         '
         Me.Label2.AutoSize = True
         Me.Label2.Font = New System.Drawing.Font("Century Gothic", 9.75!)
-        Me.Label2.Location = New System.Drawing.Point(763, 127)
+        Me.Label2.Location = New System.Drawing.Point(749, 127)
         Me.Label2.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label2.Name = "Label2"
         Me.Label2.Size = New System.Drawing.Size(95, 21)
@@ -140,7 +141,7 @@ Partial Class frmConsultaNotasFiscais
         '
         Me.botFaturarNotaFiscal.Image = CType(resources.GetObject("botFaturarNotaFiscal.Image"), System.Drawing.Image)
         Me.botFaturarNotaFiscal.Location = New System.Drawing.Point(1013, 5)
-        Me.botFaturarNotaFiscal.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.botFaturarNotaFiscal.Margin = New System.Windows.Forms.Padding(4)
         Me.botFaturarNotaFiscal.Name = "botFaturarNotaFiscal"
         Me.botFaturarNotaFiscal.Size = New System.Drawing.Size(53, 49)
         Me.botFaturarNotaFiscal.TabIndex = 64
@@ -150,38 +151,39 @@ Partial Class frmConsultaNotasFiscais
         '
         Me.chkEntreDatas.AutoSize = True
         Me.chkEntreDatas.Font = New System.Drawing.Font("Century Gothic", 9.5!)
-        Me.chkEntreDatas.Location = New System.Drawing.Point(627, 154)
-        Me.chkEntreDatas.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.chkEntreDatas.Location = New System.Drawing.Point(623, 153)
+        Me.chkEntreDatas.Margin = New System.Windows.Forms.Padding(4)
         Me.chkEntreDatas.Name = "chkEntreDatas"
         Me.chkEntreDatas.Size = New System.Drawing.Size(123, 25)
         Me.chkEntreDatas.TabIndex = 66
         Me.chkEntreDatas.Text = "Entre datas"
         Me.chkEntreDatas.UseVisualStyleBackColor = True
         '
-        'mskDataInicial
+        'dtpDataInicial
         '
-        Me.mskDataInicial.Location = New System.Drawing.Point(416, 155)
-        Me.mskDataInicial.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
-        Me.mskDataInicial.Mask = "00/00/0000"
-        Me.mskDataInicial.Name = "mskDataInicial"
-        Me.mskDataInicial.Size = New System.Drawing.Size(199, 22)
-        Me.mskDataInicial.TabIndex = 68
-        Me.mskDataInicial.ValidatingType = GetType(Date)
+        Me.dtpDataInicial.Format = System.Windows.Forms.DateTimePickerFormat.[Short]
+        Me.dtpDataInicial.Location = New System.Drawing.Point(416, 153)
+        Me.dtpDataInicial.Name = "dtpDataInicial"
+        Me.dtpDataInicial.Size = New System.Drawing.Size(200, 22)
+        Me.dtpDataInicial.TabIndex = 70
         '
-        'mskDataFinal
+        'dtpDataFinal
         '
-        Me.mskDataFinal.Location = New System.Drawing.Point(767, 155)
-        Me.mskDataFinal.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
-        Me.mskDataFinal.Mask = "00/00/0000"
-        Me.mskDataFinal.Name = "mskDataFinal"
-        Me.mskDataFinal.Size = New System.Drawing.Size(199, 22)
-        Me.mskDataFinal.TabIndex = 69
-        Me.mskDataFinal.ValidatingType = GetType(Date)
+        Me.dtpDataFinal.Format = System.Windows.Forms.DateTimePickerFormat.[Short]
+        Me.dtpDataFinal.Location = New System.Drawing.Point(753, 153)
+        Me.dtpDataFinal.Name = "dtpDataFinal"
+        Me.dtpDataFinal.Size = New System.Drawing.Size(200, 22)
+        Me.dtpDataFinal.TabIndex = 71
         '
         'notCodigo
         '
         Me.notCodigo.HeaderText = "Codigo"
         Me.notCodigo.Name = "notCodigo"
+        '
+        'notHora
+        '
+        Me.notHora.HeaderText = "Hora"
+        Me.notHora.Name = "notHora"
         '
         'notValor
         '
@@ -228,9 +230,9 @@ Partial Class frmConsultaNotasFiscais
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.SystemColors.Window
-        Me.ClientSize = New System.Drawing.Size(1020, 742)
-        Me.Controls.Add(Me.mskDataFinal)
-        Me.Controls.Add(Me.mskDataInicial)
+        Me.ClientSize = New System.Drawing.Size(1135, 742)
+        Me.Controls.Add(Me.dtpDataFinal)
+        Me.Controls.Add(Me.dtpDataInicial)
         Me.Controls.Add(Me.chkEntreDatas)
         Me.Controls.Add(Me.lblFaturarNotaFiscal)
         Me.Controls.Add(Me.botFaturarNotaFiscal)
@@ -242,7 +244,7 @@ Partial Class frmConsultaNotasFiscais
         Me.Controls.Add(Me.PictureBox1)
         Me.Controls.Add(Me.lblTitulo)
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
-        Me.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.Margin = New System.Windows.Forms.Padding(4)
         Me.Name = "frmConsultaNotasFiscais"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "Consulta de Notas Fiscais"
@@ -262,9 +264,10 @@ Partial Class frmConsultaNotasFiscais
     Friend WithEvents lblFaturarNotaFiscal As System.Windows.Forms.Label
     Friend WithEvents botFaturarNotaFiscal As System.Windows.Forms.Button
     Friend WithEvents chkEntreDatas As System.Windows.Forms.CheckBox
-    Friend WithEvents mskDataInicial As System.Windows.Forms.MaskedTextBox
-    Friend WithEvents mskDataFinal As System.Windows.Forms.MaskedTextBox
+    Friend WithEvents dtpDataInicial As System.Windows.Forms.DateTimePicker
+    Friend WithEvents dtpDataFinal As System.Windows.Forms.DateTimePicker
     Friend WithEvents notCodigo As System.Windows.Forms.DataGridViewTextBoxColumn
+    Friend WithEvents notHora As System.Windows.Forms.DataGridViewTextBoxColumn
     Friend WithEvents notValor As System.Windows.Forms.DataGridViewTextBoxColumn
     Friend WithEvents notData As System.Windows.Forms.DataGridViewTextBoxColumn
     Friend WithEvents notCodVer As System.Windows.Forms.DataGridViewTextBoxColumn

@@ -328,8 +328,6 @@ C:\Users\i7\Documents\Projeto UNI9\trunk\Sistema Matrix\obj\Debug\Sistema Matrix
 C:\Users\i7\Documents\Projeto UNI9\trunk\Sistema Matrix\obj\Debug\Sistema Matrix.xml
 C:\Users\i7\Documents\Projeto UNI9\trunk\Sistema Matrix\obj\Debug\Sistema Matrix.pdb
 C:\Users\i7\Documents\Projeto UNI9\trunk\Sistema Matrix\obj\Debug\Sistema Matrix.vbprojResolveAssemblyReference.cache
-C:\Users\i7\Documents\Projeto UNI9\trunk\Sistema Matrix\obj\Debug\Sistema_Matrix.Form1.resources
-C:\Users\i7\Documents\Projeto UNI9\trunk\Sistema Matrix\obj\Debug\Sistema_Matrix.frmBackupeRestauracao.resources
 C:\Users\i7\Documents\Projeto UNI9\trunk\Sistema Matrix\obj\Debug\Sistema_Matrix.frmGerenciamentoUsuarios.resources
 C:\Users\i7\Documents\Projeto UNI9\trunk\Sistema Matrix\obj\Debug\Sistema_Matrix.frmCadastroEmitente.resources
 C:\Users\i7\Documents\Projeto UNI9\trunk\Sistema Matrix\obj\Debug\Sistema_Matrix.relContasReceber.resources
@@ -429,3 +427,6 @@ C:\Users\SL Artesanatos\Documents\Projeto Matrix\trunk\Sistema Matrix\obj\Debug\
 C:\Users\CASA\Documents\Projetos SVN\Sistema Matrix\trunk\Sistema Matrix\obj\Debug\Sistema_Matrix.relNF.resources
 C:\Users\CASA\Documents\Projetos SVN\Sistema Matrix\trunk\Sistema Matrix\obj\Debug\Sistema_Matrix.frmAjuda.resources
 C:\Users\CASA\Documents\Projetos SVN\Sistema Matrix\trunk\Sistema Matrix\obj\Debug\Sistema_Matrix.frmBackupRestauracao.resources
+C:\Users\i7\Documents\Projeto UNI9\trunk\Sistema Matrix\obj\Debug\Sistema_Matrix.relNF.resources
+C:\Users\i7\Documents\Projeto UNI9\trunk\Sistema Matrix\obj\Debug\Sistema_Matrix.frmAjuda.resources
+C:\Users\i7\Documents\Projeto UNI9\trunk\Sistema Matrix\obj\Debug\Sistema_Matrix.frmBackupRestauracao.resources
