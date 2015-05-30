@@ -197,7 +197,7 @@ Partial Class frmConsultaNotasFiscais
         '
         'notCodVer
         '
-        Me.notCodVer.HeaderText = "Código Do Vendedor"
+        Me.notCodVer.HeaderText = "Código de Verificação"
         Me.notCodVer.Name = "notCodVer"
         '
         'notOutrasInformacoes
