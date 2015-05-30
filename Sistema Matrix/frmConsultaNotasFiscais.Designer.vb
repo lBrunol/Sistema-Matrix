@@ -177,7 +177,7 @@ Partial Class frmConsultaNotasFiscais
         '
         'notCodigo
         '
-        Me.notCodigo.HeaderText = "Codigo"
+        Me.notCodigo.HeaderText = "Código"
         Me.notCodigo.Name = "notCodigo"
         '
         'notHora
@@ -197,7 +197,7 @@ Partial Class frmConsultaNotasFiscais
         '
         'notCodVer
         '
-        Me.notCodVer.HeaderText = "CodVer"
+        Me.notCodVer.HeaderText = "Código Do Vendedor"
         Me.notCodVer.Name = "notCodVer"
         '
         'notOutrasInformacoes
@@ -207,22 +207,22 @@ Partial Class frmConsultaNotasFiscais
         '
         'ordCodigo
         '
-        Me.ordCodigo.HeaderText = "ordCodigo"
+        Me.ordCodigo.HeaderText = "Código da Ordem de Serviço"
         Me.ordCodigo.Name = "ordCodigo"
         '
         'demCodigo
         '
-        Me.demCodigo.HeaderText = "demCodigo"
+        Me.demCodigo.HeaderText = "Código dos Dados Emitentes"
         Me.demCodigo.Name = "demCodigo"
         '
         'cliCodigo
         '
-        Me.cliCodigo.HeaderText = "cliCodigo"
+        Me.cliCodigo.HeaderText = "Código do Cliente"
         Me.cliCodigo.Name = "cliCodigo"
         '
         'cliNome
         '
-        Me.cliNome.HeaderText = "cliNome"
+        Me.cliNome.HeaderText = "Nome do Cliente"
         Me.cliNome.Name = "cliNome"
         '
         'frmConsultaNotasFiscais
