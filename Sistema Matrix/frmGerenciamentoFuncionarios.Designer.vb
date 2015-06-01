@@ -385,7 +385,7 @@ Partial Class frmGerenciamentoFuncionarios
         'botHoje
         '
         Me.botHoje.Font = New System.Drawing.Font("Century Gothic", 9.75!)
-        Me.botHoje.Location = New System.Drawing.Point(86, 417)
+        Me.botHoje.Location = New System.Drawing.Point(97, 420)
         Me.botHoje.Name = "botHoje"
         Me.botHoje.Size = New System.Drawing.Size(47, 23)
         Me.botHoje.TabIndex = 73
@@ -399,7 +399,7 @@ Partial Class frmGerenciamentoFuncionarios
         Me.mtxDataAdmissao.Location = New System.Drawing.Point(12, 420)
         Me.mtxDataAdmissao.Mask = "00/00/0000"
         Me.mtxDataAdmissao.Name = "mtxDataAdmissao"
-        Me.mtxDataAdmissao.Size = New System.Drawing.Size(68, 23)
+        Me.mtxDataAdmissao.Size = New System.Drawing.Size(79, 23)
         Me.mtxDataAdmissao.TabIndex = 9
         Me.mtxDataAdmissao.ValidatingType = GetType(Date)
         '
