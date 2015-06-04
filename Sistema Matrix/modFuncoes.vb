@@ -295,6 +295,17 @@ Module modFuncoes
         Return valorCodF
 
     End Function
+    Sub filtraDataGrid(nomeTxt As TextBox, nomeDataGrid As DataGridView, queryFiltro As String, queryAll As String, Optional comboFilter As Boolean = False)
+
+        Dim objBanco As New clsConexaoBanco
+        If nomeTxt.Text = "" And comboFilter = False Then
+            objBanco.carregaDataGrid(nomeDataGrid, queryAll)
+        ElseIf comboFilter = True Then
+            objBanco.carregaDataGrid(nomeDataGrid, queryFiltro)
+        Else
+            objBanco.carregaDataGrid(nomeDataGrid, queryFiltro)
+        End If
+    End Sub
 
     Public Function quantFormsAbertos()
         'Esta função verifica quantos formulários estão abertos
