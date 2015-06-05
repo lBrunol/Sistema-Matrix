@@ -5,7 +5,7 @@ Public Class frmBackupRestauracao
         Try
             Dim dlg As New OpenFileDialog
 
-            dlg.Filter = "Microsoft Access Database(2002-2003) (*.mdb)|*.mdb|Microsoft Access Database(2007-2009) (*.accdb)|*.accdb"
+            dlg.Filter = "Microsoft Access Database(2007-2009) (*.accdb)|*.accdb"
             ' para definir a extensão *.mdb como padrão use FilterIndex = 1 , para extensão *.accdb use FilterIndex=2
             dlg.InitialDirectory = My.Settings.PastaOrigem
             dlg.FilterIndex = 1
@@ -61,7 +61,7 @@ Public Class frmBackupRestauracao
     Private Sub btnArquivoBackupRestaurar_Click(sender As Object, e As EventArgs) Handles btnArquivoBackupRestaurar.Click
         Try
             Dim dlg As New OpenFileDialog
-            dlg.Filter = "Microsoft Access Database(2002-2003) (*.mdb)|*.mdb|Microsoft Access Database(2007-2009) (*.accdb)|*.accdb"
+            dlg.Filter = "Microsoft Access Database(2007-2009) (*.accdb)|*.accdb"
             ' para definir a extensão *.mdb como padrão use FilterIndex = 1 , para extensão *.accdb use FilterIndex=2
             Dim reader As New System.Configuration.AppSettingsReader
             ' dlg.InitialDirectory = reader.GetValue("PastaDestino", GetType(String))
