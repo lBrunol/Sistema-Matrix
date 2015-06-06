@@ -24,23 +24,23 @@ Partial Class frmConsultaContasReceber
     Private Sub InitializeComponent()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(frmConsultaContasReceber))
         Me.lblTitulo = New System.Windows.Forms.Label()
-        Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.dtgContasReceber = New System.Windows.Forms.DataGridView()
         Me.lblCnpjCpfTomador = New System.Windows.Forms.Label()
         Me.txtNomeCliente = New System.Windows.Forms.TextBox()
         Me.Label1 = New System.Windows.Forms.Label()
-        Me.txtDataInicial = New System.Windows.Forms.TextBox()
         Me.Label2 = New System.Windows.Forms.Label()
-        Me.txtDataFinal = New System.Windows.Forms.TextBox()
         Me.Label3 = New System.Windows.Forms.Label()
         Me.cboStatus = New System.Windows.Forms.ComboBox()
         Me.lblFaturarNotaFiscal = New System.Windows.Forms.Label()
-        Me.botFaturarNotaFiscal = New System.Windows.Forms.Button()
         Me.chkEntreDatas = New System.Windows.Forms.CheckBox()
         Me.lblLancaPagamento = New System.Windows.Forms.Label()
+        Me.mtxDataInicial = New System.Windows.Forms.MaskedTextBox()
+        Me.mtxDataFinal = New System.Windows.Forms.MaskedTextBox()
         Me.botLancaPagamento = New System.Windows.Forms.Button()
-        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.botFaturarNotaFiscal = New System.Windows.Forms.Button()
+        Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         CType(Me.dtgContasReceber, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'lblTitulo
@@ -52,17 +52,6 @@ Partial Class frmConsultaContasReceber
         Me.lblTitulo.Size = New System.Drawing.Size(152, 21)
         Me.lblTitulo.TabIndex = 10
         Me.lblTitulo.Text = "Contas a Receber"
-        '
-        'PictureBox1
-        '
-        Me.PictureBox1.BackgroundImage = CType(resources.GetObject("PictureBox1.BackgroundImage"), System.Drawing.Image)
-        Me.PictureBox1.InitialImage = Global.Sistema_Matrix.My.Resources.Resources.nota_fiscal_eletronica
-        Me.PictureBox1.Location = New System.Drawing.Point(16, 56)
-        Me.PictureBox1.Name = "PictureBox1"
-        Me.PictureBox1.Size = New System.Drawing.Size(90, 90)
-        Me.PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize
-        Me.PictureBox1.TabIndex = 11
-        Me.PictureBox1.TabStop = False
         '
         'dtgContasReceber
         '
@@ -103,15 +92,6 @@ Partial Class frmConsultaContasReceber
         Me.Label1.TabIndex = 16
         Me.Label1.Text = "Data Inicial"
         '
-        'txtDataInicial
-        '
-        Me.txtDataInicial.Font = New System.Drawing.Font("Century Gothic", 9.75!)
-        Me.txtDataInicial.Location = New System.Drawing.Point(411, 123)
-        Me.txtDataInicial.Multiline = True
-        Me.txtDataInicial.Name = "txtDataInicial"
-        Me.txtDataInicial.Size = New System.Drawing.Size(150, 23)
-        Me.txtDataInicial.TabIndex = 15
-        '
         'Label2
         '
         Me.Label2.AutoSize = True
@@ -121,16 +101,6 @@ Partial Class frmConsultaContasReceber
         Me.Label2.Size = New System.Drawing.Size(74, 17)
         Me.Label2.TabIndex = 18
         Me.Label2.Text = "Data Final"
-        '
-        'txtDataFinal
-        '
-        Me.txtDataFinal.Enabled = False
-        Me.txtDataFinal.Font = New System.Drawing.Font("Century Gothic", 9.75!)
-        Me.txtDataFinal.Location = New System.Drawing.Point(674, 123)
-        Me.txtDataFinal.Multiline = True
-        Me.txtDataFinal.Name = "txtDataFinal"
-        Me.txtDataFinal.Size = New System.Drawing.Size(150, 23)
-        Me.txtDataFinal.TabIndex = 17
         '
         'Label3
         '
@@ -161,15 +131,6 @@ Partial Class frmConsultaContasReceber
         Me.lblFaturarNotaFiscal.TabIndex = 65
         Me.lblFaturarNotaFiscal.Text = "Gerar Relatório"
         '
-        'botFaturarNotaFiscal
-        '
-        Me.botFaturarNotaFiscal.Image = CType(resources.GetObject("botFaturarNotaFiscal.Image"), System.Drawing.Image)
-        Me.botFaturarNotaFiscal.Location = New System.Drawing.Point(941, 4)
-        Me.botFaturarNotaFiscal.Name = "botFaturarNotaFiscal"
-        Me.botFaturarNotaFiscal.Size = New System.Drawing.Size(40, 40)
-        Me.botFaturarNotaFiscal.TabIndex = 64
-        Me.botFaturarNotaFiscal.UseVisualStyleBackColor = True
-        '
         'chkEntreDatas
         '
         Me.chkEntreDatas.AutoSize = True
@@ -190,6 +151,27 @@ Partial Class frmConsultaContasReceber
         Me.lblLancaPagamento.TabIndex = 68
         Me.lblLancaPagamento.Text = "Lançar Pagamento"
         '
+        'mtxDataInicial
+        '
+        Me.mtxDataInicial.Font = New System.Drawing.Font("Century Gothic", 9.75!)
+        Me.mtxDataInicial.Location = New System.Drawing.Point(411, 121)
+        Me.mtxDataInicial.Mask = "00/00/0000"
+        Me.mtxDataInicial.Name = "mtxDataInicial"
+        Me.mtxDataInicial.Size = New System.Drawing.Size(133, 23)
+        Me.mtxDataInicial.TabIndex = 69
+        Me.mtxDataInicial.ValidatingType = GetType(Date)
+        '
+        'mtxDataFinal
+        '
+        Me.mtxDataFinal.Enabled = False
+        Me.mtxDataFinal.Font = New System.Drawing.Font("Century Gothic", 9.75!)
+        Me.mtxDataFinal.Location = New System.Drawing.Point(674, 121)
+        Me.mtxDataFinal.Mask = "00/00/0000"
+        Me.mtxDataFinal.Name = "mtxDataFinal"
+        Me.mtxDataFinal.Size = New System.Drawing.Size(133, 23)
+        Me.mtxDataFinal.TabIndex = 70
+        Me.mtxDataFinal.ValidatingType = GetType(Date)
+        '
         'botLancaPagamento
         '
         Me.botLancaPagamento.Image = CType(resources.GetObject("botLancaPagamento.Image"), System.Drawing.Image)
@@ -199,12 +181,34 @@ Partial Class frmConsultaContasReceber
         Me.botLancaPagamento.TabIndex = 67
         Me.botLancaPagamento.UseVisualStyleBackColor = True
         '
+        'botFaturarNotaFiscal
+        '
+        Me.botFaturarNotaFiscal.Image = CType(resources.GetObject("botFaturarNotaFiscal.Image"), System.Drawing.Image)
+        Me.botFaturarNotaFiscal.Location = New System.Drawing.Point(941, 4)
+        Me.botFaturarNotaFiscal.Name = "botFaturarNotaFiscal"
+        Me.botFaturarNotaFiscal.Size = New System.Drawing.Size(40, 40)
+        Me.botFaturarNotaFiscal.TabIndex = 64
+        Me.botFaturarNotaFiscal.UseVisualStyleBackColor = True
+        '
+        'PictureBox1
+        '
+        Me.PictureBox1.BackgroundImage = CType(resources.GetObject("PictureBox1.BackgroundImage"), System.Drawing.Image)
+        Me.PictureBox1.InitialImage = Global.Sistema_Matrix.My.Resources.Resources.nota_fiscal_eletronica
+        Me.PictureBox1.Location = New System.Drawing.Point(16, 56)
+        Me.PictureBox1.Name = "PictureBox1"
+        Me.PictureBox1.Size = New System.Drawing.Size(90, 90)
+        Me.PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize
+        Me.PictureBox1.TabIndex = 11
+        Me.PictureBox1.TabStop = False
+        '
         'frmConsultaContasReceber
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.SystemColors.Window
         Me.ClientSize = New System.Drawing.Size(1008, 686)
+        Me.Controls.Add(Me.mtxDataFinal)
+        Me.Controls.Add(Me.mtxDataInicial)
         Me.Controls.Add(Me.lblLancaPagamento)
         Me.Controls.Add(Me.botLancaPagamento)
         Me.Controls.Add(Me.chkEntreDatas)
@@ -213,9 +217,7 @@ Partial Class frmConsultaContasReceber
         Me.Controls.Add(Me.cboStatus)
         Me.Controls.Add(Me.Label3)
         Me.Controls.Add(Me.Label2)
-        Me.Controls.Add(Me.txtDataFinal)
         Me.Controls.Add(Me.Label1)
-        Me.Controls.Add(Me.txtDataInicial)
         Me.Controls.Add(Me.lblCnpjCpfTomador)
         Me.Controls.Add(Me.txtNomeCliente)
         Me.Controls.Add(Me.dtgContasReceber)
@@ -226,8 +228,8 @@ Partial Class frmConsultaContasReceber
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "Consulta de Contas a Receber"
         Me.WindowState = System.Windows.Forms.FormWindowState.Maximized
-        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.dtgContasReceber, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -238,9 +240,7 @@ Partial Class frmConsultaContasReceber
     Friend WithEvents lblCnpjCpfTomador As System.Windows.Forms.Label
     Friend WithEvents txtNomeCliente As System.Windows.Forms.TextBox
     Friend WithEvents Label1 As System.Windows.Forms.Label
-    Friend WithEvents txtDataInicial As System.Windows.Forms.TextBox
     Friend WithEvents Label2 As System.Windows.Forms.Label
-    Friend WithEvents txtDataFinal As System.Windows.Forms.TextBox
     Friend WithEvents Label3 As System.Windows.Forms.Label
     Friend WithEvents cboStatus As System.Windows.Forms.ComboBox
     Friend WithEvents lblFaturarNotaFiscal As System.Windows.Forms.Label
@@ -248,4 +248,6 @@ Partial Class frmConsultaContasReceber
     Friend WithEvents chkEntreDatas As System.Windows.Forms.CheckBox
     Friend WithEvents lblLancaPagamento As System.Windows.Forms.Label
     Friend WithEvents botLancaPagamento As System.Windows.Forms.Button
+    Friend WithEvents mtxDataInicial As System.Windows.Forms.MaskedTextBox
+    Friend WithEvents mtxDataFinal As System.Windows.Forms.MaskedTextBox
 End Class

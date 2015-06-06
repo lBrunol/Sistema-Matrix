@@ -194,7 +194,7 @@ Partial Class frmBackupRestauracao
         Me.btnBancodeDados.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btnBancodeDados.Image = CType(resources.GetObject("btnBancodeDados.Image"), System.Drawing.Image)
         Me.btnBancodeDados.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.btnBancodeDados.Location = New System.Drawing.Point(451, 48)
+        Me.btnBancodeDados.Location = New System.Drawing.Point(451, 47)
         Me.btnBancodeDados.Name = "btnBancodeDados"
         Me.btnBancodeDados.Size = New System.Drawing.Size(87, 23)
         Me.btnBancodeDados.TabIndex = 5

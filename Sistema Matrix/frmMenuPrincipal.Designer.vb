@@ -132,12 +132,14 @@ Partial Class frmMenuPrincipal
         '
         'botBackupeRestauracao
         '
-        Me.botBackupeRestauracao.BackColor = System.Drawing.Color.DarkSlateGray
+        Me.botBackupeRestauracao.BackColor = System.Drawing.Color.DarkSeaGreen
         Me.botBackupeRestauracao.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center
         Me.botBackupeRestauracao.FlatAppearance.BorderSize = 0
         Me.botBackupeRestauracao.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.botBackupeRestauracao.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.botBackupeRestauracao.ForeColor = System.Drawing.Color.White
+        Me.botBackupeRestauracao.Image = CType(resources.GetObject("botBackupeRestauracao.Image"), System.Drawing.Image)
+        Me.botBackupeRestauracao.ImageAlign = System.Drawing.ContentAlignment.TopCenter
         Me.botBackupeRestauracao.Location = New System.Drawing.Point(456, 305)
         Me.botBackupeRestauracao.Name = "botBackupeRestauracao"
         Me.botBackupeRestauracao.Size = New System.Drawing.Size(107, 74)

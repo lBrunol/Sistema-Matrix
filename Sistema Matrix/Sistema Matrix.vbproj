@@ -163,6 +163,12 @@
     <Compile Include="frmCadastroEmitente.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="frmLancaPagamento.Designer.vb">
+      <DependentUpon>frmLancaPagamento.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmLancaPagamento.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="My Project\Resources.Designer.vb">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -275,6 +281,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmCadastroEmitente.resx">
       <DependentUpon>frmCadastroEmitente.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmLancaPagamento.resx">
+      <DependentUpon>frmLancaPagamento.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="relContasReceber.resx">
       <DependentUpon>relContasReceber.vb</DependentUpon>
@@ -456,6 +465,7 @@
   <ItemGroup>
     <Content Include="bin\Debug\dados\banco.accdb" />
     <None Include="bin\Debug\icones\Logo.bmp" />
+    <None Include="bin\Debug\icones\lancar-pagamento-maior.png" />
     <Content Include="favicon.ico" />
     <Content Include="logo.ico" />
     <None Include="Resources\Logo.bmp" />

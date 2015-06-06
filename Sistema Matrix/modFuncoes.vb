@@ -295,7 +295,7 @@ Module modFuncoes
         Return valorCodF
 
     End Function
-    Sub filtraDataGrid(nomeTxt As TextBox, nomeDataGrid As DataGridView, queryFiltro As String, queryAll As String, Optional comboFilter As Boolean = False)
+    Sub filtraDataGrid(nomeTxt As Control, nomeDataGrid As DataGridView, queryFiltro As String, queryAll As String, Optional comboFilter As Boolean = False)
 
         Dim objBanco As New clsConexaoBanco
         If nomeTxt.Text = "" And comboFilter = False Then

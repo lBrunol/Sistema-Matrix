@@ -430,3 +430,4 @@ C:\Users\CASA\Documents\Projetos SVN\Sistema Matrix\trunk\Sistema Matrix\obj\Deb
 C:\Users\i7\Documents\Projeto UNI9\trunk\Sistema Matrix\obj\Debug\Sistema_Matrix.relNF.resources
 C:\Users\i7\Documents\Projeto UNI9\trunk\Sistema Matrix\obj\Debug\Sistema_Matrix.frmAjuda.resources
 C:\Users\i7\Documents\Projeto UNI9\trunk\Sistema Matrix\obj\Debug\Sistema_Matrix.frmBackupRestauracao.resources
+C:\Users\CASA\Documents\Projetos SVN\Sistema Matrix\trunk\Sistema Matrix\obj\Debug\Sistema_Matrix.frmLancaPagamento.resources
