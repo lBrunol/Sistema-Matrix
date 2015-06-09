@@ -431,3 +431,46 @@ C:\Users\i7\Documents\Projeto UNI9\trunk\Sistema Matrix\obj\Debug\Sistema_Matrix
 C:\Users\i7\Documents\Projeto UNI9\trunk\Sistema Matrix\obj\Debug\Sistema_Matrix.frmAjuda.resources
 C:\Users\i7\Documents\Projeto UNI9\trunk\Sistema Matrix\obj\Debug\Sistema_Matrix.frmBackupRestauracao.resources
 C:\Users\CASA\Documents\Projetos SVN\Sistema Matrix\trunk\Sistema Matrix\obj\Debug\Sistema_Matrix.frmLancaPagamento.resources
+C:\Users\HENRIQUE\Documents\Projeto\trunk\Sistema Matrix\bin\Debug\Sistema Matrix.exe.config
+C:\Users\HENRIQUE\Documents\Projeto\trunk\Sistema Matrix\obj\Debug\Interop.Microsoft.Vbe.Interop.Forms.dll
+C:\Users\HENRIQUE\Documents\Projeto\trunk\Sistema Matrix\obj\Debug\Sistema Matrix.vbproj.ResolveComReference.cache
+C:\Users\HENRIQUE\Documents\Projeto\trunk\Sistema Matrix\obj\Debug\Sistema Matrix.exe
+C:\Users\HENRIQUE\Documents\Projeto\trunk\Sistema Matrix\obj\Debug\Sistema Matrix.xml
+C:\Users\HENRIQUE\Documents\Projeto\trunk\Sistema Matrix\obj\Debug\Sistema Matrix.pdb
+C:\Users\HENRIQUE\Documents\Projeto\trunk\Sistema Matrix\bin\Debug\Sistema Matrix.exe.manifest
+C:\Users\HENRIQUE\Documents\Projeto\trunk\Sistema Matrix\bin\Debug\Sistema Matrix.application
+C:\Users\HENRIQUE\Documents\Projeto\trunk\Sistema Matrix\bin\Debug\Sistema Matrix.exe
+C:\Users\HENRIQUE\Documents\Projeto\trunk\Sistema Matrix\bin\Debug\Sistema Matrix.pdb
+C:\Users\HENRIQUE\Documents\Projeto\trunk\Sistema Matrix\bin\Debug\Sistema Matrix.xml
+C:\Users\HENRIQUE\Documents\Projeto\trunk\Sistema Matrix\bin\Debug\Microsoft.ReportViewer.Common.dll
+C:\Users\HENRIQUE\Documents\Projeto\trunk\Sistema Matrix\bin\Debug\Microsoft.ReportViewer.ProcessingObjectModel.DLL
+C:\Users\HENRIQUE\Documents\Projeto\trunk\Sistema Matrix\bin\Debug\Microsoft.ReportViewer.WinForms.dll
+C:\Users\HENRIQUE\Documents\Projeto\trunk\Sistema Matrix\bin\Debug\Microsoft.SqlServer.Types.dll
+C:\Users\HENRIQUE\Documents\Projeto\trunk\Sistema Matrix\bin\Debug\System.Data.dll
+C:\Users\HENRIQUE\Documents\Projeto\trunk\Sistema Matrix\bin\Debug\Interop.Microsoft.Vbe.Interop.Forms.dll
+C:\Users\HENRIQUE\Documents\Projeto\trunk\Sistema Matrix\obj\Debug\Sistema Matrix.vbprojResolveAssemblyReference.cache
+C:\Users\HENRIQUE\Documents\Projeto\trunk\Sistema Matrix\obj\Debug\Sistema_Matrix.relNF.resources
+C:\Users\HENRIQUE\Documents\Projeto\trunk\Sistema Matrix\obj\Debug\Sistema_Matrix.frmAjuda.resources
+C:\Users\HENRIQUE\Documents\Projeto\trunk\Sistema Matrix\obj\Debug\Sistema_Matrix.frmBackupRestauracao.resources
+C:\Users\HENRIQUE\Documents\Projeto\trunk\Sistema Matrix\obj\Debug\Sistema_Matrix.frmGerenciamentoUsuarios.resources
+C:\Users\HENRIQUE\Documents\Projeto\trunk\Sistema Matrix\obj\Debug\Sistema_Matrix.frmCadastroEmitente.resources
+C:\Users\HENRIQUE\Documents\Projeto\trunk\Sistema Matrix\obj\Debug\Sistema_Matrix.frmLancaPagamento.resources
+C:\Users\HENRIQUE\Documents\Projeto\trunk\Sistema Matrix\obj\Debug\Sistema_Matrix.relContasReceber.resources
+C:\Users\HENRIQUE\Documents\Projeto\trunk\Sistema Matrix\obj\Debug\Sistema_Matrix.relOrdensServico.resources
+C:\Users\HENRIQUE\Documents\Projeto\trunk\Sistema Matrix\obj\Debug\Sistema_Matrix.frmConsultaNotasFiscais.resources
+C:\Users\HENRIQUE\Documents\Projeto\trunk\Sistema Matrix\obj\Debug\Sistema_Matrix.frmConsultaContasReceber.resources
+C:\Users\HENRIQUE\Documents\Projeto\trunk\Sistema Matrix\obj\Debug\Sistema_Matrix.frmConfirmaNotaFiscal.resources
+C:\Users\HENRIQUE\Documents\Projeto\trunk\Sistema Matrix\obj\Debug\Sistema_Matrix.frmGerenciamentoServicos.resources
+C:\Users\HENRIQUE\Documents\Projeto\trunk\Sistema Matrix\obj\Debug\Sistema_Matrix.frmGerenciamentoClientes.resources
+C:\Users\HENRIQUE\Documents\Projeto\trunk\Sistema Matrix\obj\Debug\Sistema_Matrix.frmGerenciamentoOrdensServico.resources
+C:\Users\HENRIQUE\Documents\Projeto\trunk\Sistema Matrix\obj\Debug\Sistema_Matrix.frmGerenciamentoFuncionarios.resources
+C:\Users\HENRIQUE\Documents\Projeto\trunk\Sistema Matrix\obj\Debug\Sistema_Matrix.frmLogin.resources
+C:\Users\HENRIQUE\Documents\Projeto\trunk\Sistema Matrix\obj\Debug\Sistema_Matrix.Resources.resources
+C:\Users\HENRIQUE\Documents\Projeto\trunk\Sistema Matrix\obj\Debug\Sistema_Matrix.frmMenuPrincipal.resources
+C:\Users\HENRIQUE\Documents\Projeto\trunk\Sistema Matrix\obj\Debug\Sistema_Matrix.frmTiposPagamento.resources
+C:\Users\HENRIQUE\Documents\Projeto\trunk\Sistema Matrix\obj\Debug\Sistema_Matrix.frmCadastroUsuarios.resources
+C:\Users\HENRIQUE\Documents\Projeto\trunk\Sistema Matrix\obj\Debug\Sistema Matrix.vbproj.GenerateResource.Cache
+C:\Users\HENRIQUE\Documents\Projeto\trunk\Sistema Matrix\obj\Debug\RdlCompile.cache
+C:\Users\HENRIQUE\Documents\Projeto\trunk\Sistema Matrix\obj\Debug\RdlCompile.compiled
+C:\Users\HENRIQUE\Documents\Projeto\trunk\Sistema Matrix\obj\Debug\Sistema Matrix.exe.manifest
+C:\Users\HENRIQUE\Documents\Projeto\trunk\Sistema Matrix\obj\Debug\Sistema Matrix.application

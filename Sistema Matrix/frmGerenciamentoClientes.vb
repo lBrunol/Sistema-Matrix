@@ -511,4 +511,8 @@ Public Class frmGerenciamentoClientes
     Private Sub mtxCEP_KeyPress(sender As Object, e As KeyPressEventArgs) Handles mtxCEP.KeyPress
         modFuncoes.apenasNumeros(e)
     End Sub
+
+    Private Sub mtxCPF_MaskInputRejected(ByVal sender As System.Object, ByVal e As System.Windows.Forms.MaskInputRejectedEventArgs) Handles mtxCPF.MaskInputRejected
+
+    End Sub
 End Class

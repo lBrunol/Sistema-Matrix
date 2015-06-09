@@ -23,8 +23,8 @@ Partial Class frmGerenciamentoClientes
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(frmGerenciamentoClientes))
-        Dim DataGridViewCellStyle1 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle2 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle3 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle4 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Me.tabClientes = New System.Windows.Forms.TabControl()
         Me.tabCadastroClientes = New System.Windows.Forms.TabPage()
         Me.lblTitulo = New System.Windows.Forms.Label()
@@ -124,7 +124,6 @@ Partial Class frmGerenciamentoClientes
         Me.tabCadastroClientes.Controls.Add(Me.PictureBox1)
         Me.tabCadastroClientes.Controls.Add(Me.lblCodCliente)
         Me.tabCadastroClientes.Controls.Add(Me.txtCodigoCliente)
-        Me.tabCadastroClientes.Controls.Add(Me.txtIM)
         Me.tabCadastroClientes.Controls.Add(Me.lblIM)
         Me.tabCadastroClientes.Controls.Add(Me.lblCampoObrigatorio)
         Me.tabCadastroClientes.Controls.Add(Me.lblInserir)
@@ -174,6 +173,7 @@ Partial Class frmGerenciamentoClientes
         Me.tabCadastroClientes.Controls.Add(Me.mtxCNPJ)
         Me.tabCadastroClientes.Controls.Add(Me.mtxRG)
         Me.tabCadastroClientes.Controls.Add(Me.lblRG)
+        Me.tabCadastroClientes.Controls.Add(Me.txtIM)
         Me.tabCadastroClientes.Location = New System.Drawing.Point(4, 22)
         Me.tabCadastroClientes.Name = "tabCadastroClientes"
         Me.tabCadastroClientes.Padding = New System.Windows.Forms.Padding(3)
@@ -237,7 +237,7 @@ Partial Class frmGerenciamentoClientes
         '
         Me.lblIM.AutoSize = True
         Me.lblIM.Font = New System.Drawing.Font("Century Gothic", 9.75!)
-        Me.lblIM.Location = New System.Drawing.Point(192, 220)
+        Me.lblIM.Location = New System.Drawing.Point(193, 220)
         Me.lblIM.Name = "lblIM"
         Me.lblIM.Size = New System.Drawing.Size(40, 17)
         Me.lblIM.TabIndex = 62
@@ -606,7 +606,7 @@ Partial Class frmGerenciamentoClientes
         '
         Me.lblIE.AutoSize = True
         Me.lblIE.Font = New System.Drawing.Font("Century Gothic", 9.75!)
-        Me.lblIE.Location = New System.Drawing.Point(349, 220)
+        Me.lblIE.Location = New System.Drawing.Point(345, 219)
         Me.lblIE.Name = "lblIE"
         Me.lblIE.Size = New System.Drawing.Size(30, 17)
         Me.lblIE.TabIndex = 39
@@ -636,7 +636,7 @@ Partial Class frmGerenciamentoClientes
         'mtxIE
         '
         Me.mtxIE.Font = New System.Drawing.Font("Century Gothic", 9.75!)
-        Me.mtxIE.Location = New System.Drawing.Point(353, 239)
+        Me.mtxIE.Location = New System.Drawing.Point(348, 239)
         Me.mtxIE.Name = "mtxIE"
         Me.mtxIE.Size = New System.Drawing.Size(129, 23)
         Me.mtxIE.TabIndex = 9
@@ -685,7 +685,7 @@ Partial Class frmGerenciamentoClientes
         'mtxCPF
         '
         Me.mtxCPF.Font = New System.Drawing.Font("Century Gothic", 9.75!)
-        Me.mtxCPF.Location = New System.Drawing.Point(196, 239)
+        Me.mtxCPF.Location = New System.Drawing.Point(348, 239)
         Me.mtxCPF.Name = "mtxCPF"
         Me.mtxCPF.Size = New System.Drawing.Size(143, 23)
         Me.mtxCPF.TabIndex = 5
@@ -694,7 +694,7 @@ Partial Class frmGerenciamentoClientes
         '
         Me.lblCPF.AutoSize = True
         Me.lblCPF.Font = New System.Drawing.Font("Century Gothic", 9.75!)
-        Me.lblCPF.Location = New System.Drawing.Point(349, 220)
+        Me.lblCPF.Location = New System.Drawing.Point(345, 219)
         Me.lblCPF.Name = "lblCPF"
         Me.lblCPF.Size = New System.Drawing.Size(43, 17)
         Me.lblCPF.TabIndex = 9
@@ -712,7 +712,7 @@ Partial Class frmGerenciamentoClientes
         'mtxRG
         '
         Me.mtxRG.Font = New System.Drawing.Font("Century Gothic", 9.75!)
-        Me.mtxRG.Location = New System.Drawing.Point(353, 239)
+        Me.mtxRG.Location = New System.Drawing.Point(196, 239)
         Me.mtxRG.Name = "mtxRG"
         Me.mtxRG.Size = New System.Drawing.Size(132, 23)
         Me.mtxRG.TabIndex = 8
@@ -721,7 +721,7 @@ Partial Class frmGerenciamentoClientes
         '
         Me.lblRG.AutoSize = True
         Me.lblRG.Font = New System.Drawing.Font("Century Gothic", 9.75!)
-        Me.lblRG.Location = New System.Drawing.Point(192, 220)
+        Me.lblRG.Location = New System.Drawing.Point(193, 220)
         Me.lblRG.Name = "lblRG"
         Me.lblRG.Size = New System.Drawing.Size(37, 17)
         Me.lblRG.TabIndex = 10
@@ -857,20 +857,20 @@ Partial Class frmGerenciamentoClientes
         '
         Me.dtgConsultaClientes.AllowUserToAddRows = False
         Me.dtgConsultaClientes.AllowUserToDeleteRows = False
-        DataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        Me.dtgConsultaClientes.AlternatingRowsDefaultCellStyle = DataGridViewCellStyle1
+        DataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        Me.dtgConsultaClientes.AlternatingRowsDefaultCellStyle = DataGridViewCellStyle3
         Me.dtgConsultaClientes.BackgroundColor = System.Drawing.Color.Azure
         Me.dtgConsultaClientes.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
         Me.dtgConsultaClientes.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.dtgConsultaClientes.Cursor = System.Windows.Forms.Cursors.Hand
-        DataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window
-        DataGridViewCellStyle2.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText
-        DataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.ActiveCaption
-        DataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText
-        DataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
-        Me.dtgConsultaClientes.DefaultCellStyle = DataGridViewCellStyle2
+        DataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.Window
+        DataGridViewCellStyle4.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.ControlText
+        DataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.ActiveCaption
+        DataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
+        Me.dtgConsultaClientes.DefaultCellStyle = DataGridViewCellStyle4
         Me.dtgConsultaClientes.EditMode = System.Windows.Forms.DataGridViewEditMode.EditProgrammatically
         Me.dtgConsultaClientes.Location = New System.Drawing.Point(7, 91)
         Me.dtgConsultaClientes.MultiSelect = False
