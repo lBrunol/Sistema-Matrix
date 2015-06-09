@@ -62,7 +62,7 @@ Public Class frmCadastroEmitente
 
             Try
                 'Comando para inclusão dos dados
-                strsql = "INSERT INTO dadosEmitente(demCodigo, demNomeFantasia, demRazaoSocial, demInscricaoEstadual, demInscricaoMunicipal, demCEP, demTelefone, demEndereco) VALUES (" & _
+                strsql = "INSERT INTO dadosEmitente(demCodigo, demNomeFantasia, demRazaoSocial, demInscricaoEstadual, demInscricaoMunicipal, demCEP, demTelefone, demEndereco, demMunicipio, demUF) VALUES (" & _
                     varCodigo & ", '" & _
                     varNomeFantasia & "','" & _
                     varRazaoSocial & "','" & _
@@ -70,7 +70,9 @@ Public Class frmCadastroEmitente
                     varIE & "','" & _
                     varEndereco & "','" & _
                     varCep & "','" & _
-                    varTelefone & "')"
+                    varTelefone & "','" & _
+                    Txtmunicipio.Text & "','" & _
+                    Txtuf.Text & "')"
 
                 'Executa a instrução
                 objBanco.ExecutaQuery(strsql)
@@ -179,5 +181,9 @@ Public Class frmCadastroEmitente
 
     Private Sub frmCadastroEmitente_FormClosing(sender As Object, e As FormClosingEventArgs) Handles MyBase.FormClosing
         modFuncoes.HabilitaBotaoLogOff()
+    End Sub
+
+    Private Sub MaskeTextBox1_MaskInputRejected(ByVal sender As System.Object, ByVal e As System.Windows.Forms.MaskInputRejectedEventArgs)
+
     End Sub
 End Class

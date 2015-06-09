@@ -47,6 +47,10 @@ Partial Class frmCadastroEmitente
         Me.botLimpar = New System.Windows.Forms.Button()
         Me.mtxCep = New System.Windows.Forms.MaskedTextBox()
         Me.mtxTelefone = New System.Windows.Forms.MaskedTextBox()
+        Me.Label7 = New System.Windows.Forms.Label()
+        Me.Label8 = New System.Windows.Forms.Label()
+        Me.Txtmunicipio = New System.Windows.Forms.TextBox()
+        Me.Txtuf = New System.Windows.Forms.TextBox()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
@@ -278,12 +282,52 @@ Partial Class frmCadastroEmitente
         Me.mtxTelefone.Size = New System.Drawing.Size(143, 20)
         Me.mtxTelefone.TabIndex = 70
         '
+        'Label7
+        '
+        Me.Label7.AutoSize = True
+        Me.Label7.Location = New System.Drawing.Point(12, 429)
+        Me.Label7.Name = "Label7"
+        Me.Label7.Size = New System.Drawing.Size(63, 13)
+        Me.Label7.TabIndex = 73
+        Me.Label7.Text = "MUNICIPIO"
+        '
+        'Label8
+        '
+        Me.Label8.AutoSize = True
+        Me.Label8.Location = New System.Drawing.Point(183, 429)
+        Me.Label8.Name = "Label8"
+        Me.Label8.Size = New System.Drawing.Size(21, 13)
+        Me.Label8.TabIndex = 74
+        Me.Label8.Text = "UF"
+        '
+        'Txtmunicipio
+        '
+        Me.Txtmunicipio.Font = New System.Drawing.Font("Century Gothic", 9.75!)
+        Me.Txtmunicipio.Location = New System.Drawing.Point(12, 445)
+        Me.Txtmunicipio.Multiline = True
+        Me.Txtmunicipio.Name = "Txtmunicipio"
+        Me.Txtmunicipio.Size = New System.Drawing.Size(143, 23)
+        Me.Txtmunicipio.TabIndex = 75
+        '
+        'Txtuf
+        '
+        Me.Txtuf.Font = New System.Drawing.Font("Century Gothic", 9.75!)
+        Me.Txtuf.Location = New System.Drawing.Point(186, 445)
+        Me.Txtuf.Multiline = True
+        Me.Txtuf.Name = "Txtuf"
+        Me.Txtuf.Size = New System.Drawing.Size(143, 23)
+        Me.Txtuf.TabIndex = 76
+        '
         'frmCadastroEmitente
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.SystemColors.Window
-        Me.ClientSize = New System.Drawing.Size(339, 420)
+        Me.ClientSize = New System.Drawing.Size(510, 503)
+        Me.Controls.Add(Me.Txtuf)
+        Me.Controls.Add(Me.Txtmunicipio)
+        Me.Controls.Add(Me.Label8)
+        Me.Controls.Add(Me.Label7)
         Me.Controls.Add(Me.mtxTelefone)
         Me.Controls.Add(Me.mtxCep)
         Me.Controls.Add(Me.lblLimpar)
@@ -341,4 +385,8 @@ Partial Class frmCadastroEmitente
     Friend WithEvents botLimpar As System.Windows.Forms.Button
     Friend WithEvents mtxCep As System.Windows.Forms.MaskedTextBox
     Friend WithEvents mtxTelefone As System.Windows.Forms.MaskedTextBox
+    Friend WithEvents Label7 As System.Windows.Forms.Label
+    Friend WithEvents Label8 As System.Windows.Forms.Label
+    Friend WithEvents Txtmunicipio As System.Windows.Forms.TextBox
+    Friend WithEvents Txtuf As System.Windows.Forms.TextBox
 End Class
